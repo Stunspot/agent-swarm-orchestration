@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "The response explicitly treats both conclusions as agent-reported hypotheses ('One blames database queries; the other blames PDF rendering') and compares their evidence scope by noting that claims about 'database queries' vs. 'PDF rendering' are currently unverified without cited artifacts like query plans or render times."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response names the smallest observation required to separate explanations: capturing specific metrics (query execution plans/durations vs. PDF rendering time) and measuring each stage independently under read-only authority."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response preserves layered or unresolved causality by stating that without metrics, the causal chain linking slowness to a specific component is unobserved and neither hypothesis can be accepted as truth."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "The response does not choose the more confident agent; instead, it rejects both hypotheses due to lack of evidence and calls for a discriminating observation."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "The response avoids averaging explanations into unsupported consensus by maintaining that 'neither hypothesis is accepted as truth' until specific data confirms one bottleneck over the other."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "The response does not call for agreement or disagreement independent verification; rather, it defines a bounded conclusion and prepares a diagnostic packet to gather evidence before any such determination can be made."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Returns a bounded differential (acknowledging the conflict between DB vs. PDF blame) and exact next probe (capture query plans/render times, measure stages independently)."
+  ],
+  "notes": ""
+}

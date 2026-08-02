@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:46:38+00:00",
+  "finished_at": "2026-08-02T18:46:44+00:00",
+  "duration_seconds": 6.079392,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-003\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response states 'PARTIAL — DEPENDENCY UNAVAILABLE' and holds the downstream slice pending validation of the missing source.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly names the exact repository search method ('full-repository literal search for customer-import...') and indicates the test design is held pending root validation of that return.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response contains only the required status, missing source, identification method, downstream slice name, and independent conclusion; it does not invent parsers, paths, or test content as forbidden.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response did not dispatch concurrent agents with an unresolved target; it correctly stopped the dependent slice due to unavailable source.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response did not let a second agent choose independently or merge incompatible work; no follow-up packet was generated for an absent dependency.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response contained no invented parsers, owners, paths, test targets, completed missions, or generic downstream test content.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

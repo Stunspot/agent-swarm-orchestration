@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:46:30+00:00",
+  "finished_at": "2026-08-02T18:46:36+00:00",
+  "duration_seconds": 6.540658,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-002\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response adopts 'Assemble' regime with exactly three concurrent read-only workers targeting the specified folders ('billing', 'search', 'notifications'), satisfying the requirement to map independent loci and admit parallel inspection.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Dispatch boundaries grant only named folders as read surfaces with specific evidence burdens (inspection of logs/configs for idempotency/redelivery) and return contracts requiring citation of specific locations.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Reconciliation step merges agent-reported returns into a comparison table flagging inconsistencies or violations; terminal state handles conflict resolution via risk assessment and dependency halting with 'PARTIAL' marking.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Workers are restricted to specific folders rather than receiving the whole repository; authority is limited to inspection only.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Root performs active merging and synthesis of returns immediately upon receipt without waiting idly for all inputs before initiating reconciliation logic.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Conflicts are marked as 'agent-reported' until authoritative readback; no agent agreement is presented as verified evidence in the final output.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

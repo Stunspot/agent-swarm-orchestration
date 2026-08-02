@@ -1,0 +1,1 @@
+*   **Recover:** Preserve the completed schema inspection return as `agent-reported` pending root observation; classify the migration history worker failure as wrong-target context and replace only its read-surfaces field with the authoritative repository root before reassigning that slice to inspect migration history under corrected authority.

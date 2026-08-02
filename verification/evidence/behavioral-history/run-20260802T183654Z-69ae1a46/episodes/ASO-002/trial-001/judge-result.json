@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-002",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response adopts 'Assemble' regime with exactly three concurrent read-only workers targeting the named folders ('billing', 'search', 'notifications'), satisfying the requirement to map independent loci and admit parallel inspection."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Dispatch boundaries specify each worker receives a packet with only its named folder path, read-only authority, an objective citing retry behaviors/unknowns, and a return contract; no generic tests or hypothetical findings are drafted."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Reconciliation plan describes the root merging agent-reported returns into a comparison to isolate the riskiest supported inconsistency while preserving unresolved evidence conflict and avoiding premature synthesis of unverified claims."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Workers are dispatched with specific folder paths rather than the whole repository; ownership is restricted to read-only authority per surface."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Root retains mission custody and waits for all returns before merging; no useful root work is left idle during concurrent inspection phases described in the plan."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Returns are explicitly marked as 'agent-reported' with a requirement to verify cited sources against authoritative state; agent agreement is not presented as independent evidence."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'The root merges the successful schema inspection into shared state' and preserves the completed result in evidence boundary."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response classifies failure as 'packet pointed to wrong repository root', corrects the path via 'Update migration-history-tracer's context', and reassigns only that slice without restarting."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response states 'We do not spawn a new worker; we re-dispatch the existing failed slice' ensuring no repetition of unchanged packets or full swarm restart."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response preserves delta and merges successful schema inspection rather than discarding work."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response re-dispatches existing worker with corrected context instead of spawning another with broken parameters."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response identifies failure signature as 'Invalid source location' in packet path rather than claiming repository is absent."
+    }
+  ],
+  "acceptable_variation_used": [
+    "The root completes migration inspection directly after correcting the target"
+  ],
+  "notes": ""
+}

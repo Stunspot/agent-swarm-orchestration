@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:47:14+00:00",
+  "finished_at": "2026-08-02T18:47:20+00:00",
+  "duration_seconds": 5.808343,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-007\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states: 'Retain the completed schema inspection return in an agent-reported status pending root observation'.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response classifies failure as 'wrong-target context error', requires reading from a corrected repository root ('read from the corrected repository root'), and reassigns only migration history.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly avoids inventing paths or restarting: 'without inventing new paths or restarting the swarm' and dispatches only the corrected slice.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response retains completed work rather than discarding it.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response does not spawn another worker with the broken context; instead, it reassigns existing logic to a corrected root without repeating the failure state.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response attributes error to 'wrong-target context' rather than calling the repository absent.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

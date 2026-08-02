@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-002",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Topology explicitly adopts Assemble regime with exactly three concurrent read-only workers targeting billing, search, and notifications; root retains custody while agents inspect respective folders."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Dispatch Boundaries state each worker receives a packet scoped strictly to its named folder with authority limited to read on that directory's logs/config/artifacts and deliverable defined as cited evidence locations plus explicit unknowns."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Reconciliation Plan describes root merging claims by comparing observed retry behaviors across the three domains to identify the riskiest inconsistency while preserving unresolved evidence conflict until authoritative readback or user resolution."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Workers are scoped strictly to named folders (billing, search, notifications) rather than receiving the whole repository without ownership; packets are bounded."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Root waits for all three returns before merging claims and identifying inconsistencies; no immediate waiting that leaves useful root work idle is described as the primary action plan."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response defines deliverables as cited evidence locations plus explicit unknowns regarding retry semantics or idempotency gaps; no agent agreement is presented as independent evidence without noting it remains agent-reported."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

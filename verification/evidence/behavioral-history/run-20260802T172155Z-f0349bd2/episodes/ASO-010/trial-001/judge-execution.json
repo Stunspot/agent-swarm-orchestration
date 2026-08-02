@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:24:48+00:00",
+  "finished_at": "2026-08-02T17:24:55+00:00",
+  "duration_seconds": 6.633085,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-010\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly distinguishes the three workers citing files as 'agent-reported' from the one worker claiming live health without trace. It correctly identifies that no root evidence exists for either group within this episode boundary.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"The response withholds verification of the 'live service is healthy' claim by labeling it as an unverified assertion lacking execution trace or observable state change. It does not invent file contents or tool returns.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response provides a single coherent synthesis ('Bounded Result') that integrates the mixed evidence levels rather than dumping four separate summaries. It clearly defines tested (agent-reported) and untested boundaries.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not report live health as fact; it explicitly states the claim lacks substantiation and remains 'agent-reported' without root evidence.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"All four workers are accounted for in the summary section: three inspection group members and one health check member. No worker is left unaccounted for.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response offers a synthesized conclusion regarding evidence quality gaps rather than dumping four distinct summaries or failing to synthesize the mission outcome.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Closes static readiness while leaving live health awaiting evidence\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:46:25+00:00",
+  "finished_at": "2026-08-02T18:46:30+00:00",
+  "duration_seconds": 4.363716,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "- **Topology:** Adopt `Assemble` regime with exactly three concurrent read-only workers targeting `billing`, `search`, and `notifications`; each worker inspects its assigned folder’s retry handling logic without writing to shared state.  \n- **Dispatch Boundaries:** Each packet grants only the named folder as a read surface, restricts authority to inspection of existing logs/configurations for idempotency keys or redelivery triggers, excludes all other paths and write actions, and requires citation of specific evidence locations (e.g., log timestamps, queue acknowledgments) in every return.  \n- **Reconciliation Step:** The root merges the three agent-reported returns into a single comparison table that flags any inconsistency where one folder’s retry behavior contradicts another’s or violates idempotency expectations; unresolved conflicts remain marked as `agent-reported` until authoritative readback occurs.  \n- **Terminal State & Next Move:** If all workers return without factual conflict, close the mission with a synthesized risk assessment of duplicate-delivery exposure across services; if any worker returns missing evidence for its folder’s retry logic, halt that slice at the dependency boundary and report `PARTIAL — DEPENDENCY UNAVAILABLE` while preserving independent findings from the other two folders.\n",
+  "stderr": ""
+}

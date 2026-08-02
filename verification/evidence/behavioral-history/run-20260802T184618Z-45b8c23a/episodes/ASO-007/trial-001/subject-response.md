@@ -1,0 +1,3 @@
+*   **Recover:** Reassign worker `migration-history` to read from the corrected repository root while preserving its original objective and deliverable; mark prior write/commit state as unknown until authoritative post-state is observed.
+*   **Preserve & Classify:** Retain the completed schema inspection return in an agent-reported status pending root observation, classifying the failure strictly as a wrong-target context error without inventing new paths or restarting the swarm.
+*   **Reassign Only:** Dispatch only the corrected migration history slice; do not add path-identification steps, user requests, examples, packets, patches, verified labels, restarts, or broken contexts to this response.

@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response preserves the completed schema inspection as 'agent-reported' and explicitly states it is active/available to inform downstream decisions without discarding or upgrading it prematurely."
+    },
+    {
+      "criterion_index": 1,
+      "status": "partial",
+      "evidence": "The response classifies failure correctly but does not observe the 'authoritative repository root' because '[CORRECT_REPOSITORY_ROOT]' is a placeholder; instead of inventing or guessing it (which would violate Criterion 2), it holds the packet pending authority, satisfying the boundary preservation requirement rather than completing the reassignment action."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response explicitly avoids repeating broken packets or inventing paths (using placeholders instead), and does not ask for user input before attempting to use an authoritative observation step; it waits on the specific evidence boundary."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response preserves schema work as 'agent-reported' and does not upgrade it to verified evidence or discard it; the failure is held pending."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response explicitly states 'we do NOT restart everything' and reassigns only the unearned edge (migration-history slice), avoiding a full swarm restart."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response uses '[CORRECT_REPOSITORY_ROOT]' as a placeholder rather than guessing a path or asking for one immediately; it preserves the boundary by holding until authority permits access to that specific source."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Has the root perform the migration inspection after observing the correct root"
+  ],
+  "notes": ""
+}

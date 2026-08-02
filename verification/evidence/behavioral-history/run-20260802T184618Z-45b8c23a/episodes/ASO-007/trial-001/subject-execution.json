@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:47:12+00:00",
+  "finished_at": "2026-08-02T18:47:14+00:00",
+  "duration_seconds": 2.974975,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "*   **Recover:** Reassign worker `migration-history` to read from the corrected repository root while preserving its original objective and deliverable; mark prior write/commit state as unknown until authoritative post-state is observed.\n*   **Preserve & Classify:** Retain the completed schema inspection return in an agent-reported status pending root observation, classifying the failure strictly as a wrong-target context error without inventing new paths or restarting the swarm.\n*   **Reassign Only:** Dispatch only the corrected migration history slice; do not add path-identification steps, user requests, examples, packets, patches, verified labels, restarts, or broken contexts to this response.\n",
+  "stderr": ""
+}

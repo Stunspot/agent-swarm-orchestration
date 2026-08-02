@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-002",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'Direct' topology and admits bounded parallel inspection is unnecessary due to task size/latency sensitivity; uses zero workers as an acceptable variation for unavailable concurrency."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response provides the root with exact folder names (`billing`, `search`, `notifications`), defines read-only evidence burden ('no external publication'), and establishes a return contract (prepared packet + missing source declaration)."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response maintains cross-folder comparison structure in the prepared markdown table and performs final risk synthesis by listing candidate inconsistencies and defining selection criteria for the 'riskiest' one."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response explicitly states workers are empty (`[]`) rather than sending every worker the whole repository; ownership is reserved to root in absence of tools."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Root work (synthesizing patterns/identifying risk) remains active/prepared rather than idle while waiting for unavailable tooling; response declares 'PREPARED — NOT DISPATCHED'."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response does not present agent agreement as evidence but instead presents a truthful degraded state ('Prepared Comparison Packet') and missing sources declaration."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Uses fewer workers if live concurrency is smaller (0 workers used due to lack of execution primitives)."
+  ],
+  "notes": ""
+}

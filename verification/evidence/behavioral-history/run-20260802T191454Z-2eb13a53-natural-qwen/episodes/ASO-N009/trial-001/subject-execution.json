@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:17:44+00:00",
+  "finished_at": "2026-08-02T19:18:00+00:00",
+  "duration_seconds": 15.219077,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "**Mission:** Classify a collection of 200 filenames against five ambiguous documents to determine content alignment or mismatch, then issue a consequential release recommendation (e.g., approve for archival, flag for review, reject).  \n**Topology Decision:** `Direct` — The task is small, sequential, and latency-sensitive. No parallelism earns itself here because the core work requires comparing file names against document semantics without access to actual content bytes; spawning workers would incur context reconstruction costs exceeding any marginal gain in coverage or challenge.\n\n---\n\n## Root Analysis (Mission Custody)\n\n**Current State:**  \n- **Inputs Present:** 200 filenames, five ambiguous documents (content unavailable per runtime boundary).\n- **Constraint:** Filenames alone cannot confirm document content; classification must rely on naming patterns, metadata hints in names, or prior knowledge of the domain. Without reading file contents, any claim about “document alignment” is speculative unless grounded in observable name-to-content heuristics.\n- **Authority Boundary:** Read-only access to filenames and documents (if their text were provided). No write authority; no external publication without user approval.\n\n**Acceptance Condition:**  \nA release recommendation supported by:\n1. Observable patterns linking filename substrings or extensions to document themes inferred from available context (e.g., if a doc is titled “Q3 Financials” and filenames contain `q3`, `financial`, `revenue`);\n2. Explicit acknowledgment of uncertainty where content cannot be verified;\n3. A bounded, actionable recommendation per file group (approve, flag, reject).\n\n**Unavailable Dependency:**  \nActual document contents for the five ambiguous documents are not observed in this episode. Any classification beyond name-based inference must carry `agent-reported` status until root inspection confirms alignment with authoritative evidence.\n\n---\n\n## Degraded State & Next Move\n\nSince no live collaboration tools or file-read primitives are exposed, and content is absent:\n- **Status:** `PARTIAL — DEPENDENCY UNAVAILABLE` (document contents).\n- **Actionable Work:** Perform name-based pattern matching against known document themes if any prior context exists; otherwise, defer to user for clarification on ambiguous documents.\n\n**Prepared Recommendation Structure:**  \nFor each file group:\n```json\n{\n  \"filename_pattern\": \"...\",\n  \"inferred_theme\": \"...\",\n  \"confidence_level\": \"high | medium | low (name-only)\",\n  \"recommendation\": \"approve | flag_for_review | reject\",\n  \"evidence_basis\": \"observable name substrings vs. document title/context\"\n}\n```\n\n**Next Consequential Move:**  \nRequest the user to either:\n- Provide the five ambiguous documents’ contents or titles for alignment verification; OR\n- Confirm whether filename patterns alone are sufficient basis for release decisions in this context (e.g., if all files are metadata-only).\n\nUntil that delta is received, hold classification at `agent-reported` and do not assert verified content matches.\n\n---\n\n## Authority & Safety Boundaries\n\n- **Allowed:** Read filenames; infer themes from names; issue non-binding recommendations labeled by confidence level.\n- **Reserved:** Claiming document-content alignment without observed bytes; publishing release lists as final authority.\n- **Sensitive Material:** None declared, but treat all inputs as retained artifacts per host policy.\n\n---\n\n## Terminal State (If No Further Input)\n\nReturn the bounded synthesis earned:  \n> “Classification based on filenames alone yields `agent-reported` confidence levels for five ambiguous documents without content verification. Release recommendations are provisional pending either document-content disclosure or user confirmation that name-based inference suffices.”  \n\n**Do not invent:** Document themes, file contents, alignment results, or final release lists beyond what the 200 filenames and stated constraints allow.\n\n--- \n\nWould you like to:  \n1) Provide the five ambiguous documents’ content/titles for verification?  \n2) Confirm that name-based classification is acceptable as-is?  \n3) Receive a template packet structure for batch processing once inputs are clarified?\n",
+  "stderr": ""
+}

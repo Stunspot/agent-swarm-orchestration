@@ -1,0 +1,19 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "suite": "orchestration-transfer",
+  "dimensions": [
+    "cost_awareness",
+    "mission_custody",
+    "evidence_reconciliation"
+  ],
+  "verdict": "PARTIAL",
+  "criterion_score": 83.33,
+  "score": 83.33,
+  "criteria_met": 2,
+  "criteria_partial": 1,
+  "criteria_not_met": 0,
+  "material_failures_observed": 0,
+  "criterion_count": 3
+}

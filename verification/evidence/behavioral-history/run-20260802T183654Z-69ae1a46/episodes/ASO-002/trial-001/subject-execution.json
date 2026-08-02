@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:37:00+00:00",
+  "finished_at": "2026-08-02T18:37:04+00:00",
+  "duration_seconds": 4.174375,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "- **Topology:** Adopt `Assemble` regime with exactly three concurrent read-only workers targeting `billing`, `search`, and `notifications`; root retains mission custody while agents inspect their respective folders for retry handling observations and unknowns without writing to shared state.  \n- **Dispatch Boundaries:** Each worker receives a packet containing only the named folder path, read-only authority over that surface, an objective to cite observed retry behaviors or missing evidence, and a return contract requiring cited sources plus explicit unknowns; no generic tests, schemas, paths, endpoints, sample data, or hypothetical findings are drafted.  \n- **Reconciliation Plan:** Root waits for all three returns as `agent-reported`, then merges them into a comparison that isolates the riskiest supported inconsistency (e.g., divergent retry logic across services) while preserving unresolved evidence conflict and avoiding premature synthesis of unverified claims.  \n- **Next Move:** Upon receipt, root verifies cited sources against authoritative state; if any return is missing or unverifiable, mark that slice `PARTIAL — DEPENDENCY UNAVAILABLE` and hold downstream integration pending the exact identification method for the absent source rather than substituting generic content.\n",
+  "stderr": ""
+}

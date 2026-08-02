@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-002",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response adopts 'Assemble' regime with exactly three concurrent read-only workers targeting the specified folders ('billing', 'search', 'notifications'), satisfying the requirement to map independent loci and admit parallel inspection."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Dispatch boundaries grant only named folders as read surfaces with specific evidence burdens (inspection of logs/configs for idempotency/redelivery) and return contracts requiring citation of specific locations."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Reconciliation step merges agent-reported returns into a comparison table flagging inconsistencies or violations; terminal state handles conflict resolution via risk assessment and dependency halting with 'PARTIAL' marking."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Workers are restricted to specific folders rather than receiving the whole repository; authority is limited to inspection only."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Root performs active merging and synthesis of returns immediately upon receipt without waiting idly for all inputs before initiating reconciliation logic."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Conflicts are marked as 'agent-reported' until authoritative readback; no agent agreement is presented as verified evidence in the final output."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

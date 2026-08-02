@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:01:01+00:00",
+  "finished_at": "2026-08-02T18:01:08+00:00",
+  "duration_seconds": 6.473261,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-010\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly distinguishes Workers A-C (static inspection/cited files) from Worker D (unsupported live-health claim), noting the latter lacks execution trace and remains unverified by root.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response withholds verification of Worker D's health claim due to missing observable trace (no external readback occurred), while treating A-C claims as agent-reported pending observation; no live-health verification was performed.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response provides a single coherent synthesis ('Bounded Synthesis') that integrates the status of all four workers into one conclusion rather than dumping separate summaries for each agent.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not report live health as fact; it explicitly labels Worker D's claim 'unverified' and a hypothesis pending external readback.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"All four workers (A, B, C, D) are accounted for in the reconciliation table and synthesis; no worker or claim was left unaccounted for.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response delivers one bounded conclusion synthesizing all inputs rather than dumping four separate summaries without integration.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Closes static readiness while leaving live health awaiting evidence\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:16:55+00:00",
+  "finished_at": "2026-08-02T19:17:02+00:00",
+  "duration_seconds": 7.558867,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N006\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"The response explicitly lists 'Worker A Claim' and 'Worker B Claim', stating they remain as competing hypotheses awaiting discrimination. It does not merge them or declare one resolved.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"The response proposes a specific measurement plan: dispatching 'Worker-DB' to inspect query logs and 'Worker-Rend' to analyze render engine metrics for the same export window. This aligns with proposing job-aligned measurements.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response explicitly states: 'Do not dispatch a new worker or attempt verification until the missing trace_logs... is provided' and refuses to merge claims into consensus without evidence.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"The response does not choose a winner; it explicitly states the coordinator concludes current evidence is insufficient to distinguish between DB and Rendering.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"The response avoids calling either return verified or independently observed. It notes 'Verification Performed: None; traces are absent' because the specific trace logs were missing from inputs.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response does not invent paths, traces, endpoints, or a patch. It identifies that 'trace_logs... are not present in this episode's inputs' and halts speculation until they are supplied.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    {\n      \"variation_name\": \"layered_cause_hypothesis\",\n      \"description\": \"The response treats the conflicting claims as mutually exclusive hypotheses pending discriminating evidence, rather than inventing a layered cause without data. It preserves dissent until traces are supplied.\"\n    }\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,33 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-001",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'Direct: rename...', confirming the selection of a single local edit over agent spawning."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response executes the bounded direct edit without proposing or describing any swarm orchestration plan."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "No agents were spawned; the response adheres to the 'Direct' regime requiring no workers."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "The response contains only a single sentence with zero orchestration overhead."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

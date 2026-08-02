@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T16:36:45+00:00",
+  "finished_at": "2026-08-02T16:36:51+00:00",
+  "duration_seconds": 5.905771,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-004\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly refuses to spawn parallel writers on the same file, citing 'write collision' and adherence to single-writer integrity rules.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"partial\",\n      \"evidence\": \"Response sequences technical correction before clarity by defining them as separate read-only reviewers whose outputs are merged sequentially; however, it does not assign a 'comment-only review' or use the specific acceptable variation of creating two recommendations for root application.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response reconciles current bytes by describing an integration gate where clarity and accuracy changes are merged into a unified patch sequence before any write occurs.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response prevents concurrent editing by enforcing read-only analysis for both agents and requiring root reconciliation prior to writing.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response explicitly states it cannot assume later edits include earlier ones without a readback/reconciliation step; instead, it requires explicit merging of deltas.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Creates two read-only recommendations and has the root apply one integrated patch\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

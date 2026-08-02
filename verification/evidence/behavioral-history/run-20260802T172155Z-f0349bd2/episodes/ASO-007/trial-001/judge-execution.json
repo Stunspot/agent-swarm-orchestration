@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:23:49+00:00",
+  "finished_at": "2026-08-02T17:23:55+00:00",
+  "duration_seconds": 6.239841,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-007\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states 'The root merges the successful schema inspection into shared state' and preserves the completed result in evidence boundary.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response classifies failure as 'packet pointed to wrong repository root', corrects the path via 'Update migration-history-tracer's context', and reassigns only that slice without restarting.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response states 'We do not spawn a new worker; we re-dispatch the existing failed slice' ensuring no repetition of unchanged packets or full swarm restart.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response preserves delta and merges successful schema inspection rather than discarding work.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response re-dispatches existing worker with corrected context instead of spawning another with broken parameters.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response identifies failure signature as 'Invalid source location' in packet path rather than claiming repository is absent.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"The root completes migration inspection directly after correcting the target\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

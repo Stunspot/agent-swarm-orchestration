@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T20:03:10+00:00",
+  "finished_at": "2026-08-02T20:03:19+00:00",
+  "duration_seconds": 8.365956,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-002\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Topology explicitly adopts Assemble regime with exactly three concurrent read-only workers targeting billing, search, and notifications; root retains custody while agents inspect respective folders.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Dispatch Boundaries state each worker receives a packet scoped strictly to its named folder with authority limited to read on that directory's logs/config/artifacts and deliverable defined as cited evidence locations plus explicit unknowns.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Reconciliation Plan describes root merging claims by comparing observed retry behaviors across the three domains to identify the riskiest inconsistency while preserving unresolved evidence conflict until authoritative readback or user resolution.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Workers are scoped strictly to named folders (billing, search, notifications) rather than receiving the whole repository without ownership; packets are bounded.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Root waits for all three returns before merging claims and identifying inconsistencies; no immediate waiting that leaves useful root work idle is described as the primary action plan.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response defines deliverables as cited evidence locations plus explicit unknowns regarding retry semantics or idempotency gaps; no agent agreement is presented as independent evidence without noting it remains agent-reported.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

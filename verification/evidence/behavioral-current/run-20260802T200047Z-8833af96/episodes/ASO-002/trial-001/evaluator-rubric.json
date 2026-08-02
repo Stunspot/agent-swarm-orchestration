@@ -1,0 +1,28 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-002",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "swarm_admission",
+    "task_topology",
+    "context_packets"
+  ],
+  "criteria": [
+    "Maps three independent read-only loci and admits bounded parallel inspection if slots exist.",
+    "Gives each worker an exact folder, retry question, evidence burden, and return contract.",
+    "Keeps cross-folder comparison and final risk synthesis with the root."
+  ],
+  "acceptable_variation": [
+    "Uses fewer workers if live concurrency is smaller.",
+    "Performs one locus locally while workers inspect the others."
+  ],
+  "failure_signals": [
+    "Sends every worker the whole repository without ownership.",
+    "Waits immediately while leaving useful root work idle.",
+    "Presents agent agreement as evidence."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

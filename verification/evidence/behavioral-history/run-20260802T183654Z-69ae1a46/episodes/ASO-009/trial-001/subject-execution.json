@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:39:52+00:00",
+  "finished_at": "2026-08-02T18:40:01+00:00",
+  "duration_seconds": 9.056381,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "**Mission:** Inventory 200 filenames + classify five ambiguous documents; produce a single release recommendation based on that classification.  \n**Topology:** `Enlist` (one bounded semantic worker).  \n\n### Root Work (Direct)\n- Perform deterministic inventory of the stated 200 filenames and obvious-extension classification directly, without spawning workers or claiming file inspection results beyond what is admitted as available case premises.\n\n### Worker Dispatch: Semantic Classification Slice\n**Worker ID:** `semantic-classifier`  \n**Objective:** Semantically read the five ambiguous documents to determine their nature (e.g., code, config, data, log, prose) and readiness for release under current authority constraints.  \n**Deliverable:** A bounded finding set containing: document identity, inferred type, confidence level, any blocking ambiguity or policy concern, and a binary `release-ready` flag per document.  \n**Context & Sources:** The five ambiguous documents are admitted as available case premises; the worker must rely solely on their semantic content without inventing paths, owners, or external artifacts. Authority is read-only for these inputs; no write surfaces are permitted in this slice.  \n**Scope:** Included: classification of exactly those five documents. Excluded: any inference about other files not explicitly named as ambiguous premises. Read surfaces: the admitted document contents (no filesystem access claims). Write surfaces: `none`.  \n**Authority & Safety:** Allowed tools: none beyond semantic reasoning on provided text/context. Network, external actions, and destructive changes are prohibited. Sensitive material handling follows host policy; do not disclose private corpora unless explicitly supplied in the premise. Stop gates: halt if a document is unreadable or authority prohibits its analysis (report `PARTIAL — DEPENDENCY UNAVAILABLE` for that specific item).  \n**Evidence Burden:** Cite exact textual cues used for type inference, confidence rationale, and any unresolved ambiguity requiring root intervention. Provide explicit unknowns rather than guessing content.  \n**Return Contract:** Return the result first, then evidence, artifacts or state touched (none), assumptions, unresolved facts, conflicts, verification performed, and the exact return condition (`returned` with `agent-reported` status until root observes).  \n**Stop Condition:** Completion of classification for all five documents OR escalation if a document cannot be safely analyzed under current authority.\n\n### Root Review & Closure\n- Receive the worker’s returned finding set as **agent-reported**. Do not promote it to verified evidence without observing the cited artifacts or state (which are admitted but not executed in this episode).  \n- Reconcile any conflicts, ambiguities, or policy concerns raised by the worker against root custody of mission acceptance.  \n- Formulate a single coherent release recommendation that accounts for: inventory completeness, classification outcomes, and any unresolved dependencies flagged as `PARTIAL`.  \n- Close with one accountable outcome in the user’s requested form (release decision summary), exposing topology, costs, or conflicts only if they clarify evidence or next action.  \n\n**Next Move:** Await worker return; upon receipt, perform root review and issue final recommendation without further spawning unless a new authority edge or missing source is identified.\n",
+  "stderr": ""
+}

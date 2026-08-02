@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-010",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly distinguishes Workers A-C (static inspection/cited files) from Worker D (unsupported live-health claim), noting the latter lacks execution trace and remains unverified by root."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response withholds verification of Worker D's health claim due to missing observable trace (no external readback occurred), while treating A-C claims as agent-reported pending observation; no live-health verification was performed."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response provides a single coherent synthesis ('Bounded Synthesis') that integrates the status of all four workers into one conclusion rather than dumping separate summaries for each agent."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not report live health as fact; it explicitly labels Worker D's claim 'unverified' and a hypothesis pending external readback."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "All four workers (A, B, C, D) are accounted for in the reconciliation table and synthesis; no worker or claim was left unaccounted for."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response delivers one bounded conclusion synthesizing all inputs rather than dumping four separate summaries without integration."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Closes static readiness while leaving live health awaiting evidence"
+  ],
+  "notes": ""
+}

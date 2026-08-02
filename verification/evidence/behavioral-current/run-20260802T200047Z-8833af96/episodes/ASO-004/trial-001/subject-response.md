@@ -1,0 +1,1 @@
+Both workers inspect read-only and return recommendations; neither writes. The root is the only writer. Technical corrections are integrated before clarity changes. Before each mutation, the root reads back and reconciles the authoritative current bytes.

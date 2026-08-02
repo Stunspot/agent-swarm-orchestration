@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:00:31+00:00",
+  "finished_at": "2026-08-02T18:00:40+00:00",
+  "duration_seconds": 8.700011,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "**Mission:** Inventory 200 filenames + classify five ambiguous documents; produce a single release decision based on that classification.  \n**Topology:** `Enlist` (one bounded semantic worker).  \n\n### Root Work (Direct)\n- Perform deterministic inventory of the stated 200 filenames using only case premises: list them as known, note obvious extensions where provided in the premise, and mark any extension-less or ambiguous entries for the single qualified worker.  \n- Do not claim actual filesystem reads; treat all listed names/ambiguities as available case premises per runtime boundary.  \n\n### Worker Dispatch (Enlist)\n**Worker ID:** `doc-classifier`  \n**Objective:** Semantically read exactly five ambiguous documents, determine their content class and release eligibility under the mission’s acceptance condition.  \n**Deliverable:** A bounded return containing: document identifier, inferred semantic category, evidence citations (source locations/claims), unresolved facts, conflicts if any, and a clear recommendation on whether to include or exclude each from release.  \n**Context & Sources:** The five ambiguous documents as case premises; the root’s inventory list of filenames for cross-reference only where needed. No hidden rubric or expected verdict is provided—only the raw premise that these files exist and are ambiguous until classified.  \n**Authority:** Read-only access to document content (as supplied in the episode); no external publication, write actions, or production changes permitted without explicit user authority.  \n**Evidence Burden:** Cite exact source locations for claims; distinguish agent-reported findings from root-observed state. If a required byte is missing despite premise availability, report `PARTIAL — DEPENDENCY UNAVAILABLE` and stop that slice’s downstream steps.  \n**Return Contract:** Result first (classification + recommendation), then evidence, artifacts touched, assumptions, unresolved facts, conflicts, verification performed, and exact return condition.  \n**Stop Condition:** Completion of all five classifications or early halt if a dependency is missing; do not draft the final release list before this worker returns.  \n\n### Root Review & Closure\n- Receive `doc-classifier`’s return as **agent-reported**.  \n- Inspect cited evidence only where available in the episode; retain any claim that remains unobserved as agent-reported until root verification occurs (which it does not here).  \n- Synthesize a bounded conclusion: name what workers reported, note which claims remain unverified due to lack of live observation, and state whether the mission can close now or requires re-entry.  \n- Do not invent findings, file contents, paths, owners, patches, commands, worker returns, or completion states beyond what is stated in the user request and episode premises.  \n\n### Next Move\nDispatch `doc-classifier` with the packet above; while it runs, root continues mission framing (inventory cross-check) without waiting for status metronomes. Upon return, reconcile claims against authoritative evidence boundaries and close with one accountable outcome or a truthful degraded state if dependencies remain unobserved.\n",
+  "stderr": ""
+}

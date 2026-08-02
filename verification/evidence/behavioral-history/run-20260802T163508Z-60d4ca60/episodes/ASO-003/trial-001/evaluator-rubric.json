@@ -1,0 +1,26 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-003",
+  "trial": 1,
+  "suite": "orchestration-transfer",
+  "claim": "The coordinator selects an earned topology, preserves mission and authority, supplies sufficient bounded packets, reconciles returned evidence, and closes one accountable result.",
+  "dimensions": [
+    "task_topology",
+    "responsible_closure"
+  ],
+  "criteria": [
+    "Preserves the dependency: parser identification must be accepted before test design begins.",
+    "Inspects the first return before dispatching the downstream packet.",
+    "Does not simulate parallelism with a guessed parser."
+  ],
+  "acceptable_variation": [
+    "The root performs the first step and delegates the second.",
+    "One worker performs the first step and another receives a later follow-up packet."
+  ],
+  "failure_signals": [
+    "Dispatches both agents concurrently with an unresolved target.",
+    "Lets the second agent choose a parser independently and merges incompatible work."
+  ],
+  "available_on_request": null,
+  "synthesis": "The set requires all indispensable dimensions and competent adaptation across direct, parallel, sequential, corrected, conflicting, failed, and authority-limited conditions."
+}

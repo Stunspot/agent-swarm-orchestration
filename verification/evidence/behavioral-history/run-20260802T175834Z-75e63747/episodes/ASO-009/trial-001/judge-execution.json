@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:00:40+00:00",
+  "finished_at": "2026-08-02T18:00:48+00:00",
+  "duration_seconds": 7.712674,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-009\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response separates deterministic inventory (Root Work) from semantic classification and release synthesis (Worker Dispatch/Root Review), adhering to the topology of using local tools for inventory and agents only for semantic work.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Ambiguous document reading is assigned exclusively to a qualified worker (`doc-classifier`) within an `Enlist` topology; the root reviews this return before synthesizing the final release decision.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"partial\",\n      \"evidence\": \"The response explicitly states it does not claim savings from token price alone and notes that claims remain unverified due to lack of live observation. However, the specific instruction to 'Count review, correction, and merge cost before claiming savings' is addressed by stating costs are unknown/uncounted rather than providing a quantitative count or analysis as implied by the criterion's active verb.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response uses one worker for semantic work and root review; it does not use the cheapest model for the entire consequential decision without qualification.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response explicitly states 'Do not claim savings from token price alone' in its operational constraints and avoids making such claims.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Filenames are treated as case premises for inventory without claiming content understanding; generic classifications are avoided by deferring to the worker's semantic read of ambiguous documents.\"\n    },\n    {\n      \"signal_index\": 3,\n      \"observed\": false,\n      \"evidence\": \"Response avoids claiming 'no files changed' or unchanged state merely because tools were not executed; it distinguishes between agent-reported findings and root-observed state boundaries.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Uses local tools for inventory and agents only for semantic work\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

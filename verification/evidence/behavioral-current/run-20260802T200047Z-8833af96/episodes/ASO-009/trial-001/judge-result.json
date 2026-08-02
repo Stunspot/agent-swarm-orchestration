@@ -1,0 +1,48 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "The response explicitly separates 'Root Work (Direct)' for deterministic inventory/classification from the worker dispatch and root review of semantic interpretation/release synthesis."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Ambiguous document reading is assigned to a single qualified route ('Enlist' topology with one 'semantic-reader'), while authority for the final recommendation rests on the root's review of that specific return."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response states it does not claim savings from token price alone and notes 'No files changed', adhering to the requirement to count costs before claiming savings rather than making unsubstantiated efficiency claims."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "The response uses a qualified worker for semantic work and root review for the consequential decision; it does not use the cheapest model for the entire decision without qualification."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "No claim of savings from token price alone is present in the response text."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "The response explicitly states 'no actual inspection results invented beyond what is stated as available case premises' and avoids treating filenames as content understanding or supplying generic classifications for absent inputs."
+    },
+    {
+      "signal_index": 3,
+      "observed": true,
+      "evidence": "The response contains the statement 'No files changed; no external actions taken', which constitutes a claim of unchanged state without an authoritative readback from live tools in this context-only episode."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

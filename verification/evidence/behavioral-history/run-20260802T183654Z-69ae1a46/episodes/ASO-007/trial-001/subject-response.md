@@ -1,0 +1,1 @@
+*   **Recover:** The root preserves the completed schema inspection as `agent-reported` pending observation; it classifies the migration worker's failure as wrong-target context and replaces only that packet’s repository-root field after observing the authoritative path before reassigning solely to inspect migration history.

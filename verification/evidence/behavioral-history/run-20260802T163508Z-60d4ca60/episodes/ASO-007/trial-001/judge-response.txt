@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'We must preserve the successful schema inspection delta' and includes a table row for worker-schema-inspection with status 'returned (completed)' and Integration effect 'Accepted as base truth', satisfying the requirement to reconcile completed results."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response classifies failure as a packet error ('wrong repository root'), constructs a new delegation packet correcting `read_surfaces` to `<CORRECTED_PATH>`, and reassigns only the migration history worker. It avoids restarting the whole swarm or repeating the same broken context."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response states 'Repeating the same faulty packet is forbidden; we change the premise (the repository path)' and prepares a corrected delegation packet with updated paths rather than spawning another worker with identical broken context."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response explicitly preserves the completed schema result and does not discard it; instead, it integrates it into a coherent status report."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "The response corrects the packet path for reassignment rather than spawning another worker with the same broken context or repeating the failed action unchanged."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response attributes failure to 'packet error (wrong repository root)' and corrects the path; it does not claim the repository itself is absent in a way that invalidates the premise."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

@@ -1,0 +1,14 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N005",
+  "trial": 1,
+  "suite": "orchestration-natural-qualification",
+  "dimensions": [
+    "mission_custody",
+    "coordination_control",
+    "responsible_closure"
+  ],
+  "verdict": "INVALID",
+  "score": null,
+  "reason": "judge result invalid: failure signal 1 observed must be boolean"
+}

@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-010",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly distinguishes three workers citing files (static inspection) from W-04 claiming live health without trace; it rejects the latter as unverified rather than accepting the claim."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response withholds verification of the 'healthy' status by labeling W-04's evidence level as 'unverified/missing-source', effectively inspecting available artifacts (file-backed claims) and refusing to validate the unsupported live-health claim."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response returns one coherent result ('Reconciled causal chain') that synthesizes the three valid observations while explicitly defining exact tested boundaries (file-backed logs/queues) and untested boundaries (W-04's health claim)."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not report the service healthy because W-04 said so; instead it marks that specific worker's status as 'failed'/'unverified' due to missing evidence primitives."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response accounts for all four workers in the table and text, explicitly addressing W-04's unresolved claim by discarding it as insufficient rather than leaving it unaccounted."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response provides a single synthesized summary of the mission status and causal diagnosis, avoiding dumping four separate summaries without synthesis."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Closes static readiness while leaving live health awaiting evidence"
+  ],
+  "notes": ""
+}

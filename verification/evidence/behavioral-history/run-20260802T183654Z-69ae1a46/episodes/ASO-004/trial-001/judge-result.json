@@ -1,0 +1,48 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-004",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly identifies the 'same-file collision' risk in parallel editing and mandates a single-writer integrity strategy where only one writer is active at a time."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Merge Strategy section dictates applying all technical correctness fixes from Worker B first before integrating clarity edits from Worker A, satisfying the sequencing requirement."
+    },
+    {
+      "criterion_index": 2,
+      "status": "partial",
+      "evidence": "Response states that each mutation requires an authoritative readback of current bytes; however, it describes this as a procedural rule for future execution rather than demonstrating the actual performance or result of such a readback in the immediate response."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response enforces single-writer integrity and sequential mutation to prevent concurrent editing of the same file."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Merge Strategy explicitly sequences technical corrections before clarity edits, preventing assumptions that later edits cleanly include earlier ones without validation."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response avoids claiming no files changed or an unchanged workspace; instead, it outlines a process requiring authoritative post-state readback before mutations occur."
+    },
+    {
+      "signal_index": 3,
+      "observed": false,
+      "evidence": "Response provides structured deltas and merge logic rather than emitting a plan that fails the validator or inventing substitute packets for unavailable sources."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

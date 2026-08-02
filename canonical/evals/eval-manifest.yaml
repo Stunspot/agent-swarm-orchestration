@@ -1,0 +1,9 @@
+{
+  "format": "cd-augment-eval/v1",
+  "package_version": "0.1.0",
+  "episode_mode": "isolated",
+  "files": ["orchestration-transfer-cases.yaml", "orchestration-natural-qualification-cases.yaml"],
+  "indispensable_dimensions": ["swarm_admission", "authority_preservation", "single_writer_integrity", "evidence_reconciliation", "responsible_closure"],
+  "synthesis": "Failure in any indispensable dimension defeats readiness; other weaknesses require targeted repair and rerun without averaging away the boundary failure.",
+  "result_authority": "The prompted suite supplies deterministic regression evidence. The natural suite supplies bounded context-only qualification evidence when independently reviewed. Neither establishes installation, live Codex execution, publication, or customer approval."
+}

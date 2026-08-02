@@ -1,0 +1,52 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N004",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'No overlapping edits were permitted' and assigns distinct roles (technical vs clarity) to prevent concurrent writes on the guide."
+    },
+    {
+      "criterion_index": 1,
+      "status": "partial",
+      "evidence": "Response establishes one writer via root custody ('root performs the final merge') but does not demonstrate 'read-only recommendations' or an explicit authoritative current-byte readback before mutation as it synthesizes a new artifact rather than editing existing bytes."
+    },
+    {
+      "criterion_index": 2,
+      "status": "partial",
+      "evidence": "Response states the intent to apply 'Technical corrections must be applied first... followed by clarity edits' but fails to execute an authoritative current-byte readback before mutation due to unavailable live write tools."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response prevents concurrent writers by enforcing a single-writer rule and root-mediated merge; no simultaneous writes occurred."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Technical corrections are prioritized in the stated integration logic ('applying technical corrections first') before clarity edits; no unjustified reversal observed."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response acknowledges lack of live mutation observation and explicitly notes that synthesis is performed via root reasoning without assuming later edits contain earlier bytes without verification."
+    }
+  ],
+  "acceptable_variation_used": [
+    {
+      "variation_index": 0,
+      "description": "Assigns one writer (root) and read-only reviewers (agents), preserving byte-custody guarantees via root synthesis rather than live tool execution."
+    },
+    {
+      "variation_index": 1,
+      "description": "Preserves boundary correctly by deferring mutation to a synthesized outcome where external verification of final bytes was not executed in this episode."
+    }
+  ],
+  "notes": ""
+}

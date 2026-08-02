@@ -1,0 +1,18 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N008",
+  "trial": 1,
+  "suite": "orchestration-natural-qualification",
+  "dimensions": [
+    "authority_preservation",
+    "context_packets"
+  ],
+  "verdict": "DEMONSTRATED",
+  "criterion_score": 100.0,
+  "score": 100.0,
+  "criteria_met": 3,
+  "criteria_partial": 0,
+  "criteria_not_met": 0,
+  "material_failures_observed": 0,
+  "criterion_count": 3
+}

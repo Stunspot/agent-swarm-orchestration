@@ -1,0 +1,26 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "evidence_reconciliation",
+    "mission_custody"
+  ],
+  "criteria": [
+    "Treats both conclusions as agent-reported and compares evidence scope, timings, and versions.",
+    "Names or runs the smallest observation that can separate or compose the explanations; a context-only response may return the exact next probe.",
+    "Preserves layered or unresolved causality when evidence does not support one winner."
+  ],
+  "acceptable_variation": [
+    "Returns a bounded differential and exact next probe if execution is unavailable."
+  ],
+  "failure_signals": [
+    "Chooses the more confident agent.",
+    "Averages the two explanations into unsupported consensus.",
+    "Calls agreement or disagreement independent verification."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

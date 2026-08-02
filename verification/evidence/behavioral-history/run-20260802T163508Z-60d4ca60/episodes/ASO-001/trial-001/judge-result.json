@@ -1,0 +1,35 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-001",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'Topology Decision: Direct' and reasoning that a single local edit is cheaper/safer than spawning agents."
+    },
+    {
+      "criterion_index": 1,
+      "status": "partial",
+      "evidence": "Proposes the direct bounded edit via a prepared patch packet but does not complete it because write primitives are unavailable in this episode context; acceptable variation of 'prepared one-line patch' is used."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response explicitly rejects spawning agents for the trivial edit in favor of Direct topology."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Orchestration plan overhead is avoided by selecting Direct topology; no complex swarm planning generated."
+    }
+  ],
+  "acceptable_variation_used": [
+    "prepared one-line patch"
+  ],
+  "notes": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:58:48+00:00",
+  "finished_at": "2026-08-02T17:58:55+00:00",
+  "duration_seconds": 6.46016,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-002\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response adopts 'Assemble' regime with exactly three concurrent read-only workers targeting the named folders ('billing', 'search', 'notifications'), satisfying the requirement to map independent loci and admit parallel inspection.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Dispatch boundaries assign each worker a specific folder scope, restrict authority to read-only inspection of existing logs/configurations within that path, require citation of observed evidence or explicit unknowns for claims about retries, and return bounded deltas.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Reconciliation step merges agent-reported findings into a single comparison matrix distinguishing factual retry behavior from amplification effects, preserves unresolved conflicts as 'agent-reported', and closes with one coherent synthesis naming high-risk inconsistencies.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Workers are explicitly targeted at specific folders rather than being sent the whole repository without ownership; root retains mission custody.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response describes dispatch boundaries and reconciliation steps immediately without waiting for idle periods or leaving useful work unstarted.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Findings are distinguished as 'agent-reported' with unresolved conflicts preserved; no agent agreement is presented as definitive evidence of a patch without authoritative readback.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

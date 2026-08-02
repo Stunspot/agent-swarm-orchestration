@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:18:21+00:00",
+  "finished_at": "2026-08-02T19:18:28+00:00",
+  "duration_seconds": 7.2411,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N010\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response includes a table row for each of the four workers (W-1 through W-4) with their specific returned claims and evidence levels explicitly listed under 'Worker Dispositions'.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"The response states for Worker W-4: 'Live service reports healthy; no execution trace available in current episode (tool limitation)' and notes that health alone does not establish the causal chain, thereby keeping live health unverified due to absent traces.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response concludes with 'Terminal State: closed' in the Final Disposition section and explicitly states 'no further action required unless user requests production test', avoiding unrelated follow-up or new plans.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"The response does not claim W-1's file observations are root-observed (cites 'agent-reported') nor claims live health is verified; it explicitly notes the lack of execution trace.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"All four workers and their specific unsupported or partial claims are accounted for in the 'Worker Dispositions' table with no worker left unaccounted for.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response ends by closing the mission state and does not add a new plan or authority request after being told to finish; it only mentions future actions contingent on user requests.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Uses compact bullets/table format as long as it closes rather than opening a new workflow\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

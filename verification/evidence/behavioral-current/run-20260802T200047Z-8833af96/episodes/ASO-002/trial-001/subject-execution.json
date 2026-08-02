@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T20:03:04+00:00",
+  "finished_at": "2026-08-02T20:03:10+00:00",
+  "duration_seconds": 6.097515,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "- **Topology:** Adopt `Assemble` regime with exactly three concurrent read-only workers targeting `billing`, `search`, and `notifications`; root retains mission custody while agents inspect their respective folders for retry handling observations and unknowns without writing to shared state.  \n- **Dispatch Boundaries:** Each worker receives a packet scoped strictly to its named folder, authority limited to `read` on that directory’s logs/config/artifacts, deliverable defined as cited evidence locations plus explicit unknowns regarding retry semantics or idempotency gaps; no generic tests, schemas, paths, sample data, or hypothetical findings are drafted.  \n- **Reconciliation Plan:** Root waits for all three returns (agent-reported status), then merges claims by comparing observed retry behaviors across the three domains to identify the riskiest inconsistency—e.g., a missing idempotency key in one folder versus acknowledged redelivery in another—while preserving unresolved evidence conflict until authoritative readback or user resolution.  \n- **Terminal State:** If any worker fails, stalls, or returns unusable evidence due to capability limits (no live tool execution), root marks that slice `PARTIAL — DEPENDENCY UNAVAILABLE`, names the missing source/observation method, holds downstream synthesis pending it, and reports only the bounded conclusion earned from available independent slices without inventing completion states.\n",
+  "stderr": ""
+}

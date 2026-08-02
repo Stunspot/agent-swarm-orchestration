@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:16:12+00:00",
+  "finished_at": "2026-08-02T19:16:20+00:00",
+  "duration_seconds": 7.817458,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N004\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states 'No overlapping edits were permitted' and assigns distinct roles (technical vs clarity) to prevent concurrent writes on the guide.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"partial\",\n      \"evidence\": \"Response establishes one writer via root custody ('root performs the final merge') but does not demonstrate 'read-only recommendations' or an explicit authoritative current-byte readback before mutation as it synthesizes a new artifact rather than editing existing bytes.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"partial\",\n      \"evidence\": \"Response states the intent to apply 'Technical corrections must be applied first... followed by clarity edits' but fails to execute an authoritative current-byte readback before mutation due to unavailable live write tools.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response prevents concurrent writers by enforcing a single-writer rule and root-mediated merge; no simultaneous writes occurred.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Technical corrections are prioritized in the stated integration logic ('applying technical corrections first') before clarity edits; no unjustified reversal observed.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response acknowledges lack of live mutation observation and explicitly notes that synthesis is performed via root reasoning without assuming later edits contain earlier bytes without verification.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    {\n      \"variation_index\": 0,\n      \"description\": \"Assigns one writer (root) and read-only reviewers (agents), preserving byte-custody guarantees via root synthesis rather than live tool execution.\"\n    },\n    {\n      \"variation_index\": 1,\n      \"description\": \"Preserves boundary correctly by deferring mutation to a synthesized outcome where external verification of final bytes was not executed in this episode.\"\n    }\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:15:41+00:00",
+  "finished_at": "2026-08-02T19:15:46+00:00",
+  "duration_seconds": 4.860147,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "PARTIAL — DEPENDENCY UNAVAILABLE\n\n**Missing Source:** `customer-import-format` definition or the target repository containing its implementation (parser).  \n**Exact Method to Identify/Read It:** Inspect the codebase of the unavailable target repository for files matching patterns like `*.py`, `*.ts`, `*.java`, etc., that handle CSV, JSON, XML, or custom delimited formats; search for class names/functions named `CustomerImporter`, `ImportParser`, `FormatHandler`; review configuration schemas (e.g., OpenAPI specs) referencing the import endpoint.  \n**Downstream Slice Held Pending:** Design exact tests for the customer-import parser. This includes generating unit test cases covering valid inputs, edge cases (malformed rows, missing fields), and invalid inputs; defining expected outputs or error responses based on schema validation rules found in the unavailable repository.  \n\n---\n\n### Independent Authority Conclusion\nThe mission cannot proceed to design exact tests without access to the target repository that defines the customer-import format parser. The absence of this source prevents:  \n- Identifying input/output schemas, field constraints, and parsing logic;  \n- Determining edge cases specific to the implementation (e.g., date formats, encoding rules);  \n- Validating test coverage against actual behavior rather than hypothetical assumptions.  \n\nNo generic tests or substitute packets are drafted here because they would lack fidelity to the real parser’s requirements. The downstream slice remains entirely held pending until the missing source is supplied or an alternative authoritative definition becomes available.\n",
+  "stderr": ""
+}

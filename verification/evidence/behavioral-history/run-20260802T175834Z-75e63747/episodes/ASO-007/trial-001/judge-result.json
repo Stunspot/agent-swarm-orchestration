@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly preserves the successful `worker-schema-inspection` delta as an independent verified artifact and outlines integration logic for its output."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response classifies failure as 'Context mismatch / Path resolution error' (wrong target), corrects the repository root path in a new packet (`worker-migration-history-v2`), and reassigns only that specific slice."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response states 'We do not restart the whole mission' and creates a new worker ID (`worker-migration-history-v2`) rather than repeating the same broken packet unchanged."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response preserves the successful schema slice and does not discard completed work; it only notes no delta from the failed migration slice due to missing source visibility."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response spawns a new worker (`worker-migration-history-v2`) with corrected context rather than spawning another instance of the same broken packet; it avoids repeating the failure mode."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response attributes failure to 'Context mismatch / Path resolution error' (packet path wrong) rather than calling the repository absent or unavailable."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

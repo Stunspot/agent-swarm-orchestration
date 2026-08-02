@@ -1,0 +1,48 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-004",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly defines Worker A and Worker B as 'read-only' on the guide with no direct mutation until merge. It enforces a single-writer integrity where only the root produces the final artifact, thereby identifying that simultaneous writers are not allowed."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response states: 'Resolve factual corrections first; apply style polish only after technical correctness is settled.' This sequences the technical correction before clarity. Additionally, it assigns separate comment-only review roles to both workers and designates the root as the sole writer."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response mandates: 'Reconcile comment-style recommendations from both workers against the authoritative current bytes of the guide' before merging. It requires marking state as 'agent-reported until root observes... or receives authoritative readback,' satisfying the requirement for a readback gate."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response prevents concurrent editing by restricting workers to 'read-only' authority and reserving write permissions exclusively for the root owner during the merge phase."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response explicitly sequences operations: 'Resolve factual corrections first; apply style polish only after technical correctness is settled,' ensuring later edits do not assume clean inclusion without readback or precedence."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response avoids claiming unchanged state by stating: 'No mutation was executed in this episode; target state remains unobserved,' and requires authoritative post-state evidence for any claim of change."
+    },
+    {
+      "signal_index": 3,
+      "observed": false,
+      "evidence": "Response provides a textual coordination plan describing topology decisions (Assemble), worker packets, merge gates, and return shapes rather than emitting an executable structured block that would fail validation in this context."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

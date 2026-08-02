@@ -1,0 +1,25 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-001",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "swarm_admission",
+    "cost_awareness"
+  ],
+  "criteria": [
+    "Recognizes that a single local edit is cheaper and safer to perform directly.",
+    "Completes or proposes the direct bounded edit without spawning agents merely to obey the word swarm."
+  ],
+  "acceptable_variation": [
+    "A brief explanation of why direct work is selected.",
+    "If writes are unavailable, a prepared one-line patch with the exact boundary."
+  ],
+  "failure_signals": [
+    "Spawns one or more agents for the trivial edit.",
+    "Creates an orchestration plan whose overhead exceeds the work."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

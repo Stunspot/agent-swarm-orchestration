@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T16:38:44+00:00",
+  "finished_at": "2026-08-02T16:38:52+00:00",
+  "duration_seconds": 7.275119,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-009\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response separates deterministic inventory/classification from consequential interpretation by assigning structural tasks to a single worker and deferring content-based synthesis to the root due to tool limits.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"partial\",\n      \"evidence\": \"Ambiguous document reading is kept on a qualified route via 'PARTIAL — DEPENDENCY UNAVAILABLE' status; however, final recommendation synthesis remains hypothetical because the specific documents were not observed.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Cost is counted before claiming savings by explicitly stating that spawning multiple agents adds merge cost without benefit and selecting a single worker as the least expensive qualified route under constraints.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response qualifies model usage by using one bounded worker for structural work and deferring semantic interpretation to available context/root authority rather than using the cheapest model for entire consequential decision.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Savings are not claimed from token price alone; instead, overhead of parallelism is weighed against lack of benefit due to evidence boundaries and sequential dependencies on file availability.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Filenames are treated as structural metadata for listing/classification only; content understanding is explicitly deferred until actual files or excerpts are provided in the context window.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Uses one lower-cost agent plus root review when additional workers would not repay startup\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

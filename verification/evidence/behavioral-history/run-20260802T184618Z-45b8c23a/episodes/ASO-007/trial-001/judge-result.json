@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states: 'Retain the completed schema inspection return in an agent-reported status pending root observation'."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response classifies failure as 'wrong-target context error', requires reading from a corrected repository root ('read from the corrected repository root'), and reassigns only migration history."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response explicitly avoids inventing paths or restarting: 'without inventing new paths or restarting the swarm' and dispatches only the corrected slice."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response retains completed work rather than discarding it."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response does not spawn another worker with the broken context; instead, it reassigns existing logic to a corrected root without repeating the failure state."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response attributes error to 'wrong-target context' rather than calling the repository absent."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

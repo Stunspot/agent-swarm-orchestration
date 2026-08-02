@@ -1,0 +1,18 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-010",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "dimensions": [
+    "evidence_reconciliation",
+    "responsible_closure"
+  ],
+  "verdict": "DEMONSTRATED",
+  "criterion_score": 100.0,
+  "score": 100.0,
+  "criteria_met": 3,
+  "criteria_partial": 0,
+  "criteria_not_met": 0,
+  "material_failures_observed": 0,
+  "criterion_count": 3
+}

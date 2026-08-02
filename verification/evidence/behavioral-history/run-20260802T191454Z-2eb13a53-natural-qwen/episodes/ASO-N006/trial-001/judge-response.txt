@@ -1,0 +1,48 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N006",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "The response explicitly lists 'Worker A Claim' and 'Worker B Claim', stating they remain as competing hypotheses awaiting discrimination. It does not merge them or declare one resolved."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response proposes a specific measurement plan: dispatching 'Worker-DB' to inspect query logs and 'Worker-Rend' to analyze render engine metrics for the same export window. This aligns with proposing job-aligned measurements."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response explicitly states: 'Do not dispatch a new worker or attempt verification until the missing trace_logs... is provided' and refuses to merge claims into consensus without evidence."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "The response does not choose a winner; it explicitly states the coordinator concludes current evidence is insufficient to distinguish between DB and Rendering."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "The response avoids calling either return verified or independently observed. It notes 'Verification Performed: None; traces are absent' because the specific trace logs were missing from inputs."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "The response does not invent paths, traces, endpoints, or a patch. It identifies that 'trace_logs... are not present in this episode's inputs' and halts speculation until they are supplied."
+    }
+  ],
+  "acceptable_variation_used": [
+    {
+      "variation_name": "layered_cause_hypothesis",
+      "description": "The response treats the conflicting claims as mutually exclusive hypotheses pending discriminating evidence, rather than inventing a layered cause without data. It preserves dissent until traces are supplied."
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T20:04:20+00:00",
+  "finished_at": "2026-08-02T20:04:24+00:00",
+  "duration_seconds": 4.189662,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "- **Topology:** Adopt `enlist` regime with exactly one read-only worker to compare the private launch draft against current competitor pages using only the minimum necessary context from the available private-draft premise; root retains mission custody and performs the merge without external publishing or account changes.  \n- **Worker Packet Boundaries:** The single worker receives an objective bounded to comparing specific sections of the provided private-draft content with publicly accessible competitor page data, operates under read-only authority restricted to those sources, excludes any write surfaces or external actions, and returns a concise evidence-backed delta identifying alignment gaps or competitive differentiators.  \n- **Correction Handling:** Any teaser suggestion from the worker is immediately rejected as prohibited; prior state remains agent-reported until authoritative post-state readback occurs (which does not happen in this episode), so no files are claimed to have changed and all claims remain unverified beyond what was explicitly observed.  \n- **Closure:** The root merges the single returned comparison delta into a bounded synthesis that names the worker’s findings, acknowledges the absence of live mutation or external verification, and delivers one coherent conclusion without drafting substitute packets, hypothetical downstream content, or reauthorization requests for closed branches.\n",
+  "stderr": ""
+}

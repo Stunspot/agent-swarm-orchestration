@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:47:01+00:00",
+  "finished_at": "2026-08-02T18:47:05+00:00",
+  "duration_seconds": 4.101535,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "**Mission:** Resolve conflicting agent reports on export latency causes without choosing a single root cause prematurely.  \n**Topology:** `Direct` (Root custody only; no workers dispatched).  \n\n### Current State Summary\n- **Agent A Claim:** Latency correlates with database query time (`agent-reported`).  \n- **Agent B Claim:** Latency correlates with PDF render time (`agent-reported`).  \n- **Evidence Level:** Both claims remain unverified by the root. Underlying traces are absent from this episode; no authoritative post-state readback exists to confirm or reconcile these deltas yet.  \n\n### Next Move\nThe mission pauses at a dependency boundary: discriminating observation is required before integration. The next executable action is an event-driven wait for user steering (e.g., providing trace data, logs, or metrics) that enables job-aligned measurement of database-query duration and PDF-render duration for the same slow exports. Until such evidence arrives, no worker dispatch occurs; the root retains custody to integrate claims once authoritative state becomes available.  \n\n**Disposition:** `AWAITING-EVIDENCE` — pending user-provided traces or explicit authorization to proceed with a new observation plan.\n",
+  "stderr": ""
+}

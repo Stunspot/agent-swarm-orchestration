@@ -1,0 +1,1 @@
+Three cited-file returns remain agent-reported pending root observation. The live-health return remains agent-reported and unverified because it has no execution trace. Mission closed at that bounded evidence state; no further action is proposed.

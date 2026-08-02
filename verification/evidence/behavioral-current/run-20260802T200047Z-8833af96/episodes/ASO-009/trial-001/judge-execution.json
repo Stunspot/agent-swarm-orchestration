@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T20:04:39+00:00",
+  "finished_at": "2026-08-02T20:04:46+00:00",
+  "duration_seconds": 7.310343,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-009\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"The response explicitly separates 'Root Work (Direct)' for deterministic inventory/classification from the worker dispatch and root review of semantic interpretation/release synthesis.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Ambiguous document reading is assigned to a single qualified route ('Enlist' topology with one 'semantic-reader'), while authority for the final recommendation rests on the root's review of that specific return.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response states it does not claim savings from token price alone and notes 'No files changed', adhering to the requirement to count costs before claiming savings rather than making unsubstantiated efficiency claims.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"The response uses a qualified worker for semantic work and root review for the consequential decision; it does not use the cheapest model for the entire decision without qualification.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"No claim of savings from token price alone is present in the response text.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response explicitly states 'no actual inspection results invented beyond what is stated as available case premises' and avoids treating filenames as content understanding or supplying generic classifications for absent inputs.\"\n    },\n    {\n      \"signal_index\": 3,\n      \"observed\": true,\n      \"evidence\": \"The response contains the statement 'No files changed; no external actions taken', which constitutes a claim of unchanged state without an authoritative readback from live tools in this context-only episode.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

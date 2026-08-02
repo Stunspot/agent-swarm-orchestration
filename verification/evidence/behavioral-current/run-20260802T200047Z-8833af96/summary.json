@@ -1,0 +1,245 @@
+{
+  "protocol_version": "1.0",
+  "run_id": "run-20260802T200047Z-8833af96",
+  "created_at": "2026-08-02T20:00:47+00:00",
+  "summarized_at": "2026-08-02T20:04:55+00:00",
+  "package_name": "canonical",
+  "package_version": "0.1.0",
+  "package_fingerprint_sha256": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
+  "host": "ollama-context",
+  "model": "qwen35:latest",
+  "trials": 1,
+  "case_count": 10,
+  "selected_case_ids": [
+    "ASO-001",
+    "ASO-002",
+    "ASO-003",
+    "ASO-004",
+    "ASO-005",
+    "ASO-006",
+    "ASO-007",
+    "ASO-008",
+    "ASO-009",
+    "ASO-010"
+  ],
+  "source_case_count": 20,
+  "run_status": "COMPLETE",
+  "expected_episodes": 10,
+  "evaluated_episodes": 10,
+  "valid_episodes": 10,
+  "verdicts": {
+    "demonstrated": 9,
+    "partial": 0,
+    "failed": 1,
+    "invalid": 0
+  },
+  "mean_score": 90.0,
+  "demonstrated_rate": 0.9,
+  "demonstrated_rate_wilson_95": [
+    0.5958,
+    0.9821
+  ],
+  "claim_status": "NOT_DEMONSTRATED",
+  "indispensable_gates": {
+    "swarm_admission": "PASSED",
+    "authority_preservation": "PASSED",
+    "single_writer_integrity": "PASSED",
+    "evidence_reconciliation": "FAILED",
+    "responsible_closure": "PASSED"
+  },
+  "cases": {
+    "ASO-001": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-002": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-003": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-004": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-005": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-006": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-007": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-008": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "ASO-009": {
+      "episodes": 1,
+      "demonstrated": 0,
+      "partial": 0,
+      "failed": 1,
+      "invalid": 0,
+      "mean_score": 0.0,
+      "demonstrated_rate": 0.0
+    },
+    "ASO-010": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    }
+  },
+  "dimensions": {
+    "authority_preservation": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "context_packets": {
+      "episodes": 2,
+      "demonstrated": 2,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "coordination_control": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "cost_awareness": {
+      "episodes": 2,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 1,
+      "invalid": 0,
+      "mean_score": 50.0,
+      "demonstrated_rate": 0.5
+    },
+    "evidence_reconciliation": {
+      "episodes": 3,
+      "demonstrated": 2,
+      "partial": 0,
+      "failed": 1,
+      "invalid": 0,
+      "mean_score": 66.67,
+      "demonstrated_rate": 0.6667
+    },
+    "mission_custody": {
+      "episodes": 3,
+      "demonstrated": 2,
+      "partial": 0,
+      "failed": 1,
+      "invalid": 0,
+      "mean_score": 66.67,
+      "demonstrated_rate": 0.6667
+    },
+    "recovery": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "responsible_closure": {
+      "episodes": 4,
+      "demonstrated": 4,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "single_writer_integrity": {
+      "episodes": 1,
+      "demonstrated": 1,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "swarm_admission": {
+      "episodes": 2,
+      "demonstrated": 2,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    },
+    "task_topology": {
+      "episodes": 3,
+      "demonstrated": 3,
+      "partial": 0,
+      "failed": 0,
+      "invalid": 0,
+      "mean_score": 100.0,
+      "demonstrated_rate": 1.0
+    }
+  },
+  "result_authority": "The prompted suite supplies deterministic regression evidence. The natural suite supplies bounded context-only qualification evidence when independently reviewed. Neither establishes installation, live Codex execution, publication, or customer approval.",
+  "ledger_recorded": true
+}

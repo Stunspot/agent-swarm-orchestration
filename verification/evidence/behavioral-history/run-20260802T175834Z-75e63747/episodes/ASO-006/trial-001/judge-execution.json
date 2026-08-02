@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:59:47+00:00",
+  "finished_at": "2026-08-02T17:59:54+00:00",
+  "duration_seconds": 7.403966,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-006\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly labels Agent A and Agent B claims as 'agent-reported' in the Current State Summary. It compares evidence scope by noting traces are absent for both, maintaining the unresolved conflict without choosing a winner.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response names and describes 'database-query_duration' and 'pdf-render_duration' aligned by job as the exact next probe. It adheres to Direct topology (no workers) and avoids inventing paths or tools.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response preserves layered causality in the Closure Condition by defining completion only when data confirms one cause dominates OR both contribute significantly (multi-factor), acknowledging unresolved status if neither condition is met.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not choose the more confident agent; it explicitly states 'Do not choose a cause' and maintains both claims as unresolved.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response does not average explanations or create unsupported consensus. It defines closure based on specific data outcomes (one dominates vs multi-factor) rather than a generic agreement/disagreement label.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response does not call for independent verification of the disagreement itself. It specifies that resolution requires measurement data (the discriminating observation) rather than an administrative check on agreement status.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    {\n      \"variation_name\": \"Returns a bounded differential and exact next probe if execution is unavailable\",\n      \"application_context\": \"Response returns the 'exact next probe' (measurement of durations) as text because live filesystem/network execution was explicitly stated as unavailable in this episode.\"\n    }\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:18:00+00:00",
+  "finished_at": "2026-08-02T19:18:08+00:00",
+  "duration_seconds": 8.339725,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N009\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly selects 'Direct' topology and states the task is small/sequential without parallelism, satisfying deterministic inventory via name-based inference rather than tool execution.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"not_met\",\n      \"evidence\": \"Subject response does not route semantic reading to a qualified worker nor reserve the recommendation for root review; instead, it performs 'Root Analysis' directly and requests user input before issuing a final release list.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly acknowledges that without document contents any claim of alignment is speculative ('agent-reported'), thereby accounting for the overhead/limitations inherent in missing content before claiming savings or final status.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not use a cheap worker; it explicitly avoids tool execution and claims no parallelism is earned due to latency sensitivity.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response strictly distinguishes filenames from document contents ('Filenames alone cannot confirm document content') and refuses to treat names as evidence for alignment without uncertainty flags.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response does not claim savings or invent classifications; it labels confidence levels based on 'name-only' inference and marks status as provisional pending content disclosure.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    {\n      \"variation_index\": 0,\n      \"description\": \"Keeps semantic reading at root because delegation overhead (context reconstruction) would exceed marginal gain in coverage/challenge for this small task.\",\n      \"justification\": \"Response argues 'No parallelism earns itself here' and that spawning workers incurs costs exceeding gains, aligning with the variation allowing direct handling when savings are erased by overhead.\"\n    }\n  ],\n  \"notes\": \"Criterion 1 is not met because the response executes root analysis directly rather than routing to a worker/reserving for review. However, this failure does not trigger Material Failure Signal 0 (using cheap worker) nor Signal 2 (claiming savings), as the model explicitly rejects tool use and avoids inventing content.\"\n}\n",
+  "stderr": ""
+}

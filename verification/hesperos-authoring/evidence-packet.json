@@ -1,0 +1,97 @@
+{
+    "format":  "cd-hesperos-evidence-packet/v1",
+    "run_id":  "aso-0.1.0-hesperos-20260802-05",
+    "product":  {
+                    "name":  "Agent Swarm Orchestration",
+                    "slug":  "agent-swarm-orchestration",
+                    "version":  "0.1.0",
+                    "owner":  "Collaborative Dynamics",
+                    "target_host":  "Codex",
+                    "promise":  "Coordinate multiple Codex agents when parallel cognition earns its cost, while preserving one mission, authority envelope, evidence chain, and merge owner."
+                },
+    "audience":  [
+                     "Codex users coordinating multi-agent work",
+                     "AI systems designers and technical leads",
+                     "Non-coder product owners who need safe, legible orchestration"
+                 ],
+    "authoritative_sources":  [
+                                  "design-record/agent-swarm-orchestration-augment-map.md",
+                                  "design-record/agent-swarm-orchestration-build-state.md",
+                                  "package-manifest.json",
+                                  "provenance.md",
+                                  "canonical/skills/agent-swarm-orchestration/SKILL.md",
+                                  "canonical/skills/agent-swarm-orchestration/references/",
+                                  "canonical/skills/agent-swarm-orchestration/assets/",
+                                  "canonical/skills/agent-swarm-orchestration/scripts/validate_swarm_plan.py",
+                                  "canonical/skills/agent-swarm-orchestration/tests/test_validate_swarm_plan.py",
+                                  "canonical/evals/",
+                                  "verification/evidence/initial-validation.md",
+                                  "verification/evidence/forward-use-notes.md",
+                                  "verification/evidence/behavioral-testbed-summary.md"
+                              ],
+    "skill_entrypoints":  [
+                              {
+                                  "name":  "agent-swarm-orchestration",
+                                  "path":  "canonical/skills/agent-swarm-orchestration/SKILL.md",
+                                  "activation":  "Requests to decide, coordinate, recover, or review multi-agent Codex work."
+                              }
+                          ],
+    "installation_units":  {
+                               "codex":  "release/codex/agent-swarm-orchestration",
+                               "release_asset":  "release-assets/agent-swarm-orchestration-v0.1.0.zip",
+                               "state":  "generated after authoring dispatch; Codex profile PASS; 17-file byte parity with canonical; ZIP has one matching top-level folder and direct SKILL.md"
+                           },
+    "representative_workflows":  [
+                                     "Decide whether a task earns multiple agents.",
+                                     "Inspect independent repository loci in parallel under read-only authority.",
+                                     "Sequence dependent specialist work.",
+                                     "Use one writer plus an independent reviewer for a shared file.",
+                                     "Reconcile conflicting returns against authoritative evidence.",
+                                     "Redirect or interrupt affected workers after a user correction.",
+                                     "Recover a failed worker without restarting accepted work."
+                                 ],
+    "validation":  {
+                       "structural":  "canonical Codex profile PASS",
+                       "bundle":  "pre-documentation bundle profile PASS",
+                       "validator_tests":  "10 passed, including lexical path aliases and malformed nested fields",
+                       "template":  "VALID cd-agent-swarm-plan/v1",
+                       "fresh_context_use":  "3 bounded exercises plus 10 isolated natural Codex decision cases at the final fingerprint",
+                       "codex_release":  "17-file exact byte parity with canonical and Codex profile PASS",
+                       "release_asset":  "one top-level agent-swarm-orchestration folder, direct SKILL.md, 17 files",
+                       "installed_host":  "not tested",
+                       "codex_behavior":  "Final fingerprint 8833af96: independent TestForge semantic review passed all 10 isolated natural Codex decision cases; one trial per case; live collaboration tools were not executed",
+                       "local_model_behavior":  "Final fingerprint 8833af96 prompted qwen regression: 10 valid episodes, 9 demonstrated, 1 failed; deterministic checker failed the unsupported unchanged-state claim; retained natural-qwen transfer evidence is also negative"
+                   },
+    "known_limits":  [
+                         "The skill does not create agent tools or enlarge user authority.",
+                         "Exact collaboration tool names, schemas, slots, and lifecycle semantics must be read from the live Codex task envelope.",
+                         "The validator normalizes lexical slash, dot-segment, and case aliases, but does not resolve filesystem-specific aliases, semantic quality, undeclared overlap, or reconciled sequential bytes.",
+                         "The natural Codex qualification passed all ten decision cases in independent semantic review, but used one isolated trial per case and did not exercise live Codex tools.",
+                         "Prompted and natural qwen evidence does not establish smaller-model transfer.",
+                         "Background execution after the Codex task ends is not provided.",
+                         "Installation, discovery, implicit routing, clean-task invocation, health, and customer outcomes are not established.",
+                         "Other agent harnesses are outside version 0.1.0."
+                     ],
+    "customer_docs_required":  [
+                                   "START-HERE.md",
+                                   "README.md",
+                                   "INSTALLATION.md",
+                                   "WORKFLOWS.md",
+                                   "TROUBLESHOOTING.md",
+                                   "TRUST-AND-LIMITS.md",
+                                   "SUPPORT.md",
+                                   "host-matrix.md"
+                               ],
+    "documentation_requirements":  [
+                                       "Lead with fit and the shortest route to first value.",
+                                       "Use Codex-only installation and removal guidance; do not mention Claude as a supported host.",
+                                       "Separate canonical source, installable Codex folder, and ZIP release asset.",
+                                       "Include prerequisites, observable success, branches, safe stopping, recovery, and proof of completion.",
+                                       "Describe privacy, authority, agent-report versus verified evidence, single-writer integrity, and tool-contract volatility.",
+                                       "Keep installation, discovery, invocation, health, publication, and customer validation as separate claims.",
+                                       "Provide support, maintenance, change triggers, and removal/rollback."
+                                   ],
+    "support_owner":  "Collaborative Dynamics",
+    "rights":  "Original Collaborative Dynamics product; linked sources remain with their owners.",
+    "authoring_scope":  "authored"
+}

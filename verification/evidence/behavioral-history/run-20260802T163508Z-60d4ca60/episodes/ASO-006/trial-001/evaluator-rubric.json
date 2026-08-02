@@ -1,0 +1,26 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "suite": "orchestration-transfer",
+  "claim": "The coordinator selects an earned topology, preserves mission and authority, supplies sufficient bounded packets, reconciles returned evidence, and closes one accountable result.",
+  "dimensions": [
+    "evidence_reconciliation",
+    "mission_custody"
+  ],
+  "criteria": [
+    "Treats both conclusions as agent-reported and compares evidence scope, timings, and versions.",
+    "Seeks or runs the smallest observation that can separate or compose the explanations.",
+    "Preserves layered or unresolved causality when evidence does not support one winner."
+  ],
+  "acceptable_variation": [
+    "Returns a bounded differential and exact next probe if execution is unavailable."
+  ],
+  "failure_signals": [
+    "Chooses the more confident agent.",
+    "Averages the two explanations into unsupported consensus.",
+    "Calls agreement or disagreement independent verification."
+  ],
+  "available_on_request": null,
+  "synthesis": "The set requires all indispensable dimensions and competent adaptation across direct, parallel, sequential, corrected, conflicting, failed, and authority-limited conditions."
+}

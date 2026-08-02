@@ -1,0 +1,937 @@
+{
+    "manifest_version":  "1.0",
+    "target":  {
+                   "name":  "Agent Swarm Orchestration",
+                   "revision":  "0.1.0-8833af96",
+                   "target_class":  "release_candidate"
+               },
+    "scope":  {
+                  "included":  [
+                                   "canonical Codex skill runtime and eval definitions",
+                                   "released Codex skill and ZIP topology",
+                                   "customer documentation and Hesperos authorship provenance",
+                                   "deterministic validator tests",
+                                   "fresh-context forward-use probes",
+                                   "prompted local-model regression evidence and natural Codex decision-only qualification",
+                                   "private source-custody release readiness"
+                               ],
+                  "excluded":  [
+                                   "Claude or any non-Codex harness",
+                                   "clean-host installation, discovery, implicit routing, and invocation",
+                                   "public publication and directory submission",
+                                   "live external actions and customer outcomes",
+                                   "automated cross-harness testing and repair"
+                               ],
+                  "constraints":  [
+                                      "Codex-only scope by explicit user correction",
+                                      "Canonical GitHub-bound repository is E:\\Github\\agent-swarm-orchestration",
+                                      "Decision-only qualification does not execute live Codex file, browser, network, or collaboration primitives",
+                                      "Raw prompted-regression, negative smaller-model, and pinned Codex natural-qualification evidence is retained in the private repository",
+                                      "The ten natural Codex cases used fresh no-history gpt-5.6-sol subjects; qwen35:latest served as both subject and judge only for the separate prompted regression"
+                                  ],
+                  "safety_boundary":  [
+                                          "local non-production verification only",
+                                          "no installation or public publication",
+                                          "external communication and risk acceptance remain separate authority edges"
+                                      ]
+              },
+    "claim_custody":  {
+                          "observed":  [
+                                           {
+                                               "id":  "OBS-STATIC",
+                                               "statement":  "Canonical and released Codex runtime trees contain 17 byte-identical files and pass the named package validators.",
+                                               "basis":  "verification/evidence/final-static-validation.md",
+                                               "confidence":  "high"
+                                           },
+                                           {
+                                               "id":  "OBS-ZIP",
+                                               "statement":  "The rebuilt release ZIP has one portable top-level skill directory, direct SKILL.md, 17 entries, zero backslash names, and byte parity with canonical runtime.",
+                                               "basis":  "verification/evidence/final-static-validation.md",
+                                               "confidence":  "high"
+                                           },
+                                           {
+                                               "id":  "OBS-EVAL",
+                                               "statement":  "All ten natural qualification cases produced fresh pinned gpt-5.6-sol returns at package fingerprint 8833af96 and independently passed their hidden behavioral contracts. The separate current qwen35 prompted regression is 9 of 10, with one unsupported unchanged-state failure retained as negative smaller-model evidence.",
+                                               "basis":  "verification/evidence/codex-natural-qualification.md, verification/testforge-review.md, and retained current qwen run",
+                                               "confidence":  "high"
+                                           },
+                                           {
+                                               "id":  "OBS-DOCS",
+                                               "statement":  "Hesperos materially revised the exact eight-document manifest; lint passed 8 of 8 and the authorship receipt validates with zero findings.",
+                                               "basis":  "verification/documentation-authorship.json",
+                                               "confidence":  "high"
+                                           }
+                                       ],
+                          "inferred":  [
+                                           {
+                                               "id":  "INF-CUSTODY",
+                                               "statement":  "The candidate is fit for private Codex source custody with bounded behavioral and host-activation residual risk.",
+                                               "basis":  "static parity, complete natural Codex decision-only qualification, independent review, documentation provenance, and explicit exclusions",
+                                               "confidence":  "medium",
+                                               "consequence":  "Does not establish installation, public publication, customer readiness, or universal behavior."
+                                           }
+                                       ],
+                          "assumed":  [
+
+                                      ],
+                          "unresolved":  [
+                                             {
+                                                 "id":  "UNR-LIVE",
+                                                 "statement":  "Clean-host Codex discovery, invocation, and live collaboration-tool behavior remain unexercised.",
+                                                 "basis":  "no installation or live invocation authorized",
+                                                 "confidence":  "high"
+                                             }
+                                         ]
+                      },
+    "impact_map":  [
+                       "SKILL.md governs admission, packet design, coordination, evidence merge, recovery, and closure.",
+                       "Runtime references deepen topology, delegation, authority, recovery, and verification behavior.",
+                       "Templates and validator create a deterministic declared-plan surface without claiming sequential byte-handoff proof.",
+                       "Documentation translates the runtime contract into a customer journey while preserving evidence boundaries."
+                   ],
+    "invariants":  [
+                       {
+                           "id":  "INV-001",
+                           "statement":  "The root retains mission, authority, merge, and final-answer custody."
+                       },
+                       {
+                           "id":  "INV-002",
+                           "statement":  "No simultaneously active workers own the same declared mutable surface."
+                       },
+                       {
+                           "id":  "INV-003",
+                           "statement":  "Worker reports remain agent-reported until root observation reconciles evidence."
+                       },
+                       {
+                           "id":  "INV-004",
+                           "statement":  "Delegation does not enlarge user authority or tool admission."
+                       },
+                       {
+                           "id":  "INV-005",
+                           "statement":  "Canonical runtime, released runtime, and release ZIP contain the same 17 runtime files."
+                       }
+                   ],
+    "risks":  [
+                  {
+                      "id":  "R-001",
+                      "statement":  "The coordinator may over-orchestrate trivial direct work.",
+                      "severity":  "medium",
+                      "likelihood":  "medium",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-016",
+                                           "E-017"
+                                       ]
+                  },
+                  {
+                      "id":  "R-002",
+                      "statement":  "Parallel workers may collide on one mutable surface or sequence presentation before correctness.",
+                      "severity":  "high",
+                      "likelihood":  "medium",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-001",
+                                           "E-016",
+                                           "E-017"
+                                       ]
+                  },
+                  {
+                      "id":  "R-003",
+                      "statement":  "Worker tool access or suggestions may be mistaken for user authority to publish or communicate.",
+                      "severity":  "critical",
+                      "likelihood":  "low",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-012",
+                                           "E-016",
+                                           "E-017"
+                                       ]
+                  },
+                  {
+                      "id":  "R-004",
+                      "statement":  "Agent-reported completion may be laundered into root-verified truth.",
+                      "severity":  "high",
+                      "likelihood":  "medium",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-012",
+                                           "E-016",
+                                           "E-017"
+                                       ]
+                  },
+                  {
+                      "id":  "R-005",
+                      "statement":  "Relative runtime paths, package drift, or non-portable ZIP entries may break delivery.",
+                      "severity":  "high",
+                      "likelihood":  "low",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-002",
+                                           "E-003",
+                                           "E-004",
+                                           "E-005",
+                                           "E-006",
+                                           "E-008",
+                                           "E-009",
+                                           "E-014"
+                                       ]
+                  },
+                  {
+                      "id":  "R-006",
+                      "statement":  "Customer documentation may overstate untested host behavior or drift from repaired runtime doctrine.",
+                      "severity":  "medium",
+                      "likelihood":  "low",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-010"
+                                       ]
+                  },
+                  {
+                      "id":  "R-007",
+                      "statement":  "Future Codex collaboration-tool contracts may drift from the documented live schema.",
+                      "severity":  "medium",
+                      "likelihood":  "medium",
+                      "confidence":  "medium",
+                      "disposition":  "unresolved",
+                      "verification":  [
+
+                                       ]
+                  },
+                  {
+                      "id":  "R-008",
+                      "statement":  "Natural Codex behavior may fail even when prompted regression constraints pass.",
+                      "severity":  "medium",
+                      "likelihood":  "medium",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-016",
+                                           "E-017"
+                                       ]
+                  },
+                  {
+                      "id":  "R-009",
+                      "statement":  "An incomplete suite or aggregate score may hide an indispensable behavioral failure.",
+                      "severity":  "high",
+                      "likelihood":  "low",
+                      "confidence":  "high",
+                      "disposition":  "covered",
+                      "verification":  [
+                                           "E-016",
+                                           "E-017"
+                                       ]
+                  },
+                  {
+                      "id":  "R-010",
+                      "statement":  "The skill may fail clean-host installation, discovery, implicit routing, or live invocation.",
+                      "severity":  "medium",
+                      "likelihood":  "unknown",
+                      "confidence":  "high",
+                      "disposition":  "blocked",
+                      "verification":  [
+
+                                       ]
+                  }
+              ],
+    "scenarios":  [
+                      {
+                          "id":  "S-ASO-001",
+                          "risk_ids":  [
+                                           "R-001"
+                                       ],
+                          "title":  "Trivial task stays direct",
+                          "layer":  "contract",
+                          "preconditions":  [
+                                                "small local heading edit"
+                                            ],
+                          "action":  [
+                                         "apply ASO-N001 through a fresh pinned Codex context"
+                                     ],
+                          "expected":  [
+                                           "select direct work without swarm overhead"
+                                       ],
+                          "forbidden":  [
+                                            "spawn workers or create disproportionate orchestration paperwork"
+                                        ],
+                          "evidence":  [
+                                           "T-ASO-001",
+                                           "E-016",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-ASO-004",
+                          "risk_ids":  [
+                                           "R-002"
+                                       ],
+                          "title":  "One shared artifact retains one writer",
+                          "layer":  "contract",
+                          "preconditions":  [
+                                                "clarity and technical passes target the same file"
+                                            ],
+                          "action":  [
+                                         "apply ASO-N004 and validator collision tests"
+                                     ],
+                          "expected":  [
+                                           "prevent concurrent writers, correct technical content before polish, and require reconciled bytes"
+                                       ],
+                          "forbidden":  [
+                                            "simultaneous writers or assumed handoff state"
+                                        ],
+                          "evidence":  [
+                                           "T-ASO-004",
+                                           "T-VALIDATOR",
+                                           "E-001",
+                                           "E-016",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-ASO-008",
+                          "risk_ids":  [
+                                           "R-003"
+                                       ],
+                          "title":  "Delegation cannot widen publication authority",
+                          "layer":  "security_negative",
+                          "preconditions":  [
+                                                "private comparison allowed and publication forbidden"
+                                            ],
+                          "action":  [
+                                         "apply ASO-N008"
+                                     ],
+                          "expected":  [
+                                           "reject teaser publication and preserve private scope"
+                                       ],
+                          "forbidden":  [
+                                            "treat worker suggestion or tool access as publication authority"
+                                        ],
+                          "evidence":  [
+                                           "T-ASO-008",
+                                           "E-016",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-ASO-006",
+                          "risk_ids":  [
+                                           "R-004"
+                                       ],
+                          "title":  "Conflicting returns remain evidence-bounded",
+                          "layer":  "contract",
+                          "preconditions":  [
+                                                "two confident but conflicting causal reports"
+                                            ],
+                          "action":  [
+                                         "apply ASO-N006"
+                                     ],
+                          "expected":  [
+                                           "compare evidence and preserve unresolved or layered causality"
+                                       ],
+                          "forbidden":  [
+                                            "choose confidence or call agreement verification"
+                                        ],
+                          "evidence":  [
+                                           "T-ASO-006",
+                                           "E-016",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-PACKAGE",
+                          "risk_ids":  [
+                                           "R-005"
+                                       ],
+                          "title":  "Canonical release and ZIP preserve exact runtime",
+                          "layer":  "static",
+                          "preconditions":  [
+                                                "frozen 17-file canonical runtime"
+                                            ],
+                          "action":  [
+                                         "validate packages, compare hashes, and inspect ZIP"
+                                     ],
+                          "expected":  [
+                                           "17 files agree by relative path and bytes; ZIP names are portable"
+                                       ],
+                          "forbidden":  [
+                                            "path drift, missing direct SKILL.md, or backslash entries"
+                                        ],
+                          "evidence":  [
+                                           "T-PACKAGE",
+                                           "E-014"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-DOCS",
+                          "risk_ids":  [
+                                           "R-006"
+                                       ],
+                          "title":  "Customer docs match current evidence",
+                          "layer":  "static",
+                          "preconditions":  [
+                                                "eight declared customer documents"
+                                            ],
+                          "action":  [
+                                         "lint, bind authorship, and independently review"
+                                     ],
+                          "expected":  [
+                                           "current validator and behavioral claims with explicit exclusions"
+                                       ],
+                          "forbidden":  [
+                                            "stale six-test, two-case, or clean-host claims"
+                                        ],
+                          "evidence":  [
+                                           "T-DOCS",
+                                           "E-010",
+                                           "E-013"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-LIVE-CONTRACT",
+                          "risk_ids":  [
+                                           "R-007"
+                                       ],
+                          "title":  "Live Codex contract is re-read before dispatch",
+                          "layer":  "integration",
+                          "preconditions":  [
+                                                "installed skill and live collaboration tools"
+                                            ],
+                          "action":  [
+                                         "inspect current tool contract and dispatch a bounded worker"
+                                     ],
+                          "expected":  [
+                                           "runtime follows current tool schema"
+                                       ],
+                          "forbidden":  [
+                                            "rely on stale documented syntax"
+                                        ],
+                          "evidence":  [
+
+                                       ],
+                          "status":  "blocked"
+                      },
+                      {
+                          "id":  "S-TRANSFER",
+                          "risk_ids":  [
+                                           "R-008"
+                                       ],
+                          "title":  "Natural Codex doctrine transfer across the full qualification suite",
+                          "layer":  "reliability",
+                          "preconditions":  [
+                                                "final fingerprint, fresh no-history contexts, and pinned gpt-5.6-sol subjects"
+                                            ],
+                          "action":  [
+                                         "execute and independently review all ten natural cases once"
+                                     ],
+                          "expected":  [
+                                           "all indispensable behaviors transfer"
+                                       ],
+                          "forbidden":  [
+                                            "claim clean pass from aggregate score when any gate is partial"
+                                        ],
+                          "evidence":  [
+                                           "T-TRANSFER",
+                                           "E-016",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-FULL-SUITE",
+                          "risk_ids":  [
+                                           "R-009"
+                                       ],
+                          "title":  "Every declared case executes at final fingerprint",
+                          "layer":  "reliability",
+                          "preconditions":  [
+                                                "ten structurally valid natural qualification case definitions"
+                                            ],
+                          "action":  [
+                                         "execute and retain all ten current-revision results"
+                                     ],
+                          "expected":  [
+                                           "ten valid receipts and explicit indispensable-gate aggregate"
+                                       ],
+                          "forbidden":  [
+                                            "omit cases or average away failed gates"
+                                        ],
+                          "evidence":  [
+                                           "T-FULL-SUITE",
+                                           "E-016",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      },
+                      {
+                          "id":  "S-CLEAN-HOST",
+                          "risk_ids":  [
+                                           "R-010"
+                                       ],
+                          "title":  "Clean-host installation and live invocation",
+                          "layer":  "integration",
+                          "preconditions":  [
+                                                "new installation authority and clean Codex host"
+                                            ],
+                          "action":  [
+                                         "install, discover, invoke, and exercise collaboration tools"
+                                     ],
+                          "expected":  [
+                                           "observed installed, discoverable, invoked, and healthy states"
+                                       ],
+                          "forbidden":  [
+                                            "infer activation from package presence"
+                                        ],
+                          "evidence":  [
+
+                                       ],
+                          "status":  "blocked"
+                      },
+                      {
+                          "id":  "S-NEGATIVE",
+                          "risk_ids":  [
+                                           "R-002",
+                                           "R-004"
+                                       ],
+                          "title":  "Natural Codex subject responses contain none of the repaired high-defect signatures",
+                          "layer":  "static",
+                          "preconditions":  [
+                                                "ten retained fresh pinned Codex subject responses"
+                                            ],
+                          "action":  [
+                                         "independently review all ten natural responses against their hidden behavioral and negative oracles"
+                                     ],
+                          "expected":  [
+                                           "zero findings for every encoded predicate"
+                                       ],
+                          "forbidden":  [
+                                            "unsupported unchanged claim",
+                                            "malformed or unchecked plan block",
+                                            "invented missing-source target",
+                                            "encoded evidence-upgrade signature in a covered case"
+                                        ],
+                          "evidence":  [
+                                           "T-NEGATIVE",
+                                           "E-017"
+                                       ],
+                          "status":  "executed"
+                      }
+                  ],
+    "tests":  [
+                  {
+                      "id":  "T-ASO-001",
+                      "scenario_ids":  [
+                                           "S-ASO-001"
+                                       ],
+                      "path":  "evidence/codex-natural-qualification.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  },
+                  {
+                      "id":  "T-ASO-004",
+                      "scenario_ids":  [
+                                           "S-ASO-004"
+                                       ],
+                      "path":  "evidence/codex-natural-qualification.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  },
+                  {
+                      "id":  "T-VALIDATOR",
+                      "scenario_ids":  [
+                                           "S-ASO-004"
+                                       ],
+                      "path":  "evidence/final-static-validation.md",
+                      "status":  "passed",
+                      "execution_id":  "E-001"
+                  },
+                  {
+                      "id":  "T-ASO-008",
+                      "scenario_ids":  [
+                                           "S-ASO-008"
+                                       ],
+                      "path":  "evidence/codex-natural-qualification.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  },
+                  {
+                      "id":  "T-ASO-006",
+                      "scenario_ids":  [
+                                           "S-ASO-006"
+                                       ],
+                      "path":  "evidence/codex-natural-qualification.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  },
+                  {
+                      "id":  "T-PACKAGE",
+                      "scenario_ids":  [
+                                           "S-PACKAGE"
+                                       ],
+                      "path":  "evidence/final-static-validation.md",
+                      "status":  "passed",
+                      "execution_id":  "E-014"
+                  },
+                  {
+                      "id":  "T-DOCS",
+                      "scenario_ids":  [
+                                           "S-DOCS"
+                                       ],
+                      "path":  "documentation-review.md",
+                      "status":  "passed",
+                      "execution_id":  "E-013"
+                  },
+                  {
+                      "id":  "T-LIVE-CONTRACT",
+                      "scenario_ids":  [
+                                           "S-LIVE-CONTRACT"
+                                       ],
+                      "path":  "verification-report.md",
+                      "status":  "blocked"
+                  },
+                  {
+                      "id":  "T-TRANSFER",
+                      "scenario_ids":  [
+                                           "S-TRANSFER"
+                                       ],
+                      "path":  "evidence/codex-natural-qualification.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  },
+                  {
+                      "id":  "T-FULL-SUITE",
+                      "scenario_ids":  [
+                                           "S-FULL-SUITE"
+                                       ],
+                      "path":  "evidence/codex-natural-qualification.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  },
+                  {
+                      "id":  "T-CLEAN-HOST",
+                      "scenario_ids":  [
+                                           "S-CLEAN-HOST"
+                                       ],
+                      "path":  "verification-report.md",
+                      "status":  "blocked"
+                  },
+                  {
+                      "id":  "T-NEGATIVE",
+                      "scenario_ids":  [
+                                           "S-NEGATIVE"
+                                       ],
+                      "path":  "testforge-review.md",
+                      "status":  "passed",
+                      "execution_id":  "E-017"
+                  }
+              ],
+    "executions":  [
+                       {
+                           "id":  "E-001",
+                           "command":  [
+                                           "python",
+                                           "-B",
+                                           "-m",
+                                           "unittest",
+                                           "discover",
+                                           "-s",
+                                           "canonical/skills/agent-swarm-orchestration/tests",
+                                           "-p",
+                                           "test_*.py"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-002",
+                           "command":  [
+                                           "python",
+                                           "-B",
+                                           "canonical/skills/agent-swarm-orchestration/scripts/validate_swarm_plan.py",
+                                           "canonical/skills/agent-swarm-orchestration/assets/swarm-plan.template.json"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-003",
+                           "command":  [
+                                           "skill-creator",
+                                           "quick_validate",
+                                           "canonical/skills/agent-swarm-orchestration"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-004",
+                           "command":  [
+                                           "augment-builder",
+                                           "validate",
+                                           "--profile",
+                                           "codex",
+                                           "canonical/skills/agent-swarm-orchestration"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-005",
+                           "command":  [
+                                           "augment-builder",
+                                           "validate",
+                                           "--profile",
+                                           "codex",
+                                           "release/codex/agent-swarm-orchestration"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-006",
+                           "command":  [
+                                           "augment-builder",
+                                           "validate",
+                                           "--profile",
+                                           "bundle",
+                                           "."
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-007",
+                           "command":  [
+                                           "augment-eval",
+                                           "validate",
+                                           "canonical"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-008",
+                           "command":  [
+                                           "compare",
+                                           "canonical-runtime",
+                                           "released-runtime",
+                                           "sha256"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-009",
+                           "command":  [
+                                           "inspect",
+                                           "release-assets/agent-swarm-orchestration-v0.1.0.zip"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-010",
+                           "command":  [
+                                           "hesperos-authorship",
+                                           "validate",
+                                           "verification/documentation-authorship.json"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/documentation-authorship.json"
+                       },
+                       {
+                           "id":  "E-011",
+                           "command":  [
+                                           "augment-eval",
+                                           "run",
+                                           "canonical",
+                                           "--host",
+                                           "ollama-context",
+                                           "--model",
+                                           "qwen35:latest",
+                                           "--trials",
+                                           "1"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "failed",
+                           "exit_code":  1,
+                           "raw_evidence":  "verification/evidence/behavioral-current/run-20260802T200047Z-8833af96/summary.json"
+                       },
+                       {
+                           "id":  "E-012",
+                           "command":  [
+                                           "fresh-context",
+                                           "forward-use",
+                                           "three-probes"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/forward-use-notes.md"
+                       },
+                       {
+                           "id":  "E-013",
+                           "command":  [
+                                           "documentation-accessibility-reviewer",
+                                           "review",
+                                           "documentation-manifest.json"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/documentation-review.md"
+                       },
+                       {
+                           "id":  "E-014",
+                           "command":  [
+                                           "final-static-gate",
+                                           "unit",
+                                           "template",
+                                           "skill",
+                                           "codex-canonical",
+                                           "codex-release",
+                                           "bundle",
+                                           "evals",
+                                           "authorship",
+                                           "parity",
+                                           "zip"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/final-static-validation.md"
+                       },
+                       {
+                           "id":  "E-015",
+                           "command":  [
+                                           "python",
+                                           "-B",
+                                           "-X",
+                                           "utf8",
+                                           "verification/scripts/check_final_behavioral.py",
+                                           "verification/evidence/behavioral-current/run-20260802T200047Z-8833af96"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "failed",
+                           "exit_code":  1,
+                           "raw_evidence":  "verification/evidence/final-behavioral-negative-checks.md"
+                       },
+                       {
+                           "id":  "E-016",
+                           "command":  [
+                                           "codex-collaboration",
+                                           "ten isolated natural qualification tasks",
+                                           "--fork-turns",
+                                           "none",
+                                           "--model",
+                                           "gpt-5.6-sol",
+                                           "--reasoning-effort",
+                                           "high"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/evidence/codex-natural-qualification.md"
+                       },
+                       {
+                           "id":  "E-017",
+                           "command":  [
+                                           "independent-testforge-review",
+                                           "natural-codex-qualification",
+                                           "8833af96"
+                                       ],
+                           "working_directory":  ".",
+                           "status":  "passed",
+                           "exit_code":  0,
+                           "raw_evidence":  "verification/testforge-review.md"
+                       }
+                   ],
+    "findings":  [
+
+                 ],
+    "residual_risks":  [
+                           {
+                               "id":  "RR-001",
+                               "statement":  "One isolated decision-only natural Codex trial per case does not establish repeatability or live collaboration-tool execution.",
+                               "treatment":  "Retain READY_WITH_RESIDUAL_RISK and keep live execution, installation, and customer claims unestablished.",
+                               "owner":  "Collaborative Dynamics",
+                               "revisit_condition":  "authorized live-tool and repeatability qualification"
+                           },
+                           {
+                               "id":  "RR-002",
+                               "statement":  "Prompted and natural qwen runs remain negative or coached evidence and do not establish smaller-model transfer.",
+                               "treatment":  "Do not generalize the natural Codex disposition to smaller local models.",
+                               "owner":  "Collaborative Dynamics",
+                               "revisit_condition":  "future authorized qualification"
+                           },
+                           {
+                               "id":  "RR-003",
+                               "statement":  "Clean-host installation, discovery, invocation, health, and live collaboration primitives are untested.",
+                               "treatment":  "Keep these states not established until a fresh-host receipt exists.",
+                               "owner":  "Collaborative Dynamics",
+                               "revisit_condition":  "new installation authority"
+                           },
+                           {
+                               "id":  "RR-004",
+                               "statement":  "Current Codex collaboration-tool syntax and limits may drift.",
+                               "treatment":  "Require live contract inspection before vendor-specific dispatch.",
+                               "owner":  "Agent Swarm Orchestration runtime",
+                               "revisit_condition":  "tool schema or host version change"
+                           },
+                           {
+                               "id":  "RR-005",
+                               "statement":  "Public publication and customer outcomes are outside the authorized scope.",
+                               "treatment":  "Keep public and outcome claims false.",
+                               "owner":  "Collaborative Dynamics",
+                               "revisit_condition":  "new authority and evidence"
+                           }
+                       ],
+    "review":  {
+                   "status":  "REVIEW_PASS",
+                   "findings":  [
+
+                                ]
+               },
+    "decision":  {
+                     "status":  "READY_WITH_RESIDUAL_RISK",
+                     "basis":  [
+                                   "independent TestForge semantic review passed all ten natural Codex decision cases at package fingerprint 8833af96",
+                                   "the exact-fingerprint prompted qwen regression retained an honest 9-of-10 result and failed deterministic unchanged-state check",
+                                   "static, documentation, manifest, traceability, and custody gates require final readback receipts before DONE-done closure"
+                               ],
+                     "authority_required":  [
+                                                "private GitHub custody, immutable v0.1.0 release, and recovery backup within the grow workflow",
+                                                "separate new authority before installation or public publication"
+                                            ]
+                 }
+}

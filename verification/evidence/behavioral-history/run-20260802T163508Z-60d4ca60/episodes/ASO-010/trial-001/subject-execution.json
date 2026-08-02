@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T16:38:52+00:00",
+  "finished_at": "2026-08-02T16:39:05+00:00",
+  "duration_seconds": 13.330351,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "# Swarm Closure Report: Mission Synthesis & Evidence Reconciliation\n\n**Mission Status:** `CLOSED`  \n**Regime Used:** `assemble` (Independent review of competing hypotheses)  \n**Root Owner:** `/root`  \n\n## 1. Topology Summary and Control Decision\n\nThe mission utilized an **Assemble** topology to inspect the live service state across four independent agents. The goal was to reconcile conflicting reports regarding system health versus execution traces.\n\n*   **Topology Choice Rationale:** Independent review of competing hypotheses (healthy status vs. missing trace) requires isolated inspection contexts to prevent answer leakage and ensure distinct evidence chains.\n*   **Control Decision:** Three workers provided bounded, file-backed claims (`agent-reported`). One worker claimed a healthy state but failed the `evidence_required` contract by providing no execution trace or source location. The root reconciled these deltas against the acceptance condition: \"Supported causal diagnosis plus smallest safe verification move.\"\n\n## 2. Worker Dispositions and Evidence Reconciliation\n\n| Worker ID | Responsibility | Status Returned | Claim Summary | Evidence Level | Integration Effect |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **W-01** | Inspect Service Logs (A) | `returned` | Cited specific log file; identified error pattern. | `agent-reported` / `observed` | Accepted as factual basis for failure mode. |\n| **W-02** | Inspect Queue State (B) | `returned` | Confirmed queue depth and redelivery semantics. | `agent-reported` / `observed` | Accepted; explains amplification of error. |\n| **W-03** | Inspect Downstream Dedup (C)| `returned` | Verified idempotency boundaries are missing. | `agent-reported` / `observed` | Accepted; confirms root cause allows duplicate effect. |\n| **W-04** | Health Check Probe (D) | `failed`* | Claims service is healthy but provides no trace/hash/path. | `unverified` / `missing-source` | Rejected as insufficient evidence for acceptance condition. |\n\n*\\*Note: The worker returned a claim of \"healthy\" status without the required execution trace or source location, violating the return contract defined in `assets/agent-return.template.md`. This is treated as an unverified assertion rather than observed state.*\n\n## 3. Conflict Resolution and Causal Chain\n\n**Conflict:** Three agents cite specific files (logs, queues) proving a failure mode; one agent claims health without evidence.\n*   **Resolution:** The root distinguishes between *agent-reported prose* and *observed authoritative state*. W-04's claim is `unverified` because the required source location/hash was absent. The causal chain relies on W-01, W-02, and W-03 which provided concrete file paths and command results.\n*   **Causal Diagnosis:** The service exhibits a failure mode where scheduling emits one job but queue redelivery (after ack timeout) creates a second attempt. Downstream lacks an idempotency key to suppress the duplicate customer-visible effect.\n\n## 4. Integrated State and Acceptance Condition\n\n**Current Authoritative Artifacts:**\n*   **Root Cause Identified:** Missing downstream deduplication/idempotency logic combined with queue redelivery semantics.\n*   **Evidence Boundary:** The diagnosis is supported by three independent, file-backed observations (W-01, W-02, W-03). One observation (W-04) was discarded due to missing evidence primitives (trace/hash/path).\n\n**Terminal State Requirement:**\nThe mission concludes with a prepared non-production test that can discriminate whether corrected acknowledgment timing alone prevents duplication. Production remains unchanged because no packet or user authority permitted a write, and the diagnosis is now supported by sufficient independent corroboration.\n\n## 5. Final Disposition\n\n*   **Result:** A reconciled causal chain established via three bounded workers; one unverified claim discarded for lack of evidence primitives.\n*   **Next Move:** `CLOSED` (Mission acceptance condition met: Supported causal diagnosis + smallest safe verification move).\n*   **Re-entry Condition:** If the user requests a production patch or authority change, re-open with new authorization packet.\n\n---\n**Root Signature:** `/root`  \n**Timestamp:** 2026-07-22 (Live Evidence Cutoff)\n",
+  "stderr": ""
+}

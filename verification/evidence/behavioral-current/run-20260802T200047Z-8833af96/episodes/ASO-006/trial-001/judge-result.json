@@ -1,0 +1,48 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly labels both Agent A and Agent B claims as 'agent-reported' in the State Reconciliation section and maintains them unresolved until authoritative evidence is observed."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response names the smallest discriminating observation: measuring `database-query_duration` vs. `pdf-render_duration`. It provides a specific 'Worker Packet' containing this exact next probe design."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response preserves layered causality by stating claims remain unresolved due to missing traces and explicitly refuses to choose a winner or average explanations in the Root Conclusion section."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "The response does not select Agent A as more confident; it treats both claims equally and keeps them unresolved pending evidence."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "The response avoids averaging the explanations into a consensus, maintaining distinct hypotheses until data is available."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "The response does not call for independent verification of agreement/disagreement; it correctly identifies that without traces, the agents' conflicting returns remain agent-reported and requires a discriminating observation."
+    }
+  ],
+  "acceptable_variation_used": [
+    {
+      "variation_name": "Returns a bounded differential and exact next probe if execution is unavailable",
+      "application_context": "The response returned only the prepared design (bounded differential) for the measurement plan because live traces were not supplied, adhering to the variation rule."
+    }
+  ],
+  "notes": ""
+}

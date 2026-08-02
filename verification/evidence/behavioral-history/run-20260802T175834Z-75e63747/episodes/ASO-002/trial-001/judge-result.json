@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-002",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response adopts 'Assemble' regime with exactly three concurrent read-only workers targeting the named folders ('billing', 'search', 'notifications'), satisfying the requirement to map independent loci and admit parallel inspection."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Dispatch boundaries assign each worker a specific folder scope, restrict authority to read-only inspection of existing logs/configurations within that path, require citation of observed evidence or explicit unknowns for claims about retries, and return bounded deltas."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Reconciliation step merges agent-reported findings into a single comparison matrix distinguishing factual retry behavior from amplification effects, preserves unresolved conflicts as 'agent-reported', and closes with one coherent synthesis naming high-risk inconsistencies."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Workers are explicitly targeted at specific folders rather than being sent the whole repository without ownership; root retains mission custody."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response describes dispatch boundaries and reconciliation steps immediately without waiting for idle periods or leaving useful work unstarted."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Findings are distinguished as 'agent-reported' with unresolved conflicts preserved; no agent agreement is presented as definitive evidence of a patch without authoritative readback."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

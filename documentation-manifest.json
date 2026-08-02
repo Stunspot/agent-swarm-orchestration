@@ -1,0 +1,13 @@
+{
+  "format": "cd-customer-documentation/v1",
+  "customer_docs": [
+    "START-HERE.md",
+    "README.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "SUPPORT.md",
+    "host-matrix.md"
+  ]
+}

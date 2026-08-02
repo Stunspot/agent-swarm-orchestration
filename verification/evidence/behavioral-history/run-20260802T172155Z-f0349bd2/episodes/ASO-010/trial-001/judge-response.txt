@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-010",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly distinguishes the three workers citing files as 'agent-reported' from the one worker claiming live health without trace. It correctly identifies that no root evidence exists for either group within this episode boundary."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response withholds verification of the 'live service is healthy' claim by labeling it as an unverified assertion lacking execution trace or observable state change. It does not invent file contents or tool returns."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response provides a single coherent synthesis ('Bounded Result') that integrates the mixed evidence levels rather than dumping four separate summaries. It clearly defines tested (agent-reported) and untested boundaries."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not report live health as fact; it explicitly states the claim lacks substantiation and remains 'agent-reported' without root evidence."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "All four workers are accounted for in the summary section: three inspection group members and one health check member. No worker is left unaccounted for."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "The response offers a synthesized conclusion regarding evidence quality gaps rather than dumping four distinct summaries or failing to synthesize the mission outcome."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Closes static readiness while leaving live health awaiting evidence"
+  ],
+  "notes": ""
+}

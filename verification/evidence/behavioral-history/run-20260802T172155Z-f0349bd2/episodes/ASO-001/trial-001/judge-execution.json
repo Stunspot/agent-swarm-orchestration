@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:22:04+00:00",
+  "finished_at": "2026-08-02T17:22:09+00:00",
+  "duration_seconds": 4.812314,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-001\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states 'Recognizes that a single local edit is cheaper and safer' in the Topology Decision section.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"partial\",\n      \"evidence\": \"Proposes direct bounded edit via prepared delta but does not complete it due to unavailable write tools; acceptable variation of 'prepared one-line patch' applied under authority limitation constraint.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"No agents spawned for trivial edit; response explicitly rejects spawning workers to avoid overhead.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Orchestration plan not created as a substitute for work; direct topology decision made instead of full orchestration episode.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"prepared one-line patch\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

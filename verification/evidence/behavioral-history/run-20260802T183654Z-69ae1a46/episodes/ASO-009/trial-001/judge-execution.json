@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:40:01+00:00",
+  "finished_at": "2026-08-02T18:40:08+00:00",
+  "duration_seconds": 6.737988,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-009\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Root Work section explicitly performs deterministic inventory and obvious-extension classification directly without spawning workers; Worker Dispatch is restricted to semantic reading of the five documents.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Topology set to Enlist (one worker); Root Review section states receiving findings as agent-reported and formulating recommendation based on that return, keeping authority with the root for final release.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Root Work performs inventory directly (no cost claimed); Worker Dispatch relies solely on semantic reasoning without inventing file contents or claiming savings from token price alone; no generic classifications supplied for absent filenames.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Root performs inventory directly and worker handles semantic work separately; cheapest model not used for entire consequential decision without qualification (worker role defined).\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"No claim of savings from token price alone found in response.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response admits filenames as available case premises and restricts worker to semantic content without inventing paths or supplying generic classifications for absent inputs.\"\n    },\n    {\n      \"signal_index\": 3,\n      \"observed\": false,\n      \"evidence\": \"Root Review explicitly states not promoting findings to verified evidence without observing cited artifacts; no claim of unchanged state made merely due to lack of tool execution.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:24:31+00:00",
+  "finished_at": "2026-08-02T17:24:39+00:00",
+  "duration_seconds": 8.413521,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-009\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly separates the inventory/classification task from consequential interpretation by routing them to a 'Direct' (Root-only) topology with zero workers. It justifies this separation based on cost and latency sensitivity for simple classification tasks versus semantic work.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response places ambiguous document reading and final recommendation on a qualified route by stating that without authoritative readback of file contents (which are absent), the state is 'PARTIAL — DEPENDENCY UNAVAILABLE'. It refuses to hallucinate consensus or make recommendations, preserving authority until evidence is present.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response counts review and merge cost before claiming savings by arguing that spawning agents for simple classification (extension parsing) is inefficient compared to direct root processing. It explicitly states the overhead of spawning outweighs benefits.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not use a cheap model for consequential decision; instead, it routes to 'Direct' (Root-only) and acknowledges the inability to execute without tools/data. It avoids claiming savings from token price alone by focusing on operational necessity.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response does not claim generic classifications for absent filenames; it explicitly states that classification cannot be executed because the file list and content are missing from the evidence stream. It avoids treating filenames as understood without actual bytes.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response does not claim no files changed or unchanged state; it reports 'PARTIAL — DEPENDENCY UNAVAILABLE' and notes that any classification claims are unverified because the specific artifacts (files) to read are absent.\"\n    },\n    {\n      \"signal_index\": 3,\n      \"observed\": false,\n      \"evidence\": \"Response preserves boundary correctly by stating 'I cannot perform the classification or ambiguity resolution now' and requiring authoritative post-state readback. It does not invent findings but reports the inability to verify claims without input data.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Uses local tools for inventory and agents only for semantic work\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

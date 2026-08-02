@@ -1,0 +1,13 @@
+{
+  "protocol_version": "1.0",
+  "run_id": "run-20260802T191454Z-2eb13a53",
+  "case_id": "ASO-N005",
+  "trial": 1,
+  "package_root": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "skills": [
+    "skills/agent-swarm-orchestration/SKILL.md"
+  ],
+  "runtime": "Isolated decision-only episode with the named skill package. Existing artifacts, readable inputs, active workers, returned claims, and worker slots described by the user are present case fixtures unless the user explicitly says otherwise. Tool execution is outside this episode; describe the live-host coordination decision for the stated fixture without claiming that it ran, and do not invent any unstated content, path, finding, worker claim, or mission detail.",
+  "input": "Three workers are currently reviewing the web app, API, and database for a full redesign. Correction: I only want diagnosis now. No redesign and no file changes.",
+  "interactive": false
+}

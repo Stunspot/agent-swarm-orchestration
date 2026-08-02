@@ -1,0 +1,49 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N009",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly selects 'Direct' topology and states the task is small/sequential without parallelism, satisfying deterministic inventory via name-based inference rather than tool execution."
+    },
+    {
+      "criterion_index": 1,
+      "status": "not_met",
+      "evidence": "Subject response does not route semantic reading to a qualified worker nor reserve the recommendation for root review; instead, it performs 'Root Analysis' directly and requests user input before issuing a final release list."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response explicitly acknowledges that without document contents any claim of alignment is speculative ('agent-reported'), thereby accounting for the overhead/limitations inherent in missing content before claiming savings or final status."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not use a cheap worker; it explicitly avoids tool execution and claims no parallelism is earned due to latency sensitivity."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response strictly distinguishes filenames from document contents ('Filenames alone cannot confirm document content') and refuses to treat names as evidence for alignment without uncertainty flags."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response does not claim savings or invent classifications; it labels confidence levels based on 'name-only' inference and marks status as provisional pending content disclosure."
+    }
+  ],
+  "acceptable_variation_used": [
+    {
+      "variation_index": 0,
+      "description": "Keeps semantic reading at root because delegation overhead (context reconstruction) would exceed marginal gain in coverage/challenge for this small task.",
+      "justification": "Response argues 'No parallelism earns itself here' and that spawning workers incurs costs exceeding gains, aligning with the variation allowing direct handling when savings are erased by overhead."
+    }
+  ],
+  "notes": "Criterion 1 is not met because the response executes root analysis directly rather than routing to a worker/reserving for review. However, this failure does not trigger Material Failure Signal 0 (using cheap worker) nor Signal 2 (claiming savings), as the model explicitly rejects tool use and avoids inventing content."
+}

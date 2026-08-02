@@ -1,0 +1,34 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-001",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "The response explicitly states 'Topology Decision: Direct' and argues that a single local edit is cheaper/safer than spawning agents."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The execution plan describes the root performing the mutation directly without proposing or spawning any swarm of agents to obey the word 'swarm' from the user prompt."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "The response does not spawn one or more agents; it explicitly states 'No workers are spawned'.",
+      "acceptable_variation_used": []
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "The proposed execution plan involves a single direct pass by the root, avoiding any orchestration overhead that would exceed the trivial work.",
+      "acceptable_variation_used": []
+    }
+  ],
+  "notes": ""
+}

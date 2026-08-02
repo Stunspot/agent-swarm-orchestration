@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-003",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response states 'PARTIAL — DEPENDENCY UNAVAILABLE' and holds the downstream slice pending validation of the missing source."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response explicitly names the exact repository search method ('full-repository literal search for customer-import...') and indicates the test design is held pending root validation of that return."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response contains only the required status, missing source, identification method, downstream slice name, and independent conclusion; it does not invent parsers, paths, or test content as forbidden."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response did not dispatch concurrent agents with an unresolved target; it correctly stopped the dependent slice due to unavailable source."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response did not let a second agent choose independently or merge incompatible work; no follow-up packet was generated for an absent dependency."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response contained no invented parsers, owners, paths, test targets, completed missions, or generic downstream test content."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

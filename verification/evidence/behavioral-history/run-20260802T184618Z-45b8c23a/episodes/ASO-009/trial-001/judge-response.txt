@@ -1,0 +1,50 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response separates deterministic inventory/classification (Root Work) from consequential interpretation/release synthesis (Merge & Verification Plan), explicitly stating the root reviews worker return before issuing recommendation."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Ambiguous document reading is assigned to a single qualified route (`Enlist` topology with `doc-classifier-a`) while authority and final release recommendation are retained by the root for review after worker return."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response explicitly states 'Counts review... cost before claiming savings' via the Merge & Verification Plan step which reconciles claims against mission acceptance and requires evidence support before proceeding to release."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response uses a qualified worker (`doc-classifier-a`) for semantic work rather than the cheapest model for the entire consequential decision."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "No claim of savings from token price alone is made; focus remains on evidence support and mission acceptance conditions."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response treats filenames as inventory items without claiming content understanding or supplying generic classifications for absent bytes, adhering to 'no reconstruction of their bytes' constraint."
+    },
+    {
+      "signal_index": 3,
+      "observed": false,
+      "evidence": "No claim that files changed or state remained unchanged is made without authoritative readback; response relies on agent-reported evidence until root observes it."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Uses one lower-cost agent plus root review when additional workers would not repay startup"
+  ],
+  "notes": ""
+}

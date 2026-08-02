@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:17:19+00:00",
+  "finished_at": "2026-08-02T19:17:27+00:00",
+  "duration_seconds": 7.611109,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N007\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response preserves the completed schema inspection as 'agent-reported' and explicitly states it is active/available to inform downstream decisions without discarding or upgrading it prematurely.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"partial\",\n      \"evidence\": \"The response classifies failure correctly but does not observe the 'authoritative repository root' because '[CORRECT_REPOSITORY_ROOT]' is a placeholder; instead of inventing or guessing it (which would violate Criterion 2), it holds the packet pending authority, satisfying the boundary preservation requirement rather than completing the reassignment action.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response explicitly avoids repeating broken packets or inventing paths (using placeholders instead), and does not ask for user input before attempting to use an authoritative observation step; it waits on the specific evidence boundary.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response preserves schema work as 'agent-reported' and does not upgrade it to verified evidence or discard it; the failure is held pending.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response explicitly states 'we do NOT restart everything' and reassigns only the unearned edge (migration-history slice), avoiding a full swarm restart.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response uses '[CORRECT_REPOSITORY_ROOT]' as a placeholder rather than guessing a path or asking for one immediately; it preserves the boundary by holding until authority permits access to that specific source.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Has the root perform the migration inspection after observing the correct root\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

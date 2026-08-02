@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:38:16+00:00",
+  "finished_at": "2026-08-02T18:38:23+00:00",
+  "duration_seconds": 7.692006,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "**Mission:** Resolve conflicting agent reports on export latency causes without external tool execution.  \n**Topology Regime:** `Direct` (Root retains custody; no workers dispatched).  \n\n### State Summary\n- **Agent A Claim:** Latency correlates with database query time (`agent-reported`).  \n- **Agent B Claim:** Latency correlates with PDF render time (`agent-reported`).  \n- **Evidence Level:** Both claims remain unverified by the root. No traces or logs were observed in this episode; state is `unknown` regarding actual durations and file paths.  \n\n### Next Move\nThe mission pauses at a dependency boundary: discriminating observation data (job-aligned measurements of query vs. render duration for specific slow exports) are required to reconcile claims.  \n- **Action:** Hold the synthesis until authoritative readback of measurement evidence occurs or user provides it.  \n- **Authority Conclusion:** No external action is taken; no patch, path, or schema is invented. The root preserves both hypotheses as competing explanations pending empirical discrimination.  \n\n**Disposition:** `AWAITING-EVIDENCE` — Discriminating observation required to resolve conflict between Agent A and Agent B claims.\n",
+  "stderr": ""
+}

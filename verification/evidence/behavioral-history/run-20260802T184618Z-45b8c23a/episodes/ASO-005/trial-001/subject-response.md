@@ -1,0 +1,1 @@
+Correction accepted: the root mission is diagnosis only and write authority is closed. All three active workers are redirected to read-only diagnosis while useful inspection is preserved. Any worker that cannot comply is interrupted. Prior write state is unknown; prior commit state is unknown; authoritative post-state readback is required.

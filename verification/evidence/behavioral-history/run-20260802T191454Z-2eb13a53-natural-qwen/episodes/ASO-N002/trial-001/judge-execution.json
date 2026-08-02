@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:15:34+00:00",
+  "finished_at": "2026-08-02T19:15:41+00:00",
+  "duration_seconds": 6.884536,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N002\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly enlists 'worker-retry-compare-1' with a scope covering all three named folders (billing/search/notifications) and defines read-only authority on each, satisfying the concurrent independent inspection requirement.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"The delegation packet bounds the single worker to inspecting all three folders as a unified unit with distinct deliverables for each (mechanism, inconsistency, evidence), requiring cited observations and unknowns rather than sharing an unbounded surface.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response frames the mission to identify a 'riskiest unsupported behavior pattern' across the folders with cross-cutting analysis and merge ledger gates for reconciliation, preserving the root's role in final risk conclusion.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not choose a single-worker regime without constraint; it explicitly defines read-only authority across all three folders within the dispatched worker.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"The response treats each folder's inspection as distinct evidence locations (file paths/log patterns) rather than sharing an unbounded repository surface or treating agreement as proof; it requires specific citations.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response explicitly states 'Do not invent findings' and instructs to state if logic is missing, avoiding invention of retry inconsistencies.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

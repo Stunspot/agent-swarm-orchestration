@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states: 'Preserve the completed schema inspection return as agent-reported pending root observation'."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response classifies failure as 'wrong-target context', replaces only its read-surfaces field with authoritative repository root, and reassigns that slice for migration history inspection."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response does not invent a path (uses 'read-surfaces' correction), upgrades the schema return (preserves it as agent-reported), restarts the swarm, or repeat the packet unchanged."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response preserves completed work rather than discarding it."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response corrects the existing packet field and reassigns without spawning another worker with broken context; no new swarm spawn is mentioned."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response attributes failure to 'wrong-target context' (packet path) rather than calling the repository absent."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

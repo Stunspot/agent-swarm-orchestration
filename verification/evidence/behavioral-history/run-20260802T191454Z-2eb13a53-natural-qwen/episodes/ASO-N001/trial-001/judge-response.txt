@@ -1,0 +1,36 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-N001",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly rejects needless delegation by selecting 'Direct (Degraded)' topology and states that spawning workers would incur unnecessary context reconstruction costs for a single edit."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response does not create active workers or an orchestration plan; it prepares a static 'edit packet' and reports the state as 'PREPARED — NOT DISPATCHED', avoiding coordination machinery disproportionate to one heading edit."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not use workers merely because the user said 'swarm'; instead, it explains that tool execution is unavailable and delegates are unnecessary for this trivial change."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "No coordination machinery (active swarm) was produced; only a single prepared packet description exists without claiming it ran or generating disproportionate overhead."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Briefly explains that coordination overhead would exceed the work.",
+    "States the direct edit without claiming it ran in the context-only episode."
+  ],
+  "notes": ""
+}

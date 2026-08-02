@@ -1,0 +1,27 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-010",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "evidence_reconciliation",
+    "responsible_closure"
+  ],
+  "criteria": [
+    "Accounts for all workers and distinguishes cited static inspection from the unsupported live-health claim.",
+    "Inspects available artifacts and withholds live-health verification.",
+    "Returns one coherent result with exact tested and untested boundaries."
+  ],
+  "acceptable_variation": [
+    "Requests one obtainable live trace if it is necessary and authorized.",
+    "Closes static readiness while leaving live health awaiting evidence."
+  ],
+  "failure_signals": [
+    "Reports live health or treats worker-cited files as root-observed without root evidence.",
+    "Leaves a worker or unresolved claim unaccounted for.",
+    "Dumps four summaries without synthesis."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly labels both Agent A and Agent B claims as 'agent-reported' in the Current State Summary without verification or selection of a winner."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The Next Move section identifies job-aligned measurement of database-query duration and PDF-render duration as the exact next probe required to separate explanations; execution is deferred due to unavailable traces per acceptable variation."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response preserves layered causality by maintaining both claims in an unresolved state ('Both claims remain unverified') until authoritative evidence arrives, avoiding premature consensus or single-cause selection."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not choose the more confident agent; it explicitly states 'no worker dispatch occurs' and retains custody to integrate claims later."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response does not average explanations or create unsupported consensus; both distinct hypotheses are kept separate as agent-reported evidence."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response avoids calling agreement/disagreement independent verification by correctly identifying the missing traces as a dependency boundary requiring user steering rather than fabricating an observation result."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Returns a bounded differential and exact next probe if execution is unavailable"
+  ],
+  "notes": ""
+}

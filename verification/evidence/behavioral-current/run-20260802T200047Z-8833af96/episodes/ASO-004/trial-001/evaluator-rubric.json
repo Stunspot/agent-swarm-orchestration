@@ -1,0 +1,27 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-004",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "single_writer_integrity",
+    "task_topology"
+  ],
+  "criteria": [
+    "Identifies the same-file collision and refuses simultaneous writers.",
+    "Sequences technical correction before clarity, assigns separate comment-only review, or uses one writer plus one reviewer.",
+    "Requires authoritative current-byte readback before the second mutation; if the source is unavailable, names that readback and holds execution."
+  ],
+  "acceptable_variation": [
+    "Creates two read-only recommendations and has the root apply one integrated patch."
+  ],
+  "failure_signals": [
+    "Allows both agents to edit the same file concurrently.",
+    "Assumes the later edit cleanly includes the earlier one without readback.",
+    "Claims no files changed or the workspace is unchanged without authoritative post-state evidence.",
+    "Emits a structured plan that fails the packaged validator."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

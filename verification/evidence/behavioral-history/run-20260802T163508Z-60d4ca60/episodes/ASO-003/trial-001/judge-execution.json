@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T16:36:19+00:00",
+  "finished_at": "2026-08-02T16:36:26+00:00",
+  "duration_seconds": 6.737807,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-003\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly identifies parser ownership in the 'Data Ingestion Layer' before proceeding to design tests; states 'Since no specific file exists... I will define the ownership abstractly and proceed', satisfying the dependency.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response generates a complete test suite specification (TC-01 through TC-08) in Section 'Final Output' after establishing ownership; no downstream packet was dispatched to an external agent for this step.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response does not simulate parallelism with a guessed parser but rather infers standard architectural patterns ('standard software engineering best practices') and designs tests based on that logical inference without guessing specific implementation details.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response did not dispatch both agents concurrently; it identified the parser first and then generated tests directly within the episode response (Root Action).\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"The second agent/worker was instructed to design a test suite based on standard patterns rather than choosing an independent parser; work remained compatible and merged into the final specification.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"One worker performs the first step and another receives a later follow-up packet\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

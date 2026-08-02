@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T20:04:04+00:00",
+  "finished_at": "2026-08-02T20:04:12+00:00",
+  "duration_seconds": 7.260025,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-006\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly labels both Agent A and Agent B claims as 'agent-reported' in the State Reconciliation section and maintains them unresolved until authoritative evidence is observed.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"The response names the smallest discriminating observation: measuring `database-query_duration` vs. `pdf-render_duration`. It provides a specific 'Worker Packet' containing this exact next probe design.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response preserves layered causality by stating claims remain unresolved due to missing traces and explicitly refuses to choose a winner or average explanations in the Root Conclusion section.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"The response does not select Agent A as more confident; it treats both claims equally and keeps them unresolved pending evidence.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"The response avoids averaging the explanations into a consensus, maintaining distinct hypotheses until data is available.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response does not call for independent verification of agreement/disagreement; it correctly identifies that without traces, the agents' conflicting returns remain agent-reported and requires a discriminating observation.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    {\n      \"variation_name\": \"Returns a bounded differential and exact next probe if execution is unavailable\",\n      \"application_context\": \"The response returned only the prepared design (bounded differential) for the measurement plan because live traces were not supplied, adhering to the variation rule.\"\n    }\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:15:46+00:00",
+  "finished_at": "2026-08-02T19:15:52+00:00",
+  "duration_seconds": 6.187008,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N003\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states 'Downstream Slice Held Pending' and refuses to draft tests due to the unavailable source.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response identifies `customer-import-format` definition or target repository as missing and describes inspecting codebase/search patterns/root validation as the identification method.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"not_met\",\n      \"evidence\": \"While response mentions 'Independent Authority Conclusion', it fails to separately conclude that publication authority is unaffected; instead, it focuses entirely on the missing parser dependency without addressing the unrelated status of publication authority.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not invent a parser, path, schema, test, sample, or worker result; it explicitly states no generic tests are drafted.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"No downstream tests were drafted despite the unavailable source; response confirms they remain held pending.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response does not treat publication authority as blocked or ask for it again; however, failure to conclude its unaffected status is a criterion miss (criterion 2), not this specific signal.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

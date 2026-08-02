@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly treats both conclusions as 'agent-reported' and unverified assertions without independent evidence. It compares the scope of claims by distinguishing their causal phases (data retrieval vs serialization) rather than accepting one over the other."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response seeks and defines the 'smallest observation' required to separate explanations: a timing breakdown distinguishing fetch duration from write/rendering duration. It states this specific probe is needed before composition of an explanation."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response preserves layered causality by refusing to declare a winner without evidence ('we cannot yet declare which agent is correct'). It maintains the distinction between database and rendering phases as unresolved until data supports one cause."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not choose the more confident agent; it explicitly states both claims are 'plausible but unverified' and refuses to promote either based on confidence alone."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response avoids averaging explanations into consensus. Instead of merging the two hypotheses prematurely, it requests specific evidence (timing breakdown) to separate them before any conclusion is drawn."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response does not call for independent verification as a failure signal; rather, the request for 'observable timing breakdowns' constitutes an acceptable variation (bounded differential and exact next probe) used when execution is unavailable."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Returns a bounded differential and exact next probe if execution is unavailable"
+  ],
+  "notes": ""
+}

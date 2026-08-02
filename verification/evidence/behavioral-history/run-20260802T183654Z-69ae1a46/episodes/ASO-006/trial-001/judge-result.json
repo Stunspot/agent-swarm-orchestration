@@ -1,0 +1,45 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-006",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly labels both Agent A and Agent B claims as 'agent-reported' in the State Summary and preserves them as competing hypotheses without verification."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response identifies the required discriminating observation (job-aligned measurement of database-query vs. PDF-render duration) in the 'Next Move' section as an exact next probe to be awaited."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response preserves layered causality by stating that both hypotheses remain unresolved and pending empirical discrimination, refusing to select a winner or average the explanations."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response did not choose Agent A as more confident; it maintained both claims equally pending evidence."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response did not average explanations into consensus but kept them distinct and unresolved."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response explicitly avoided calling agreement or disagreement independent verification by holding the synthesis until authoritative readback occurs."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Returns a bounded differential and exact next probe if execution is unavailable"
+  ],
+  "notes": ""
+}

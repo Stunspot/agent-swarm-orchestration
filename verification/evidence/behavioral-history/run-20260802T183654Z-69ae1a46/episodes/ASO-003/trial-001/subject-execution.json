@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:37:11+00:00",
+  "finished_at": "2026-08-02T18:37:13+00:00",
+  "duration_seconds": 1.947089,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "PARTIAL — DEPENDENCY UNAVAILABLE: target repository (full-repository literal search for customer-import, then root validation of the returned definition and references); exact-parser test design held pending; publication authority unaffected.\n",
+  "stderr": ""
+}

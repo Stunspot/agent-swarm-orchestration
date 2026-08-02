@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "The response states: 'preserves the completed schema inspection as agent-reported pending observation', satisfying the requirement to preserve the result without verification."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "The response classifies failure as 'wrong-target context', notes replacing only that packet's field after observing the authoritative path, and reassigns solely to migration history, meeting all sub-requirements."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "The response avoids inventing paths (uses 'authoritative path'), does not upgrade the schema return, does not restart a swarm, and does not repeat an unchanged packet."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "The response explicitly preserves completed work rather than discarding it."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "No new worker is spawned with the broken context; only the specific packet field is corrected and reassignment occurs."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "The response treats the repository as present but mispointed in the original packet, rather than calling it absent."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

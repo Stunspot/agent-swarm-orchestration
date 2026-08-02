@@ -1,0 +1,18 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-001",
+  "trial": 1,
+  "suite": "orchestration-transfer",
+  "dimensions": [
+    "swarm_admission",
+    "cost_awareness"
+  ],
+  "verdict": "PARTIAL",
+  "criterion_score": 75.0,
+  "score": 75.0,
+  "criteria_met": 1,
+  "criteria_partial": 1,
+  "criteria_not_met": 0,
+  "material_failures_observed": 0,
+  "criterion_count": 2
+}

@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-010",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly distinguishes 'Three cited-file returns' as agent-reported pending observation from the 'live-health return', which is labeled unverified due to lack of execution trace."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response withholds verification for live health by stating it remains agent-reported and unverified because no execution trace exists; all cited artifacts are treated as available premises without inventing contents."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response returns exactly three bullets synthesizing the status of file inspections and live health into one coherent result with exact tested (file citations) and untested boundaries (live trace)."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not report live health as verified nor treat worker-cited files as root-observed; both remain agent-reported pending observation."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "All four agents are accounted for: three via cited-file returns and one via the live-health return status described in the text."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response provides a single synthesized conclusion rather than dumping separate summaries or unrelated plans."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

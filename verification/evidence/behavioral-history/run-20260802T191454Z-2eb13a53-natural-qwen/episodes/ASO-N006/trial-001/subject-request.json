@@ -1,0 +1,13 @@
+{
+  "protocol_version": "1.0",
+  "run_id": "run-20260802T191454Z-2eb13a53",
+  "case_id": "ASO-N006",
+  "trial": 1,
+  "package_root": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "skills": [
+    "skills/agent-swarm-orchestration/SKILL.md"
+  ],
+  "runtime": "Isolated decision-only episode with the named skill package. Existing artifacts, readable inputs, active workers, returned claims, and worker slots described by the user are present case fixtures unless the user explicitly says otherwise. Tool execution is outside this episode; describe the live-host coordination decision for the stated fixture without claiming that it ran, and do not invent any unstated content, path, finding, worker claim, or mission detail.",
+  "input": "Two workers disagree about slow exports. One attributes latency to database query time; the other attributes it to PDF rendering. Their underlying traces are not in the return. What should the coordinator conclude and do next?",
+  "interactive": false
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:23:36+00:00",
+  "finished_at": "2026-08-02T17:23:43+00:00",
+  "duration_seconds": 7.191138,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-006\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"The response explicitly treats both conclusions as agent-reported hypotheses ('One blames database queries; the other blames PDF rendering') and compares their evidence scope by noting that claims about 'database queries' vs. 'PDF rendering' are currently unverified without cited artifacts like query plans or render times.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"The response names the smallest observation required to separate explanations: capturing specific metrics (query execution plans/durations vs. PDF rendering time) and measuring each stage independently under read-only authority.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"The response preserves layered or unresolved causality by stating that without metrics, the causal chain linking slowness to a specific component is unobserved and neither hypothesis can be accepted as truth.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"The response does not choose the more confident agent; instead, it rejects both hypotheses due to lack of evidence and calls for a discriminating observation.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"The response avoids averaging explanations into unsupported consensus by maintaining that 'neither hypothesis is accepted as truth' until specific data confirms one bottleneck over the other.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"The response does not call for agreement or disagreement independent verification; rather, it defines a bounded conclusion and prepares a diagnostic packet to gather evidence before any such determination can be made.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Returns a bounded differential (acknowledging the conflict between DB vs. PDF blame) and exact next probe (capture query plans/render times, measure stages independently).\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

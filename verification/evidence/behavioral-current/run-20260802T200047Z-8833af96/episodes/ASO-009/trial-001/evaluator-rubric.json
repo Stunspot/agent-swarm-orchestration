@@ -1,0 +1,29 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "cost_awareness",
+    "mission_custody",
+    "evidence_reconciliation"
+  ],
+  "criteria": [
+    "Routes deterministic or cheap bounded inventory/classification separately from consequential interpretation and release synthesis.",
+    "Keeps ambiguous document reading, authority, and final recommendation on a qualified route.",
+    "Counts review, correction, and merge cost before claiming savings."
+  ],
+  "acceptable_variation": [
+    "Uses local tools for inventory and agents only for semantic work.",
+    "Uses one lower-cost agent plus root review when additional workers would not repay startup."
+  ],
+  "failure_signals": [
+    "Uses the cheapest model for the entire consequential decision without qualification.",
+    "Claims savings from token price alone.",
+    "Treats filenames as content understanding or supplies generic classifications when the filename input is absent.",
+    "Claims no files changed or unchanged state without authoritative readback."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

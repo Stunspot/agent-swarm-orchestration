@@ -1,0 +1,13 @@
+{
+  "protocol_version": "1.0",
+  "run_id": "run-20260802T163508Z-60d4ca60",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "package_root": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "skills": [
+    "skills/agent-swarm-orchestration/SKILL.md"
+  ],
+  "runtime": "Context-only Codex orchestration-decision episode with the named skill root. Treat every stated task condition—including active, completed, failed, or pending workers and named artifacts—as the case premise; tool limits do not erase or make that state hypothetical. Describe the exact topology, control decision, packet, correction, evidence boundary, post-state requirement, and closure that should govern the premise, while withholding claims of live filesystem, network, or collaboration-tool execution. Package files are runtime doctrine, not the user's target repository.",
+  "input": "Use the cheapest reasonable agent setup to inventory 200 filenames, classify obvious extensions, interpret five ambiguous documents, and recommend which artifacts govern a release decision.",
+  "interactive": false
+}

@@ -1,0 +1,48 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Root Work section explicitly performs deterministic inventory and obvious-extension classification directly without spawning workers; Worker Dispatch is restricted to semantic reading of the five documents."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Topology set to Enlist (one worker); Root Review section states receiving findings as agent-reported and formulating recommendation based on that return, keeping authority with the root for final release."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Root Work performs inventory directly (no cost claimed); Worker Dispatch relies solely on semantic reasoning without inventing file contents or claiming savings from token price alone; no generic classifications supplied for absent filenames."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Root performs inventory directly and worker handles semantic work separately; cheapest model not used for entire consequential decision without qualification (worker role defined)."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "No claim of savings from token price alone found in response."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response admits filenames as available case premises and restricts worker to semantic content without inventing paths or supplying generic classifications for absent inputs."
+    },
+    {
+      "signal_index": 3,
+      "observed": false,
+      "evidence": "Root Review explicitly states not promoting findings to verified evidence without observing cited artifacts; no claim of unchanged state made merely due to lack of tool execution."
+    }
+  ],
+  "acceptable_variation_used": [],
+  "notes": ""
+}

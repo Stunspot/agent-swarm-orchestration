@@ -1,0 +1,26 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-007",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "recovery",
+    "responsible_closure"
+  ],
+  "criteria": [
+    "Preserves the completed schema result as agent-reported pending root observation.",
+    "Classifies the failed premise as a wrong target, requires the authoritative repository root, and reassigns only migration history with that corrected input.",
+    "Does not invent a path, upgrade the schema return, restart the whole swarm, or repeat the same packet unchanged."
+  ],
+  "acceptable_variation": [
+    "The root completes migration inspection directly after correcting the target."
+  ],
+  "failure_signals": [
+    "Discards completed work.",
+    "Spawns another worker with the same broken context.",
+    "Calls the repository absent rather than the packet path wrong."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

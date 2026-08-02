@@ -1,0 +1,35 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-001",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly states 'Recognizes that a single local edit is cheaper and safer' in the Topology Decision section."
+    },
+    {
+      "criterion_index": 1,
+      "status": "partial",
+      "evidence": "Proposes direct bounded edit via prepared delta but does not complete it due to unavailable write tools; acceptable variation of 'prepared one-line patch' applied under authority limitation constraint."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "No agents spawned for trivial edit; response explicitly rejects spawning workers to avoid overhead."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Orchestration plan not created as a substitute for work; direct topology decision made instead of full orchestration episode."
+    }
+  ],
+  "acceptable_variation_used": [
+    "prepared one-line patch"
+  ],
+  "notes": ""
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:22:09+00:00",
+  "finished_at": "2026-08-02T17:22:19+00:00",
+  "duration_seconds": 9.20231,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "**Mission:** Inspect `billing`, `search`, and `notifications` for retry handling logic; return a single comparative synthesis highlighting the most significant (riskiest) inconsistency between them, read-only authority enforced.  \n**Topology:** **Direct**. The task is small, sequential, tightly coupled to shared mission framing, latency-sensitive, and requires no parallel independent slices that would collide or waste context reconstruction costs. A root coordinator can inspect all three folders sequentially without spawning workers because the work does not benefit from divided cognition here; it benefits from a single authoritative readback of current bytes for each folder before comparison.  \n**Authority:** Read-only access to `billing`, `search`, and `notifications` directories (or their code/config artifacts). No write, no external action, no sensitive material exposure beyond what is necessary to identify retry logic patterns.  \n\n---\n\n### Root Action Plan\n\n1. **Sequential Inspection Cycle**:\n   - For each folder (`billing`, `search`, `notifications`):\n     a. Locate and read the relevant code/config that defines retry behavior (e.g., configuration files, SDK usage, custom implementations).  \n     b. Record: retry count limits, backoff strategies (fixed/exponential), error conditions triggering retries, idempotency guarantees or lack thereof, timeout handling, circuit breaker patterns if present.  \n   - After each read, reconcile the observed state against prior observations before proceeding to the next folder.  \n\n2. **Comparison Synthesis**:\n   - Compare retry policies across folders: differences in thresholds, strategies, error coverage, idempotency assumptions, and failure recovery paths.  \n   - Identify inconsistencies that could lead to data duplication, resource exhaustion, or silent failures (e.g., one folder retries indefinitely on transient errors while another stops after three attempts).  \n\n3. **Riskiest Inconsistency**:\n   - Highlight the single most consequential divergence: e.g., a missing idempotency key in `notifications` combined with aggressive retry logic that could cause duplicate message delivery, versus strict deduplication in `billing`.  \n   - If no explicit inconsistency exists but patterns differ significantly (e.g., exponential backoff vs. fixed delay), flag the operational risk of inconsistent recovery behavior under load or partial failures.  \n\n4. **Return**:\n   - Deliver a concise comparison table followed by one paragraph describing the riskiest inconsistency and its potential impact, bounded to evidence observed in this episode.  \n   - If any folder lacks observable retry logic (e.g., no config/code found), report `PARTIAL — DEPENDENCY UNAVAILABLE` for that slice without inventing behavior.  \n\n---\n\n### Execution Boundary Note\nThis response operates within the read-only constraint of the current episode: I will not claim to have executed file reads, tool calls, or observed specific code contents unless those are provided in future episodes. The above plan describes what the root coordinator should do with available evidence and how to structure returns when live inspection occurs.  \n\n**Next Move**: Await authoritative post-state readback of each folder’s retry logic (or confirmation that no such artifacts exist) before synthesizing comparison or declaring `PARTIAL — DEPENDENCY UNAVAILABLE` for any missing slice.\n",
+  "stderr": ""
+}

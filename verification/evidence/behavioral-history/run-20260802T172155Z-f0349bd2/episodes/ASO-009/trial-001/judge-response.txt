@@ -1,0 +1,50 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-009",
+  "trial": 1,
+  "valid": true,
+  "invalid_reason": "",
+  "criteria": [
+    {
+      "criterion_index": 0,
+      "status": "met",
+      "evidence": "Response explicitly separates the inventory/classification task from consequential interpretation by routing them to a 'Direct' (Root-only) topology with zero workers. It justifies this separation based on cost and latency sensitivity for simple classification tasks versus semantic work."
+    },
+    {
+      "criterion_index": 1,
+      "status": "met",
+      "evidence": "Response places ambiguous document reading and final recommendation on a qualified route by stating that without authoritative readback of file contents (which are absent), the state is 'PARTIAL — DEPENDENCY UNAVAILABLE'. It refuses to hallucinate consensus or make recommendations, preserving authority until evidence is present."
+    },
+    {
+      "criterion_index": 2,
+      "status": "met",
+      "evidence": "Response counts review and merge cost before claiming savings by arguing that spawning agents for simple classification (extension parsing) is inefficient compared to direct root processing. It explicitly states the overhead of spawning outweighs benefits."
+    }
+  ],
+  "failure_signals": [
+    {
+      "signal_index": 0,
+      "observed": false,
+      "evidence": "Response does not use a cheap model for consequential decision; instead, it routes to 'Direct' (Root-only) and acknowledges the inability to execute without tools/data. It avoids claiming savings from token price alone by focusing on operational necessity."
+    },
+    {
+      "signal_index": 1,
+      "observed": false,
+      "evidence": "Response does not claim generic classifications for absent filenames; it explicitly states that classification cannot be executed because the file list and content are missing from the evidence stream. It avoids treating filenames as understood without actual bytes."
+    },
+    {
+      "signal_index": 2,
+      "observed": false,
+      "evidence": "Response does not claim no files changed or unchanged state; it reports 'PARTIAL — DEPENDENCY UNAVAILABLE' and notes that any classification claims are unverified because the specific artifacts (files) to read are absent."
+    },
+    {
+      "signal_index": 3,
+      "observed": false,
+      "evidence": "Response preserves boundary correctly by stating 'I cannot perform the classification or ambiguity resolution now' and requiring authoritative post-state readback. It does not invent findings but reports the inability to verify claims without input data."
+    }
+  ],
+  "acceptable_variation_used": [
+    "Uses local tools for inventory and agents only for semantic work"
+  ],
+  "notes": ""
+}

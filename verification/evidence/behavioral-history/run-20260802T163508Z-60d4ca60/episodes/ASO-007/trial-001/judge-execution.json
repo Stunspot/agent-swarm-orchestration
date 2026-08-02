@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T16:37:42+00:00",
+  "finished_at": "2026-08-02T16:37:50+00:00",
+  "duration_seconds": 8.302894,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-007\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states 'We must preserve the successful schema inspection delta' and includes a table row for worker-schema-inspection with status 'returned (completed)' and Integration effect 'Accepted as base truth', satisfying the requirement to reconcile completed results.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response classifies failure as a packet error ('wrong repository root'), constructs a new delegation packet correcting `read_surfaces` to `<CORRECTED_PATH>`, and reassigns only the migration history worker. It avoids restarting the whole swarm or repeating the same broken context.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response states 'Repeating the same faulty packet is forbidden; we change the premise (the repository path)' and prepares a corrected delegation packet with updated paths rather than spawning another worker with identical broken context.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response explicitly preserves the completed schema result and does not discard it; instead, it integrates it into a coherent status report.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"The response corrects the packet path for reassignment rather than spawning another worker with the same broken context or repeating the failed action unchanged.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response attributes failure to 'packet error (wrong repository root)' and corrects the path; it does not claim the repository itself is absent in a way that invalidates the premise.\"\n    }\n  ],\n  \"acceptable_variation_used\": [],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

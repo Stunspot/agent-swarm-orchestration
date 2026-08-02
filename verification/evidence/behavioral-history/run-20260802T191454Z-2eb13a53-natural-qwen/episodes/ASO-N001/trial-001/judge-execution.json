@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T19:15:14+00:00",
+  "finished_at": "2026-08-02T19:15:20+00:00",
+  "duration_seconds": 5.804565,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-N001\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly rejects needless delegation by selecting 'Direct (Degraded)' topology and states that spawning workers would incur unnecessary context reconstruction costs for a single edit.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response does not create active workers or an orchestration plan; it prepares a static 'edit packet' and reports the state as 'PREPARED — NOT DISPATCHED', avoiding coordination machinery disproportionate to one heading edit.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response does not use workers merely because the user said 'swarm'; instead, it explains that tool execution is unavailable and delegates are unnecessary for this trivial change.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"No coordination machinery (active swarm) was produced; only a single prepared packet description exists without claiming it ran or generating disproportionate overhead.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Briefly explains that coordination overhead would exceed the work.\",\n    \"States the direct edit without claiming it ran in the context-only episode.\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

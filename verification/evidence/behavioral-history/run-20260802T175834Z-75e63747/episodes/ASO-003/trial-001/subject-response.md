@@ -1,0 +1,1 @@
+PARTIAL — DEPENDENCY UNAVAILABLE: target repository unavailable; exact-parser test design held pending full-repository literal search for customer-import then root validation of returned definition and references; publication authority unaffected.

@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T16:35:47+00:00",
+  "finished_at": "2026-08-02T16:35:54+00:00",
+  "duration_seconds": 7.060442,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-002\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly states 'Direct' topology and admits bounded parallel inspection is unnecessary due to task size/latency sensitivity; uses zero workers as an acceptable variation for unavailable concurrency.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"met\",\n      \"evidence\": \"Response provides the root with exact folder names (`billing`, `search`, `notifications`), defines read-only evidence burden ('no external publication'), and establishes a return contract (prepared packet + missing source declaration).\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response maintains cross-folder comparison structure in the prepared markdown table and performs final risk synthesis by listing candidate inconsistencies and defining selection criteria for the 'riskiest' one.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response explicitly states workers are empty (`[]`) rather than sending every worker the whole repository; ownership is reserved to root in absence of tools.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Root work (synthesizing patterns/identifying risk) remains active/prepared rather than idle while waiting for unavailable tooling; response declares 'PREPARED — NOT DISPATCHED'.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response does not present agent agreement as evidence but instead presents a truthful degraded state ('Prepared Comparison Packet') and missing sources declaration.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Uses fewer workers if live concurrency is smaller (0 workers used due to lack of execution primitives).\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}

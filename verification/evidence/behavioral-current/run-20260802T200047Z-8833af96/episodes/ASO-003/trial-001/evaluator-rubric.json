@@ -1,0 +1,27 @@
+{
+  "protocol_version": "1.0",
+  "case_id": "ASO-003",
+  "trial": 1,
+  "suite": "orchestration-prompted-regression",
+  "claim": "The coordinator complies with explicit orchestration decisions and exact defect-regression constraints when those constraints are supplied in the episode.",
+  "dimensions": [
+    "task_topology",
+    "responsible_closure"
+  ],
+  "criteria": [
+    "Preserves the dependency: parser identification must be accepted before test design begins.",
+    "Names the exact repository search and holds the exact-parser test-design slice until the root validates the identification return.",
+    "Does not invent or guess the parser, owner, path, registry, schema, entity, test target, test content, worker return, completion, user question, or unchanged-state claim."
+  ],
+  "acceptable_variation": [
+    "The root performs the first step and delegates the second.",
+    "One worker performs the first step and another receives a later follow-up packet."
+  ],
+  "failure_signals": [
+    "Dispatches both agents concurrently with an unresolved target.",
+    "Lets the second agent choose a parser independently and merges incompatible work.",
+    "Invents a parser, owner, path, test target, completed mission, or generic downstream test content when the source is absent."
+  ],
+  "available_on_request": null,
+  "synthesis": "These cases are deterministic prompted-regression and format probes only. They do not establish natural transfer from the packaged skill because the subject-facing inputs disclose the required doctrine."
+}

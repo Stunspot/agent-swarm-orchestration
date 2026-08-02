@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:36:55+00:00",
+  "finished_at": "2026-08-02T18:36:56+00:00",
+  "duration_seconds": 1.552523,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "Direct: rename the heading in notes.md from Draft to Working Notes; no workers are warranted.\n",
+  "stderr": ""
+}

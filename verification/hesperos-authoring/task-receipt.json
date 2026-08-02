@@ -1,0 +1,38 @@
+{
+    "format":  "cd-independent-authoring-task/v1",
+    "task_id":  "hesperos_author",
+    "run_id":  "aso-0.1.0-hesperos-20260802-05",
+    "dispatch_mode":  "in-process",
+    "status":  "completed",
+    "capability":  "hesperos-documentation",
+    "authorship_scope":  "materially-revised",
+    "authored_files":  [
+                           "START-HERE.md",
+                           "README.md",
+                           "INSTALLATION.md",
+                           "WORKFLOWS.md",
+                           "TROUBLESHOOTING.md",
+                           "TRUST-AND-LIMITS.md",
+                           "SUPPORT.md",
+                           "host-matrix.md"
+                       ],
+    "documentation_fingerprint":  "b82a71589301372d941b182c93d5434b28cb1ced6e5a163b0583215f7028223c",
+    "checks":  {
+                   "markdown_lint":  "8-of-8-pass",
+                   "broken_relative_links":  0,
+                   "marker_validation_errors":  0,
+                   "manifest_unique_paths":  8,
+                   "excluded_host_references":  0,
+                   "canonical_release_mismatches":  0,
+                   "validator_unit_tests":  "10-pass"
+               },
+    "claim_boundary":  [
+                           "clean-host installation, discovery, invocation, and health not established",
+                           "live Codex collaboration-tool execution not established",
+                           "independent TestForge semantic review passed all ten natural Codex decision cases in one isolated trial per case",
+                           "prompted and natural qwen evidence remains negative for smaller-model transfer",
+                           "customer outcomes not established",
+                           "independent accessibility review pending at authoring completion",
+                           "accessibility conformance not claimed"
+                       ]
+}

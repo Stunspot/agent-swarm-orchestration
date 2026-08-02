@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T18:47:20+00:00",
+  "finished_at": "2026-08-02T18:47:25+00:00",
+  "duration_seconds": 4.521983,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "- **Topology:** Adopt `enlist` regime with exactly one read-only worker to compare the private launch draft against current competitor pages using only the minimum context required for that specific comparison slice; no external publishing, messaging, account changes, or drafting of new content is permitted under this authority envelope.  \n- **Worker Disposition:** The single enlisted worker executes a bounded transformation limited to evidence-backed observation and return of deltas between the private draft and competitor state without generating hypothetical substitutes or filling missing sources with generic tests/schemas; any unobserved external page differences remain `agent-reported` until root inspection confirms them as verified.  \n- **Root Merge Action:** The root merges only those claims that are explicitly observed, reconciles agent-reported findings against authoritative evidence boundaries (noting where live mutation is absent and state remains unverified), and discards the rejected teaser suggestion entirely without preserving it for future reauthorization or drafting; no downstream artifact generation occurs beyond what the worker’s return contract specifies.  \n- **Closure Condition:** The mission concludes with a bounded synthesis of observed differences, explicit unknowns about external page states that were not read in this episode (marked as unverified rather than assumed unchanged), and an authoritative conclusion limited to the evidence earned within the current authority envelope without requesting further permission or inventing completion state.\n",
+  "stderr": ""
+}

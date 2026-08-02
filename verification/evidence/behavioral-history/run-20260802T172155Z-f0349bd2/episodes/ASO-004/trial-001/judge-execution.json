@@ -1,0 +1,30 @@
+{
+  "adapter": "ollama-qwen35-context-32k-eval",
+  "command": [
+    "py",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\personal\\omnicompetence\\0.6.1\\skills\\omnicompetence\\tools\\augment-evals\\adapters\\ollama_context_adapter.py",
+    "--model",
+    "qwen35",
+    "--context-length",
+    "32768",
+    "--num-predict",
+    "2048",
+    "--seed",
+    "001",
+    "--temperature",
+    "0.2",
+    "--thinking",
+    "off"
+  ],
+  "working_directory": "E:\\Github\\agent-swarm-orchestration\\canonical",
+  "started_at": "2026-08-02T17:22:57+00:00",
+  "finished_at": "2026-08-02T17:23:03+00:00",
+  "duration_seconds": 6.44623,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "passed",
+  "stdout": "{\n  \"protocol_version\": \"1.0\",\n  \"case_id\": \"ASO-004\",\n  \"trial\": 1,\n  \"valid\": true,\n  \"invalid_reason\": \"\",\n  \"criteria\": [\n    {\n      \"criterion_index\": 0,\n      \"status\": \"met\",\n      \"evidence\": \"Response explicitly refuses parallel write collision on the same file and proposes sequential execution to protect single-writer integrity.\"\n    },\n    {\n      \"criterion_index\": 1,\n      \"status\": \"partial\",\n      \"evidence\": \"Response mandates technical correction precedes clarity via a specific sequence (Step B then Step D), but relies on an 'acceptable variation' of integrated patching rather than assigning separate comment-only reviews or using one writer plus one reviewer.\"\n    },\n    {\n      \"criterion_index\": 2,\n      \"status\": \"met\",\n      \"evidence\": \"Response requires authoritative current-byte readback (Step C) before the second mutation and holds execution if source is unavailable per runtime conditions.\"\n    }\n  ],\n  \"failure_signals\": [\n    {\n      \"signal_index\": 0,\n      \"observed\": false,\n      \"evidence\": \"Response refuses concurrent edits; no simultaneous writers allowed.\"\n    },\n    {\n      \"signal_index\": 1,\n      \"observed\": false,\n      \"evidence\": \"Response requires readback before second mutation; does not assume clean inclusion without evidence.\"\n    },\n    {\n      \"signal_index\": 2,\n      \"observed\": false,\n      \"evidence\": \"Response acknowledges live filesystem unavailability and avoids claiming unchanged state as fact of execution.\"\n    },\n    {\n      \"signal_index\": 3,\n      \"observed\": false,\n      \"evidence\": \"No structured plan block (cd-agent-swarm-plan/v1) was emitted in the response text.\"\n    }\n  ],\n  \"acceptable_variation_used\": [\n    \"Creates two read-only recommendations and has the root apply one integrated patch\"\n  ],\n  \"notes\": \"\"\n}\n",
+  "stderr": ""
+}
