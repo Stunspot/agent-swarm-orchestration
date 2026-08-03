@@ -1,0 +1,46 @@
+{
+  "name": "agent-swarm-orchestration",
+  "version": "0.2.0",
+  "description": "Governed multi-agent coordination with one accountable root, explicit ownership, evidence custody, and honest recovery.",
+  "author": {
+    "name": "Collaborative Dynamics",
+    "url": "https://collaborative-dynamics.com"
+  },
+  "homepage": "https://stunspot.github.io/agent-swarm-orchestration/",
+  "repository": "https://github.com/Stunspot/agent-swarm-orchestration",
+  "license": "SEE LICENSE.md",
+  "keywords": [
+    "agent orchestration",
+    "multi-agent systems",
+    "agent skills",
+    "delegation",
+    "evidence custody"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Swarm Orchestration",
+    "shortDescription": "Parallel cognition without custody loss.",
+    "longDescription": "Choose when multiple agents earn their coordination cost, divide work under explicit ownership and authority, reconcile reported findings against evidence, and return one accountable result without pretending that dispatch equals verification.",
+    "developerName": "Collaborative Dynamics",
+    "websiteURL": "https://stunspot.github.io/agent-swarm-orchestration/",
+    "privacyPolicyURL": "https://github.com/Stunspot/agent-swarm-orchestration/blob/main/DATA-AND-PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/Stunspot/agent-swarm-orchestration/blob/main/TERMS-OF-USE.md",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Choose the lightest capable topology, coordinate the work, and return one evidence-bounded result.",
+      "Split these independent areas safely, keep one writer per mutable surface, and reconcile every return.",
+      "Recover this stalled swarm from the first unearned edge without discarding accepted work."
+    ],
+    "brandColor": "#6FE7F7",
+    "composerIcon": "./assets/aso-icon.png",
+    "logo": "./assets/aso-icon.png",
+    "screenshots": [
+      "./assets/aso-social-card.png"
+    ]
+  }
+}
