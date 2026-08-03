@@ -3,7 +3,7 @@ REVIEWED_FILES: README.md | START-HERE.md | INSTALLATION.md | WORKFLOWS.md | TRO
 MATERIAL_DOCUMENTATION_FINDINGS_COUNT: 0
 ALL_REQUIRED_CUSTOMER_MOMENTS_AND_SAFETY_BOUNDARIES_INSPECTED: yes
 PASS_EVIDENCE_ORIENTATION: README.md | START-HERE.md :: These pages explain the free Augment, suitable task shapes, host requirements, first value, and evidence boundaries without overstating activation.
-PASS_EVIDENCE_INSTALLATION: INSTALLATION.md | host-matrix.md :: The installation journey separates marketplace, standalone Codex, and Claude artifacts while labeling discovery, activation, and untested host surfaces precisely.
+PASS_EVIDENCE_INSTALLATION: INSTALLATION.md | host-matrix.md :: The installation journey uses the observed Windows-safe sparse marketplace command, separates standalone Codex and Claude artifacts, and labels discovery and activation precisely.
 PASS_EVIDENCE_FIRST_VALUE: START-HERE.md :: The example prompt gives a representative bounded task, expected orchestration signals, and a valid Direct outcome when delegation adds no value.
 PASS_EVIDENCE_NORMAL_USE: WORKFLOWS.md :: The workflow guidance covers selection, delegation packets, single-writer custody, evidence reconciliation, recovery, and integrated final reporting for routine operation.
 PASS_EVIDENCE_RECOVERY: TROUBLESHOOTING.md | SUPPORT.md :: Symptom-led recovery distinguishes installation, discovery, collaboration controls, uncertain commits, archive validation, useful issue evidence, and supported maintenance channels.
