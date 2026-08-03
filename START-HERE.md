@@ -28,7 +28,7 @@ Installation files existing on disk do not establish host discovery or activatio
 
 ## Reach first value
 
-Start a fresh task if your host requires reload after installation. Then use a real task with independent read surfaces:
+Start a fresh task if your host requires reload after installation. Then use this example prompt with independent read surfaces:
 
 ```text
 Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep every worker read-only. Decide whether parallel agents earn their coordination cost, give each worker one bounded evidence question, and return one comparison with the riskiest inconsistency. Treat worker findings as reported until you inspect their cited evidence.
