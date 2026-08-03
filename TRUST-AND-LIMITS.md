@@ -1,4 +1,4 @@
-# Trust and limits
+# Trust, evidence, and limits
 
 Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what version 0.1.0 establishes from what your live task must still prove.
 
@@ -105,7 +105,7 @@ The current preliminary TestForge disposition is `PASS_WITH_CONDITIONS / READY_W
 
 ## What remains untested or outside the claim
 
-Version 0.1.0 does not establish:
+Version 0.2.0 does not establish:
 
 - installation on a clean customer host;
 - Codex discovery or implicit routing after installation;
@@ -126,3 +126,10 @@ The package is Codex-only. Other agent harnesses and persistent external swarm s
 The user retains priorities, values, risk acceptance, new authority, sensitive disclosure decisions, installation, and publication. The root retains integration decisions only inside the authorized mission.
 
 When evidence, authority, tools, cost, or quality cannot support another responsible in-bounds step, the skill should stop with an exact bounded state and re-entry condition. A truthful partial result is safer than a polished claim that outruns its receipts.
+
+
+## Public 0.2.0 distribution boundary
+
+Version 0.2.0 adds public licensing, a Codex marketplace plugin, a byte-matched Claude folder, release archives, Pages source, and visual assets around the unchanged verified runtime fingerprint. Packaging checks can establish file parity, manifest validity, archive topology, dimensions, links, and checksums. They do not retroactively establish live host discovery, Claude activation, directory approval, rendered accessibility with assistive technology, or customer outcomes.
+
+Repository visibility, GitHub release publication, Pages deployment, plugin installation, skill discovery, invocation, and healthy behavior require separate receipts. The release record must name the highest state actually observed.
