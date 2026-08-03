@@ -1,13 +1,49 @@
 {
   "format": "cd-customer-documentation/v1",
-  "customer_docs": [
+  "version": "0.2.0",
+  "reader_journey": [
     "START-HERE.md",
     "README.md",
     "INSTALLATION.md",
     "WORKFLOWS.md",
     "TROUBLESHOOTING.md",
     "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "DATA-AND-PRIVACY.md",
+    "TERMS-OF-USE.md",
     "SUPPORT.md",
-    "host-matrix.md"
+    "RELEASE-NOTES-v0.2.0.md",
+    "LICENSE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "docs/index.html"
+  ],
+  "visual_assets": [
+    {
+      "path": "docs/assets/aso-readme-banner.png",
+      "use": "repository banner",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "path": "docs/assets/aso-pages-hero.png",
+      "use": "Pages hero",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "path": "docs/assets/aso-social-card.png",
+      "use": "Open Graph social card",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
+      "use": "plugin icon",
+      "width": 512,
+      "height": 512
+    }
   ]
 }
