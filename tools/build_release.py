@@ -18,8 +18,20 @@ SKILL_SOURCE = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
 CLAUDE_OUT = ROOT / "claude-ai" / f"agent-swarm-orchestration-v{VERSION}.zip"
 
 
+def is_release_file(path: Path, root: Path) -> bool:
+    rel = path.relative_to(root)
+    return (
+        path.is_file()
+        and "__pycache__" not in rel.parts
+        and path.suffix not in {".pyc", ".pyo"}
+    )
+
+
 def files_under(root: Path) -> list[Path]:
-    return sorted((p for p in root.rglob("*") if p.is_file()), key=lambda p: p.relative_to(root).as_posix())
+    return sorted(
+        (p for p in root.rglob("*") if is_release_file(p, root)),
+        key=lambda p: p.relative_to(root).as_posix(),
+    )
 
 
 def sha256_file(path: Path) -> str:
