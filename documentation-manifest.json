@@ -45,5 +45,24 @@
       "width": 512,
       "height": 512
     }
+  ],
+  "customer_docs": [
+    "START-HERE.md",
+    "README.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "DATA-AND-PRIVACY.md",
+    "TERMS-OF-USE.md",
+    "SUPPORT.md",
+    "RELEASE-NOTES-v0.2.0.md",
+    "LICENSE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "docs/index.html"
   ]
 }
