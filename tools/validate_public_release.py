@@ -16,7 +16,17 @@ SKILL = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
 
 
 def files(root: Path) -> dict[str, bytes]:
-    return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob("*") if p.is_file()}
+    result: dict[str, bytes] = {}
+    for path in root.rglob("*"):
+        rel = path.relative_to(root)
+        if (
+            not path.is_file()
+            or "__pycache__" in rel.parts
+            or path.suffix in {".pyc", ".pyo"}
+        ):
+            continue
+        result[rel.as_posix()] = path.read_bytes()
+    return result
 
 
 def png_size(path: Path) -> tuple[int, int]:
