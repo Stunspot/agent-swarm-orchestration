@@ -25,7 +25,7 @@ This is honest negative smaller-model regression evidence, not the Codex qualifi
 
 ## Historical natural-qwen evidence
 
-The retained natural-qwen attempt at `verification/evidence/behavioral-history/run-20260802T191454Z-2eb13a53-natural-qwen/` produced 9 valid episodes: 5 demonstrated, 2 partial, 2 failed, and 1 invalid. It is negative smaller-model transfer evidence and does not qualify the Codex target.
+The retained natural-qwen attempt at `verification/evidence/qwen-natural/` produced 9 valid episodes: 5 demonstrated, 2 partial, 2 failed, and 1 invalid. It is negative smaller-model transfer evidence and does not qualify the Codex target.
 
 Earlier prompted qwen runs, including a coached 10-of-10 result, remain historical regression evidence only. Their explicit prompts disclosed target behavior and cannot establish natural transfer.
 
