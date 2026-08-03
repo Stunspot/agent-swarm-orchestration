@@ -34,7 +34,7 @@ Start from the observable symptom. Preserve the package, task transcript, agent 
 3. Reload Codex or start a fresh task if the host requires discovery at session start.
 4. Invoke the exact name `$agent-swarm-orchestration`.
 
-**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. Clean-host discovery is not established for version 0.1.0, so an unrecognized skill needs host-specific diagnosis rather than repeated copying.
+**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. The unchanged 0.1.0 runtime was not qualified for clean-host discovery. Version 0.2.0 adds public Codex and Claude transport surfaces, but only an observed registration, upload, and fresh-task resolution establishes discovery in a particular host.
 
 ## The skill loads but does not create agents
 
