@@ -28,5 +28,6 @@
     "Remote tag and release availability remain a publication readback gate.",
     "Pages deployment and external-link availability remain a publication readback gate.",
     "Assistive-technology conformance, clean-host activation, Claude activation, broad live collaboration behavior, and customer outcomes remain unexecuted."
-  ]
+  ],
+  "review_input_evidence": "verification/hesperos-public-v0.2.0/review-input-evidence.json"
 }
