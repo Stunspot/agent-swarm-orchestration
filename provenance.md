@@ -2,34 +2,37 @@
 
 ## Product authority
 
-- **Source-verified:** Sam Walker authorized growth of Agent Swarm Orchestration on 2026-07-22.
-- **Source-verified:** Sam narrowed version 0.1.0 to Codex only; Claude and later major-harness variants are outside this build.
-- **Source-verified:** later cross-harness versions plus automated testing and repair were explicitly parked for a future effort.
-- **Source-verified:** the approved product truth is recorded in `design-record/agent-swarm-orchestration-augment-map.md`.
+- **Source-verified:** Sam Walker authorized growth of Agent Swarm Orchestration on July 22, 2026.
+- **Source-verified:** version 0.1.0 was intentionally bounded to a private Codex runtime candidate.
+- **Source-verified correction:** on August 3, 2026, Sam authorized a full public Augment plugin release, requested repository and Pages visuals plus a social card, and established the offer as free.
+- **Source-verified:** the approved runtime product truth is recorded in `design-record/agent-swarm-orchestration-augment-map.md`.
+- **Derived release decision:** version 0.2.0 preserves the verified runtime bytes and adds public Codex, Claude, legal, documentation, visual, archive, and publication surfaces. This distribution expansion does not rewrite the earlier 0.1.0 evidence boundary.
 
 ## Construction doctrine
 
-- Prompt Design v3 governed every model-facing prompt surface.
-- Augment Builder governed mapping, package topology, Codex distribution, documentation custody, and behavioral-eval structure.
-- Skill Creator governed skill anatomy, concise progressive disclosure, metadata, validation, and fresh-context forward use.
-- Hesperos Documentation governs the customer journey and separate documentation review.
-- TestForge governs verification evidence and independent challenge.
+- Prompt Design v3 governed model-facing prompt surfaces.
+- Augment Builder governed mapping, package topology, and behavioral-eval structure.
+- Hesperos Documentation governed the public reader journey, content pass, accessibility structure, and recovery paths.
+- TestForge governs runtime and release evidence plus independent challenge.
+- Augment Launch Operator governs claims, rights, channel custody, publication, readback, and rollback.
 
-These build capabilities are consulted construction dependencies, not hidden runtime requirements.
+These capabilities are construction and release dependencies, not hidden runtime requirements.
 
 ## Domain and runtime sources
 
-- The live Codex collaboration tool contract at the build evidence cutoff supplied current local agent-control semantics.
-- Augment of MIND, Capability Conductor, Agent Striving, Agent Harness Engineer, and Architecture of Endurance supplied consulted local doctrine on mission custody, routing, context, authority, state, evidence, and recovery.
-- Official OpenAI Agents SDK orchestration, agent, and running-agent documentation supplied current primary-source architecture guidance.
-- Anthropic’s “Building Effective Agents” supplied general primary-source evidence favoring simple composable patterns; no Claude runtime or packaging claim is made.
+- The Codex collaboration-tool contract at the 0.1.0 evidence cutoff supplied the exercised local agent-control semantics.
+- Augment of MIND, Capability Conductor, Agent Striving, Agent Harness Engineer, and Architecture of Endurance supplied consulted doctrine on mission custody, routing, context, authority, state, evidence, and recovery.
+- Official OpenAI agent-orchestration documentation supplied primary-source architecture guidance.
+- Anthropic's agent guidance supplied general primary-source evidence favoring simple composable patterns.
 
-The dated claim boundaries and links live in `canonical/skills/agent-swarm-orchestration/references/source-and-currentness-register.md`.
+The dated runtime-source boundaries live in `canonical/skills/agent-swarm-orchestration/references/source-and-currentness-register.md`. Current plugin, Pages, and repository publication behavior is verified against live tools and destination readback during release.
 
 ## Derived product surfaces
 
-The skill, references, schema, validator, templates, example, tests, and evals are original Collaborative Dynamics compositions derived from the approved map and consulted doctrine. Third-party articles and SDK documentation are linked or summarized; they are not copied into the runtime package.
+The skill, references, schema, validator, templates, example, tests, evals, documentation, public plugin wrapper, Pages site, and visual release assets are original Collaborative Dynamics compositions. Third-party articles and SDK documentation are linked or summarized; they are not copied into the runtime package.
+
+The three raster release artworks were generated for this product on August 3, 2026, then cropped and resized into declared channel-specific assets. Their final dimensions and hashes are release evidence; visual quality review does not imply accessibility conformance.
 
 ## Evidence boundary
 
-At the documentation handoff, the canonical Codex skill passes structural package validation, its Swarm Plan template validates, six unit tests pass, and three fresh-context uses exercised direct restraint, package inspection, and evidence-conflict resolution. Installation, discovery, clean-task activation, customer operation, public publication, and universal cost savings are not established.
+The public 0.2.0 wrapper does not enlarge the runtime claim. The retained runtime fingerprint, validator evidence, package parity, and Codex decision qualification remain bounded as recorded in `verification/`. Public packaging, licensing, documentation, image dimensions, archive custody, GitHub release publication, repository visibility, and Pages deployment each require their own receipts. Claude activation, broad clean-host behavior, directory approval, assistive-technology conformance, and customer outcomes remain unestablished until observed.
