@@ -1,6 +1,6 @@
 # Trust, evidence, and limits
 
-Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what version 0.1.0 establishes from what your live task must still prove.
+Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what the unchanged 0.1.0 runtime evidence establishes, what the 0.2.0 public distribution adds, and what your live task must still prove.
 
 ## Keep one authority envelope
 
@@ -119,7 +119,7 @@ Version 0.2.0 does not establish:
 - public publication;
 - accessibility conformance or representative-user usability.
 
-The package is Codex-only. Other agent harnesses and persistent external swarm services are outside this release.
+Version 0.2.0 packages the same runtime for Codex and as a byte-matched Claude or one-skill upload. The retained behavioral qualification is Codex decision-only evidence; live Claude upload, activation, and behavior remain untested. Persistent external swarm services are outside this release.
 
 ## Human control and safe stopping
 
