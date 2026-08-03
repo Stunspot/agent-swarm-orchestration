@@ -64,7 +64,8 @@
     "TRADEMARKS.md",
     "SECURITY.md",
     "CONTRIBUTING.md",
-    "ARCHIVE-CUSTODY.md"
+    "ARCHIVE-CUSTODY.md",
+    "docs/index.html"
   ],
   "delivery_surfaces": [
     "GitHub README",
