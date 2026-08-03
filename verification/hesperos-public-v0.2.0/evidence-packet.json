@@ -48,24 +48,21 @@
     "customer outcomes"
   ],
   "authored_files": [
-    "START-HERE.md",
     "README.md",
+    "START-HERE.md",
     "INSTALLATION.md",
     "WORKFLOWS.md",
     "TROUBLESHOOTING.md",
     "TRUST-AND-LIMITS.md",
-    "SUPPORT.md",
     "host-matrix.md",
     "DATA-AND-PRIVACY.md",
     "TERMS-OF-USE.md",
+    "SUPPORT.md",
     "RELEASE-NOTES-v0.2.0.md",
     "LICENSE.md",
-    "ATTRIBUTION.md",
-    "TRADEMARKS.md",
     "SECURITY.md",
-    "CONTRIBUTING.md",
     "ARCHIVE-CUSTODY.md",
-    "docs/index.html"
+    "provenance.md"
   ],
   "delivery_surfaces": [
     "GitHub README",
