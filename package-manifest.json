@@ -1,58 +1,82 @@
 {
-    "format":  "cd-augment-package/v1",
-    "name":  "agent-swarm-orchestration",
-    "display_name":  "Agent Swarm Orchestration",
-    "version":  "0.1.0",
-    "status":  "verified-private-release-candidate",
-    "map":  "design-record/agent-swarm-orchestration-augment-map.md",
-    "build_state":  "design-record/agent-swarm-orchestration-build-state.md",
-    "canonical_skills":  [
-                             "canonical/skills/agent-swarm-orchestration"
-                         ],
-    "canonical_evals":  [
-                            "canonical/evals/eval-manifest.yaml",
-                            "canonical/evals/orchestration-transfer-cases.yaml",
-                            "canonical/evals/orchestration-natural-qualification-cases.yaml"
-                        ],
-    "customer_docs_manifest":  "documentation-manifest.json",
-    "distributions":  {
-                          "codex":  {
-                                        "status":  "generated-validated-byte-parity-17-files",
-                                        "planned_paths":  [
-                                                              "release/codex/agent-swarm-orchestration"
-                                                          ]
-                                    },
-                          "release_asset":  {
-                                                "status":  "generated-topology-and-byte-parity-validated",
-                                                "planned_paths":  [
-                                                                      "release-assets/agent-swarm-orchestration-v0.1.0.zip"
-                                                                  ]
-                                            }
-                      },
-    "target_hosts":  [
-                         "codex"
-                     ],
-    "license":  "LICENSE.md",
-    "rights_status":  "Original Collaborative Dynamics product; linked third-party publications remain with their owners.",
-    "evidence":  {
-                     "construction":  "complete",
-                     "structural_verification":  "passed-final-static-gate-and-independent-review",
-                     "behavioral_verification":  "ten-case-natural-codex-decision-qualification-pass-with-residual-risk; prompted-qwen-regression-9-of-10-retained-negative",
-                     "installation":  "not-performed",
-                     "clean_host_discovery":  "not-tested",
-                     "clean_host_invocation":  "not-performed",
-                     "publication":  "not-published",
-                     "documentation":  "hesperos-authorship-and-independent-review-pass",
-                     "private_repository":  "not-yet-created-at-candidate-freeze",
-                     "private_release":  "not-yet-created-at-candidate-freeze",
-                     "recovery_backup":  "not-yet-written-at-candidate-freeze",
-                     "estate_reentry":  "not-yet-run-at-candidate-freeze"
-                 },
-    "authority":  {
-                      "installation":  false,
-                      "public_publication":  false,
-                      "external_action":  false,
-                      "risk_acceptance":  false
-                  },
-    "owner":  "Collaborative Dynamics"
+  "format": "cd-augment-package/v1",
+  "name": "agent-swarm-orchestration",
+  "display_name": "Agent Swarm Orchestration",
+  "version": "0.2.0",
+  "runtime_version": "0.1.0",
+  "runtime_fingerprint": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
+  "status": "public-release-candidate",
+  "map": "design-record/agent-swarm-orchestration-augment-map.md",
+  "build_state": "design-record/agent-swarm-orchestration-build-state.md",
+  "canonical_skills": [
+    "canonical/skills/agent-swarm-orchestration"
+  ],
+  "canonical_evals": [
+    "canonical/evals/eval-manifest.yaml",
+    "canonical/evals/orchestration-transfer-cases.yaml",
+    "canonical/evals/orchestration-natural-qualification-cases.yaml"
+  ],
+  "customer_docs_manifest": "documentation-manifest.json",
+  "distributions": {
+    "codex_plugin": {
+      "status": "prepared-not-yet-publicly-read-back",
+      "paths": [
+        ".agents/plugins/marketplace.json",
+        "plugins/agent-swarm-orchestration"
+      ]
+    },
+    "codex_standalone": {
+      "status": "runtime-preserved",
+      "paths": [
+        "release/codex/agent-swarm-orchestration"
+      ]
+    },
+    "claude_standalone": {
+      "status": "prepared-byte-match-to-canonical-required",
+      "paths": [
+        "release/claude/agent-swarm-orchestration",
+        "claude-ai/agent-swarm-orchestration-v0.2.0.zip"
+      ]
+    },
+    "release_assets": {
+      "status": "generation-and-custody-pending",
+      "paths": [
+        "release-assets/v0.2.0"
+      ]
+    },
+    "pages": {
+      "status": "source-prepared-deployment-pending",
+      "paths": [
+        "docs"
+      ]
+    }
+  },
+  "target_hosts": [
+    "codex",
+    "claude",
+    "agent-skill-compatible-hosts"
+  ],
+  "license": "LICENSE.md",
+  "rights_status": "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
+  "evidence": {
+    "runtime": "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
+    "structural_verification": "public-distribution-rerun-pending",
+    "behavioral_verification": "ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
+    "installation": "not-performed-for-0.2.0",
+    "clean_host_discovery": "not-tested-for-0.2.0",
+    "clean_host_invocation": "not-performed-for-0.2.0",
+    "publication": "not-yet-published",
+    "documentation": "public-hesperos-content-pass-in-progress",
+    "visuals": "three-source-assets-generated; exact-dimension-derivatives-prepared",
+    "recovery_backup": "pending",
+    "estate_reentry": "pending"
+  },
+  "authority": {
+    "installation": false,
+    "public_publication": true,
+    "external_action": true,
+    "free_offer": true,
+    "risk_acceptance": false
+  },
+  "owner": "Collaborative Dynamics"
 }

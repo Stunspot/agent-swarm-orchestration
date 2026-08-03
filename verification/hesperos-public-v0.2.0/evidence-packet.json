@@ -1,0 +1,74 @@
+{
+  "format": "cd-hesperos-evidence-packet/v1",
+  "product": "Agent Swarm Orchestration",
+  "version": "0.2.0",
+  "reader": "Codex, Claude, or Agent Skill user evaluating, installing, reaching first value, recovering, and deciding what to trust",
+  "top_tasks": [
+    "decide fit",
+    "install the correct host object",
+    "confirm discovery",
+    "coordinate a representative task",
+    "recover from package or agent failure",
+    "understand evidence, privacy, rights, and support boundaries"
+  ],
+  "product_truth": {
+    "promise": "Parallel cognition without custody loss",
+    "runtime_fingerprint": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
+    "runtime_change": "none from verified 0.1.0 bytes",
+    "offer": "free public Augment",
+    "hosts": [
+      "Codex marketplace plugin",
+      "standalone Codex skill",
+      "Claude one-skill folder and ZIP"
+    ]
+  },
+  "sources": [
+    "package-manifest.json",
+    "design-record/agent-swarm-orchestration-augment-map.md",
+    "verification/verification-report.md",
+    "verification/testforge-review.md",
+    "provenance.md",
+    "ARCHIVE-CUSTODY.md"
+  ],
+  "observed_evidence": [
+    "public release validation passed",
+    "10 validator tests passed",
+    "three runtime trees matched canonical bytes",
+    "plugin installed and listed enabled in isolated temporary CODEX_HOME",
+    "declared PNG dimensions verified",
+    "deterministic ZIP topology and extraction parity passed"
+  ],
+  "not_tested": [
+    "fresh-task activation of 0.2.0",
+    "live Claude upload or activation",
+    "broad collaboration-tool behavior",
+    "assistive-technology conformance",
+    "representative-user success",
+    "OpenAI directory approval",
+    "customer outcomes"
+  ],
+  "authored_files": [
+    "README.md",
+    "START-HERE.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "DATA-AND-PRIVACY.md",
+    "TERMS-OF-USE.md",
+    "SUPPORT.md",
+    "RELEASE-NOTES-v0.2.0.md",
+    "LICENSE.md",
+    "SECURITY.md",
+    "ARCHIVE-CUSTODY.md",
+    "provenance.md"
+  ],
+  "delivery_surfaces": [
+    "GitHub README",
+    "linked Markdown journey",
+    "GitHub Pages HTML/CSS",
+    "plugin listing metadata",
+    "release notes and legal pages"
+  ]
+}

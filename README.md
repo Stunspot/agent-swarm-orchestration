@@ -1,79 +1,95 @@
-# Agent Swarm Orchestration 0.1.0
+![Agent Swarm Orchestration — parallel cognition without custody loss](docs/assets/aso-readme-banner.png)
 
-Agent Swarm Orchestration is a Codex skill from Collaborative Dynamics. It coordinates multiple agents only when divided cognition is expected to improve the accepted result after startup, duplicated reading, communication, merge, verification, latency, and token cost.
+# Agent Swarm Orchestration
 
-Its central promise is **parallel cognition without custody loss**: one root agent keeps the mission, authority envelope, evidence chain, shared-state integrity, merge, and final answer.
+Agent Swarm Orchestration is a free Collaborative Dynamics Augment for coordinating multiple AI agents without misplacing the mission, authority, evidence, or final judgment somewhere in the group chat.
 
-## What it does
+Its promise is simple: **parallel cognition without custody loss**. One accountable root decides whether a swarm is worth its overhead, gives each worker one coherent responsibility, prevents write collisions, reconciles returned claims against evidence, and delivers one integrated result.
 
-The skill helps Codex:
+**[Explore the visual project guide →](https://stunspot.github.io/agent-swarm-orchestration/)**
 
-- choose direct work, one delegate, independent parallel workers, a dependency chain, or recovery;
+## Get the Codex plugin
+
+```text
+codex plugin marketplace add Stunspot/agent-swarm-orchestration
+codex plugin add agent-swarm-orchestration@cd-agent-swarm-orchestration
+```
+
+Start a fresh Codex task, then invoke `$agent-swarm-orchestration`. The repository also preserves a standalone Codex folder, a byte-matched Claude folder, and one-skill ZIPs for hosts that accept direct skill installation.
+
+The package does not create agent tools. It reads the collaboration controls exposed by the current host and adapts to their live schemas, concurrency, messaging, waiting, interruption, and lifecycle semantics.
+
+## What it helps an agent do
+
+- choose Direct, Enlist, Assemble, Chain, or Recover instead of spawning by reflex;
 - map prerequisites, ready work, ownership, budgets, and stop conditions;
-- give each worker a bounded packet with an exact deliverable and evidence burden;
-- use the collaboration controls exposed by the current Codex task;
-- continue safe, authorized work while reserving only an ungranted authority edge;
-- distinguish missing authority from a missing source, tool, or capability;
-- distinguish worker reports from observed or independently verified evidence;
-- return an exact prepared delta when an authorized action cannot run, without claiming unobserved inspection;
-- prevent simultaneous writers from owning the same mutable surface;
-- sequence correctness-bearing changes before clarity, formatting, or polish on a shared artifact;
-- reconcile conflicts and verify the integrated result;
-- account for every worker before closing.
+- keep deterministic inventory at the root and delegate only work that earns context reconstruction;
+- give each worker a bounded packet with exact scope, authority, evidence burden, and return shape;
+- reserve one writer for every mutable surface;
+- sequence correctness-bearing changes before clarity or polish on shared artifacts;
+- keep worker findings `agent-reported` until the root inspects their evidence;
+- continue authorized work while reserving only the actual authority edge;
+- recover from stale context, failed workers, collisions, corrections, and capability loss without discarding accepted work;
+- account for every worker before closure.
 
-It does not create collaboration tools, run after the Codex task ends, or expand the user's authority.
+It does not expand authority, prove worker claims, guarantee savings, run after the host task ends, or turn five agents into five times the competence. That last trick remains regrettably unavailable from physics.
 
 ## The five operating shapes
 
 | Shape | Use it when |
 |---|---|
-| Direct | The root can complete small, sequential, same-surface, or shared-context-heavy work more safely and cheaply. |
-| Enlist | One bounded worker can return a useful result while the root keeps the main task moving. |
-| Assemble | Two or more independent, ready slices can run concurrently with separate write ownership. |
-| Chain | One accepted result determines the next specialist's input. |
-| Recover | Existing work is failed, stale, conflicting, interrupted, or based on a bad premise. |
+| **Direct** | The root can complete small, sequential, same-surface, or shared-context-heavy work more safely and cheaply. |
+| **Enlist** | One bounded worker can return a useful result while the root continues the mission. |
+| **Assemble** | Two or more independent, ready slices can run concurrently under separate ownership. |
+| **Chain** | One accepted result determines the exact input to the next specialist. |
+| **Recover** | Existing work is failed, stale, conflicting, interrupted, or based on a bad premise. |
 
-## What is in the product
+## Get to first value
 
-The product keeps three surfaces distinct:
+Use a task with genuinely independent read surfaces:
 
-- `canonical/skills/agent-swarm-orchestration/` is the maintained source skill.
-- `release/codex/agent-swarm-orchestration/` is the generated Codex installation folder.
-- `release-assets/agent-swarm-orchestration-v0.1.0.zip` is the transport archive containing one top-level `agent-swarm-orchestration/` folder.
+```text
+Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep every worker read-only. Decide whether parallel agents earn their coordination cost, give each worker one bounded evidence question, and return one comparison with the riskiest inconsistency. Treat worker findings as reported until you inspect their cited evidence.
+```
 
-The canonical and released skill folders each contain 17 files and were observed byte-identical during this documentation pass. The ZIP was observed to contain the same 17 relative files. This is package evidence, not proof that a customer host has installed, discovered, or invoked the skill.
+A correct decision to work directly is not a failure. It is the skill saving you from a tiny bureaucracy with tokens.
 
-The runtime skill includes:
+## Product and release map
 
-- one `SKILL.md` entry point;
-- seven progressive references;
-- a Swarm Plan template and schema;
-- Delegation Packet, Agent Return, and Merge Ledger templates;
-- a Swarm Plan validator and ten unit tests;
-- one worked competing-hypotheses example.
+- `canonical/skills/agent-swarm-orchestration/` — maintained runtime source.
+- `plugins/agent-swarm-orchestration/` — installable Codex marketplace plugin.
+- `release/codex/agent-swarm-orchestration/` — standalone Codex folder.
+- `release/claude/agent-swarm-orchestration/` — byte-matched Claude folder.
+- `release-assets/v0.2.0/` — governed plugin and standalone release archives.
+- `claude-ai/` — one-skill Claude upload archive.
+- `canonical/evals/` and `verification/` — retained behavioral cases and evidence.
+- `docs/` — tailored GitHub Pages source and visual assets.
 
-The product root also contains capability evals and retained construction evidence. Evals are build and regression material; they are not part of the 17-file runtime skill.
-
-## Documentation map
+## Documentation journey
 
 | Your question | Read |
 |---|---|
-| Will this help, and how do I try it? | [Start here](START-HERE.md) |
-| How do I install or remove it? | [Installation](INSTALLATION.md) |
-| How do I use the common patterns? | [Workflows](WORKFLOWS.md) |
+| Will this help, and what should I try first? | [Start here](START-HERE.md) |
+| How do I install, check, remove, or roll back? | [Installation](INSTALLATION.md) |
+| How do I use the common orchestration patterns? | [Workflows](WORKFLOWS.md) |
 | Why is it not behaving as expected? | [Troubleshooting](TROUBLESHOOTING.md) |
 | What may I trust, and what remains untested? | [Trust and limits](TRUST-AND-LIMITS.md) |
-| What does the Codex target support? | [Host matrix](host-matrix.md) |
+| Which host surfaces are packaged? | [Host matrix](host-matrix.md) |
+| How is data handled? | [Data and privacy](DATA-AND-PRIVACY.md) |
+| What are the use and responsibility boundaries? | [Terms of use](TERMS-OF-USE.md) |
 | What should I send for support? | [Support](SUPPORT.md) |
+| What changed in the public release? | [0.2.0 release notes](RELEASE-NOTES-v0.2.0.md) |
 
 ## Evidence boundary
 
-The current package fingerprint is `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`. Static package validation, the included plan validator, ten validator tests, a valid template, byte parity across both 17-file runtime trees, and ZIP topology support that build. The release ZIP SHA-256 is `1889b0b1f20a4cc98c9ccf3c95d7a1b64cea0e4524cf3e16b00b90ccd2cf6683`.
+Version 0.2.0 preserves the verified runtime fingerprint `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`. The included validator suite, runtime parity checks, portable ZIP topology, and ten-case Codex decision qualification support the boundaries recorded in [Trust and limits](TRUST-AND-LIMITS.md).
 
-The eval catalog contains 20 cases: ten explicitly coached regression cases and ten natural qualification cases. Ten fresh, no-history `gpt-5.6-sol` subjects each completed one isolated natural decision-only case. Independent TestForge semantic review passed all ten. This supports the package's orchestration decisions at the exercised boundary; those episodes did not execute target files, browsing, network actions, or live Codex collaboration tools.
+That evidence does not establish universal reliability, universal savings, live behavior on every future host contract, clean installation on every customer machine, Claude activation, accessibility conformance, directory approval, or customer outcomes. Packaging and publication receipts are tracked separately from runtime behavior.
 
-The exact-fingerprint `qwen35:latest` prompted regression demonstrated 9 of 10 cases. ASO-009 failed because it claimed that no files changed without an authoritative post-state readback. The retained qwen natural qualification is also negative smaller-model transfer evidence. Neither qwen run establishes qwen transfer.
+## License
 
-The current preliminary TestForge disposition is `PASS_WITH_CONDITIONS / READY_WITH_RESIDUAL_RISK` for private Codex source custody, conditioned on refreshing evidence and documentation custody. It is not a final live-host or customer-readiness verdict. See [Trust and limits](TRUST-AND-LIMITS.md) for the evidence classes, residuals, and exclusions.
+Agent Swarm Orchestration is free to use and redistribute under a split license: MIT for Python software and machine-readable schemas; CC BY-ND 4.0 for original authored Augment material. See [LICENSE.md](LICENSE.md), [ATTRIBUTION.md](ATTRIBUTION.md), and [TRADEMARKS.md](TRADEMARKS.md).
 
-The evidence does not establish installed-host discovery, clean-task invocation, live collaboration-tool behavior, accessibility conformance, public publication, universal reliability, universal savings, or customer success.
+## Publisher
+
+Agent Swarm Orchestration is a Collaborative Dynamics Augment. Issues and contributions are welcome within the boundaries in [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).

@@ -1,15 +1,15 @@
-# Start here: coordinate Codex agents without losing control
+# Start here: coordinate agents without losing control
 
-Agent Swarm Orchestration helps Codex decide whether multiple agents will improve a task, divide earned work safely, and return one evidence-bounded result. It is for Codex users who want the benefit of parallel cognition without handing mission, authority, or final judgment to a committee.
+Agent Swarm Orchestration helps an AI host decide whether multiple agents will improve a task, divide earned work safely, and return one evidence-bounded result. It is for people who want the benefit of parallel cognition without handing mission, authority, or final judgment to a committee.
 
-Version 0.1.0 targets Codex. The package exists as a validated 17-file Codex skill folder and a 17-file ZIP. A fresh, pinned Codex decision-only qualification passed all ten natural cases under independent semantic review. Installation, host discovery, clean-task invocation, live collaboration-tool behavior, and customer outcomes have not been tested.
+Version 0.2.0 is a free public Augment. It packages the same verified runtime as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill release archives. The package does not supply collaboration tools; the current host must expose them.
 
-## Is this the right tool for your task?
+## Decide whether this fits your task
 
 Use it when the work has at least one of these shapes:
 
 - two or more independent areas can be inspected at the same time;
-- one bounded specialist task can be delegated while the root continues useful work;
+- one bounded specialist task can run while the root continues useful work;
 - one result must be accepted before a dependent specialist begins;
 - competing explanations benefit from independent investigation;
 - a writer needs a separate, independent reviewer;
@@ -17,30 +17,47 @@ Use it when the work has at least one of these shapes:
 
 Stay with one agent when the task is small, tightly sequential, dependent on shared conversational context, latency-sensitive, or focused on one shared file. The skill is designed to decline unnecessary swarms.
 
-## Get to first value
+## Install the package that matches your host
 
-1. Read [Installation](INSTALLATION.md) and add the released Codex skill folder to the skill location used by your Codex installation.
-2. Start a fresh Codex task if your host requires a reload before discovering a newly added skill.
-3. Use this request, replacing the folder names with real independent areas:
+- **Codex marketplace plugin:** use the two commands in [Installation](INSTALLATION.md).
+- **Standalone Codex:** install `release/codex/agent-swarm-orchestration/`.
+- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or the matching archive under `claude-ai/`.
+- **Source and evidence review:** use the repository, not an installed runtime folder.
 
-   ```text
-   Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep the work read-only. Decide whether parallel agents earn their coordination cost, give each worker one bounded evidence question, and return one comparison with the riskiest inconsistency. Treat worker findings as reported until you inspect their cited evidence.
-   ```
+Installation files existing on disk do not establish host discovery or activation. Follow the check for your host and record what you actually observe.
 
-4. Look for these observable results:
+## Reach first value
 
-   - Codex explains or demonstrates why the selected topology fits the work.
-   - Each worker has a distinct responsibility and no write authority.
-   - The root compares evidence across the returned findings.
-   - You receive one integrated answer with limits, not a stack of worker summaries.
+Start a fresh task if your host requires reload after installation. Then use this example prompt with independent read surfaces:
 
-If Codex does not recognize the skill or cannot create agents, follow [Troubleshooting](TROUBLESHOOTING.md). A correct decision to work directly is not a failure.
+```text
+Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep every worker read-only. Decide whether parallel agents earn their coordination cost, give each worker one bounded evidence question, and return one comparison with the riskiest inconsistency. Treat worker findings as reported until you inspect their cited evidence.
+```
 
-## Choose your next page
+Look for these results:
 
-- [README](README.md): product model, package contents, and documentation map.
-- [Installation](INSTALLATION.md): install, check, remove, or roll back the Codex package.
-- [Workflows](WORKFLOWS.md): practical patterns for parallel, sequential, review, correction, and recovery work.
+1. The root selects Direct, Enlist, Assemble, Chain, or Recover for the actual work.
+2. Each worker receives a distinct responsibility and explicit authority.
+3. Mutable surfaces have one writer at a time.
+4. The root reconciles returned claims against cited evidence.
+5. You receive one integrated answer with limits, not a stack of worker summaries.
+
+A correct Direct decision is success when parallelism would cost more than it contributes.
+
+## If the first attempt fails
+
+- If the host does not recognize the skill, check the installed folder or plugin registration in [Troubleshooting](TROUBLESHOOTING.md).
+- If the skill is recognized but no agents can be created, confirm that the current task exposes collaboration controls.
+- If workers returned claims but the root cannot inspect their evidence, keep those claims labeled `agent-reported`.
+- If a write or external action may have committed, reconcile authoritative state before retrying.
+
+## Continue the journey
+
+- [README](README.md): product promise, install commands, release map, and evidence boundary.
+- [Installation](INSTALLATION.md): Codex, Claude, direct ZIP, removal, and rollback.
+- [Workflows](WORKFLOWS.md): practical orchestration patterns.
+- [Troubleshooting](TROUBLESHOOTING.md): symptom-led recovery.
 - [Trust and limits](TRUST-AND-LIMITS.md): authority, privacy, evidence, validation, and non-claims.
-- [Host matrix](host-matrix.md): what version 0.1.0 supplies and what remains untested.
-- [Support](SUPPORT.md): collect a useful issue report and find the maintenance boundary.
+- [Host matrix](host-matrix.md): supplied and untested host surfaces.
+- [Data and privacy](DATA-AND-PRIVACY.md): data-handling boundary.
+- [Support](SUPPORT.md): useful issue reports and maintenance boundary.

@@ -1,13 +1,102 @@
 {
   "format": "cd-customer-documentation/v1",
-  "customer_docs": [
-    "START-HERE.md",
+  "version": "0.2.0",
+  "reader_journey": [
     "README.md",
+    "START-HERE.md",
     "INSTALLATION.md",
     "WORKFLOWS.md",
     "TROUBLESHOOTING.md",
     "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "DATA-AND-PRIVACY.md",
+    "TERMS-OF-USE.md",
     "SUPPORT.md",
-    "host-matrix.md"
-  ]
+    "RELEASE-NOTES-v0.2.0.md",
+    "LICENSE.md",
+    "SECURITY.md",
+    "ARCHIVE-CUSTODY.md",
+    "provenance.md"
+  ],
+  "visual_assets": [
+    {
+      "path": "docs/assets/aso-readme-banner.png",
+      "use": "repository banner",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "path": "docs/assets/aso-pages-hero.png",
+      "use": "Pages hero",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "path": "docs/assets/aso-social-card.png",
+      "use": "Open Graph social card",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
+      "use": "plugin icon",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "customer_docs": [
+    "README.md",
+    "START-HERE.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "DATA-AND-PRIVACY.md",
+    "TERMS-OF-USE.md",
+    "SUPPORT.md",
+    "RELEASE-NOTES-v0.2.0.md",
+    "LICENSE.md",
+    "SECURITY.md",
+    "ARCHIVE-CUSTODY.md",
+    "provenance.md"
+  ],
+  "landing_page": "README.md",
+  "moments": {
+    "orientation": [
+      "README.md",
+      "START-HERE.md"
+    ],
+    "installation": [
+      "INSTALLATION.md",
+      "host-matrix.md"
+    ],
+    "first_value": [
+      "START-HERE.md"
+    ],
+    "normal_use": [
+      "WORKFLOWS.md"
+    ],
+    "recovery": [
+      "TROUBLESHOOTING.md",
+      "SUPPORT.md"
+    ],
+    "privacy_security": [
+      "DATA-AND-PRIVACY.md",
+      "TERMS-OF-USE.md",
+      "SECURITY.md"
+    ],
+    "evidence_limits": [
+      "TRUST-AND-LIMITS.md",
+      "host-matrix.md"
+    ],
+    "support_maintenance": [
+      "SUPPORT.md",
+      "RELEASE-NOTES-v0.2.0.md",
+      "ARCHIVE-CUSTODY.md"
+    ],
+    "provenance": [
+      "provenance.md"
+    ]
+  }
 }

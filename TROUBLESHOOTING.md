@@ -1,5 +1,20 @@
 # Troubleshoot Agent Swarm Orchestration
 
+Version 0.2.0 can arrive through a Codex marketplace plugin, a standalone Codex folder, or a Claude/one-skill archive. Begin with the observable boundary: package bytes, host registration, discovery, invocation, collaboration-tool availability, worker behavior, merge, or external state.
+
+## Marketplace command succeeds but the skill is not recognized
+
+1. Confirm the marketplace source is registered as `Stunspot/agent-swarm-orchestration`.
+2. Confirm the installed plugin name is `agent-swarm-orchestration@cd-agent-swarm-orchestration`.
+3. Start a fresh task if the host caches plugin discovery.
+4. Ask the host to resolve `$agent-swarm-orchestration`.
+
+A successful command return establishes the command result. It does not by itself establish fresh-task discovery.
+
+## Claude upload or folder copy is present but inactive
+
+Confirm that the archive contains one top-level `agent-swarm-orchestration/` folder with `SKILL.md` directly inside it. Follow the current host's reload or upload procedure, then test in a fresh task. Static archive validity does not establish live activation.
+
 Start from the observable symptom. Preserve the package, task transcript, agent returns, and current file state before replacing, deleting, or retrying anything.
 
 ## Codex does not recognize the skill name
@@ -19,7 +34,7 @@ Start from the observable symptom. Preserve the package, task transcript, agent 
 3. Reload Codex or start a fresh task if the host requires discovery at session start.
 4. Invoke the exact name `$agent-swarm-orchestration`.
 
-**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. Clean-host discovery is not established for version 0.1.0, so an unrecognized skill needs host-specific diagnosis rather than repeated copying.
+**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. The unchanged 0.1.0 runtime was not qualified for clean-host discovery. Version 0.2.0 adds public Codex and Claude transport surfaces, but only an observed registration, upload, and fresh-task resolution establishes discovery in a particular host.
 
 ## The skill loads but does not create agents
 

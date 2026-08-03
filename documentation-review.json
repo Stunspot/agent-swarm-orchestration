@@ -1,0 +1,33 @@
+{
+  "format": "cd-documentation-review/v1",
+  "fresh_context": true,
+  "disposition": "REVIEW_PASS",
+  "unresolved_material_findings": 0,
+  "documentation_fingerprint": "fcd42caaa243f5a7542716311aedacdbfd40f14452ea73ccfa9a884f65bcf6fc",
+  "reviewed_commit": "2a7a475b084bdbd9676d459896392f50407e6974",
+  "reviewed_files": [
+    "README.md",
+    "START-HERE.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "DATA-AND-PRIVACY.md",
+    "TERMS-OF-USE.md",
+    "SUPPORT.md",
+    "RELEASE-NOTES-v0.2.0.md",
+    "LICENSE.md",
+    "SECURITY.md",
+    "ARCHIVE-CUSTODY.md",
+    "provenance.md"
+  ],
+  "reviewer": "Independent Hesperos fresh-context review",
+  "review_run_id": "aso-0.2.0-hesperos-review-20260803",
+  "conditions": [
+    "Remote tag and release availability remain a publication readback gate.",
+    "Pages deployment and external-link availability remain a publication readback gate.",
+    "Assistive-technology conformance, clean-host activation, Claude activation, broad live collaboration behavior, and customer outcomes remain unexecuted."
+  ],
+  "review_input_evidence": "verification/hesperos-public-v0.2.0/review-input-evidence.json"
+}

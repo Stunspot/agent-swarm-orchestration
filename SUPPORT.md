@@ -1,56 +1,32 @@
-# Support and maintenance
+# Support Agent Swarm Orchestration
 
-Collaborative Dynamics owns Agent Swarm Orchestration 0.1.0. Use the channel that supplied your package to contact the owner; this release does not include a separate support address or service-level commitment.
+Use the [GitHub issue tracker](https://github.com/Stunspot/agent-swarm-orchestration/issues) for reproducible product defects, documentation problems, portability issues, and bounded host-compatibility reports.
 
-## Before requesting support
+## Before opening an issue
 
-Check these pages first:
+Read [Troubleshooting](TROUBLESHOOTING.md) and preserve the current package, task transcript, worker returns, and affected artifact state before replacing or retrying anything.
 
-- [Installation](INSTALLATION.md) for folder shape, discovery checks, removal, and rollback;
-- [Troubleshooting](TROUBLESHOOTING.md) for failed recognition, missing tools, collisions, conflicts, and recovery;
-- [Trust and limits](TRUST-AND-LIMITS.md) for the difference between package evidence and live-host evidence;
-- [Host matrix](host-matrix.md) for the supported target and untested states.
+## Include
 
-## Send a useful issue report
+1. Package version and installation surface: marketplace plugin, Codex folder, Claude folder, or archive.
+2. Host name and version.
+3. Operating system when relevant.
+4. Whether the host discovered the skill in a fresh task.
+5. Whether collaboration tools were present, with their observed names or schemas when safe.
+6. The smallest synthetic request that reproduces the behavior.
+7. Selected topology and expected result.
+8. Worker disposition and the evidence level of returned claims.
+9. Exact error text or command output.
+10. What you attempted after the failure and whether authoritative state was read back.
 
-Include the smallest evidence packet that can reproduce or classify the problem:
+Remove credentials, access tokens, private customer data, proprietary code outside the authorized scope, and unrelated repository content. Preserve the shape of the failure with synthetic values.
 
-1. Product name and version: Agent Swarm Orchestration 0.1.0.
-2. Codex version or build identifier, operating system, and task date.
-3. Installation source: released folder or ZIP.
-4. Exact installed folder path and whether `SKILL.md` is directly inside it.
-5. Whether the symptom concerns installation, discovery, invocation, agent tools, orchestration behavior, the plan validator, shared-state mutation, or documentation.
-6. The exact request with secrets and personal data removed.
-7. The observed response, error, or validator output.
-8. Worker IDs, dispositions, and affected paths or external objects.
-9. What you expected and what evidence would establish recovery.
-10. Any local modifications to the package.
+## Security reports
 
-Do not send credentials, access tokens, private customer data, or unrelated repository content. Replace sensitive values while preserving the shape of the failure.
+Do not place sensitive vulnerability details in a public issue. Follow [SECURITY.md](SECURITY.md) and request a private reporting route through [Collaborative Dynamics](https://collaborative-dynamics.com).
 
-## Preserve evidence before recovery
+## Maintenance boundary
 
-Keep copies of the relevant plan, packets, returns, merge ledger, task transcript, commands, outputs, current file hashes or diffs, and the exact package bytes. If a write or external action may have committed, record the authoritative post-state before retrying.
+Support can diagnose the packaged skill, validator, documentation, and distribution shape. It cannot guarantee third-party host availability, restore external actions, prove that interrupted writes did not commit, or certify every future collaboration-tool contract.
 
-Mark uncertain states as unknown. Do not describe a task as rolled back, unchanged, healthy, or recovered without the corresponding observation.
-
-## Maintenance triggers
-
-Customer documentation and runtime guidance should be reviewed when any of these change:
-
-- Codex skill discovery or installation behavior;
-- collaboration tool names, schemas, concurrency, waiting, messaging, interruption, or cancellation;
-- package files, paths, templates, schema, validator, or tests;
-- the supported host or product promise;
-- authority, privacy, or data-handling policy;
-- recurring support symptoms or failed customer tasks;
-- verification evidence or a known limit.
-
-Because host contracts are volatile, re-check the current Codex task envelope before relying on exact collaboration primitives.
-
-## Updates and retirement
-
-Preserve a known-good package before replacing version 0.1.0. Treat a new folder, successful copy, host discovery, invocation, healthy behavior, publication, and customer validation as separate states.
-
-If the product is retired, remove only the installed skill folder, preserve customer-created work elsewhere, and retain evidence needed to explain prior decisions. Removal does not stop existing workers or undo their effects; reconcile those separately.
-
+A useful issue ends with one discriminating observation or exact re-entry condition—not a séance around a vanished worker.
