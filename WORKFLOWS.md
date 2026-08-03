@@ -1,6 +1,8 @@
 # Agent Swarm Orchestration workflows
 
-These workflows are starting patterns, not fixed recipes. Codex should inspect the current task, authority, evidence, dependencies, write surfaces, tool contract, and cost before selecting a topology.
+These workflows are starting patterns, not fixed recipes. The active host should inspect the current task, authority, evidence, dependencies, write surfaces, live collaboration-tool contract, and total coordination cost before selecting a topology.
+
+Before any dispatch, distinguish skill discovery from tool availability: a host may recognize `$agent-swarm-orchestration` while exposing no agent controls in that task. In that case, complete root-owned work and return the strongest honest prepared result rather than simulating a swarm.
 
 ## Decide whether a swarm is worth using
 
