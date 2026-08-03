@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "runtime_version": "0.1.0",
   "runtime_fingerprint": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
-  "status": "public-release-candidate",
+  "status": "public-release-published",
   "map": "design-record/agent-swarm-orchestration-augment-map.md",
   "build_state": "design-record/agent-swarm-orchestration-build-state.md",
   "canonical_skills": [
@@ -19,33 +19,33 @@
   "customer_docs_manifest": "documentation-manifest.json",
   "distributions": {
     "codex_plugin": {
-      "status": "prepared-not-yet-publicly-read-back",
+      "status": "publicly-installed-and-enabled-with-sparse-marketplace-checkout",
       "paths": [
         ".agents/plugins/marketplace.json",
         "plugins/agent-swarm-orchestration"
       ]
     },
     "codex_standalone": {
-      "status": "runtime-preserved",
+      "status": "archive-published-runtime-preserved",
       "paths": [
         "release/codex/agent-swarm-orchestration"
       ]
     },
     "claude_standalone": {
-      "status": "prepared-byte-match-to-canonical-required",
+      "status": "archive-published-byte-matched-activation-untested",
       "paths": [
         "release/claude/agent-swarm-orchestration",
         "claude-ai/agent-swarm-orchestration-v0.2.0.zip"
       ]
     },
     "release_assets": {
-      "status": "generation-and-custody-pending",
+      "status": "published-with-github-readback",
       "paths": [
         "release-assets/v0.2.0"
       ]
     },
     "pages": {
-      "status": "source-prepared-deployment-pending",
+      "status": "deployed-and-unauthenticated-http-200",
       "paths": [
         "docs"
       ]
@@ -60,16 +60,16 @@
   "rights_status": "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
   "evidence": {
     "runtime": "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
-    "structural_verification": "public-distribution-rerun-pending",
+    "structural_verification": "public-release-validator-pass-and-10-tests-pass",
     "behavioral_verification": "ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
-    "installation": "not-performed-for-0.2.0",
-    "clean_host_discovery": "not-tested-for-0.2.0",
+    "installation": "public-github-marketplace-sparse-install-observed",
+    "clean_host_discovery": "isolated-codex-home-plugin-listed-installed-and-enabled",
     "clean_host_invocation": "not-performed-for-0.2.0",
-    "publication": "not-yet-published",
-    "documentation": "public-hesperos-content-pass-in-progress",
-    "visuals": "three-source-assets-generated; exact-dimension-derivatives-prepared",
-    "recovery_backup": "pending",
-    "estate_reentry": "pending"
+    "publication": "repository-public-release-v0.2.0-and-pages-unauthenticated-http-200",
+    "documentation": "hesperos-authorship-and-independent-review-pass-fingerprint-0b8b1ba1e8e82fc768a459b56028789c986052e7c1611731e734926659a81e8a",
+    "visuals": "readme-pages-and-social-assets-generated-dimension-verified-and-public-http-200",
+    "recovery_backup": "deterministic-archives-checksums-and-custody-receipt-published",
+    "estate_reentry": "public-main-release-assets-pages-manifests-and-review-receipts-recorded"
   },
   "authority": {
     "installation": false,
