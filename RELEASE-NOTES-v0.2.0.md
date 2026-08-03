@@ -2,7 +2,7 @@
 
 Release date: August 3, 2026
 
-Version 0.2.0 is the first public, free Augment release. It preserves the verified 0.1.0 orchestration runtime while adding governed public distribution surfaces and a reader-centered release journey.
+Version 0.2.0 is the first public, free Augment release. The public installation command uses Codex sparse marketplace checkout so Windows does not clone retained verification evidence into its deep staging directory. It preserves the verified 0.1.0 orchestration runtime while adding governed public distribution surfaces and a reader-centered release journey.
 
 ## Added
 

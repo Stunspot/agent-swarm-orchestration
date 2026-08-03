@@ -1,8 +1,8 @@
 {
   "format": "cd-documentation-review-input/v1",
-  "review_run_id": "aso-0.2.0-hesperos-review-20260803",
+  "review_run_id": "aso-0.2.0-hesperos-review-20260803-r2",
   "contents_supplied": true,
-  "documentation_fingerprint": "fcd42caaa243f5a7542716311aedacdbfd40f14452ea73ccfa9a884f65bcf6fc",
+  "documentation_fingerprint": "0b8b1ba1e8e82fc768a459b56028789c986052e7c1611731e734926659a81e8a",
   "supplied_files": [
     "README.md",
     "START-HERE.md",
@@ -20,7 +20,7 @@
     "ARCHIVE-CUSTODY.md",
     "provenance.md"
   ],
-  "transport": "Fresh-context independent delegated Hesperos review of immutable commit 2a7a475b084bdbd9676d459896392f50407e6974 with exact repository file contents",
+  "transport": "Fresh-context independent delegated Hesperos review of immutable commit c769c7b591da2f01c6ddddb048f1cff01cf9aed0 with exact repository file contents",
   "review_response_evidence": "verification/hesperos-public-v0.2.0/review-response.md",
   "execution_evidence": [
     "verification/hesperos-public-v0.2.0/review-execution.md",

@@ -36,7 +36,8 @@
     "three runtime trees matched canonical bytes",
     "plugin installed and listed enabled in isolated temporary CODEX_HOME",
     "declared PNG dimensions verified",
-    "deterministic ZIP topology and extraction parity passed"
+    "deterministic ZIP topology and extraction parity passed",
+    "public GitHub marketplace installed with documented sparse checkout and plugin listed installed and enabled in isolated CODEX_HOME"
   ],
   "not_tested": [
     "fresh-task activation of 0.2.0",

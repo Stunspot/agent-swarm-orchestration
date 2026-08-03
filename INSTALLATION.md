@@ -11,7 +11,7 @@ Back up an existing `agent-swarm-orchestration` installation before replacing it
 ## Codex marketplace plugin
 
 ```text
-codex plugin marketplace add Stunspot/agent-swarm-orchestration
+codex plugin marketplace add Stunspot/agent-swarm-orchestration --ref main --sparse .agents --sparse plugins/agent-swarm-orchestration
 codex plugin add agent-swarm-orchestration@cd-agent-swarm-orchestration
 ```
 
