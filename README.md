@@ -79,6 +79,10 @@ A correct decision to work directly is not a failure. It is the skill saving you
 | What are the use and responsibility boundaries? | [Terms of use](TERMS-OF-USE.md) |
 | What should I send for support? | [Support](SUPPORT.md) |
 | What changed in the public release? | [0.2.0 release notes](RELEASE-NOTES-v0.2.0.md) |
+| Which archives and checksums are authoritative? | [Archive custody](ARCHIVE-CUSTODY.md) |
+| Where did the product and its claims come from? | [Provenance](provenance.md) |
+| How do I contribute or report a security issue? | [Contributing](CONTRIBUTING.md) and [Security](SECURITY.md) |
+| Which licenses, attribution, and marks apply? | [License](LICENSE.md), [Attribution](ATTRIBUTION.md), and [Trademarks](TRADEMARKS.md) |
 
 ## Evidence boundary
 
