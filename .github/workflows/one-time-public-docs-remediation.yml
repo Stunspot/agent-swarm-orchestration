@@ -11,106 +11,103 @@ permissions:
 jobs:
   capture-live-surfaces:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
-      - name: Check out repository
+      - name: Check out current main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
-      - name: Capture repository and live visual assets
+      - name: Preserve the complete current repository snapshot
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p evidence/assets evidence/pages
-          cp docs/assets/aso-readme-banner.png evidence/assets/
-          cp docs/assets/aso-pages-hero.png evidence/assets/
-          cp docs/assets/aso-social-card.png evidence/assets/
+          mkdir -p evidence/repository evidence/live
+          rsync -a --exclude='.git' --exclude='evidence' ./ evidence/repository/
+          git rev-parse HEAD > evidence/repository-commit.txt
+      - name: Fetch deployed Pages and public assets
+        shell: bash
+        run: |
+          set -euo pipefail
           curl --fail --silent --show-error --location \
             https://stunspot.github.io/agent-swarm-orchestration/ \
-            -o evidence/pages/live-index.html
+            -o evidence/live/index.html
           curl --fail --silent --show-error --location \
             https://stunspot.github.io/agent-swarm-orchestration/style.css \
-            -o evidence/pages/live-style.css
-          curl --fail --silent --show-error --location \
-            https://stunspot.github.io/agent-swarm-orchestration/assets/aso-readme-banner.png \
-            -o evidence/pages/live-readme-banner.png
-          curl --fail --silent --show-error --location \
-            https://stunspot.github.io/agent-swarm-orchestration/assets/aso-pages-hero.png \
-            -o evidence/pages/live-pages-hero.png
-          curl --fail --silent --show-error --location \
-            https://stunspot.github.io/agent-swarm-orchestration/assets/aso-social-card.png \
-            -o evidence/pages/live-social-card.png
-          python - <<'PY'
-          from pathlib import Path
-          from PIL import Image
-          import hashlib, json
-          rows = []
-          for path in sorted(Path('evidence').rglob('*.png')):
-              with Image.open(path) as image:
-                  image.load()
-                  rows.append({
-                      'path': str(path),
-                      'width': image.width,
-                      'height': image.height,
-                      'mode': image.mode,
-                      'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
-                  })
-          Path('evidence/image-metadata.json').write_text(json.dumps(rows, indent=2) + '\n', encoding='utf-8')
-          PY
-      - name: Capture deployed Pages in Chrome
+            -o evidence/live/style.css
+          for name in aso-readme-banner.png aso-pages-hero.png aso-social-card.png; do
+            curl --fail --silent --show-error --location \
+              "https://stunspot.github.io/agent-swarm-orchestration/assets/${name}" \
+              -o "evidence/live/${name}"
+          done
+          sha256sum docs/assets/*.png evidence/live/*.png > evidence/asset-sha256.txt
+          file docs/assets/*.png evidence/live/*.png > evidence/asset-file-report.txt
+      - name: Capture the deployed site in a real browser
         shell: bash
         run: |
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars \
-            --window-size=1440,2200 \
-            --screenshot=evidence/pages/pages-desktop.png \
+            --window-size=1440,2400 \
+            --screenshot=evidence/live/pages-desktop.png \
             https://stunspot.github.io/agent-swarm-orchestration/
           "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars \
             --window-size=390,2600 \
             --force-device-scale-factor=1 \
-            --screenshot=evidence/pages/pages-mobile.png \
+            --screenshot=evidence/live/pages-mobile.png \
             https://stunspot.github.io/agent-swarm-orchestration/
-      - name: Record link and content checks
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars \
+            --window-size=1440,1800 \
+            --screenshot=evidence/live/repository-readme.png \
+            https://github.com/Stunspot/agent-swarm-orchestration
+      - name: Exercise public links and anchors
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
+          from urllib.parse import urljoin, urlparse
           import json, subprocess
 
-          class Links(HTMLParser):
+          class SurfaceParser(HTMLParser):
               def __init__(self):
-                  super().__init__(); self.links=[]
+                  super().__init__(); self.urls=[]; self.ids=set()
               def handle_starttag(self, tag, attrs):
                   values=dict(attrs)
-                  if tag in {'a','img','link','script'}:
-                      for key in ('href','src'):
-                          if values.get(key): self.links.append(values[key])
+                  if values.get('id'): self.ids.add(values['id'])
+                  for key in ('href','src'):
+                      if values.get(key): self.urls.append(values[key])
 
-          html=Path('evidence/pages/live-index.html').read_text(encoding='utf-8')
-          parser=Links(); parser.feed(html)
-          checks=[]
-          for url in parser.links:
-              if url.startswith('#') or url.startswith('mailto:'):
-                  checks.append({'url':url,'status':'local-anchor-or-mail'})
+          base='https://stunspot.github.io/agent-swarm-orchestration/'
+          html=Path('evidence/live/index.html').read_text(encoding='utf-8')
+          parser=SurfaceParser(); parser.feed(html)
+          rows=[]
+          for raw in parser.urls:
+              if raw.startswith('#'):
+                  target=raw[1:]
+                  rows.append({'url':raw,'kind':'anchor','pass':target in parser.ids})
                   continue
-              if url.startswith('http://') or url.startswith('https://'):
-                  result=subprocess.run(['curl','--silent','--show-error','--location','--output','/dev/null','--write-out','%{http_code}',url],text=True,capture_output=True)
-                  checks.append({'url':url,'status':result.stdout.strip() or 'curl-error','stderr':result.stderr.strip()})
-              else:
-                  absolute='https://stunspot.github.io/agent-swarm-orchestration/' + url.lstrip('./')
-                  result=subprocess.run(['curl','--silent','--show-error','--location','--output','/dev/null','--write-out','%{http_code}',absolute],text=True,capture_output=True)
-                  checks.append({'url':url,'resolved':absolute,'status':result.stdout.strip() or 'curl-error','stderr':result.stderr.strip()})
-          Path('evidence/link-checks.json').write_text(json.dumps(checks,indent=2)+'\n',encoding='utf-8')
+              if raw.startswith('mailto:'):
+                  rows.append({'url':raw,'kind':'mailto','pass':True})
+                  continue
+              resolved=urljoin(base,raw)
+              result=subprocess.run([
+                  'curl','--silent','--show-error','--location','--output','/dev/null',
+                  '--write-out','%{http_code}',resolved
+              ],text=True,capture_output=True)
+              code=result.stdout.strip()
+              rows.append({'url':raw,'resolved':resolved,'kind':'http','status':code,'pass':code.startswith(('2','3')),'stderr':result.stderr.strip()})
+          Path('evidence/link-checks.json').write_text(json.dumps(rows,indent=2)+'\n',encoding='utf-8')
+          failures=[row for row in rows if not row['pass']]
+          if failures:
+              raise SystemExit('link failures: '+json.dumps(failures))
           PY
       - name: Upload direct-inspection evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: agent-swarm-live-surface-inspection-${{ github.run_id }}
+          name: agent-swarm-complete-inspection-${{ github.run_id }}
           path: evidence/
           if-no-files-found: error
           retention-days: 30
