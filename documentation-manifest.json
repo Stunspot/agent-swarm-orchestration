@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "reader_journey": [
     "README.md",
+    "docs/index.html",
     "START-HERE.md",
     "INSTALLATION.md",
     "WORKFLOWS.md",
@@ -13,36 +14,13 @@
     "TERMS-OF-USE.md",
     "SUPPORT.md",
     "RELEASE-NOTES-v0.2.0.md",
-    "LICENSE.md",
-    "SECURITY.md",
     "ARCHIVE-CUSTODY.md",
-    "provenance.md"
-  ],
-  "visual_assets": [
-    {
-      "path": "docs/assets/aso-readme-banner.png",
-      "use": "repository banner",
-      "width": 1280,
-      "height": 640
-    },
-    {
-      "path": "docs/assets/aso-pages-hero.png",
-      "use": "Pages hero",
-      "width": 1600,
-      "height": 900
-    },
-    {
-      "path": "docs/assets/aso-social-card.png",
-      "use": "Open Graph social card",
-      "width": 1200,
-      "height": 630
-    },
-    {
-      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
-      "use": "plugin icon",
-      "width": 512,
-      "height": 512
-    }
+    "provenance.md",
+    "LICENSE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md"
   ],
   "customer_docs": [
     "README.md",
@@ -56,47 +34,97 @@
     "TERMS-OF-USE.md",
     "SUPPORT.md",
     "RELEASE-NOTES-v0.2.0.md",
-    "LICENSE.md",
-    "SECURITY.md",
     "ARCHIVE-CUSTODY.md",
-    "provenance.md"
+    "provenance.md",
+    "LICENSE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "docs/index.html",
+    "docs/style.css"
+  ],
+  "visual_assets": [
+    {
+      "path": "docs/assets/aso-readme-banner.png",
+      "use": "README hero",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "path": "docs/assets/aso-pages-hero.png",
+      "use": "GitHub Pages hero",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "path": "docs/assets/aso-social-card.png",
+      "use": "Open Graph and social share card",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-social-card.png",
+      "use": "Codex plugin listing screenshot",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
+      "use": "Codex plugin icon",
+      "width": 512,
+      "height": 512
+    }
   ],
   "landing_page": "README.md",
+  "pages_landing_page": "docs/index.html",
   "moments": {
     "orientation": [
       "README.md",
+      "docs/index.html",
       "START-HERE.md"
     ],
     "installation": [
       "INSTALLATION.md",
-      "host-matrix.md"
+      "host-matrix.md",
+      "docs/index.html"
     ],
     "first_value": [
-      "START-HERE.md"
+      "START-HERE.md",
+      "docs/index.html"
     ],
     "normal_use": [
-      "WORKFLOWS.md"
+      "WORKFLOWS.md",
+      "docs/index.html"
     ],
     "recovery": [
       "TROUBLESHOOTING.md",
-      "SUPPORT.md"
+      "SUPPORT.md",
+      "docs/index.html"
     ],
     "privacy_security": [
       "DATA-AND-PRIVACY.md",
       "TERMS-OF-USE.md",
-      "SECURITY.md"
+      "SECURITY.md",
+      "docs/index.html"
     ],
     "evidence_limits": [
       "TRUST-AND-LIMITS.md",
-      "host-matrix.md"
+      "host-matrix.md",
+      "docs/index.html"
     ],
     "support_maintenance": [
       "SUPPORT.md",
       "RELEASE-NOTES-v0.2.0.md",
-      "ARCHIVE-CUSTODY.md"
+      "ARCHIVE-CUSTODY.md",
+      "CONTRIBUTING.md"
     ],
-    "provenance": [
-      "provenance.md"
+    "provenance_rights": [
+      "provenance.md",
+      "LICENSE.md",
+      "ATTRIBUTION.md",
+      "TRADEMARKS.md"
     ]
-  }
+  },
+  "review_binding": "Customer-documentation reviews bind to a SHA-256 fingerprint over every path in customer_docs. Visual reviews bind to the exact asset SHA-256 values recorded with the remediation evidence."
 }
