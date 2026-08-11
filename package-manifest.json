@@ -1,85 +1,85 @@
 {
-  "format": "cd-augment-package/v1",
-  "name": "agent-swarm-orchestration",
-  "display_name": "Agent Swarm Orchestration",
-  "version": "0.2.1",
-  "runtime_version": "0.1.0",
-  "runtime_fingerprint": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
-  "status": "public-release-candidate",
-  "map": "design-record/agent-swarm-orchestration-augment-map.md",
-  "build_state": "design-record/agent-swarm-orchestration-build-state.md",
-  "canonical_skills": [
-    "canonical/skills/agent-swarm-orchestration"
-  ],
-  "canonical_evals": [
-    "canonical/evals/eval-manifest.yaml",
-    "canonical/evals/orchestration-transfer-cases.yaml",
-    "canonical/evals/orchestration-natural-qualification-cases.yaml"
-  ],
-  "customer_docs_manifest": "documentation-manifest.json",
-  "distributions": {
-    "codex_plugin": {
-      "status": "packaged-0.2.1-live-state-in-release-receipt",
-      "paths": [
-        ".agents/plugins/marketplace.json",
-        "plugins/agent-swarm-orchestration"
-      ]
-    },
-    "codex_standalone": {
-      "status": "archive-built-runtime-preserved",
-      "paths": [
-        "release/codex/agent-swarm-orchestration",
-        "release-assets/v0.2.1/Skill-agent-swarm-orchestration-v0.2.1.zip"
-      ]
-    },
-    "claude_standalone": {
-      "status": "archive-built-byte-matched-activation-untested",
-      "paths": [
-        "release/claude/agent-swarm-orchestration",
-        "claude-ai/agent-swarm-orchestration-v0.2.1.zip"
-      ]
-    },
-    "release_assets": {
-      "status": "deterministic-archives-built-live-state-in-release-receipt",
-      "paths": [
-        "release-assets/v0.2.1"
-      ]
-    },
-    "pages": {
-      "status": "complete-source-live-state-in-release-receipt",
-      "paths": [
-        "docs"
-      ]
-    }
-  },
-  "target_hosts": [
-    "codex",
-    "claude",
-    "agent-skill-compatible-hosts"
-  ],
-  "license": "LICENSE.md",
-  "rights_status": "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
-  "evidence": {
-    "runtime": "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
-    "structural_verification": "0.2.1-public-release-validator-and-validator-tests",
-    "behavioral_verification": "retained-ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
-    "installation": "0.2.0-public-install-observed; 0.2.1-state-recorded-separately-in-verification/public-release-v0.2.1.md",
-    "clean_host_discovery": "0.2.1-state-recorded-separately-in-verification/public-release-v0.2.1.md",
-    "clean_host_invocation": "not-performed-for-0.2.1",
-    "publication": "recorded-separately-in-verification/public-release-v0.2.1.md",
-    "documentation": "documentation-authorship.json-and-documentation-review.json-bind-the-current-customer-doc-fingerprint",
-    "accessibility": "documentation-accessibility-review.json",
-    "visuals": "actual-pixel-review-recorded-in-verification/visual-review-v0.2.1.json",
-    "adversarial_release_verification": "verification/testforge-public-v0.2.1/final-review.md",
-    "recovery_backup": "deterministic-archives-checksums-and-custody-json-under-release-assets/v0.2.1",
-    "historical_custody": "v0.2.0-archives-tags-and-receipts-left-unchanged"
-  },
-  "authority": {
-    "installation": true,
-    "public_publication": true,
-    "external_action": true,
-    "free_offer": true,
-    "risk_acceptance": false
-  },
-  "owner": "Collaborative Dynamics"
+    "format":  "cd-augment-package/v1",
+    "name":  "agent-swarm-orchestration",
+    "display_name":  "Agent Swarm Orchestration",
+    "version":  "0.2.1",
+    "runtime_version":  "0.1.0",
+    "runtime_fingerprint":  "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
+    "status":  "public-release-published",
+    "map":  "design-record/agent-swarm-orchestration-augment-map.md",
+    "build_state":  "design-record/agent-swarm-orchestration-build-state.md",
+    "canonical_skills":  [
+                             "canonical/skills/agent-swarm-orchestration"
+                         ],
+    "canonical_evals":  [
+                            "canonical/evals/eval-manifest.yaml",
+                            "canonical/evals/orchestration-transfer-cases.yaml",
+                            "canonical/evals/orchestration-natural-qualification-cases.yaml"
+                        ],
+    "customer_docs_manifest":  "documentation-manifest.json",
+    "distributions":  {
+                          "codex_plugin":  {
+                                               "status":  "public-main-0.2.1-installed-enabled",
+                                               "paths":  [
+                                                             ".agents/plugins/marketplace.json",
+                                                             "plugins/agent-swarm-orchestration"
+                                                         ]
+                                           },
+                          "codex_standalone":  {
+                                                   "status":  "archive-published-download-hash-verified-runtime-preserved",
+                                                   "paths":  [
+                                                                 "release/codex/agent-swarm-orchestration",
+                                                                 "release-assets/v0.2.1/Skill-agent-swarm-orchestration-v0.2.1.zip"
+                                                             ]
+                                               },
+                          "claude_standalone":  {
+                                                    "status":  "archive-published-download-hash-verified-byte-matched-activation-untested",
+                                                    "paths":  [
+                                                                  "release/claude/agent-swarm-orchestration",
+                                                                  "claude-ai/agent-swarm-orchestration-v0.2.1.zip"
+                                                              ]
+                                                },
+                          "release_assets":  {
+                                                 "status":  "published-download-hash-verified",
+                                                 "paths":  [
+                                                               "release-assets/v0.2.1"
+                                                           ]
+                                             },
+                          "pages":  {
+                                        "status":  "built-live-content-links-and-assets-verified",
+                                        "paths":  [
+                                                      "docs"
+                                                  ]
+                                    }
+                      },
+    "target_hosts":  [
+                         "codex",
+                         "claude",
+                         "agent-skill-compatible-hosts"
+                     ],
+    "license":  "LICENSE.md",
+    "rights_status":  "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
+    "evidence":  {
+                     "runtime":  "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
+                     "structural_verification":  "0.2.1-public-release-validator-and-validator-tests",
+                     "behavioral_verification":  "retained-ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
+                     "installation":  "0.2.1-public-sparse-marketplace-install-observed-installed-enabled; isolated-home-cleanup-passed",
+                     "clean_host_discovery":  "0.2.1-public-marketplace-and-plugin-listed-in-isolated-home",
+                     "clean_host_invocation":  "not-performed-for-0.2.1",
+                     "publication":  "verification/public-release-v0.2.1.md",
+                     "documentation":  "documentation-authorship.json-and-documentation-review.json-bind-the-current-customer-doc-fingerprint",
+                     "accessibility":  "documentation-accessibility-review.json",
+                     "visuals":  "actual-pixel-review-recorded-in-verification/visual-review-v0.2.1.json",
+                     "adversarial_release_verification":  "verification/testforge-public-v0.2.1/final-review.md",
+                     "recovery_backup":  "deterministic-archives-checksums-and-custody-json-under-release-assets/v0.2.1",
+                     "historical_custody":  "v0.2.0-archives-tags-and-receipts-left-unchanged"
+                 },
+    "authority":  {
+                      "installation":  true,
+                      "public_publication":  true,
+                      "external_action":  true,
+                      "free_offer":  true,
+                      "risk_acceptance":  false
+                  },
+    "owner":  "Collaborative Dynamics"
 }

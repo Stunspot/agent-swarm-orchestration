@@ -1,0 +1,47 @@
+{
+    "record_version":  "testforge-execution/v1",
+    "id":  "E-010",
+    "observed_at":  "2026-08-11",
+    "status":  "passed",
+    "target_commit":  "2b7792180f4987274b7116524f2d7a6e6b845550",
+    "release_url":  "https://github.com/Stunspot/agent-swarm-orchestration/releases/tag/v0.2.1",
+    "pages_url":  "https://stunspot.github.io/agent-swarm-orchestration/",
+    "pages":  {
+                  "html_sha256":  "e8d1328daabb39c6946978db1df3fe047cc4d025439d91e6d1a0a9172e93b4d1",
+                  "get_targets":  "18/18",
+                  "source":  "main:/docs",
+                  "deployment_run":  31533175523,
+                  "status":  "built",
+                  "fragment_targets":  "8/8",
+                  "deployment_conclusion":  "success",
+                  "css_sha256":  "848c772d472e13f32b8dcee9fa72aadff6d545f9f69edbd5b6deb9976132365b"
+              },
+    "repository_readback":  {
+                                "governed_readback":  "26/26 HTTP 200 and exact SHA-256 match",
+                                "customer_documents":  "19/19 HTTP 200 and exact SHA-256 match"
+                            },
+    "visuals":  {
+                    "plugin_listing":  "e0b8e89ecf3ebf020718748a36cbfeea62fbf216e8c8d2723cc8aec2a3fb7071",
+                    "readme_hero":  "9ecb7dfe388499dbe64aad0e3a50c63233a0a2b20f8159d3261e00a1e7a91d23",
+                    "pages_hero":  "6f1471f9f73e0a036c434a7c53b7708c7e23a169518f00ec3bd76cc80207b0f3",
+                    "plugin_icon":  "8be44db4ba287f4145d7de76ecd3f30fa4bf1b68f7778fe6282edb470704e245",
+                    "social_card":  "430ada4de217194c5bd54c564f082c9e35a0d6c70c1e5b3b8cf949a70b0a8759"
+                },
+    "release_assets":  {
+                           "plugin_zip":  "2e8d9cae8227735d08290baf132a3a43f435b0e2bad12b7e9add978ec65e9aa9",
+                           "custody":  "de6cdbc3826158e32deb9d8113a17c4882c9cde7e05bb6986c1340282aa663ab",
+                           "checksums":  "194d598bb71049a2ca2eb0c1fe9e0015ea548e5de0608b725ddb470657fafbdb",
+                           "skill_zip":  "53a657c1883949d0c6b1e088f2b850c9973a59428f14e4aa8317a2ae3ae85f94",
+                           "claude_zip":  "53a657c1883949d0c6b1e088f2b850c9973a59428f14e4aa8317a2ae3ae85f94"
+                       },
+    "public_install":  {
+                           "version":  "0.2.1",
+                           "boundary":  "fresh-task invocation not performed",
+                           "plugin":  "agent-swarm-orchestration",
+                           "result":  "installed, enabled",
+                           "marketplace":  "cd-agent-swarm-orchestration",
+                           "cleanup":  "passed",
+                           "codex_cli":  "0.144.5"
+                       },
+    "raw_evidence":  "verification/public-release-v0.2.1.md"
+}
