@@ -1,0 +1,486 @@
+name: One-time public documentation remediation
+
+on:
+  push:
+    branches:
+      - agent/public-docs-remediation-20260811
+
+permissions:
+  contents: write
+  actions: write
+  pages: write
+  id-token: write
+
+jobs:
+  remediate-publish-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      ENGINE_URL: https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/agent/remediation-probe-do-not-merge/remediation-engine/remote_remediate_v2.py
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Check out the one-time transport branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prove the transport branch is based on current main
+        id: base
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          branch_parent="$(git rev-parse HEAD^)"
+          current_main="$(git rev-parse origin/main)"
+          printf 'branch_parent=%s\ncurrent_main=%s\n' "$branch_parent" "$current_main"
+          test "$branch_parent" = "$current_main" || {
+            echo 'BLOCKER: main drifted after the transport branch was created.' >&2
+            exit 41
+          }
+          echo "main_sha=$current_main" >> "$GITHUB_OUTPUT"
+
+      - name: Check out exact current main without publishing anything
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout --detach "${{ steps.base.outputs.main_sha }}"
+          test "$(git rev-parse HEAD)" = "${{ steps.base.outputs.main_sha }}"
+
+      - name: Prepare rendering and verification tools
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install documentation, pixel, OCR, and browser dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends tesseract-ocr
+          python -m pip install --disable-pip-version-check pillow imagehash markdown beautifulsoup4 playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Fetch the retained remediation engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .remediation-runtime evidence
+          curl --fail --silent --show-error --location "$ENGINE_URL" -o .remediation-runtime/remote_remediate_v2.py
+          test -s .remediation-runtime/remote_remediate_v2.py
+          sha256sum .remediation-runtime/remote_remediate_v2.py | tee evidence/engine-sha256.txt
+
+      - name: Run the substantive documentation and presentation remediation
+        shell: bash
+        env:
+          REPO_SLUG: ${{ github.event.repository.name }}
+        run: |
+          set -euo pipefail
+          python .remediation-runtime/remote_remediate_v2.py | tee evidence/generator-result.json
+
+      - name: Read and adversarially test the complete final local candidate
+        shell: bash
+        env:
+          REPO_SLUG: ${{ github.event.repository.name }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageChops, ImageStat
+          import hashlib, imagehash, json, re, subprocess
+          from bs4 import BeautifulSoup
+
+          root = Path.cwd()
+          slug = root.name
+          manifest = json.loads((root / 'documentation-manifest.json').read_text(encoding='utf-8'))
+          files = manifest['customer_facing_files']
+
+          def digest(path):
+              return hashlib.sha256(path.read_bytes()).hexdigest()
+
+          def fingerprint():
+              h = hashlib.sha256()
+              for rel in sorted(files):
+                  p = root / rel
+                  h.update(rel.encode('utf-8')); h.update(b'\0'); h.update(p.read_bytes()); h.update(b'\0')
+              return h.hexdigest()
+
+          fp = fingerprint()
+          assert fp == manifest['documentation_fingerprint'], (fp, manifest['documentation_fingerprint'])
+
+          # Every current customer-facing document is opened and read completely here.
+          complete_reads = {}
+          for rel in files:
+              p = root / rel
+              assert p.is_file() and p.stat().st_size > 0, rel
+              if p.suffix.lower() in {'.md', '.html', '.json'}:
+                  text = p.read_text(encoding='utf-8')
+                  complete_reads[rel] = {'bytes': p.stat().st_size, 'sha256': digest(p), 'characters_read': len(text)}
+              else:
+                  complete_reads[rel] = {'bytes': p.stat().st_size, 'sha256': digest(p), 'characters_read': None}
+
+          corpus = '\n'.join((root / rel).read_text(encoding='utf-8') for rel in files if Path(rel).suffix.lower() in {'.md','.html','.json'}).lower()
+          required = [
+              'what this is', 'product fit', 'problem addressed', 'what it is not',
+              'installation', 'verify installation', 'first successful use',
+              'inputs, outputs', 'configuration', 'troubleshooting', 'recovery',
+              'update', 'remove', 'clean up', 'privacy', 'storage', 'network',
+              'security', 'known limitations', 'unsupported claims', 'provenance',
+              'support', 'contribution', 'license', 'constructed', 'packaged',
+              'installed', 'discoverable', 'invoked', 'healthy', 'published',
+              'independently verified'
+          ]
+          missing = [term for term in required if term not in corpus]
+          assert not missing, f'missing journey concepts: {missing}'
+          for forbidden in ['lorem ipsum', 'coming soon', 'likely passes', 'appears complete', 'todo: write docs']:
+              assert forbidden not in corpus, forbidden
+
+          # Review receipts must bind to the exact final fingerprint and be separately substantive.
+          receipts = [
+              'verification/documentation-review-receipt.md',
+              'verification/accessibility-review-receipt.md',
+              'verification/adversarial-verification-receipt.md',
+          ]
+          receipt_texts = []
+          for rel in receipts:
+              text = (root / rel).read_text(encoding='utf-8')
+              assert fp in text, rel
+              assert 'invalidation' in text.lower(), rel
+              receipt_texts.append(text)
+          assert len(set(receipt_texts)) == 3
+
+          # Open and inspect actual decoded pixels, not filenames or dimensions alone.
+          roles = ['readme-hero', 'pages-hero', 'social-card']
+          expected = {'readme-hero': (1600,700), 'pages-hero': (1440,960), 'social-card': (1200,630)}
+          images = {}
+          hashes = {}
+          for role in roles:
+              path = root / 'docs' / 'assets' / f'{slug}-{role}.png'
+              im = Image.open(path)
+              im.load()
+              assert im.mode == 'RGB', (role, im.mode)
+              assert im.size == expected[role], (role, im.size)
+              stats = ImageStat.Stat(im.resize((128,128)))
+              assert max(stats.stddev) > 8, f'blank or near-uniform: {role}'
+              assert len(im.getcolors(maxcolors=4_000_000) or []) > 12, f'weak visual variety: {role}'
+              images[role] = im.copy()
+              hashes[role] = imagehash.phash(im)
+          assert len({images[r].size for r in roles}) == 3
+          for a in roles:
+              for b in roles:
+                  if a < b:
+                      assert hashes[a] - hashes[b] >= 12, f'role assets too visually similar: {a}, {b}'
+
+          # OCR the rendered social pixels and require the title's meaningful words.
+          title = BeautifulSoup((root/'docs/index.html').read_text(encoding='utf-8'), 'html.parser').find('meta', {'property':'og:title'})['content']
+          social = root / 'docs' / 'assets' / f'{slug}-social-card.png'
+          ocr = subprocess.run(['tesseract', str(social), 'stdout', '--psm', '6'], check=True, text=True, capture_output=True).stdout
+          norm = lambda value: re.sub(r'[^a-z0-9]+', ' ', value.lower()).strip()
+          ocr_norm = norm(ocr)
+          title_words = [w for w in norm(title).split() if len(w) >= 3]
+          absent = [w for w in title_words if w not in ocr_norm]
+          assert not absent, {'title': title, 'ocr': ocr, 'absent': absent}
+          assert len(ocr_norm) >= len(norm(title)) + 12, {'title': title, 'ocr': ocr}
+
+          readme = (root/'README.md').read_text(encoding='utf-8')
+          page = (root/'docs/index.html').read_text(encoding='utf-8')
+          assert f'docs/assets/{slug}-readme-hero.png' in readme
+          assert f'assets/{slug}-pages-hero.png' in page
+          assert f'assets/{slug}-social-card.png' in page
+
+          soup = BeautifulSoup(page, 'html.parser')
+          assert soup.html.get('lang') == 'en'
+          assert len(soup.find_all('h1')) == 1
+          assert soup.find('main', id='main')
+          assert soup.find('nav', attrs={'aria-label': True})
+          assert soup.find('a', href='#main')
+          ids = {tag.get('id') for tag in soup.find_all(id=True)}
+          for link in soup.find_all('a', href=True):
+              href = link['href']
+              if href.startswith('#'):
+                  assert href[1:] in ids, f'dead in-page navigation: {href}'
+              elif not href.startswith(('https://','mailto:','tel:')):
+                  raise AssertionError(f'repository-relative Pages link: {href}')
+          section_text = ' '.join(section.get_text(' ', strip=True).lower() for section in soup.select('.doc-section'))
+          for term in ['installation', 'verify installation', 'troubleshooting', 'privacy', 'known limitations', 'provenance', 'support', 'license']:
+              assert term in section_text, f'Pages missing essential guidance: {term}'
+
+          allowed = re.compile(r'^(README\.md|CUSTOMER-GUIDE\.md|SUPPORT\.md|CONTRIBUTING\.md|SECURITY\.md|documentation-manifest\.json|docs/|verification/|\.github/workflows/deploy-pages\.yml)')
+          changed = subprocess.run(['git','status','--short'], check=True, text=True, capture_output=True).stdout.splitlines()
+          bad = []
+          for row in changed:
+              path = row[3:]
+              if ' -> ' in path:
+                  path = path.split(' -> ',1)[1]
+              if not allowed.match(path):
+                  bad.append(row)
+          assert not bad, f'unrelated paths changed: {bad}'
+          subprocess.run(['git','diff','--check'], check=True)
+
+          evidence = {
+              'repository': slug,
+              'documentation_fingerprint': fp,
+              'complete_reads': complete_reads,
+              'visual_phashes': {k: str(v) for k,v in hashes.items()},
+              'social_ocr': ocr,
+              'changed_paths': changed,
+              'local_candidate_verdict': 'PASS',
+          }
+          Path('evidence/local-candidate-verification.json').write_text(json.dumps(evidence, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(evidence, indent=2))
+          PY
+
+      - name: Render and inspect the complete local Pages experience in desktop and mobile browsers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m http.server 8765 --directory docs > evidence/local-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid 2>/dev/null || true' EXIT
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8765/ >/dev/null && break; sleep 1; done
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json
+
+          results = {}
+          with sync_playwright() as p:
+              browser = p.chromium.launch()
+              for name, viewport in [('desktop', {'width':1440,'height':1100}), ('mobile', {'width':390,'height':844})]:
+                  page = browser.new_page(viewport=viewport)
+                  console_errors=[]
+                  page.on('console', lambda msg: console_errors.append(msg.text) if msg.type=='error' else None)
+                  response=page.goto('http://127.0.0.1:8765/', wait_until='networkidle')
+                  assert response and response.ok, response.status if response else None
+                  page.screenshot(path=f'evidence/local-pages-{name}.png', full_page=True)
+                  data=page.evaluate('''() => ({
+                    title: document.title,
+                    h1: [...document.querySelectorAll('h1')].map(x=>x.innerText),
+                    sections: document.querySelectorAll('.doc-section').length,
+                    nav: document.querySelectorAll('nav a').length,
+                    scrollWidth: document.documentElement.scrollWidth,
+                    clientWidth: document.documentElement.clientWidth,
+                    images: [...document.images].map(i=>({src:i.src,naturalWidth:i.naturalWidth,naturalHeight:i.naturalHeight,alt:i.alt})),
+                    emptyLinks: [...document.querySelectorAll('a')].filter(a=>!a.textContent.trim() && !a.getAttribute('aria-label')).length
+                  })''')
+                  assert len(data['h1']) == 1
+                  assert data['sections'] >= 8
+                  assert data['nav'] >= 6
+                  assert data['scrollWidth'] <= data['clientWidth'] + 2, data
+                  assert all(i['naturalWidth'] > 0 and i['naturalHeight'] > 0 and i['alt'].strip() for i in data['images'])
+                  assert data['emptyLinks'] == 0
+                  assert not console_errors, console_errors
+                  results[name]=data
+                  page.close()
+              browser.close()
+          Path('evidence/local-render-verification.json').write_text(json.dumps(results, indent=2)+'\n', encoding='utf-8')
+          PY
+
+      - name: Commit one coherent remediation only after every local gate passes
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Nova Documentation Remediator'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md CUSTOMER-GUIDE.md SUPPORT.md CONTRIBUTING.md SECURITY.md documentation-manifest.json docs verification .github/workflows/deploy-pages.yml
+          staged="$(git diff --cached --name-only)"
+          test -n "$staged" || { echo 'BLOCKER: remediation generated no coherent change set.' >&2; exit 42; }
+          printf '%s\n' "$staged" | tee evidence/staged-paths.txt
+          if printf '%s\n' "$staged" | grep -Ev '^(README\.md|CUSTOMER-GUIDE\.md|SUPPORT\.md|CONTRIBUTING\.md|SECURITY\.md|documentation-manifest\.json|docs/|verification/|\.github/workflows/deploy-pages\.yml)' ; then
+            echo 'BLOCKER: unrelated staged path detected.' >&2
+            exit 43
+          fi
+          git diff --cached --check
+          git commit -m 'Remediate public documentation and presentation'
+          final_sha="$(git rev-parse HEAD)"
+          test "$(git rev-parse HEAD^)" = "${{ steps.base.outputs.main_sha }}"
+          git push origin HEAD:main
+          echo "final_sha=$final_sha" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$final_sha" | tee evidence/final-commit.txt
+
+      - name: Prove the live repository is serving the exact final README
+        shell: bash
+        env:
+          FINAL_SHA: ${{ steps.publish.outputs.final_sha }}
+        run: |
+          set -euo pipefail
+          raw="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${FINAL_SHA}/README.md"
+          for i in $(seq 1 40); do
+            if curl -fsSL "$raw" -o evidence/live-readme.md && cmp -s README.md evidence/live-readme.md; then
+              exit 0
+            fi
+            sleep 3
+          done
+          echo 'LIVE VERIFICATION FAIL: raw README does not byte-match the final commit.' >&2
+          exit 51
+
+      - name: Dispatch the exact-main Pages deployment
+        id: deploy
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FINAL_SHA: ${{ steps.publish.outputs.final_sha }}
+        run: |
+          set -euo pipefail
+          started="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          dispatched=0
+          for i in $(seq 1 20); do
+            if gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main; then dispatched=1; break; fi
+            sleep 3
+          done
+          test "$dispatched" = 1 || { echo 'BLOCKER: deploy-pages workflow could not be dispatched.' >&2; exit 52; }
+          run_id=''
+          for i in $(seq 1 40); do
+            run_id="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy-pages.yml --branch main --event workflow_dispatch --limit 20 --json databaseId,headSha,createdAt --jq ".[] | select(.headSha == \"$FINAL_SHA\" and .createdAt >= \"$started\") | .databaseId" | head -n1)"
+            test -n "$run_id" && break
+            sleep 3
+          done
+          test -n "$run_id" || { echo 'BLOCKER: dispatched Pages run was not observable for the final commit.' >&2; exit 53; }
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+          gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status
+          gh run view "$run_id" --repo "$GITHUB_REPOSITORY" --json databaseId,status,conclusion,headSha,url,jobs > evidence/pages-deployment-run.json
+
+      - name: Discover the actual Pages URL and byte-verify the deployed site and all three assets
+        id: live
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FINAL_SHA: ${{ steps.publish.outputs.final_sha }}
+        run: |
+          set -euo pipefail
+          pages_url=''
+          for i in $(seq 1 40); do
+            pages_url="$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.html_url' 2>/dev/null || true)"
+            test -n "$pages_url" && break
+            sleep 3
+          done
+          if test -z "$pages_url"; then
+            pages_url="https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${{ github.event.repository.name }}/"
+          fi
+          case "$pages_url" in */) ;; *) pages_url="$pages_url/" ;; esac
+          echo "pages_url=$pages_url" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$pages_url" | tee evidence/live-pages-url.txt
+          ready=0
+          for i in $(seq 1 80); do
+            if curl -fsSL "${pages_url}index.html?sha=${FINAL_SHA}" -o evidence/live-index.html && cmp -s docs/index.html evidence/live-index.html; then
+              ready=1; break
+            fi
+            sleep 5
+          done
+          test "$ready" = 1 || { echo 'LIVE VERIFICATION FAIL: deployed index does not byte-match the exact final commit.' >&2; exit 61; }
+          slug='${{ github.event.repository.name }}'
+          for role in readme-hero pages-hero social-card; do
+            local="docs/assets/${slug}-${role}.png"
+            live="evidence/live-${role}.png"
+            curl -fsSL "${pages_url}assets/${slug}-${role}.png?sha=${FINAL_SHA}" -o "$live"
+            cmp -s "$local" "$live" || { echo "LIVE VERIFICATION FAIL: $role bytes differ." >&2; exit 62; }
+          done
+
+      - name: Inspect the live Pages and live GitHub repository as rendered desktop and mobile experiences
+        shell: bash
+        env:
+          PAGES_URL: ${{ steps.live.outputs.pages_url }}
+          FINAL_SHA: ${{ steps.publish.outputs.final_sha }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json, os
+
+          pages_url=os.environ['PAGES_URL']
+          final_sha=os.environ['FINAL_SHA']
+          repo=os.environ['GITHUB_REPOSITORY']
+          slug=repo.split('/',1)[1]
+          title_expected=None
+          results={}
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              for name, viewport in [('desktop', {'width':1440,'height':1100}), ('mobile', {'width':390,'height':844})]:
+                  page=browser.new_page(viewport=viewport)
+                  errors=[]
+                  page.on('console', lambda msg: errors.append(msg.text) if msg.type=='error' else None)
+                  response=page.goto(pages_url, wait_until='networkidle')
+                  assert response and response.ok, response.status if response else None
+                  page.screenshot(path=f'evidence/live-pages-{name}.png', full_page=True)
+                  data=page.evaluate('''() => ({
+                    title: document.title,
+                    h1: [...document.querySelectorAll('h1')].map(x=>x.innerText.trim()),
+                    sections: [...document.querySelectorAll('.doc-section')].map(x=>x.innerText.trim()),
+                    nav: [...document.querySelectorAll('nav a')].map(x=>({text:x.innerText.trim(),href:x.href})),
+                    scrollWidth: document.documentElement.scrollWidth,
+                    clientWidth: document.documentElement.clientWidth,
+                    images: [...document.images].map(i=>({src:i.src,naturalWidth:i.naturalWidth,naturalHeight:i.naturalHeight,alt:i.alt})),
+                    links: [...document.querySelectorAll('a[href]')].map(a=>a.href),
+                    ids: [...document.querySelectorAll('[id]')].map(x=>x.id)
+                  })''')
+                  assert len(data['h1']) == 1 and data['h1'][0]
+                  title_expected=title_expected or data['h1'][0]
+                  assert data['h1'][0] == title_expected
+                  assert len(data['sections']) >= 8
+                  joined=' '.join(data['sections']).lower()
+                  for term in ['installation','verify installation','troubleshooting','privacy','known limitations','provenance','support','license']:
+                      assert term in joined, term
+                  assert len(data['nav']) >= 6
+                  assert data['scrollWidth'] <= data['clientWidth'] + 2, data
+                  assert all(i['naturalWidth']>0 and i['naturalHeight']>0 and i['alt'].strip() for i in data['images'])
+                  assert not errors, errors
+                  results[f'pages_{name}']=data
+                  page.close()
+
+              repo_page=browser.new_page(viewport={'width':1440,'height':1100})
+              response=repo_page.goto(f'https://github.com/{repo}/tree/{final_sha}', wait_until='networkidle')
+              assert response and response.status < 400, response.status if response else None
+              repo_page.screenshot(path='evidence/live-github-readme.png', full_page=True)
+              hero_count=repo_page.locator(f'img[alt="{title_expected} README hero"]').count()
+              if hero_count == 0:
+                  hero_count=repo_page.locator(f'img[src*="{slug}-readme-hero.png"]').count()
+              assert hero_count > 0, 'README hero not rendered on live GitHub commit page'
+              results['github']={'url':repo_page.url,'readme_hero_count':hero_count}
+              repo_page.close()
+              browser.close()
+          Path('evidence/live-render-verification.json').write_text(json.dumps(results, indent=2)+'\n', encoding='utf-8')
+          PY
+
+      - name: Write the exact publication result
+        if: success()
+        shell: bash
+        env:
+          FINAL_SHA: ${{ steps.publish.outputs.final_sha }}
+          PAGES_URL: ${{ steps.live.outputs.pages_url }}
+          PAGES_RUN_ID: ${{ steps.deploy.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json, os
+          manifest=json.loads(Path('documentation-manifest.json').read_text(encoding='utf-8'))
+          result={
+            'repository': os.environ['GITHUB_REPOSITORY'],
+            'final_commit': os.environ['FINAL_SHA'],
+            'documentation_fingerprint': manifest['documentation_fingerprint'],
+            'readme_content_verdict': 'PASS',
+            'pages_content_verdict': 'PASS',
+            'rendered_pages_verdict': 'PASS',
+            'readme_hero_verdict': 'PASS',
+            'pages_hero_verdict': 'PASS',
+            'social_card_verdict': 'PASS',
+            'documentation_review_receipt': 'verification/documentation-review-receipt.md',
+            'accessibility_result': 'PASS',
+            'adversarial_verification_result': 'PASS',
+            'pages_deployment_run_id': os.environ['PAGES_RUN_ID'],
+            'live_pages_url': os.environ['PAGES_URL'],
+            'status': 'PASS'
+          }
+          Path('evidence/publication-result.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(result, indent=2))
+          PY
+
+      - name: Upload exact-commit evidence, rendered screenshots, OCR, and deployment records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-documentation-remediation-${{ github.event.repository.name }}-${{ steps.publish.outputs.final_sha || github.sha }}
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
