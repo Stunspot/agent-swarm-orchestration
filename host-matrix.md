@@ -1,14 +1,23 @@
 # Host and distribution matrix
 
-Version 0.2.0 keeps package presence, installation, discovery, invocation, tool availability, and healthy behavior as separate evidence states.
+Version 0.2.1 keeps created, packaged, installed, discoverable, invoked, healthy, published, and independently verified as separate evidence states. The runtime bytes and retained behavioral fingerprint are unchanged from 0.1.0; this patch release repairs documentation and presentation custody.
 
-| Surface | Supplied object | Static package state | Live state established by this release |
+| Surface | Supplied object | Current static state | Live evidence boundary |
 |---|---|---|---|
-| Codex marketplace | `plugins/agent-swarm-orchestration/` | Plugin manifest, listing assets, and one self-contained skill are packaged | Publication and install readback are release gates; broad customer activation is not established |
-| Standalone Codex | `release/codex/agent-swarm-orchestration/` | Runtime tree preserved and validated | Existing qualification is decision-only; universal live tool behavior is not established |
-| Claude / one-skill upload | `release/claude/agent-swarm-orchestration/` and `claude-ai/` | Byte-matched skill folder and archive are packaged | Live upload, discovery, and invocation remain untested until observed |
-| GitHub release | `release-assets/v0.2.0/` | Governed archives and checksums are generated during release | Asset publication and download readback require separate receipts |
-| GitHub Pages | `docs/` | Accessible static source, 1600×900 hero, and 1200×630 share card are supplied | Deployment and public URL readback require separate receipts |
+| Codex marketplace | `plugins/agent-swarm-orchestration/` | Plugin manifest, distinct listing image, icon, license pointer, and one self-contained skill are packaged at 0.2.1 | A public sparse-marketplace install and enabled-state readback are recorded separately for the release; broad customer activation is not established |
+| Standalone Codex | `release/codex/agent-swarm-orchestration/` and the versioned skill archive | Runtime tree is byte-matched to canonical and packaged under one top-level folder | Existing behavioral qualification is decision-only; universal discovery, invocation, and live tool behavior are not established |
+| Claude / one-skill upload | `release/claude/agent-swarm-orchestration/` and `claude-ai/agent-swarm-orchestration-v0.2.1.zip` | Byte-matched skill folder and archive are packaged | Live upload, discovery, invocation, and behavior remain untested until observed in a named Claude host |
+| GitHub release | `release-assets/v0.2.1/` | Deterministic plugin and skill archives, custody JSON, and checksums are supplied without changing frozen v0.2.0 artifacts | Publication and asset download readback are recorded in the 0.2.1 public-release receipt |
+| GitHub Pages | `docs/` | Complete customer journey, useful navigation, and role-specific visual wiring are supplied | Deployment, linked-document availability, and public asset readback are recorded in the 0.2.1 public-release receipt |
+
+## Presentation surfaces
+
+| Role | Asset | Composition and text contract |
+|---|---|---|
+| README hero | `docs/assets/aso-readme-banner.png` (1280x640) | Text-free branching topology composed for the repository introduction |
+| Pages hero | `docs/assets/aso-pages-hero.png` (1600x900) | Text-free worker-lane convergence composed for the wide landing-page hero |
+| Social / Open Graph card | `docs/assets/aso-social-card.png` (1200x630) | Separate bee-conductor composition with the exact product title and identifying line inside the safe area |
+| Plugin listing image | `plugins/agent-swarm-orchestration/assets/aso-social-card.png` (1400x875) | Separate listing composition with product title, summary, four operating verbs, and product mark |
 
 ## Runtime dependencies
 
@@ -23,6 +32,7 @@ Host tool names, schemas, concurrency limits, context forks, waiting semantics, 
 ## Evidence vocabulary
 
 - **Created:** bytes or an external object exist.
+- **Packaged:** the intended bytes and metadata are assembled into a distribution artifact.
 - **Installed:** a package was placed or registered in the host.
 - **Discoverable:** the host lists or resolves it.
 - **Invoked:** a task actually applied it.

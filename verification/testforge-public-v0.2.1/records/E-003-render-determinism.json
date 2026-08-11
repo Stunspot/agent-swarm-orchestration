@@ -1,0 +1,17 @@
+{
+  "format_version": "1.0",
+  "command": [
+    "python",
+    "tools/render_presentation_assets.py",
+    "--check"
+  ],
+  "working_directory": ".",
+  "started_at": "2026-08-11T20:19:10.876786+00:00",
+  "finished_at": "2026-08-11T20:19:12.355800+00:00",
+  "duration_seconds": 1.479009,
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "Rendered docs/assets/aso-social-card.png (1200x630)\nRendered plugins/agent-swarm-orchestration/assets/aso-social-card.png (1400x875)\nDETERMINISTIC presentation assets unchanged after regeneration\n",
+  "stderr": "",
+  "status": "passed"
+}

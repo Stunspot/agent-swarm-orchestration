@@ -1,0 +1,634 @@
+{
+  "manifest_version": "1.0",
+  "target": {
+    "name": "Agent Swarm Orchestration 0.2.1 documentation and presentation remediation",
+    "revision": "staged candidate; documentation fingerprint 5404436f505f84578bd04df72ac0cbe48e66202c297723cb09440ca980806c32",
+    "target_class": "release_candidate"
+  },
+  "scope": {
+    "included": [
+      "complete customer documentation journey",
+      "GitHub Pages source and navigation",
+      "README, Pages, social, icon, and plugin listing visuals",
+      "0.2.1 plugin metadata and deterministic archives",
+      "Hesperos authorship/content review",
+      "separate accessibility and visual review receipts"
+    ],
+    "excluded": [
+      "new runtime behavior",
+      "live Claude activation",
+      "universal model transfer",
+      "assistive-technology conformance",
+      "customer outcomes",
+      "post-publication live readback until deployment completes"
+    ],
+    "constraints": [
+      "runtime bytes must remain identical across canonical, Codex, Claude, and plugin skill trees",
+      "frozen v0.2.0 archives and verification must remain unchanged",
+      "publication follows pre-publication readiness"
+    ],
+    "safety_boundary": [
+      "local candidate verification only before authorized GitHub publication"
+    ]
+  },
+  "claim_custody": {
+    "observed": [
+      {
+        "id": "O-001",
+        "statement": "All declared customer documents and canonical skill sources were read in full for this remediation.",
+        "basis": "documentation-manifest.json and Hesperos authoring record",
+        "confidence": "high"
+      },
+      {
+        "id": "O-002",
+        "statement": "All six repository image files in the remediation scope were decoded and their actual pixels inspected.",
+        "basis": "verification/visual-review-v0.2.1.json",
+        "confidence": "high"
+      },
+      {
+        "id": "O-003",
+        "statement": "The public-release validator, documentation-release validator, renderer determinism check, unit suite, staged diff check, and frozen-history check passed.",
+        "basis": "verification/testforge-public-v0.2.1/records",
+        "confidence": "high"
+      }
+    ],
+    "inferred": [
+      {
+        "id": "I-001",
+        "statement": "The candidate is coherent enough for publication because all local indispensable gates pass and remaining uncertainty is limited to post-publication readback.",
+        "basis": "risk and execution synthesis",
+        "confidence": "high"
+      }
+    ],
+    "assumed": [],
+    "unresolved": [
+      {
+        "id": "U-001",
+        "statement": "The final Pages deployment, live linked-document routes, release assets, and public install state cannot be observed before publication.",
+        "basis": "external state transition has not occurred",
+        "confidence": "high",
+        "consequence": "final PASS remains gated on post-publication live readback"
+      }
+    ]
+  },
+  "impact_map": [
+    "repository docs -> customer understanding -> installation and safe first use",
+    "Pages HTML/CSS -> navigation and rendered guidance -> customer recovery and trust",
+    "visual sources -> channel-specific assets -> product identification and social sharing",
+    "plugin metadata and source -> deterministic archive -> marketplace installation",
+    "documentation bytes -> fingerprint -> authorship/content/accessibility receipts -> release claim"
+  ],
+  "invariants": [
+    {
+      "id": "INV-001",
+      "statement": "The 0.1.0 runtime fingerprint and canonical/package parity remain unchanged."
+    },
+    {
+      "id": "INV-002",
+      "statement": "README, Pages, and social assets are different files, compositions, and aspect ratios."
+    },
+    {
+      "id": "INV-003",
+      "statement": "The social card visibly contains the exact product title and identifying line."
+    },
+    {
+      "id": "INV-004",
+      "statement": "Every review receipt binds the exact current documentation fingerprint."
+    },
+    {
+      "id": "INV-005",
+      "statement": "Frozen v0.2.0 artifacts remain unchanged."
+    },
+    {
+      "id": "INV-006",
+      "statement": "Publication and live behavior are never inferred from local source or HTTP status alone."
+    }
+  ],
+  "risks": [
+    {
+      "id": "R-001",
+      "statement": "incomplete or inconsistent customer journey -> wrong installation or unsafe use -> customer failure",
+      "severity": "high",
+      "likelihood": "medium",
+      "confidence": "high",
+      "disposition": "covered",
+      "verification": [
+        "S-DOC-001",
+        "T-DOC-001",
+        "T-CONTENT-001",
+        "E-002",
+        "E-008"
+      ]
+    },
+    {
+      "id": "R-002",
+      "statement": "bare, blank, duplicated, or illegible visuals -> weak product identity or failed social identification -> presentation failure",
+      "severity": "high",
+      "likelihood": "high",
+      "confidence": "high",
+      "disposition": "covered",
+      "verification": [
+        "S-VIS-001",
+        "T-RENDER-001",
+        "T-VISUAL-001",
+        "E-003",
+        "E-007"
+      ]
+    },
+    {
+      "id": "R-003",
+      "statement": "version, package, or archive mismatch -> broken installation or irreproducible release -> distribution failure",
+      "severity": "high",
+      "likelihood": "medium",
+      "confidence": "high",
+      "disposition": "covered",
+      "verification": [
+        "S-PACKAGE-001",
+        "T-PUBLIC-001",
+        "T-UNIT-001",
+        "E-001",
+        "E-004"
+      ]
+    },
+    {
+      "id": "R-004",
+      "statement": "stale documentation receipt -> unearned review claim -> false release confidence",
+      "severity": "high",
+      "likelihood": "medium",
+      "confidence": "high",
+      "disposition": "covered",
+      "verification": [
+        "S-DOC-001",
+        "T-DOC-001",
+        "T-DIFF-001",
+        "E-002",
+        "E-005"
+      ]
+    },
+    {
+      "id": "R-005",
+      "statement": "hidden navigation, weak semantics, motion, or contrast -> unusable Pages journey -> accessibility failure",
+      "severity": "medium",
+      "likelihood": "medium",
+      "confidence": "high",
+      "disposition": "covered",
+      "verification": [
+        "S-A11Y-001",
+        "T-A11Y-001",
+        "E-009"
+      ]
+    },
+    {
+      "id": "R-006",
+      "statement": "historical release mutation -> broken rollback and provenance -> custody failure",
+      "severity": "high",
+      "likelihood": "low",
+      "confidence": "high",
+      "disposition": "covered",
+      "verification": [
+        "S-HISTORY-001",
+        "T-HISTORY-001",
+        "E-006"
+      ]
+    },
+    {
+      "id": "R-007",
+      "statement": "source is correct but live release or Pages remains stale -> customers receive old assets or guidance -> live verification failure",
+      "severity": "high",
+      "likelihood": "medium",
+      "confidence": "high",
+      "disposition": "blocked",
+      "verification": [
+        "S-LIVE-001",
+        "T-LIVE-001"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S-DOC-001",
+      "risk_ids": [
+        "R-001",
+        "R-004"
+      ],
+      "title": "complete governed documentation journey and exact receipt binding",
+      "layer": "integration",
+      "preconditions": [
+        "finished customer corpus and receipts"
+      ],
+      "action": [
+        "validate files, navigation, journey gates, hashes, and receipt fingerprints"
+      ],
+      "expected": [
+        "22 governed files and ten journey gates validate against one fingerprint"
+      ],
+      "forbidden": [
+        "filename-only approval",
+        "stale review fingerprint"
+      ],
+      "evidence": [
+        "T-DOC-001",
+        "T-CONTENT-001",
+        "E-002",
+        "E-008"
+      ],
+      "status": "executed"
+    },
+    {
+      "id": "S-VIS-001",
+      "risk_ids": [
+        "R-002"
+      ],
+      "title": "distinct role assets remain legible and deterministic",
+      "layer": "property",
+      "preconditions": [
+        "all image pixels inspected"
+      ],
+      "action": [
+        "regenerate presentation assets and compare exact hashes; review role compositions"
+      ],
+      "expected": [
+        "unchanged hashes and passing actual-pixel verdicts"
+      ],
+      "forbidden": [
+        "bare social card",
+        "hidden product icon",
+        "duplicate core aspect ratios"
+      ],
+      "evidence": [
+        "T-RENDER-001",
+        "T-VISUAL-001",
+        "E-003",
+        "E-007"
+      ],
+      "status": "executed"
+    },
+    {
+      "id": "S-PACKAGE-001",
+      "risk_ids": [
+        "R-003"
+      ],
+      "title": "0.2.1 package and archives preserve runtime parity",
+      "layer": "integration",
+      "preconditions": [
+        "0.2.1 archives built"
+      ],
+      "action": [
+        "validate manifests, image dimensions, archive contents, parity, checksums, and unit tests"
+      ],
+      "expected": [
+        "public release validator and canonical unit tests pass"
+      ],
+      "forbidden": [
+        "runtime drift",
+        "archive mismatch",
+        "wrong version"
+      ],
+      "evidence": [
+        "T-PUBLIC-001",
+        "T-UNIT-001",
+        "E-001",
+        "E-004"
+      ],
+      "status": "executed"
+    },
+    {
+      "id": "S-A11Y-001",
+      "risk_ids": [
+        "R-005"
+      ],
+      "title": "documentation accessibility source review",
+      "layer": "static",
+      "preconditions": [
+        "final documentation fingerprint"
+      ],
+      "action": [
+        "review semantics, headings, alternatives, link text, focus, motion, mobile navigation, and contrast"
+      ],
+      "expected": [
+        "no blocking findings; explicit evidence limits retained"
+      ],
+      "forbidden": [
+        "hidden mobile navigation",
+        "unsupported conformance claim"
+      ],
+      "evidence": [
+        "T-A11Y-001",
+        "E-009"
+      ],
+      "status": "executed"
+    },
+    {
+      "id": "S-HISTORY-001",
+      "risk_ids": [
+        "R-006"
+      ],
+      "title": "frozen 0.2.0 custody remains unchanged",
+      "layer": "static",
+      "preconditions": [
+        "staged 0.2.1 candidate"
+      ],
+      "action": [
+        "diff frozen archives, release note, and review directories against HEAD"
+      ],
+      "expected": [
+        "no staged differences"
+      ],
+      "forbidden": [
+        "historical rewrite"
+      ],
+      "evidence": [
+        "T-HISTORY-001",
+        "E-006"
+      ],
+      "status": "executed"
+    },
+    {
+      "id": "S-DIFF-001",
+      "risk_ids": [
+        "R-004",
+        "R-006"
+      ],
+      "title": "staged candidate has no whitespace defects",
+      "layer": "static",
+      "preconditions": [
+        "all intended files explicitly staged"
+      ],
+      "action": [
+        "run git diff --cached --check"
+      ],
+      "expected": [
+        "zero findings"
+      ],
+      "forbidden": [
+        "trailing whitespace or conflict markers"
+      ],
+      "evidence": [
+        "T-DIFF-001",
+        "E-005"
+      ],
+      "status": "executed"
+    },
+    {
+      "id": "S-LIVE-001",
+      "risk_ids": [
+        "R-007"
+      ],
+      "title": "post-publication repository, release, Pages, links, and assets are current",
+      "layer": "browser",
+      "preconditions": [
+        "candidate merged, release published, Pages deployment complete"
+      ],
+      "action": [
+        "inspect live repository, Pages content/navigation, linked docs, Open Graph asset, release assets, and public install state"
+      ],
+      "expected": [
+        "all live surfaces resolve to the final candidate"
+      ],
+      "forbidden": [
+        "stale page",
+        "dead link",
+        "old social card",
+        "unpublished archive"
+      ],
+      "evidence": [
+        "T-LIVE-001"
+      ],
+      "status": "blocked"
+    }
+  ],
+  "tests": [
+    {
+      "id": "T-PUBLIC-001",
+      "scenario_ids": [
+        "S-PACKAGE-001"
+      ],
+      "path": "tools/validate_public_release.py",
+      "status": "passed",
+      "execution_id": "E-001"
+    },
+    {
+      "id": "T-DOC-001",
+      "scenario_ids": [
+        "S-DOC-001"
+      ],
+      "path": "tools/validate_documentation_release.py",
+      "status": "passed",
+      "execution_id": "E-002"
+    },
+    {
+      "id": "T-RENDER-001",
+      "scenario_ids": [
+        "S-VIS-001"
+      ],
+      "path": "tools/render_presentation_assets.py",
+      "status": "passed",
+      "execution_id": "E-003"
+    },
+    {
+      "id": "T-UNIT-001",
+      "scenario_ids": [
+        "S-PACKAGE-001"
+      ],
+      "path": "canonical/skills/agent-swarm-orchestration/tests",
+      "status": "passed",
+      "execution_id": "E-004"
+    },
+    {
+      "id": "T-DIFF-001",
+      "scenario_ids": [
+        "S-DIFF-001"
+      ],
+      "path": "verification/testforge-public-v0.2.1/records/E-005-diff-check.json",
+      "status": "passed",
+      "execution_id": "E-005"
+    },
+    {
+      "id": "T-HISTORY-001",
+      "scenario_ids": [
+        "S-HISTORY-001"
+      ],
+      "path": "verification/testforge-public-v0.2.1/records/E-006-frozen-v0.2.0.json",
+      "status": "passed",
+      "execution_id": "E-006"
+    },
+    {
+      "id": "T-VISUAL-001",
+      "scenario_ids": [
+        "S-VIS-001"
+      ],
+      "path": "verification/visual-review-v0.2.1.json",
+      "status": "passed",
+      "execution_id": "E-007"
+    },
+    {
+      "id": "T-CONTENT-001",
+      "scenario_ids": [
+        "S-DOC-001"
+      ],
+      "path": "documentation-review.json",
+      "status": "passed",
+      "execution_id": "E-008"
+    },
+    {
+      "id": "T-A11Y-001",
+      "scenario_ids": [
+        "S-A11Y-001"
+      ],
+      "path": "documentation-accessibility-review.json",
+      "status": "passed",
+      "execution_id": "E-009"
+    },
+    {
+      "id": "T-LIVE-001",
+      "scenario_ids": [
+        "S-LIVE-001"
+      ],
+      "path": "verification/testforge-public-v0.2.1/verification-manifest.json",
+      "status": "blocked"
+    }
+  ],
+  "executions": [
+    {
+      "id": "E-001",
+      "command": [
+        "python",
+        "tools/validate_public_release.py"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/testforge-public-v0.2.1/records/E-001-public-release.json"
+    },
+    {
+      "id": "E-002",
+      "command": [
+        "python",
+        "tools/validate_documentation_release.py"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/testforge-public-v0.2.1/records/E-002-documentation-release.json"
+    },
+    {
+      "id": "E-003",
+      "command": [
+        "python",
+        "tools/render_presentation_assets.py",
+        "--check"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/testforge-public-v0.2.1/records/E-003-render-determinism.json"
+    },
+    {
+      "id": "E-004",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "canonical/skills/agent-swarm-orchestration/tests",
+        "-v"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/testforge-public-v0.2.1/records/E-004-unit-tests.json"
+    },
+    {
+      "id": "E-005",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/testforge-public-v0.2.1/records/E-005-diff-check.json"
+    },
+    {
+      "id": "E-006",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code",
+        "--",
+        "release-assets/v0.2.0",
+        "verification/hesperos-public-v0.2.0",
+        "verification/testforge-public-v0.2.0",
+        "RELEASE-NOTES-v0.2.0.md"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/testforge-public-v0.2.1/records/E-006-frozen-v0.2.0.json"
+    },
+    {
+      "id": "E-007",
+      "command": [
+        "manual-actual-pixel-review"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "verification/visual-review-v0.2.1.json"
+    },
+    {
+      "id": "E-008",
+      "command": [
+        "hesperos-content-review"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "documentation-review.json"
+    },
+    {
+      "id": "E-009",
+      "command": [
+        "documentation-accessibility-review"
+      ],
+      "working_directory": ".",
+      "status": "passed",
+      "exit_code": 0,
+      "raw_evidence": "documentation-accessibility-review.json"
+    }
+  ],
+  "findings": [],
+  "residual_risks": [
+    {
+      "id": "RR-001",
+      "statement": "Live repository, release, Pages rendering, linked documents, assets, and public install state remain unobserved until publication.",
+      "treatment": "Publish the coherent candidate, wait for deployment, then perform live readback before final PASS.",
+      "owner": "release owner",
+      "revisit_condition": "v0.2.1 release and Pages deployment complete"
+    },
+    {
+      "id": "RR-002",
+      "statement": "Source accessibility review does not establish assistive-technology conformance or representative-user usability.",
+      "treatment": "Retain the explicit non-claim and reopen only when instrumented or representative-user evidence exists.",
+      "owner": "product owner",
+      "revisit_condition": "assistive-technology or user study is commissioned"
+    }
+  ],
+  "review": {
+    "status": "NOT_RUN",
+    "findings": []
+  },
+  "decision": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "basis": [
+      "All local package, documentation, visual, accessibility-source, unit, diff, and historical-custody gates passed.",
+      "Final repository, release, Pages, linked-document, asset, and public-install readback is inherently unavailable before publication.",
+      "The required independent adversarial review has not yet run on a live-complete evidence packet."
+    ],
+    "authority_required": []
+  }
+}

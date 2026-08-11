@@ -1,0 +1,16 @@
+{
+  "format_version": "1.0",
+  "command": [
+    "python",
+    "tools/validate_public_release.py"
+  ],
+  "working_directory": ".",
+  "started_at": "2026-08-11T20:19:10.208104+00:00",
+  "finished_at": "2026-08-11T20:19:10.531074+00:00",
+  "duration_seconds": 0.322968,
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "PUBLIC RELEASE VALID agent-swarm-orchestration v0.2.1\n",
+  "stderr": "test_active_write_alias_collision_is_rejected (test_validate_swarm_plan.ValidateSwarmPlanTests.test_active_write_alias_collision_is_rejected) ... ok\ntest_active_write_collision_is_rejected (test_validate_swarm_plan.ValidateSwarmPlanTests.test_active_write_collision_is_rejected) ... ok\ntest_assemble_requires_at_least_two_workers (test_validate_swarm_plan.ValidateSwarmPlanTests.test_assemble_requires_at_least_two_workers) ... ok\ntest_closed_plan_requires_terminal_workers (test_validate_swarm_plan.ValidateSwarmPlanTests.test_closed_plan_requires_terminal_workers) ... ok\ntest_dependency_cycle_is_rejected (test_validate_swarm_plan.ValidateSwarmPlanTests.test_dependency_cycle_is_rejected) ... ok\ntest_direct_rejects_workers (test_validate_swarm_plan.ValidateSwarmPlanTests.test_direct_rejects_workers) ... ok\ntest_duplicate_worker_ids_are_rejected (test_validate_swarm_plan.ValidateSwarmPlanTests.test_duplicate_worker_ids_are_rejected) ... ok\ntest_malformed_worker_arrays_are_reported_without_exception (test_validate_swarm_plan.ValidateSwarmPlanTests.test_malformed_worker_arrays_are_reported_without_exception) ... ok\ntest_template_is_valid_when_enlist_has_one_worker (test_validate_swarm_plan.ValidateSwarmPlanTests.test_template_is_valid_when_enlist_has_one_worker) ... ok\ntest_unknown_dependency_is_rejected (test_validate_swarm_plan.ValidateSwarmPlanTests.test_unknown_dependency_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.003s\n\nOK\n",
+  "status": "passed"
+}

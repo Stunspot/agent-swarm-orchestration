@@ -45,6 +45,15 @@ h2 { margin: 0; max-width: 19ch; font-size: clamp(2.2rem,4.7vw,4.5rem); }
 .section { border-top: 1px solid var(--line); }
 .grid { display: grid; gap: 1rem; margin-top: 3rem; }
 .grid.three { grid-template-columns: repeat(3,1fr); }
+.grid.two { grid-template-columns: repeat(2,1fr); }
+.example-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.example-grid > div { min-width: 0; }
+h3 { margin: 0 0 1rem; font-size: 1.45rem; }
+.callout { margin-top: 1.5rem; padding: 1.25rem 1.5rem; border-left: 4px solid var(--amber); background: rgba(255,191,90,.07); color: #e8edf3; }
+.checklist { margin: 0; padding: 1.5rem 1.5rem 1.5rem 2.6rem; border: 1px solid var(--line); background: rgba(12,18,32,.7); }
+.checklist li + li { margin-top: .8rem; }
+.doc-link { margin-top: 2rem; font-weight: 800; }
+.install-grid pre { font-size: .78rem; white-space: pre-wrap; overflow-wrap: anywhere; }
 article { padding: 1.5rem; border: 1px solid var(--line); background: rgba(12,18,32,.7); }
 article strong { color: var(--amber); font-size: 1.15rem; }
 article p, .shapes p { color: var(--muted); }
@@ -59,13 +68,19 @@ pre { margin: 2rem 0; padding: 1.25rem; overflow-x: auto; border: 1px solid var(
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 footer { max-width: 86rem; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; border-top: 1px solid var(--line); color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 @media (max-width: 940px) {
-  .hero, .contrast { grid-template-columns: 1fr; }
+  nav { align-items: flex-start; flex-direction: column; }
+  .nav-links { width: 100%; flex-wrap: nowrap; overflow-x: auto; padding-bottom: .35rem; scrollbar-width: thin; }
+  .nav-links a { flex: 0 0 auto; }
+  .hero, .contrast, .example-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
-  .grid.three { grid-template-columns: 1fr; }
+  .grid.three, .grid.two { grid-template-columns: 1fr; }
   .shapes { grid-template-columns: 1fr 1fr; }
-  .nav-links { display: none; }
 }
 @media (max-width: 560px) {
+  html { scroll-padding-top: 9rem; }
   .hero, .section { padding-top: 4rem; padding-bottom: 4rem; }
   .shapes { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

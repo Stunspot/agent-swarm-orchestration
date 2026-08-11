@@ -1,0 +1,23 @@
+{
+  "format_version": "1.0",
+  "command": [
+    "git",
+    "diff",
+    "--cached",
+    "--exit-code",
+    "--",
+    "release-assets/v0.2.0",
+    "verification/hesperos-public-v0.2.0",
+    "verification/testforge-public-v0.2.0",
+    "RELEASE-NOTES-v0.2.0.md"
+  ],
+  "working_directory": ".",
+  "started_at": "2026-08-11T20:19:50.643028+00:00",
+  "finished_at": "2026-08-11T20:19:50.681593+00:00",
+  "duration_seconds": 0.038563,
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "",
+  "stderr": "",
+  "status": "passed"
+}
