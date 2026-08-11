@@ -1,0 +1,195 @@
+name: Verify Agent Swarm documentation candidate
+
+on:
+  push:
+    branches:
+      - agent/agent-swarm-docs-remediation-20260811
+
+permissions:
+  contents: read
+
+jobs:
+  verify-documentation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out the exact candidate
+        uses: actions/checkout@v4
+        with:
+          ref: agent/agent-swarm-docs-remediation-20260811
+          fetch-depth: 1
+      - name: Record candidate commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          git rev-parse HEAD | tee evidence/candidate-commit.txt
+      - name: Run runtime and public-package checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python canonical/skills/agent-swarm-orchestration/scripts/validate_swarm_plan.py canonical/skills/agent-swarm-orchestration/assets/swarm-plan.template.json | tee evidence/swarm-plan-validator.txt
+          python -m unittest discover -s canonical/skills/agent-swarm-orchestration/tests -v 2>&1 | tee evidence/unit-tests.txt
+          python tools/validate_public_release.py --profile public-release . | tee evidence/public-release-validator.txt
+      - name: Run static customer-documentation checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet beautifulsoup4 pillow
+          python - <<'PY' | tee evidence/static-documentation-checks.txt
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          from PIL import Image
+          import json, re
+
+          root = Path('.')
+          manifest = json.loads((root / 'documentation-manifest.json').read_text(encoding='utf-8'))
+          errors = []
+          for name in manifest['customer_docs']:
+              path = root / name
+              if not path.is_file() or path.stat().st_size == 0:
+                  errors.append(f'missing or empty: {name}')
+
+          markdown_link = re.compile(r'!?\[[^\]]*\]\(([^)]+)\)')
+          for name in [item for item in manifest['customer_docs'] if item.endswith('.md')]:
+              text = (root / name).read_text(encoding='utf-8')
+              for target in markdown_link.findall(text):
+                  if target.startswith(('http://', 'https://', 'mailto:', '#')):
+                      continue
+                  local = target.split('#', 1)[0]
+                  if local and not (root / name).parent.joinpath(local).exists():
+                      errors.append(f'{name}: broken local target {local}')
+
+          soup = BeautifulSoup((root / 'docs/index.html').read_text(encoding='utf-8'), 'html.parser')
+          if len(soup.find_all('h1')) != 1:
+              errors.append('Pages must contain exactly one h1')
+          ids = [tag.get('id') for tag in soup.find_all(attrs={'id': True})]
+          if len(ids) != len(set(ids)):
+              errors.append('duplicate HTML ids')
+          for anchor in soup.find_all('a', href=True):
+              href = anchor['href']
+              if href.startswith('#') and href[1:] not in ids:
+                  errors.append(f'broken Pages anchor {href}')
+          for image in soup.find_all('img'):
+              if not image.get('alt', '').strip():
+                  errors.append(f'empty alt: {image.get("src")}')
+          headings = [int(tag.name[1]) for tag in soup.find_all(re.compile('^h[1-6]$'))]
+          for previous, current in zip(headings, headings[1:]):
+              if current > previous + 1:
+                  errors.append(f'heading level skip H{previous} to H{current}')
+
+          expected = {
+              'docs/assets/aso-readme-banner.png': (1280, 640),
+              'docs/assets/aso-pages-hero.png': (1600, 900),
+              'docs/assets/aso-social-card.png': (1200, 630),
+              'plugins/agent-swarm-orchestration/assets/aso-social-card.png': (1200, 630),
+          }
+          for name, size in expected.items():
+              with Image.open(name) as image:
+                  image.load()
+                  if image.size != size or image.getbbox() is None:
+                      errors.append(f'invalid image {name}: {image.size}')
+
+          if soup.find('meta', {'property': 'og:title'}).get('content') != 'Agent Swarm Orchestration':
+              errors.append('wrong og:title')
+          if soup.find('meta', {'property': 'og:description'}).get('content') != 'Parallel cognition without custody loss.':
+              errors.append('wrong og:description')
+
+          if errors:
+              print('FAIL')
+              for error in errors:
+                  print('-', error)
+              raise SystemExit(1)
+          print('PASS')
+          PY
+      - name: Install browser verification tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm init -y >/dev/null 2>&1
+          npm install --no-save playwright @axe-core/playwright >/dev/null
+          npx playwright install chromium >/dev/null
+      - name: Render, exercise, and accessibility-test the candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m http.server 8000 --directory docs >evidence/http-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8000/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node <<'JS'
+          const fs = require('fs');
+          const { chromium } = require('playwright');
+          const AxeBuilder = require('@axe-core/playwright').default;
+
+          (async () => {
+            const browser = await chromium.launch({headless: true});
+            const viewports = {
+              desktop: {width: 1440, height: 900},
+              mobile: {width: 390, height: 844},
+              tablet: {width: 768, height: 1024}
+            };
+            const report = {};
+            for (const [name, viewport] of Object.entries(viewports)) {
+              const page = await browser.newPage({viewport});
+              const consoleErrors = [];
+              page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
+              await page.goto('http://127.0.0.1:8000/', {waitUntil: 'networkidle'});
+              await page.screenshot({path: `evidence/${name}-full.png`, fullPage: true});
+              const structure = await page.evaluate(() => ({
+                title: document.title,
+                h1Count: document.querySelectorAll('h1').length,
+                scrollWidth: document.documentElement.scrollWidth,
+                clientWidth: document.documentElement.clientWidth,
+                internalAnchors: [...document.querySelectorAll('a[href^="#"]')].map(a => ({
+                  href: a.getAttribute('href'),
+                  targetExists: !!document.querySelector(a.getAttribute('href'))
+                })),
+                imageState: [...document.images].map(image => ({
+                  src: image.getAttribute('src'),
+                  alt: image.getAttribute('alt'),
+                  naturalWidth: image.naturalWidth,
+                  naturalHeight: image.naturalHeight
+                }))
+              }));
+              await page.keyboard.press('Tab');
+              const firstTab = await page.evaluate(() => ({
+                text: document.activeElement.textContent.trim(),
+                className: document.activeElement.className
+              }));
+              const axe = await new AxeBuilder({page}).analyze();
+              report[name] = {structure, firstTab, consoleErrors, axeViolations: axe.violations};
+              if (structure.scrollWidth > structure.clientWidth + 1) throw new Error(`${name}: horizontal overflow`);
+              if (structure.internalAnchors.some(item => !item.targetExists)) throw new Error(`${name}: broken internal anchor`);
+              if (structure.imageState.some(item => !item.alt || item.naturalWidth === 0)) throw new Error(`${name}: image or alt failure`);
+              if (firstTab.text !== 'Skip to content') throw new Error(`${name}: skip link is not first tab stop`);
+              if (consoleErrors.length) throw new Error(`${name}: console errors: ${consoleErrors.join('; ')}`);
+              const blocking = axe.violations.filter(item => ['critical','serious'].includes(item.impact));
+              if (blocking.length) throw new Error(`${name}: axe critical/serious violations: ${JSON.stringify(blocking)}`);
+              await page.close();
+            }
+            fs.writeFileSync('evidence/browser-accessibility-report.json', JSON.stringify(report, null, 2));
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          JS
+      - name: Capture and hash all role-specific visual assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/assets
+          cp docs/assets/aso-readme-banner.png evidence/assets/
+          cp docs/assets/aso-pages-hero.png evidence/assets/
+          cp docs/assets/aso-social-card.png evidence/assets/
+          sha256sum docs/assets/*.png plugins/agent-swarm-orchestration/assets/aso-social-card.png > evidence/visual-sha256.txt
+          file docs/assets/*.png plugins/agent-swarm-orchestration/assets/aso-social-card.png > evidence/visual-file-report.txt
+      - name: Upload exact candidate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-swarm-documentation-candidate-${{ github.run_id }}
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 30
