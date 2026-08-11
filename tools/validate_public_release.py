@@ -85,7 +85,8 @@ def validate_plugin_archive(record: dict[str, object], canonical: dict[str, byte
     assert plugin["version"] == VERSION
     assert plugin["skills"] == "./skills/"
     for key in ("composerIcon", "logo"):
-        assert plugin["interface"][key] in extracted, f"frozen plugin asset missing: {key}"
+        asset_path = plugin["interface"][key].removeprefix("./")
+        assert asset_path in extracted, f"frozen plugin asset missing: {key}"
 
 
 def main() -> int:
