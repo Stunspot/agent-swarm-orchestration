@@ -1,6 +1,6 @@
 # Trust, evidence, and limits
 
-Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what the unchanged 0.1.0 runtime evidence establishes, what the 0.2.0 public distribution adds, and what your live task must still prove.
+Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what the unchanged 0.1.0 runtime evidence establishes, what the 0.2.1 public distribution adds, and what your live task must still prove.
 
 ## Keep one authority envelope
 
@@ -66,14 +66,14 @@ Documentation examples describe intent. They do not freeze a future Codex API. W
 
 At the 2026-08-02 evidence cutoff:
 
-- the current package fingerprint is `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`;
+- the retained runtime fingerprint is `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`;
 - the canonical skill passed the named Skill Creator and Codex package structural validators;
 - the pre-documentation product bundle passed its bundle profile;
 - the Swarm Plan template returned `VALID cd-agent-swarm-plan/v1`;
 - ten validator unit tests passed;
 - JSON-compatible package and eval data parsed successfully;
 - the generated Codex release contains 17 files byte-identical to the 17 canonical skill files;
-- the ZIP contains one top-level `agent-swarm-orchestration/` folder and the same 17 relative files, with SHA-256 `1889b0b1f20a4cc98c9ccf3c95d7a1b64cea0e4524cf3e16b00b90ccd2cf6683`;
+- the retained qualification ZIP at that cutoff contained one top-level `agent-swarm-orchestration/` folder and the same 17 relative files, with SHA-256 `1889b0b1f20a4cc98c9ccf3c95d7a1b64cea0e4524cf3e16b00b90ccd2cf6683`;
 - the eval catalog contains 20 cases: ten explicitly coached regressions and ten natural qualifications;
 - ten fresh, no-history, pinned `gpt-5.6-sol` subjects completed one isolated natural decision-only case each, and independent TestForge semantic review passed all ten.
 
@@ -101,11 +101,11 @@ Customers should therefore expect these residual risks, especially with smaller 
 
 Check the live task's sources and tools before accepting a result. Require exact evidence for any claimed inspection, prefer direct execution for trivial work, and review degraded-state classification when an input or capability is missing.
 
-The current preliminary TestForge disposition is `PASS_WITH_CONDITIONS / READY_WITH_RESIDUAL_RISK` for private Codex source custody. Its remaining conditions are evidence and documentation custody refreshes. This is not customer readiness, installation health, universal swarm competence, or a final live-host qualification.
+The retained runtime TestForge disposition is `PASS_WITH_CONDITIONS / READY_WITH_RESIDUAL_RISK` for the exact 0.1.0 runtime fingerprint and its bounded Codex decision evidence. Version 0.2.1 does not rerun or enlarge that behavioral claim. Its documentation, accessibility, public-release, archive, and visual checks have separate receipts bound to the 0.2.1 release commit. None establishes universal swarm competence, customer outcomes, or every live-host configuration.
 
 ## What remains untested or outside the claim
 
-Version 0.2.0 does not establish:
+Version 0.2.1 does not establish:
 
 - installation on a clean customer host;
 - Codex discovery or implicit routing after installation;
@@ -116,10 +116,9 @@ Version 0.2.0 does not establish:
 - background execution after the Codex task ends;
 - semantic quality from a passing Swarm Plan validator;
 - rollback from interruption or cancellation;
-- public publication;
-- accessibility conformance or representative-user usability.
+- assistive-technology conformance or representative-user usability beyond the recorded documentation accessibility review.
 
-Version 0.2.0 packages the same runtime for Codex and as a byte-matched Claude or one-skill upload. The retained behavioral qualification is Codex decision-only evidence; live Claude upload, activation, and behavior remain untested. Persistent external swarm services are outside this release.
+Version 0.2.1 packages the same runtime for Codex and as a byte-matched Claude or one-skill upload. The retained behavioral qualification is Codex decision-only evidence; live Claude upload, activation, and behavior remain untested. Persistent external swarm services are outside this release.
 
 ## Human control and safe stopping
 
@@ -128,8 +127,8 @@ The user retains priorities, values, risk acceptance, new authority, sensitive d
 When evidence, authority, tools, cost, or quality cannot support another responsible in-bounds step, the skill should stop with an exact bounded state and re-entry condition. A truthful partial result is safer than a polished claim that outruns its receipts.
 
 
-## Public 0.2.0 distribution boundary
+## Public 0.2.1 distribution boundary
 
-Version 0.2.0 adds public licensing, a Codex marketplace plugin, a byte-matched Claude folder, release archives, Pages source, and visual assets around the unchanged verified runtime fingerprint. Packaging checks can establish file parity, manifest validity, archive topology, dimensions, links, and checksums. They do not retroactively establish live host discovery, Claude activation, directory approval, rendered accessibility with assistive technology, or customer outcomes.
+Version 0.2.1 preserves public licensing, a Codex marketplace plugin, a byte-matched Claude folder, release archives, Pages source, and visual assets around the unchanged verified runtime fingerprint. Packaging checks can establish file parity, manifest validity, archive topology, dimensions, links, and checksums. They do not retroactively establish live host discovery, Claude activation, directory approval, rendered accessibility with assistive technology, or customer outcomes.
 
-Repository visibility, GitHub release publication, Pages deployment, plugin installation, skill discovery, invocation, and healthy behavior require separate receipts. The release record must name the highest state actually observed.
+Repository visibility, GitHub release publication, Pages deployment, plugin installation, skill discovery, invocation, and healthy behavior require separate receipts. The 0.2.1 release record names the highest state actually observed and does not borrow stronger 0.2.0 installation evidence by implication.

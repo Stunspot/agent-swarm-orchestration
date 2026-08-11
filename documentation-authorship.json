@@ -1,121 +1,126 @@
 {
-  "authored_files": [
+  "format": "cd-documentation-authorship/v2",
+  "product": "agent-swarm-orchestration",
+  "version": "0.2.1",
+  "run_id": "aso-0.2.1-hesperos-authorship-20260811-r5",
+  "authored_at": "2026-08-11",
+  "author": "Nova via Hesperos Documentation",
+  "scope": "Complete current customer documentation, historical customer release note, Pages HTML/CSS, and documentation manifest.",
+  "source_truth": [
+    "canonical/skills/agent-swarm-orchestration/SKILL.md",
+    "canonical/skills/agent-swarm-orchestration/references",
+    "canonical/skills/agent-swarm-orchestration/assets",
+    "canonical/skills/agent-swarm-orchestration/examples",
+    "canonical/evals",
+    "package-manifest.json"
+  ],
+  "documentation_fingerprint": "5404436f505f84578bd04df72ac0cbe48e66202c297723cb09440ca980806c32",
+  "documentation_fingerprint_method": "sha256 of UTF-8 compact ordered JSON mapping path to exact file SHA-256",
+  "files": [
     {
-      "bytes": 6291,
       "path": "README.md",
-      "sha256": "f95369888b5012867b08e0468a5511b870454d778bee3d74c4650110f1488074"
+      "sha256": "b237648c1ac76f80ec9533c021a23339f8b3c61ffa3dcdfedc4e7f8eb3f45b44"
     },
     {
-      "bytes": 4051,
       "path": "START-HERE.md",
-      "sha256": "9cb431712cac8bc04453ed3237a1dba0855f5eb112291f5d36b1ef1332675093"
+      "sha256": "7241b3d4ccc834bdc86b86b7787fbf26fc6e9d44f1598196595d41f4205c817c"
     },
     {
-      "bytes": 3993,
       "path": "INSTALLATION.md",
-      "sha256": "cfae1483da3ba256e80fe189fcb669388742e924b2c18ff2f66015de26cce091"
+      "sha256": "67c94aeb1ac52e97a570f28b8373f195d7e8242c4ddbe0fdc5f591ebc71331ba"
     },
     {
-      "bytes": 9639,
       "path": "WORKFLOWS.md",
       "sha256": "b4a399ffe9cd47de3cdc35b8beaa263fa850ff674359289f69030244037cd772"
     },
     {
-      "bytes": 7998,
       "path": "TROUBLESHOOTING.md",
-      "sha256": "8aebca1d959001f6a541453681ab2ced4603b767fc3e34c13ff7094bd00c35e8"
+      "sha256": "a9245546ccd3f0aed65bb2b88e6eaf5ccd9bcfca67c5265021c80c229c36f3b9"
     },
     {
-      "bytes": 11139,
       "path": "TRUST-AND-LIMITS.md",
-      "sha256": "7ffcd96051e368c661f2c8495606fbe2d082b803aa547de45f307358409f1bc5"
+      "sha256": "86e33f184a784d6426f1cf3b4ed69429e4d8b3dbe0cd8c69455d3516c8a4ecc5"
     },
     {
-      "bytes": 2381,
       "path": "host-matrix.md",
-      "sha256": "775ff7616e161c577c35e78558142ca9b87e59f09faec1082c8470e8ab00f3d9"
+      "sha256": "87aae506133b2c006ac3669c6211212df18b0499fdbd524d489e5361d20911ab"
     },
     {
-      "bytes": 1438,
       "path": "DATA-AND-PRIVACY.md",
-      "sha256": "f64e86c231c9dd592bf405708aa32e89189ea8455b3c99031b23db59d9cef35e"
+      "sha256": "6946103483fba9942d251ad50611ac2f763f47e242bfaeb88c6ef12adc79807d"
     },
     {
-      "bytes": 2396,
-      "path": "TERMS-OF-USE.md",
-      "sha256": "5cf7850c1f0c2a511ceaa92fcc235f7432627cbad360173989173f820e159951"
-    },
-    {
-      "bytes": 1928,
-      "path": "SUPPORT.md",
-      "sha256": "a9f543ae19c83060b3563a2efc3be5a2a33f2d8547e4e5114b7a75c8b0ea0a34"
-    },
-    {
-      "bytes": 1734,
-      "path": "RELEASE-NOTES-v0.2.0.md",
-      "sha256": "1f0d13dd69cf9d887587468bde22e50216f8752f256da4ed39cd530dc1709fae"
-    },
-    {
-      "bytes": 2856,
-      "path": "LICENSE.md",
-      "sha256": "6e4b0ab54741e63865fa1eb901a6705349ed21e3d64ba6cf726f1f0299808d4f"
-    },
-    {
-      "bytes": 780,
       "path": "SECURITY.md",
       "sha256": "51663d8a2a2d5eb23961e46d4718b37d1ce749a543ed652ccd6b46181be742e6"
     },
     {
-      "bytes": 1551,
+      "path": "SUPPORT.md",
+      "sha256": "a9f543ae19c83060b3563a2efc3be5a2a33f2d8547e4e5114b7a75c8b0ea0a34"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "ce4be31c03ebf34921c3f7df04a2780557a119a4f9c8551749bb7000a66807e6"
+    },
+    {
+      "path": "TERMS-OF-USE.md",
+      "sha256": "5cf7850c1f0c2a511ceaa92fcc235f7432627cbad360173989173f820e159951"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "6e4b0ab54741e63865fa1eb901a6705349ed21e3d64ba6cf726f1f0299808d4f"
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "56db580d4adb7fdaff6387ebdb92344aba6f44a0afdb49758fff92bda26c23b5"
+    },
+    {
+      "path": "TRADEMARKS.md",
+      "sha256": "72ba9b418e1e4c5d4c5c2083c389696cc886f44df5f7810d57aee6e3718f4a35"
+    },
+    {
       "path": "ARCHIVE-CUSTODY.md",
-      "sha256": "f4581293d43f0665a0d6b40dd3415e025b5e30ebba643c2d847bdd8e466f7347"
+      "sha256": "c21f931208f2a1603feb999636fa1d826d9e333a1d5fc8c9c96cf87a1c502823"
     },
     {
-      "bytes": 3437,
       "path": "provenance.md",
-      "sha256": "46d612d49b3d2f063c6a8597081208a48e0f30e2eba9388109ec0d839daeb71d"
-    }
-  ],
-  "authoring": {
-    "authorship_scope": "materially-revised",
-    "capability": "hesperos-documentation",
-    "capability_entrypoint_sha256": "f9284a8b14ca20a4661b15db542e3d8f52d3cf1ef42c1c56f4ed540a1036a3b3",
-    "mode": "in-process",
-    "run_id": "aso-0.2.0-hesperos-public-20260803-r2"
-  },
-  "authoring_response": {
-    "bytes": 617,
-    "path": "verification/hesperos-public-v0.2.0/authoring-response.md",
-    "sha256": "75ebbaecf89333f882ee25dac9116db2254cffca88267dfd2fc5d6b1ee1b3d8c"
-  },
-  "claim_boundary": "Binds retained evidence for one Hesperos authoring or material-revision run. It does not prove independent review, host activation, publication, accessibility conformance, or customer outcomes.",
-  "created_at": "2026-08-03T23:17:54+00:00",
-  "documentation_fingerprint": "0b8b1ba1e8e82fc768a459b56028789c986052e7c1611731e734926659a81e8a",
-  "documentation_manifest": {
-    "bytes": 2107,
-    "path": "documentation-manifest.json",
-    "sha256": "4d3bdd49f41880fbbc63ab9158e2835c97d3222776c3ac9bc0400917bdb824b1"
-  },
-  "evidence_packet": {
-    "bytes": 2429,
-    "path": "verification/hesperos-public-v0.2.0/evidence-packet.json",
-    "sha256": "a1b619c356d5b6526dc3d91ddf463244e14f3b1c081dd7b5396569bd50cf31d8"
-  },
-  "execution_evidence": [
-    {
-      "bytes": 2083,
-      "path": "verification/hesperos-public-v0.2.0/execution-evidence.md",
-      "sha256": "13abeae36c32fc97cb3f3fe4aab5b539277ec98e531b63c151e0e4ad18bcb205"
+      "sha256": "7af4af2357bb9a274a8d02f6aa03c7683cb96b15d24f0cf0660f4374107c49bc"
     },
     {
-      "bytes": 617,
-      "path": "verification/hesperos-public-v0.2.0/authoring-response.md",
-      "sha256": "75ebbaecf89333f882ee25dac9116db2254cffca88267dfd2fc5d6b1ee1b3d8c"
+      "path": "RELEASE-NOTES-v0.2.1.md",
+      "sha256": "1173e132cf76b501deb9cbd5439c5f4ae32522a1184f3f2139629f09a2f53cd3"
+    },
+    {
+      "path": "RELEASE-NOTES-v0.2.0.md",
+      "sha256": "1f0d13dd69cf9d887587468bde22e50216f8752f256da4ed39cd530dc1709fae"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "e8d1328daabb39c6946978db1df3fe047cc4d025439d91e6d1a0a9172e93b4d1"
+    },
+    {
+      "path": "docs/style.css",
+      "sha256": "848c772d472e13f32b8dcee9fa72aadff6d545f9f69edbd5b6deb9976132365b"
+    },
+    {
+      "path": "documentation-manifest.json",
+      "sha256": "722aa0ad2bbe6e2741abc9ded1f16794330279fb5b01ffe059c55b6e2869f57a"
     }
   ],
-  "format": "cd-hesperos-documentation-authorship/v1",
-  "product": {
-    "slug": "Agent Swarm Orchestration",
-    "version": "0.2.0"
-  }
+  "authoring_result": "AUTHORING_COMPLETE",
+  "material_repairs": [
+    "Completed Pages customer journey and restored narrow-screen navigation.",
+    "Replaced stale commit-pinned links with current main routes.",
+    "Corrected stale publication, host, TestForge, archive, and accessibility evidence language.",
+    "Declared every current customer document and role-specific visual asset.",
+    "Added exact supported-host verification, update, removal, cleanup, privacy, security, limitations, provenance, support, contribution, licensing, and terms routes.",
+    "Added descriptive image alternatives, reduced-motion behavior, mobile anchor clearance, and explicit audience guidance."
+  ],
+  "hesperos_lint": {
+    "result": "PASS_WITH_DOCUMENTED_LEGAL_EXCEPTION",
+    "passed_files": 18,
+    "exception": [
+      "LICENSE.md:13 preserved verbatim MIT clause"
+    ]
+  },
+  "receipt_refresh": "Exact-byte refresh after semantic-preserving documentation-manifest JSON normalization; full governed corpus rechecked."
 }

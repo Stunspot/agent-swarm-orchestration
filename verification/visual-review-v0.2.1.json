@@ -1,0 +1,100 @@
+{
+  "format": "cd-visual-review/v1",
+  "product": "agent-swarm-orchestration",
+  "version": "0.2.1",
+  "review_run_id": "aso-0.2.1-visual-20260811",
+  "reviewed_at": "2026-08-11",
+  "method": "Each image was decoded and its actual pixels were displayed in-app at a legible scale; metadata alone was not accepted.",
+  "core_set": {
+    "distinct_files": true,
+    "distinct_aspect_ratios": [
+      "2:1",
+      "16:9",
+      "40:21"
+    ],
+    "duplicate_compositions": false,
+    "shared_identity": "crystalline bee/evidence-lane visual language",
+    "interchangeable_portfolio_wallpaper": false
+  },
+  "assets": [
+    {
+      "path": "docs/assets/aso-readme-banner.png",
+      "sha256": "9ecb7dfe388499dbe64aad0e3a50c63233a0a2b20f8159d3261e00a1e7a91d23",
+      "decoded": "1280x640|RGBA|(0, 0, 1280, 640)"
+    },
+    {
+      "path": "docs/assets/aso-pages-hero.png",
+      "sha256": "6f1471f9f73e0a036c434a7c53b7708c7e23a169518f00ec3bd76cc80207b0f3",
+      "decoded": "1600x900|RGBA|(0, 0, 1600, 900)"
+    },
+    {
+      "path": "docs/assets/aso-social-card.png",
+      "sha256": "430ada4de217194c5bd54c564f082c9e35a0d6c70c1e5b3b8cf949a70b0a8759",
+      "decoded": "1200x630|RGBA|(0, 0, 1200, 630)"
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
+      "sha256": "8be44db4ba287f4145d7de76ecd3f30fa4bf1b68f7778fe6282edb470704e245",
+      "decoded": "512x512|RGBA|(0, 0, 512, 512)"
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-social-card.png",
+      "sha256": "e0b8e89ecf3ebf020718748a36cbfeea62fbf216e8c8d2723cc8aec2a3fb7071",
+      "decoded": "1400x875|RGBA|(0, 0, 1400, 875)"
+    },
+    {
+      "path": "tools/artwork-source/aso-social-card-base.png",
+      "sha256": "01d308d060261beaad0e64eea2e8c29453cfb9a0e8acfba66d6c884ce9fce194",
+      "decoded": "1200x630|RGBA|(0, 0, 1200, 630)"
+    }
+  ],
+  "verdicts": [
+    {
+      "path": "docs/assets/aso-readme-banner.png",
+      "role": "README hero",
+      "verdict": "PASS",
+      "text_contract": "no embedded text required",
+      "pixel_judgment": "Balanced branching topology, clear accountable center, strong contrast, no blank failure area, no accidental transparency, and useful 2:1 repository composition."
+    },
+    {
+      "path": "docs/assets/aso-pages-hero.png",
+      "role": "Pages hero",
+      "verdict": "PASS",
+      "text_contract": "no embedded text required",
+      "pixel_judgment": "Distinct 16:9 lane-convergence composition, recognizable bee/workers metaphor, central flow, strong hierarchy and contrast, and no clipping or incoherent artifacts."
+    },
+    {
+      "path": "docs/assets/aso-social-card.png",
+      "role": "Open Graph social card",
+      "verdict": "PASS",
+      "text_contract": "Exact title Agent Swarm Orchestration and line Parallel cognition. One accountable root. visibly present",
+      "pixel_judgment": "Title and identifying line are large, high-contrast, and inside the likely crop-safe area; bee conductor remains legible on the right; supporting line remains readable at preview scale."
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
+      "role": "plugin icon",
+      "verdict": "PASS",
+      "text_contract": "no embedded text appropriate",
+      "pixel_judgment": "Recognizable centered bee/conductor mark with useful square crop, high contrast, and no blank or transparent failure."
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-social-card.png",
+      "role": "plugin listing image",
+      "verdict": "PASS",
+      "text_contract": "Product title, promise, four operating verbs, and identifying strap visibly present",
+      "pixel_judgment": "Separate 1400x875 editorial layout with readable hierarchy, intact product mark, balanced grid, clear feature labels, and no hidden icon after layer-order repair."
+    },
+    {
+      "path": "tools/artwork-source/aso-social-card-base.png",
+      "role": "renderer source only; not wired to a public channel",
+      "verdict": "PASS_AS_SOURCE_ONLY",
+      "text_contract": "no text required because this is the inspected illustration substrate",
+      "pixel_judgment": "Complete bee-conductor artwork retained only for deterministic rendering; the prior failure was its misuse as a final social card without title, which is no longer wired."
+    }
+  ],
+  "rejected_and_repaired": [
+    "The former docs social card was a bare image with no product title; deterministic crop-safe typography replaced that final surface.",
+    "The former plugin listing image rendered as an effectively empty dark field; a separate listing composition replaced it.",
+    "The first listing render hid the product icon because an RGBA polygon was drawn after the icon; layer order was corrected and the repaired pixels were re-inspected."
+  ]
+}

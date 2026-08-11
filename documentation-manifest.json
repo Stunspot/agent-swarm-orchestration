@@ -1,6 +1,6 @@
 {
   "format": "cd-customer-documentation/v1",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "reader_journey": [
     "README.md",
     "START-HERE.md",
@@ -10,38 +10,68 @@
     "TRUST-AND-LIMITS.md",
     "host-matrix.md",
     "DATA-AND-PRIVACY.md",
-    "TERMS-OF-USE.md",
-    "SUPPORT.md",
-    "RELEASE-NOTES-v0.2.0.md",
-    "LICENSE.md",
     "SECURITY.md",
+    "SUPPORT.md",
+    "CONTRIBUTING.md",
+    "TERMS-OF-USE.md",
+    "LICENSE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
-    "provenance.md"
+    "provenance.md",
+    "RELEASE-NOTES-v0.2.1.md"
   ],
+  "historical_customer_docs": [
+    "RELEASE-NOTES-v0.2.0.md"
+  ],
+  "site_surface": {
+    "path": "docs/index.html",
+    "stylesheet": "docs/style.css",
+    "live_url": "https://stunspot.github.io/agent-swarm-orchestration/"
+  },
   "visual_assets": [
     {
       "path": "docs/assets/aso-readme-banner.png",
-      "use": "repository banner",
+      "use": "README hero",
       "width": 1280,
-      "height": 640
+      "height": 640,
+      "embedded_text": false
     },
     {
       "path": "docs/assets/aso-pages-hero.png",
       "use": "Pages hero",
       "width": 1600,
-      "height": 900
+      "height": 900,
+      "embedded_text": false
     },
     {
       "path": "docs/assets/aso-social-card.png",
       "use": "Open Graph social card",
       "width": 1200,
-      "height": 630
+      "height": 630,
+      "embedded_text": true,
+      "required_text": [
+        "Agent Swarm Orchestration",
+        "Parallel cognition. One accountable root."
+      ]
     },
     {
       "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
       "use": "plugin icon",
       "width": 512,
-      "height": 512
+      "height": 512,
+      "embedded_text": false
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-social-card.png",
+      "use": "plugin listing image",
+      "width": 1400,
+      "height": 875,
+      "embedded_text": true,
+      "required_text": [
+        "Agent Swarm Orchestration",
+        "Coordinate many minds without losing mission, authority, ownership, or evidence."
+      ]
     }
   ],
   "customer_docs": [
@@ -53,46 +83,65 @@
     "TRUST-AND-LIMITS.md",
     "host-matrix.md",
     "DATA-AND-PRIVACY.md",
-    "TERMS-OF-USE.md",
-    "SUPPORT.md",
-    "RELEASE-NOTES-v0.2.0.md",
-    "LICENSE.md",
     "SECURITY.md",
+    "SUPPORT.md",
+    "CONTRIBUTING.md",
+    "TERMS-OF-USE.md",
+    "LICENSE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
-    "provenance.md"
+    "provenance.md",
+    "RELEASE-NOTES-v0.2.1.md",
+    "RELEASE-NOTES-v0.2.0.md"
   ],
   "landing_page": "README.md",
   "moments": {
     "orientation": [
       "README.md",
-      "START-HERE.md"
+      "START-HERE.md",
+      "docs/index.html"
     ],
     "installation": [
       "INSTALLATION.md",
-      "host-matrix.md"
+      "host-matrix.md",
+      "docs/index.html"
     ],
     "first_value": [
-      "START-HERE.md"
+      "START-HERE.md",
+      "WORKFLOWS.md",
+      "docs/index.html"
     ],
     "normal_use": [
       "WORKFLOWS.md"
     ],
     "recovery": [
       "TROUBLESHOOTING.md",
-      "SUPPORT.md"
+      "SUPPORT.md",
+      "ARCHIVE-CUSTODY.md"
     ],
     "privacy_security": [
       "DATA-AND-PRIVACY.md",
-      "TERMS-OF-USE.md",
-      "SECURITY.md"
+      "SECURITY.md",
+      "TERMS-OF-USE.md"
     ],
     "evidence_limits": [
       "TRUST-AND-LIMITS.md",
-      "host-matrix.md"
+      "host-matrix.md",
+      "provenance.md"
     ],
-    "support_maintenance": [
+    "support_contribution": [
       "SUPPORT.md",
-      "RELEASE-NOTES-v0.2.0.md",
+      "CONTRIBUTING.md"
+    ],
+    "rights_terms": [
+      "LICENSE.md",
+      "ATTRIBUTION.md",
+      "TRADEMARKS.md",
+      "TERMS-OF-USE.md"
+    ],
+    "maintenance": [
+      "RELEASE-NOTES-v0.2.1.md",
       "ARCHIVE-CUSTODY.md"
     ],
     "provenance": [

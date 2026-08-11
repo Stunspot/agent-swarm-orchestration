@@ -11,7 +11,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 SKILL = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
 
 
@@ -71,6 +71,7 @@ def main() -> int:
         ROOT / "docs" / "assets" / "aso-pages-hero.png": (1600, 900),
         ROOT / "docs" / "assets" / "aso-social-card.png": (1200, 630),
         ROOT / "plugins" / "agent-swarm-orchestration" / "assets" / "aso-icon.png": (512, 512),
+        ROOT / "plugins" / "agent-swarm-orchestration" / "assets" / "aso-social-card.png": (1400, 875),
     }
     for path, expected in expected_sizes.items():
         assert png_size(path) == expected, f"wrong dimensions: {path} {png_size(path)} != {expected}"
@@ -96,7 +97,7 @@ def main() -> int:
     result = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", str(SKILL / "tests"), "-v"], cwd=ROOT)
     assert result.returncode == 0, "validator tests failed"
 
-    print("PUBLIC RELEASE VALID agent-swarm-orchestration v0.2.0")
+    print("PUBLIC RELEASE VALID agent-swarm-orchestration v0.2.1")
     return 0
 
 

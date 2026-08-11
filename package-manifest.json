@@ -2,10 +2,10 @@
   "format": "cd-augment-package/v1",
   "name": "agent-swarm-orchestration",
   "display_name": "Agent Swarm Orchestration",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "runtime_version": "0.1.0",
   "runtime_fingerprint": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
-  "status": "public-release-published",
+  "status": "public-release-candidate",
   "map": "design-record/agent-swarm-orchestration-augment-map.md",
   "build_state": "design-record/agent-swarm-orchestration-build-state.md",
   "canonical_skills": [
@@ -19,33 +19,34 @@
   "customer_docs_manifest": "documentation-manifest.json",
   "distributions": {
     "codex_plugin": {
-      "status": "publicly-installed-and-enabled-with-sparse-marketplace-checkout",
+      "status": "packaged-0.2.1-live-state-in-release-receipt",
       "paths": [
         ".agents/plugins/marketplace.json",
         "plugins/agent-swarm-orchestration"
       ]
     },
     "codex_standalone": {
-      "status": "archive-published-runtime-preserved",
+      "status": "archive-built-runtime-preserved",
       "paths": [
-        "release/codex/agent-swarm-orchestration"
+        "release/codex/agent-swarm-orchestration",
+        "release-assets/v0.2.1/Skill-agent-swarm-orchestration-v0.2.1.zip"
       ]
     },
     "claude_standalone": {
-      "status": "archive-published-byte-matched-activation-untested",
+      "status": "archive-built-byte-matched-activation-untested",
       "paths": [
         "release/claude/agent-swarm-orchestration",
-        "claude-ai/agent-swarm-orchestration-v0.2.0.zip"
+        "claude-ai/agent-swarm-orchestration-v0.2.1.zip"
       ]
     },
     "release_assets": {
-      "status": "published-with-github-readback",
+      "status": "deterministic-archives-built-live-state-in-release-receipt",
       "paths": [
-        "release-assets/v0.2.0"
+        "release-assets/v0.2.1"
       ]
     },
     "pages": {
-      "status": "deployed-and-unauthenticated-http-200",
+      "status": "complete-source-live-state-in-release-receipt",
       "paths": [
         "docs"
       ]
@@ -60,19 +61,21 @@
   "rights_status": "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
   "evidence": {
     "runtime": "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
-    "structural_verification": "public-release-validator-pass-and-10-tests-pass",
-    "behavioral_verification": "ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
-    "installation": "public-github-marketplace-sparse-install-observed",
-    "clean_host_discovery": "isolated-codex-home-plugin-listed-installed-and-enabled",
-    "clean_host_invocation": "not-performed-for-0.2.0",
-    "publication": "repository-public-release-v0.2.0-and-pages-unauthenticated-http-200",
-    "documentation": "hesperos-authorship-and-independent-review-pass-fingerprint-0b8b1ba1e8e82fc768a459b56028789c986052e7c1611731e734926659a81e8a",
-    "visuals": "readme-pages-and-social-assets-generated-dimension-verified-and-public-http-200",
-    "recovery_backup": "deterministic-archives-checksums-and-custody-receipt-published",
-    "estate_reentry": "public-main-release-assets-pages-manifests-and-review-receipts-recorded"
+    "structural_verification": "0.2.1-public-release-validator-and-validator-tests",
+    "behavioral_verification": "retained-ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
+    "installation": "0.2.0-public-install-observed; 0.2.1-state-recorded-separately-in-verification/public-release-v0.2.1.md",
+    "clean_host_discovery": "0.2.1-state-recorded-separately-in-verification/public-release-v0.2.1.md",
+    "clean_host_invocation": "not-performed-for-0.2.1",
+    "publication": "recorded-separately-in-verification/public-release-v0.2.1.md",
+    "documentation": "documentation-authorship.json-and-documentation-review.json-bind-the-current-customer-doc-fingerprint",
+    "accessibility": "documentation-accessibility-review.json",
+    "visuals": "actual-pixel-review-recorded-in-verification/visual-review-v0.2.1.json",
+    "adversarial_release_verification": "verification/testforge-public-v0.2.1/final-review.md",
+    "recovery_backup": "deterministic-archives-checksums-and-custody-json-under-release-assets/v0.2.1",
+    "historical_custody": "v0.2.0-archives-tags-and-receipts-left-unchanged"
   },
   "authority": {
-    "installation": false,
+    "installation": true,
     "public_publication": true,
     "external_action": true,
     "free_offer": true,
