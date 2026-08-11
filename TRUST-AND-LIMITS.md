@@ -103,6 +103,10 @@ Check the live task's sources and tools before accepting a result. Require exact
 
 The current preliminary TestForge disposition is `PASS_WITH_CONDITIONS / READY_WITH_RESIDUAL_RISK` for private Codex source custody. Its remaining conditions are evidence and documentation custody refreshes. This is not customer readiness, installation health, universal swarm competence, or a final live-host qualification.
 
+## Publication and presentation evidence
+
+The public repository, version 0.2.0 release, and GitHub Pages site have separate publication receipts. Publication establishes that a destination exposed the named bytes at the observed time; it does not establish installation, host discovery, invocation, healthy orchestration, accessibility conformance, or customer outcomes. Current documentation and presentation reviews are bound to their declared documentation fingerprint, while live Pages and asset readback are recorded separately against the deployed commit.
+
 ## What remains untested or outside the claim
 
 Version 0.2.0 does not establish:
@@ -116,7 +120,6 @@ Version 0.2.0 does not establish:
 - background execution after the Codex task ends;
 - semantic quality from a passing Swarm Plan validator;
 - rollback from interruption or cancellation;
-- public publication;
 - accessibility conformance or representative-user usability.
 
 Version 0.2.0 packages the same runtime for Codex and as a byte-matched Claude or one-skill upload. The retained behavioral qualification is Codex decision-only evidence; live Claude upload, activation, and behavior remain untested. Persistent external swarm services are outside this release.
