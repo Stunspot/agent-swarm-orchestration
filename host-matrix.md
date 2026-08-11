@@ -4,11 +4,11 @@ Version 0.2.0 keeps package presence, installation, discovery, invocation, tool 
 
 | Surface | Supplied object | Static package state | Live state established by this release |
 |---|---|---|---|
-| Codex marketplace | `plugins/agent-swarm-orchestration/` | Plugin manifest, listing assets, and one self-contained skill are packaged | Publication and install readback are release gates; broad customer activation is not established |
+| Codex marketplace | `plugins/agent-swarm-orchestration/` | Plugin manifest, listing assets, and one self-contained skill are packaged | Public sparse-marketplace installation and isolated listing/enabled readback were observed; broad customer activation and clean-task invocation remain unestablished |
 | Standalone Codex | `release/codex/agent-swarm-orchestration/` | Runtime tree preserved and validated | Existing qualification is decision-only; universal live tool behavior is not established |
 | Claude / one-skill upload | `release/claude/agent-swarm-orchestration/` and `claude-ai/` | Byte-matched skill folder and archive are packaged | Live upload, discovery, and invocation remain untested until observed |
-| GitHub release | `release-assets/v0.2.0/` | Governed archives and checksums are generated during release | Asset publication and download readback require separate receipts |
-| GitHub Pages | `docs/` | Accessible static source, 1600×900 hero, and 1200×630 share card are supplied | Deployment and public URL readback require separate receipts |
+| GitHub release | `release-assets/v0.2.0/` | Governed archives and checksums are frozen release objects | Version 0.2.0 asset publication and unauthenticated readback are recorded separately; current source presentation assets may postdate those frozen archives |
+| GitHub Pages | `docs/` | Accessible static source, 1600×900 hero, and 1200×630 share card are supplied | Public deployment, rendered-site review, navigation checks, and asset readback are separate commit-bound verification gates |
 
 ## Runtime dependencies
 
