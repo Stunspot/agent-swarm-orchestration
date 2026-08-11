@@ -6,40 +6,111 @@ on:
       - agent/public-docs-remediation-20260811-r2
 
 permissions:
-  contents: write
-  actions: write
-  pages: write
-  id-token: write
+  contents: read
 
 jobs:
-  remediate-publish-verify:
+  capture-live-surfaces:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 20
     steps:
-      - name: Check out the one-time transport branch
+      - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - name: Use a current Python runtime
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Run the atomic remediation, deployment, and live-verification driver
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TRANSPORT_BRANCH: agent/public-docs-remediation-20260811-r2
+          ref: main
+          fetch-depth: 1
+      - name: Capture repository and live visual assets
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p evidence/assets evidence/pages
+          cp docs/assets/aso-readme-banner.png evidence/assets/
+          cp docs/assets/aso-pages-hero.png evidence/assets/
+          cp docs/assets/aso-social-card.png evidence/assets/
           curl --fail --silent --show-error --location \
-            https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/agent/remediation-probe-do-not-merge/remediation-engine/one_time_driver_v2.sh \
-            -o /tmp/one_time_driver_v2.sh
-          bash /tmp/one_time_driver_v2.sh
-      - name: Upload exact-commit review and live-render evidence
+            https://stunspot.github.io/agent-swarm-orchestration/ \
+            -o evidence/pages/live-index.html
+          curl --fail --silent --show-error --location \
+            https://stunspot.github.io/agent-swarm-orchestration/style.css \
+            -o evidence/pages/live-style.css
+          curl --fail --silent --show-error --location \
+            https://stunspot.github.io/agent-swarm-orchestration/assets/aso-readme-banner.png \
+            -o evidence/pages/live-readme-banner.png
+          curl --fail --silent --show-error --location \
+            https://stunspot.github.io/agent-swarm-orchestration/assets/aso-pages-hero.png \
+            -o evidence/pages/live-pages-hero.png
+          curl --fail --silent --show-error --location \
+            https://stunspot.github.io/agent-swarm-orchestration/assets/aso-social-card.png \
+            -o evidence/pages/live-social-card.png
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import hashlib, json
+          rows = []
+          for path in sorted(Path('evidence').rglob('*.png')):
+              with Image.open(path) as image:
+                  image.load()
+                  rows.append({
+                      'path': str(path),
+                      'width': image.width,
+                      'height': image.height,
+                      'mode': image.mode,
+                      'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+                  })
+          Path('evidence/image-metadata.json').write_text(json.dumps(rows, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Capture deployed Pages in Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars \
+            --window-size=1440,2200 \
+            --screenshot=evidence/pages/pages-desktop.png \
+            https://stunspot.github.io/agent-swarm-orchestration/
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars \
+            --window-size=390,2600 \
+            --force-device-scale-factor=1 \
+            --screenshot=evidence/pages/pages-mobile.png \
+            https://stunspot.github.io/agent-swarm-orchestration/
+      - name: Record link and content checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import json, subprocess
+
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.links=[]
+              def handle_starttag(self, tag, attrs):
+                  values=dict(attrs)
+                  if tag in {'a','img','link','script'}:
+                      for key in ('href','src'):
+                          if values.get(key): self.links.append(values[key])
+
+          html=Path('evidence/pages/live-index.html').read_text(encoding='utf-8')
+          parser=Links(); parser.feed(html)
+          checks=[]
+          for url in parser.links:
+              if url.startswith('#') or url.startswith('mailto:'):
+                  checks.append({'url':url,'status':'local-anchor-or-mail'})
+                  continue
+              if url.startswith('http://') or url.startswith('https://'):
+                  result=subprocess.run(['curl','--silent','--show-error','--location','--output','/dev/null','--write-out','%{http_code}',url],text=True,capture_output=True)
+                  checks.append({'url':url,'status':result.stdout.strip() or 'curl-error','stderr':result.stderr.strip()})
+              else:
+                  absolute='https://stunspot.github.io/agent-swarm-orchestration/' + url.lstrip('./')
+                  result=subprocess.run(['curl','--silent','--show-error','--location','--output','/dev/null','--write-out','%{http_code}',absolute],text=True,capture_output=True)
+                  checks.append({'url':url,'resolved':absolute,'status':result.stdout.strip() or 'curl-error','stderr':result.stderr.strip()})
+          Path('evidence/link-checks.json').write_text(json.dumps(checks,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Upload direct-inspection evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: public-documentation-remediation-${{ github.event.repository.name }}-${{ github.run_id }}
+          name: agent-swarm-live-surface-inspection-${{ github.run_id }}
           path: evidence/
           if-no-files-found: error
-          retention-days: 90
+          retention-days: 30
