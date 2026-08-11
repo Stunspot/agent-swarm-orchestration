@@ -1,0 +1,45 @@
+name: One-time public documentation remediation
+
+on:
+  push:
+    branches:
+      - agent/public-docs-remediation-20260811-r2
+
+permissions:
+  contents: write
+  actions: write
+  pages: write
+  id-token: write
+
+jobs:
+  remediate-publish-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out the one-time transport branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Use a current Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the atomic remediation, deployment, and live-verification driver
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TRANSPORT_BRANCH: agent/public-docs-remediation-20260811-r2
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location \
+            https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/agent/remediation-probe-do-not-merge/remediation-engine/one_time_driver_v2.sh \
+            -o /tmp/one_time_driver_v2.sh
+          bash /tmp/one_time_driver_v2.sh
+      - name: Upload exact-commit review and live-render evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-documentation-remediation-${{ github.event.repository.name }}-${{ github.run_id }}
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
