@@ -134,7 +134,8 @@ jobs:
             };
             const report = {};
             for (const [name, viewport] of Object.entries(viewports)) {
-              const page = await browser.newPage({viewport});
+              const context = await browser.newContext({viewport});
+              const page = await context.newPage();
               const consoleErrors = [];
               page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
               await page.goto('http://127.0.0.1:8000/', {waitUntil: 'networkidle'});
@@ -169,7 +170,7 @@ jobs:
               if (consoleErrors.length) throw new Error(`${name}: console errors: ${consoleErrors.join('; ')}`);
               const blocking = axe.violations.filter(item => ['critical','serious'].includes(item.impact));
               if (blocking.length) throw new Error(`${name}: axe critical/serious violations: ${JSON.stringify(blocking)}`);
-              await page.close();
+              await context.close();
             }
             fs.writeFileSync('evidence/browser-accessibility-report.json', JSON.stringify(report, null, 2));
             await browser.close();
