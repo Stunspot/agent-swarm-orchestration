@@ -31,7 +31,7 @@ The dated runtime-source boundaries live in `canonical/skills/agent-swarm-orches
 
 The skill, references, schema, validator, templates, example, tests, evals, documentation, public plugin wrapper, Pages site, and visual release assets are original Collaborative Dynamics compositions. Third-party articles and SDK documentation are linked or summarized; they are not copied into the runtime package.
 
-The three raster release artworks were generated for this product on August 3, 2026, then cropped and resized into declared channel-specific assets. Their final dimensions and hashes are release evidence; visual quality review does not imply accessibility conformance.
+The README and Pages hero artworks were generated for this product on August 3, 2026 and remain distinct channel-specific raster compositions. On August 11, 2026, the current repository and plugin social card was remediated from the existing generative artwork with crop-safe raster typography so the exact product title and identifying line survive social sharing. The frozen version 0.2.0 release archives remain historical custody objects and were not rewritten. Image dimensions, hashes, and direct visual inspection support only the named presentation surfaces; they do not imply assistive-technology conformance.
 
 ## Evidence boundary
 
