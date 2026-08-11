@@ -1,0 +1,89 @@
+name: Remediate Agent Swarm social card
+
+on:
+  push:
+    branches:
+      - agent/agent-swarm-docs-remediation-20260811
+
+permissions:
+  contents: write
+
+jobs:
+  remediate-social-card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out remediation branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/agent-swarm-docs-remediation-20260811
+          fetch-depth: 0
+      - name: Add exact raster typography to the existing generative artwork
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+
+          path = Path('docs/assets/aso-social-card.png')
+          image = Image.open(path).convert('RGBA')
+          width, height = image.size
+          scaled = image.resize((round(width * 1.04), round(height * 1.04)), Image.Resampling.LANCZOS)
+          canvas = Image.new('RGBA', (width, height), (2, 5, 18, 255))
+          canvas.alpha_composite(scaled, (width - scaled.width + 40, (height - scaled.height) // 2))
+
+          overlay = Image.new('RGBA', (width, height), (0, 0, 0, 0))
+          pixels = overlay.load()
+          for x in range(width):
+              if x <= 470:
+                  alpha = 236
+              elif x >= 790:
+                  alpha = 0
+              else:
+                  t = (x - 470) / 320
+                  alpha = round(236 * (1 - t) ** 1.35)
+              for y in range(height):
+                  edge = min(y, height - 1 - y)
+                  pixels[x, y] = (2, 5, 18, min(255, alpha + (18 if edge < 44 else 0)))
+          canvas = Image.alpha_composite(canvas, overlay)
+
+          draw = ImageDraw.Draw(canvas)
+          left = 66
+          draw.rounded_rectangle((left, 92, 246, 97), radius=2, fill=(111, 231, 247, 255))
+          draw.rounded_rectangle((250, 92, 312, 97), radius=2, fill=(255, 191, 90, 255))
+
+          bold = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          regular = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          eyebrow = ImageFont.truetype(bold, 18)
+          title = ImageFont.truetype(bold, 62)
+          tagline = ImageFont.truetype(regular, 28)
+          credit = ImageFont.truetype(regular, 17)
+
+          draw.text((left, 122), 'COLLABORATIVE DYNAMICS AUGMENT', font=eyebrow, fill=(159, 140, 255, 255))
+          draw.text((left, 176), 'Agent Swarm', font=title, fill=(247, 251, 255, 255))
+          draw.text((left, 247), 'Orchestration', font=title, fill=(247, 251, 255, 255))
+          draw.text((left, 359), 'Parallel cognition', font=tagline, fill=(111, 231, 247, 255))
+          draw.text((left, 398), 'without custody loss.', font=tagline, fill=(111, 231, 247, 255))
+          draw.text((left, 533), 'One root. Explicit ownership. Evidence-bound synthesis.', font=credit, fill=(180, 198, 214, 255))
+
+          final = canvas.convert('RGB').convert(
+              'P',
+              palette=Image.Palette.ADAPTIVE,
+              colors=256,
+              dither=Image.Dither.FLOYDSTEINBERG,
+          )
+          final.save(path, 'PNG', optimize=True)
+          Path('plugins/agent-swarm-orchestration/assets/aso-social-card.png').write_bytes(path.read_bytes())
+          PY
+      - name: Commit final raster asset and remove this one-time workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/remediate-agent-swarm-social-card.yml
+          git config user.name "Sam \"stunspot\" Walker"
+          git config user.email "130078438+Stunspot@users.noreply.github.com"
+          git add docs/assets/aso-social-card.png plugins/agent-swarm-orchestration/assets/aso-social-card.png .github/workflows/remediate-agent-swarm-social-card.yml
+          git commit -m "Replace the titleless Agent Swarm social card"
+          git push origin HEAD:agent/agent-swarm-docs-remediation-20260811
