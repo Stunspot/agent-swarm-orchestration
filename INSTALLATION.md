@@ -8,6 +8,10 @@ You need an AI host that supports Agent Skills or Codex plugins. To create or co
 
 Back up an existing `agent-swarm-orchestration` installation before replacing it. Keep the backup outside the destination folder.
 
+## Configuration boundary
+
+The Augment has no account, API key, background service, database, or mandatory package-level configuration file. Its effective configuration is the live host task: skill discovery, available collaboration tools, permissions, model routes, concurrency limits, context behavior, and retention policy. Inspect that contract rather than copying a configuration example from another host version.
+
 ## Codex marketplace plugin
 
 ```text
@@ -87,7 +91,7 @@ The validator checks declared fields, dependency references and cycles, terminal
 - Reload or start a fresh task if the host caches discovery.
 - Confirm absence through the host's skill or plugin surface when available.
 
-Removal does not cancel running agents, undo committed changes, or roll back external actions. Reconcile those surfaces separately.
+Removal does not cancel running agents, undo committed changes, or roll back external actions. Reconcile those surfaces separately. The package itself creates no account or database. Delete only user-created plans, packets, ledgers, logs, or outputs you no longer need, subject to the host and storage system's retention rules.
 
 ## Roll back
 
