@@ -5,7 +5,7 @@
     "version":  "0.2.2",
     "runtime_version":  "0.1.0",
     "runtime_fingerprint":  "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
-    "status":  "public-release-candidate",
+    "status":  "public-release-published",
     "map":  "design-record/agent-swarm-orchestration-augment-map.md",
     "build_state":  "design-record/agent-swarm-orchestration-build-state.md",
     "canonical_skills":  [
@@ -19,34 +19,34 @@
     "customer_docs_manifest":  "documentation-manifest.json",
     "distributions":  {
                           "codex_plugin":  {
-                                               "status":  "packaged-not-yet-published",
+                                               "status":  "published-in-github-release-v0.2.2",
                                                "paths":  [
                                                              ".agents/plugins/marketplace.json",
                                                              "plugins/agent-swarm-orchestration"
                                                          ]
                                            },
                           "codex_standalone":  {
-                                                   "status":  "packaged-not-yet-published",
+                                                   "status":  "published-in-github-release-v0.2.2",
                                                    "paths":  [
                                                                  "release/codex/agent-swarm-orchestration",
                                                                  "release-assets/v0.2.2/Skill-agent-swarm-orchestration-v0.2.2.zip"
                                                              ]
                                                },
                           "claude_standalone":  {
-                                                    "status":  "packaged-not-yet-published-activation-untested",
+                                                    "status":  "published-in-github-release-v0.2.2-activation-untested",
                                                     "paths":  [
                                                                   "release/claude/agent-swarm-orchestration",
                                                                   "claude-ai/agent-swarm-orchestration-v0.2.2.zip"
                                                               ]
                                                 },
                           "release_assets":  {
-                                                 "status":  "built-not-yet-published",
+                                                 "status":  "published-github-release-v0.2.2",
                                                  "paths":  [
                                                                "release-assets/v0.2.2"
                                                            ]
                                              },
                           "pages":  {
-                                        "status":  "source-complete-not-yet-live",
+                                        "status":  "published-live-http-verified-rendered-not-tested",
                                         "paths":  [
                                                       "docs"
                                                   ]
@@ -66,7 +66,7 @@
                      "installation":  "retained-0.2.1-observation-does-not-establish-0.2.2",
                      "clean_host_discovery":  "not-performed-for-0.2.2",
                      "clean_host_invocation":  "not-performed-for-0.2.2",
-                     "publication":  "not-yet-published",
+                     "publication":  "verification/v0.2.2/public-release.json",
                      "documentation":  "verification/v0.2.2/documentation-review.json",
                      "accessibility":  "verification/v0.2.2/documentation-accessibility-review.json",
                      "visuals":  "verification/v0.2.2/visual-review.json",
