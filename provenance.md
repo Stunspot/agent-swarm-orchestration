@@ -7,7 +7,8 @@
 - **Source-verified correction:** on August 3, 2026, Sam authorized a full public Augment plugin release, requested repository and Pages visuals plus a social card, and established the offer as free.
 - **Source-verified:** the approved runtime product truth is recorded in `design-record/agent-swarm-orchestration-augment-map.md`.
 - **Derived release decision:** version 0.2.0 preserved the verified runtime bytes and added public Codex, Claude, legal, documentation, visual, archive, and publication surfaces.
-- **Derived remediation decision:** version 0.2.1 preserves the same runtime bytes while replacing failed presentation assets, completing the Pages customer journey, correcting stale evidence language, and binding fresh documentation, accessibility, adversarial, archive, and live-publication receipts.
+- **Derived remediation decision:** version 0.2.1 preserved the same runtime bytes while expanding the Pages customer journey and correcting stale evidence language.
+- **Derived presentation correction:** version 0.2.2 preserves the runtime again, restores direct product language, retains the original heroes and icon, replaces rejected programmed compositions with original generated illustrations, and removes scripted raster-art generation from the current tree.
 
 Neither distribution expansion rewrites the earlier 0.1.0 runtime evidence boundary.
 
@@ -36,13 +37,13 @@ The skill, references, schema, validator, templates, example, tests, evals, docu
 
 The public visual set is role-specific rather than one artwork resized three times:
 
-- `docs/assets/aso-readme-banner.png` is a 1280x640 text-free branching-topology composition for the repository introduction.
-- `docs/assets/aso-pages-hero.png` is a 1600x900 text-free worker-lane convergence composition for the landing-page hero.
-- `docs/assets/aso-social-card.png` is a 1200x630 bee-conductor composition with deterministic, crop-safe typography containing the exact product title and identifying line.
-- `plugins/agent-swarm-orchestration/assets/aso-social-card.png` is an additional 1400x875 listing composition with product copy, operating verbs, and the inspected plugin mark.
+- `docs/assets/aso-readme-banner.png` is the restored 1280x640 text-free branching-topology composition for the repository introduction.
+- `docs/assets/aso-pages-hero.png` is the restored 1600x900 text-free worker-lane convergence composition for the landing-page hero.
+- `docs/assets/aso-social-card.png` is a generated 1730x909 frontal-convergence illustration containing the exact product title and “Parallel cognition without custody loss.”
+- `plugins/agent-swarm-orchestration/assets/aso-social-card.png` is a separate generated 1586x992 top-down topology illustration containing the exact product title and “Choose the smallest swarm that earns itself.”
 
-The inspected bare social artwork is retained at `tools/artwork-source/aso-social-card-base.png`; `tools/render_presentation_assets.py` produces deterministic presentation outputs from that source and the inspected icon. Image hashes, dimensions, alpha bounds, text presence, and actual-pixel review are separate evidence fields. Visual review does not establish assistive-technology conformance.
+The two generated PNGs were produced as original raster artwork on August 12, 2026 and copied into the repository unchanged. The current tree contains no scripted raster-art renderer. Exact hashes, dimensions, text, crop survival, composition, and actual pixels are reviewed separately. Visual review does not establish assistive-technology conformance.
 
 ## Evidence boundary
 
-The public 0.2.1 wrapper does not enlarge the runtime claim. The retained runtime fingerprint, validator evidence, package parity, and Codex decision qualification remain bounded as recorded in `verification/`. Public packaging, licensing, documentation, image quality, archive custody, GitHub release publication, repository visibility, and Pages deployment each require their own receipts. Claude activation, broad clean-host behavior, directory approval, assistive-technology conformance, and customer outcomes remain unestablished until observed.
+The public 0.2.2 wrapper does not enlarge the runtime claim. The retained runtime fingerprint, validator evidence, package parity, and Codex decision qualification remain bounded as recorded in `verification/`. Public packaging, licensing, documentation, image quality, archive custody, GitHub release publication, repository visibility, and Pages deployment each require their own receipts. Claude activation, broad clean-host behavior, directory approval, assistive-technology conformance, and customer outcomes remain unestablished until observed.

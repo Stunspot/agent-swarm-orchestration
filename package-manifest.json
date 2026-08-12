@@ -2,10 +2,10 @@
     "format":  "cd-augment-package/v1",
     "name":  "agent-swarm-orchestration",
     "display_name":  "Agent Swarm Orchestration",
-    "version":  "0.2.1",
+    "version":  "0.2.2",
     "runtime_version":  "0.1.0",
     "runtime_fingerprint":  "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
-    "status":  "public-release-published",
+    "status":  "public-release-candidate",
     "map":  "design-record/agent-swarm-orchestration-augment-map.md",
     "build_state":  "design-record/agent-swarm-orchestration-build-state.md",
     "canonical_skills":  [
@@ -19,34 +19,34 @@
     "customer_docs_manifest":  "documentation-manifest.json",
     "distributions":  {
                           "codex_plugin":  {
-                                               "status":  "public-main-0.2.1-installed-enabled",
+                                               "status":  "packaged-not-yet-published",
                                                "paths":  [
                                                              ".agents/plugins/marketplace.json",
                                                              "plugins/agent-swarm-orchestration"
                                                          ]
                                            },
                           "codex_standalone":  {
-                                                   "status":  "archive-published-download-hash-verified-runtime-preserved",
+                                                   "status":  "packaged-not-yet-published",
                                                    "paths":  [
                                                                  "release/codex/agent-swarm-orchestration",
-                                                                 "release-assets/v0.2.1/Skill-agent-swarm-orchestration-v0.2.1.zip"
+                                                                 "release-assets/v0.2.2/Skill-agent-swarm-orchestration-v0.2.2.zip"
                                                              ]
                                                },
                           "claude_standalone":  {
-                                                    "status":  "archive-published-download-hash-verified-byte-matched-activation-untested",
+                                                    "status":  "packaged-not-yet-published-activation-untested",
                                                     "paths":  [
                                                                   "release/claude/agent-swarm-orchestration",
-                                                                  "claude-ai/agent-swarm-orchestration-v0.2.1.zip"
+                                                                  "claude-ai/agent-swarm-orchestration-v0.2.2.zip"
                                                               ]
                                                 },
                           "release_assets":  {
-                                                 "status":  "published-download-hash-verified",
+                                                 "status":  "built-not-yet-published",
                                                  "paths":  [
-                                                               "release-assets/v0.2.1"
+                                                               "release-assets/v0.2.2"
                                                            ]
                                              },
                           "pages":  {
-                                        "status":  "built-live-content-links-and-assets-verified",
+                                        "status":  "source-complete-not-yet-live",
                                         "paths":  [
                                                       "docs"
                                                   ]
@@ -61,18 +61,18 @@
     "rights_status":  "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
     "evidence":  {
                      "runtime":  "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
-                     "structural_verification":  "0.2.1-public-release-validator-and-validator-tests",
+                     "structural_verification":  "local-0.2.2-public-release-validator-and-10-unit-tests-pass",
                      "behavioral_verification":  "retained-ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
-                     "installation":  "0.2.1-public-sparse-marketplace-install-observed-installed-enabled; isolated-home-cleanup-passed",
-                     "clean_host_discovery":  "0.2.1-public-marketplace-and-plugin-listed-in-isolated-home",
-                     "clean_host_invocation":  "not-performed-for-0.2.1",
-                     "publication":  "verification/public-release-v0.2.1.md",
-                     "documentation":  "documentation-authorship.json-and-documentation-review.json-bind-the-current-customer-doc-fingerprint",
-                     "accessibility":  "documentation-accessibility-review.json",
-                     "visuals":  "actual-pixel-review-recorded-in-verification/visual-review-v0.2.1.json",
-                     "adversarial_release_verification":  "verification/testforge-public-v0.2.1/final-review.md",
-                     "recovery_backup":  "deterministic-archives-checksums-and-custody-json-under-release-assets/v0.2.1",
-                     "historical_custody":  "v0.2.0-archives-tags-and-receipts-left-unchanged"
+                     "installation":  "retained-0.2.1-observation-does-not-establish-0.2.2",
+                     "clean_host_discovery":  "not-performed-for-0.2.2",
+                     "clean_host_invocation":  "not-performed-for-0.2.2",
+                     "publication":  "not-yet-published",
+                     "documentation":  "verification/v0.2.2/documentation-review.json",
+                     "accessibility":  "verification/v0.2.2/documentation-accessibility-review.json",
+                     "visuals":  "verification/v0.2.2/visual-review.json",
+                     "adversarial_release_verification":  "verification/v0.2.2/adversarial-review.md",
+                     "recovery_backup":  "release-assets/v0.2.2",
+                     "historical_custody":  "v0.2.0-and-v0.2.1-archives-tags-and-receipts-left-unchanged"
                  },
     "authority":  {
                       "installation":  true,

@@ -1,0 +1,111 @@
+{
+    "format":  "hesperos-documentation-authorship/v1",
+    "product":  "agent-swarm-orchestration",
+    "version":  "0.2.2",
+    "reviewed_at":  "2026-08-12",
+    "documentation_fingerprint":  "0d5b8a008f3669b6e73eef27f9b0f3df094ca06b1eaf7c62996b1bc11215e619",
+    "files":  [
+                  {
+                      "path":  "README.md",
+                      "sha256":  "a5c8248f1d9c304748cf6af86bb24861095ce9faa72f45ec7d70b396ec1306af"
+                  },
+                  {
+                      "path":  "START-HERE.md",
+                      "sha256":  "0d076e473d3518325b5ed898767a10c985c08b3a78867a8f395c454c1ce1ceca"
+                  },
+                  {
+                      "path":  "INSTALLATION.md",
+                      "sha256":  "34d70fd3006ad4b05e6df0a0f685563881b4ee91acb92d94479638450d390dad"
+                  },
+                  {
+                      "path":  "WORKFLOWS.md",
+                      "sha256":  "b4a399ffe9cd47de3cdc35b8beaa263fa850ff674359289f69030244037cd772"
+                  },
+                  {
+                      "path":  "TROUBLESHOOTING.md",
+                      "sha256":  "9912d7384345c37beb7530ecf3fdb3d7f70c8b21246babc1602af00b41193394"
+                  },
+                  {
+                      "path":  "TRUST-AND-LIMITS.md",
+                      "sha256":  "c96cdcde2f11112f6033c746cee9c330b1f24c46d1c10e8081a92cc86d6acf48"
+                  },
+                  {
+                      "path":  "host-matrix.md",
+                      "sha256":  "475f786796f0adcb91dbab2bc4cd79a382d45546f353ae100b6b65cc1afea8ff"
+                  },
+                  {
+                      "path":  "DATA-AND-PRIVACY.md",
+                      "sha256":  "97e0df5b6196a8b4a2958e79dbe2e227796e50761f3f1ce5ebf960f63e8f5394"
+                  },
+                  {
+                      "path":  "SECURITY.md",
+                      "sha256":  "51663d8a2a2d5eb23961e46d4718b37d1ce749a543ed652ccd6b46181be742e6"
+                  },
+                  {
+                      "path":  "SUPPORT.md",
+                      "sha256":  "a9f543ae19c83060b3563a2efc3be5a2a33f2d8547e4e5114b7a75c8b0ea0a34"
+                  },
+                  {
+                      "path":  "CONTRIBUTING.md",
+                      "sha256":  "ce4be31c03ebf34921c3f7df04a2780557a119a4f9c8551749bb7000a66807e6"
+                  },
+                  {
+                      "path":  "TERMS-OF-USE.md",
+                      "sha256":  "5cf7850c1f0c2a511ceaa92fcc235f7432627cbad360173989173f820e159951"
+                  },
+                  {
+                      "path":  "LICENSE.md",
+                      "sha256":  "6e4b0ab54741e63865fa1eb901a6705349ed21e3d64ba6cf726f1f0299808d4f"
+                  },
+                  {
+                      "path":  "ATTRIBUTION.md",
+                      "sha256":  "56db580d4adb7fdaff6387ebdb92344aba6f44a0afdb49758fff92bda26c23b5"
+                  },
+                  {
+                      "path":  "TRADEMARKS.md",
+                      "sha256":  "72ba9b418e1e4c5d4c5c2083c389696cc886f44df5f7810d57aee6e3718f4a35"
+                  },
+                  {
+                      "path":  "ARCHIVE-CUSTODY.md",
+                      "sha256":  "1e5e0c5c3ab66932134d9cae0fa7de02e1f7cb11116dbb2975eb7d3c1851665a"
+                  },
+                  {
+                      "path":  "provenance.md",
+                      "sha256":  "fe8b674c36c4cc2ce9182c8a4d441aa87c72babc9a2214d3bf38086a700591ac"
+                  },
+                  {
+                      "path":  "RELEASE-NOTES-v0.2.2.md",
+                      "sha256":  "4e888e6912f8a9d17c91c9db6d70c9e0ea3ce9a81e2f6b839fb1580745de8d78"
+                  },
+                  {
+                      "path":  "RELEASE-NOTES-v0.2.1.md",
+                      "sha256":  "1173e132cf76b501deb9cbd5439c5f4ae32522a1184f3f2139629f09a2f53cd3"
+                  },
+                  {
+                      "path":  "RELEASE-NOTES-v0.2.0.md",
+                      "sha256":  "1f0d13dd69cf9d887587468bde22e50216f8752f256da4ed39cd530dc1709fae"
+                  },
+                  {
+                      "path":  "docs/index.html",
+                      "sha256":  "1c21a69ea5214a119d581e90ad068d1c04474872a0ccf9d38d4b3bb3ed2ff72e"
+                  },
+                  {
+                      "path":  "docs/style.css",
+                      "sha256":  "67f399100b2e8180c69bc67b7e90b936a6ce4d62d1a3084f5b224b9f54c4d455"
+                  },
+                  {
+                      "path":  "documentation-manifest.json",
+                      "sha256":  "f0972d528d46d7536d028ad375fbc35c89cae6e04d228314a0329825db2dece8"
+                  }
+              ],
+    "hesperos_lint":  {
+                          "result":  "PASS",
+                          "scope":  [
+                                        "README.md",
+                                        "ARCHIVE-CUSTODY.md",
+                                        "host-matrix.md",
+                                        "provenance.md",
+                                        "RELEASE-NOTES-v0.2.2.md"
+                                    ]
+                      }
+}

@@ -1,6 +1,6 @@
 {
   "format": "cd-customer-documentation/v1",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "reader_journey": [
     "README.md",
     "START-HERE.md",
@@ -19,9 +19,10 @@
     "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
     "provenance.md",
-    "RELEASE-NOTES-v0.2.1.md"
+    "RELEASE-NOTES-v0.2.2.md"
   ],
   "historical_customer_docs": [
+    "RELEASE-NOTES-v0.2.1.md",
     "RELEASE-NOTES-v0.2.0.md"
   ],
   "site_surface": {
@@ -47,12 +48,12 @@
     {
       "path": "docs/assets/aso-social-card.png",
       "use": "Open Graph social card",
-      "width": 1200,
-      "height": 630,
+      "width": 1730,
+      "height": 909,
       "embedded_text": true,
       "required_text": [
         "Agent Swarm Orchestration",
-        "Parallel cognition. One accountable root."
+        "Parallel cognition without custody loss."
       ]
     },
     {
@@ -65,12 +66,12 @@
     {
       "path": "plugins/agent-swarm-orchestration/assets/aso-social-card.png",
       "use": "plugin listing image",
-      "width": 1400,
-      "height": 875,
+      "width": 1586,
+      "height": 992,
       "embedded_text": true,
       "required_text": [
         "Agent Swarm Orchestration",
-        "Coordinate many minds without losing mission, authority, ownership, or evidence."
+        "Choose the smallest swarm that earns itself."
       ]
     }
   ],
@@ -92,6 +93,7 @@
     "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
     "provenance.md",
+    "RELEASE-NOTES-v0.2.2.md",
     "RELEASE-NOTES-v0.2.1.md",
     "RELEASE-NOTES-v0.2.0.md"
   ],
@@ -141,7 +143,7 @@
       "TERMS-OF-USE.md"
     ],
     "maintenance": [
-      "RELEASE-NOTES-v0.2.1.md",
+      "RELEASE-NOTES-v0.2.2.md",
       "ARCHIVE-CUSTODY.md"
     ],
     "provenance": [

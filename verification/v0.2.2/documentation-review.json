@@ -1,0 +1,54 @@
+{
+    "format":  "hesperos-documentation-review/v1",
+    "product":  "agent-swarm-orchestration",
+    "version":  "0.2.2",
+    "reviewed_at":  "2026-08-12",
+    "documentation_fingerprint":  "0d5b8a008f3669b6e73eef27f9b0f3df094ca06b1eaf7c62996b1bc11215e619",
+    "verdict":  "REVIEW_PASS",
+    "journey_verdicts":  [
+                             {
+                                 "gate":  "purpose-audience",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "capabilities-limits",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "install-supported-hosts",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "verify-first-use",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "workflows-inputs-outputs",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "troubleshooting-recovery",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "update-remove-cleanup",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "privacy-network-security",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "provenance-evidence",
+                                 "verdict":  "PASS"
+                             },
+                             {
+                                 "gate":  "support-license-terms",
+                                 "verdict":  "PASS"
+                             }
+                         ],
+    "open_content_findings":  [
+
+                              ],
+    "summary":  "The retained README remains the strongest compact product introduction. Pages now explains the concrete agent decisions and outcomes in direct language while preserving useful 0.2.1 operational guidance. No unsupported runtime or host claim was added."
+}
