@@ -2,7 +2,7 @@
 
 Agent Swarm Orchestration helps an AI host decide whether multiple agents will improve a task, divide earned work safely, and return one evidence-bounded result. It is for people who want the benefit of parallel cognition without handing mission, authority, or final judgment to a committee.
 
-Version 0.2.1 is a free public Augment. It packages the same verified runtime as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill release archives. The package does not supply collaboration tools; the current host must expose them.
+Version 0.2.2 is a free public Augment. It packages the same verified runtime as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill release archives. The package does not supply collaboration tools; the current host must expose them.
 
 ## Decide whether this fits your task
 

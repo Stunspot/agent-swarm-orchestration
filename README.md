@@ -1,4 +1,4 @@
-![Branching worker paths converge on one luminous accountable root while distinct evidence lanes remain visible.](docs/assets/aso-readme-banner.png)
+![Agent Swarm Orchestration — parallel cognition without custody loss](docs/assets/aso-readme-banner.png)
 
 # Agent Swarm Orchestration
 
@@ -60,7 +60,7 @@ A correct decision to work directly is not a failure. It is the skill saving you
 - `plugins/agent-swarm-orchestration/` — installable Codex marketplace plugin.
 - `release/codex/agent-swarm-orchestration/` — standalone Codex folder.
 - `release/claude/agent-swarm-orchestration/` — byte-matched Claude folder.
-- `release-assets/v0.2.1/` — governed plugin and standalone release archives.
+- `release-assets/v0.2.2/` — governed plugin and standalone release archives.
 - `claude-ai/` — one-skill Claude upload archive.
 - `canonical/evals/` and `verification/` — retained behavioral cases and evidence.
 - `docs/` — tailored GitHub Pages source and visual assets.
@@ -78,11 +78,11 @@ A correct decision to work directly is not a failure. It is the skill saving you
 | How is data handled? | [Data and privacy](DATA-AND-PRIVACY.md) |
 | What are the use and responsibility boundaries? | [Terms of use](TERMS-OF-USE.md) |
 | What should I send for support? | [Support](SUPPORT.md) |
-| What changed in the public release? | [0.2.1 release notes](RELEASE-NOTES-v0.2.1.md) |
+| What changed in the public release? | [0.2.2 release notes](RELEASE-NOTES-v0.2.2.md) |
 
 ## Evidence boundary
 
-Version 0.2.1 preserves the verified runtime fingerprint `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`. The included validator suite, runtime parity checks, portable ZIP topology, and ten-case Codex decision qualification support the boundaries recorded in [Trust and limits](TRUST-AND-LIMITS.md).
+Version 0.2.2 preserves the verified runtime fingerprint `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`. The included validator suite, runtime parity checks, portable ZIP topology, and ten-case Codex decision qualification support the boundaries recorded in [Trust and limits](TRUST-AND-LIMITS.md).
 
 That evidence does not establish universal reliability, universal savings, live behavior on every future host contract, clean installation on every customer machine, Claude activation, accessibility conformance, directory approval, or customer outcomes. Packaging and publication receipts are tracked separately from runtime behavior.
 

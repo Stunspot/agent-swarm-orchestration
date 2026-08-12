@@ -10,7 +10,7 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.1"
+VERSION = "0.2.2"
 
 
 def read_json(relative: str) -> dict:
@@ -37,10 +37,10 @@ def documentation_fingerprint(paths: list[str]) -> tuple[str, list[dict[str, str
 def main() -> int:
     docs = read_json("documentation-manifest.json")
     package = read_json("package-manifest.json")
-    authorship = read_json("documentation-authorship.json")
-    review = read_json("documentation-review.json")
-    accessibility = read_json("documentation-accessibility-review.json")
-    visual = read_json("verification/visual-review-v0.2.1.json")
+    authorship = read_json("verification/v0.2.2/documentation-authorship.json")
+    review = read_json("verification/v0.2.2/documentation-review.json")
+    accessibility = read_json("verification/v0.2.2/documentation-accessibility-review.json")
+    visual = read_json("verification/v0.2.2/visual-review.json")
 
     assert docs["version"] == VERSION
     assert package["version"] == VERSION
@@ -60,13 +60,13 @@ def main() -> int:
     assert not review["open_content_findings"]
     assert all(item["verdict"] == "PASS" for item in review["journey_verdicts"])
     assert accessibility["verdict"] == "REVIEW_PASS_WITH_CONDITIONS"
-    assert authorship["hesperos_lint"]["result"] == "PASS_WITH_DOCUMENTED_LEGAL_EXCEPTION"
+    assert authorship["hesperos_lint"]["result"] == "PASS"
 
     html = (ROOT / "docs/index.html").read_text(encoding="utf-8")
     css = (ROOT / "docs/style.css").read_text(encoding="utf-8")
     ids = set(re.findall(r'\bid="([^"]+)"', html))
     hrefs = re.findall(r'\bhref="([^"]+)"', html)
-    required_ids = {"top", "main", "product", "shapes", "use", "install", "recover", "evidence", "support"}
+    required_ids = {"top", "main", "product", "shapes", "try", "install", "recover", "trust", "help"}
     assert required_ids <= ids, f"missing Pages sections: {sorted(required_ids - ids)}"
     assert not [href for href in hrefs if href.startswith("#") and href[1:] not in ids]
     assert not [href for href in hrefs if "/blob/" in href and "/blob/main/" not in href]
@@ -75,14 +75,14 @@ def main() -> int:
             assert (ROOT / "docs" / source).is_file(), f"missing Pages asset: {source}"
     for token in (
         "What it prevents",
-        "First successful use",
-        "Expected output shape",
+        "Try it on real parallel work",
+        "What a good run returns",
         "Install and verify",
-        "Configuration, troubleshooting, and recovery",
+        "Troubleshoot and recover",
         "Privacy, security, and evidence",
-        "Support, contribution, and terms",
+        "Support and contribution",
         "Agent Swarm Orchestration",
-        "Parallel cognition. One accountable root.",
+        "Parallel cognition without custody loss.",
     ):
         assert token in html, f"Pages journey token missing: {token}"
     for token in (".skip-link", ":focus-visible", "prefers-reduced-motion", "overflow-x: auto"):
@@ -104,12 +104,12 @@ def main() -> int:
     assert len({item["width"] / item["height"] for item in core}) == 3
     assert len({reviewed_visuals[item["path"]]["sha256"] for item in core}) == 3
     social = manifest_visuals["docs/assets/aso-social-card.png"]
-    assert social["required_text"] == ["Agent Swarm Orchestration", "Parallel cognition. One accountable root."]
+    assert social["required_text"] == ["Agent Swarm Orchestration", "Parallel cognition without custody loss."]
 
     plugin = read_json("plugins/agent-swarm-orchestration/.codex-plugin/plugin.json")
     assert plugin["version"] == VERSION
-    custody = read_json("release-assets/v0.2.1/archive-custody.json")
-    assert custody["version"] == VERSION and custody["generated_at"] == "2026-08-11"
+    custody = read_json("release-assets/v0.2.2/archive-custody.json")
+    assert custody["version"] == VERSION and custody["generated_at"] == "2026-08-12"
     for archive in custody["archives"]:
         path = ROOT / archive["path"]
         assert path.is_file(), f"missing archive: {archive['path']}"

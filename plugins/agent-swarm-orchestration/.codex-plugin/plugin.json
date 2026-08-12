@@ -1,7 +1,7 @@
 {
   "name": "agent-swarm-orchestration",
-  "version": "0.2.1",
-  "description": "Governed multi-agent coordination with one accountable root, explicit ownership, evidence custody, and honest recovery.",
+  "version": "0.2.2",
+  "description": "Decides when multiple AI agents will help, divides independent work safely, and reconciles one accountable answer.",
   "author": {
     "name": "Collaborative Dynamics",
     "url": "https://collaborative-dynamics.com"

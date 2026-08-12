@@ -17,7 +17,7 @@ body { margin: 0; color: var(--ink); background: radial-gradient(circle at 78% 3
 a { color: var(--cyan); text-underline-offset: .2em; }
 a:hover { color: var(--amber); }
 a:focus-visible, .button:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 30; padding: .8rem 1rem; color: #111; background: var(--focus); font-weight: 900; }
 .skip-link:focus { top: 1rem; }
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(5,7,18,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
@@ -42,6 +42,7 @@ h2 { margin: 0; max-width: 19ch; font-size: clamp(2.2rem,4.7vw,4.5rem); }
 .button:hover { color: #111; border-color: var(--amber); background: var(--amber); }
 .quiet { color: var(--muted); font-size: .92rem; }
 .hero-art { margin: 0; border: 1px solid rgba(111,231,247,.42); box-shadow: 0 2rem 7rem rgba(0,0,0,.55); }
+.hero-art img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
 .section { border-top: 1px solid var(--line); }
 .grid { display: grid; gap: 1rem; margin-top: 3rem; }
 .grid.three { grid-template-columns: repeat(3,1fr); }

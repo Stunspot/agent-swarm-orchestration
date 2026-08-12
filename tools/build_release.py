@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build deterministic Agent Swarm Orchestration 0.2.1 release archives."""
+"""Build deterministic Agent Swarm Orchestration 0.2.2 release archives."""
 
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ import zipfile
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.1"
-FIXED_TIME = (2026, 8, 11, 0, 0, 0)
+VERSION = "0.2.2"
+FIXED_TIME = (2026, 8, 12, 0, 0, 0)
 OUT = ROOT / "release-assets" / f"v{VERSION}"
 PLUGIN_SOURCE = ROOT / "plugins" / "agent-swarm-orchestration"
 SKILL_SOURCE = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
@@ -93,7 +93,7 @@ def main() -> int:
         "format": "cd-augment-archive-custody/v1",
         "product": "agent-swarm-orchestration",
         "version": VERSION,
-        "generated_at": "2026-08-11",
+        "generated_at": "2026-08-12",
         "archives": records,
     }
     custody_path = OUT / "archive-custody.json"
