@@ -1,0 +1,52 @@
+{
+    "format":  "cd-public-release-receipt/v1",
+    "repository":  "Stunspot/agent-swarm-orchestration",
+    "version":  "0.2.2",
+    "observed_at_utc":  "2026-08-12T17:09:55Z",
+    "final_documentation_fingerprint":  "0d5b8a008f3669b6e73eef27f9b0f3df094ca06b1eaf7c62996b1bc11215e619",
+    "merge":  {
+                  "commit":  "24e862f0ec2cb8b2487c1b671977ce2e83bd5792",
+                  "pull_request":  "https://github.com/Stunspot/agent-swarm-orchestration/pull/8",
+                  "state":  "MERGED"
+              },
+    "release":  {
+                    "url":  "https://github.com/Stunspot/agent-swarm-orchestration/releases/tag/v0.2.2",
+                    "tag":  "v0.2.2",
+                    "state":  "PUBLISHED",
+                    "asset_digests_verified":  true
+                },
+    "pages":  {
+                  "url":  "https://stunspot.github.io/agent-swarm-orchestration/",
+                  "build_id":  1147493689,
+                  "build_commit":  "24e862f0ec2cb8b2487c1b671977ce2e83bd5792",
+                  "build_state":  "built",
+                  "http_state":  "PASS",
+                  "navigation_state":  "PASS",
+                  "rendered_browser_state":  "NOT TESTED",
+                  "rendered_browser_reason":  "No permitted attachable existing browser was available after the Codex restart; no browser was launched."
+              },
+    "live_assets":  {
+                        "readme_hero":  {
+                                            "path":  "docs/assets/aso-readme-banner.png",
+                                            "sha256":  "9ecb7dfe388499dbe64aad0e3a50c63233a0a2b20f8159d3261e00a1e7a91d23",
+                                            "exact_live_bytes":  true
+                                        },
+                        "pages_hero":  {
+                                           "path":  "docs/assets/aso-pages-hero.png",
+                                           "sha256":  "6f1471f9f73e0a036c434a7c53b7708c7e23a169518f00ec3bd76cc80207b0f3",
+                                           "exact_live_bytes":  true
+                                       },
+                        "social_card":  {
+                                            "path":  "docs/assets/aso-social-card.png",
+                                            "sha256":  "8fc2492b7bee26c238011922953d3b92b68975b50c6ba3975e446b09870bf62b",
+                                            "pages_og_exact_live_bytes":  true,
+                                            "github_repository_preview_state":  "LIVE VERIFICATION FAIL",
+                                            "reason":  "GitHub still serves the prior repository-images URL; the new generated social card requires upload in repository Settings \u003e Social preview."
+                                        }
+                    },
+    "final_status":  "BLOCKED",
+    "blockers":  [
+                     "GitHub repository social preview still serves the prior card.",
+                     "Rendered Pages visual and keyboard inspection is NOT TESTED because no permitted existing browser is available."
+                 ]
+}
