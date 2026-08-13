@@ -21,12 +21,29 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def png_size(path: Path) -> tuple[int, int]:
-    header = path.read_bytes()[:24]
-    assert header[:8] == b"\x89PNG\r\n\x1a\n", f"not a PNG: {path}"
-    return struct.unpack(">II", header[16:24])
-
-
+def image_size(path: Path) -> tuple[int, int]:
+    data = path.read_bytes()
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", data[16:24])
+    assert data[:2] == b"\xff\xd8", f"unsupported image format: {path}"
+    offset = 2
+    sof_markers = {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}
+    while offset < len(data):
+        if data[offset] != 0xFF:
+            offset += 1
+            continue
+        while offset < len(data) and data[offset] == 0xFF:
+            offset += 1
+        marker = data[offset]
+        offset += 1
+        if marker in {0xD8, 0xD9}:
+            continue
+        length = struct.unpack(">H", data[offset:offset + 2])[0]
+        if marker in sof_markers:
+            height, width = struct.unpack(">HH", data[offset + 3:offset + 7])
+            return width, height
+        offset += length
+    raise AssertionError(f"JPEG dimensions not found: {path}")
 def documentation_fingerprint(paths: list[str]) -> tuple[str, list[dict[str, str]]]:
     records = [{"path": rel, "sha256": sha256(ROOT / rel)} for rel in paths]
     mapping = {item["path"]: item["sha256"] for item in records}
@@ -83,6 +100,8 @@ def main() -> int:
         "Support and contribution",
         "Agent Swarm Orchestration",
         "Parallel cognition without custody loss.",
+        "image/jpeg",
+        "twitter:image:alt",
     ):
         assert token in html, f"Pages journey token missing: {token}"
     for token in (".skip-link", ":focus-visible", "prefers-reduced-motion", "overflow-x: auto"):
@@ -93,18 +112,18 @@ def main() -> int:
     reviewed_visuals = {item["path"]: item for item in visual["assets"]}
     for relative, item in manifest_visuals.items():
         path = ROOT / relative
-        assert png_size(path) == (item["width"], item["height"]), f"wrong image dimensions: {relative}"
+        assert image_size(path) == (item["width"], item["height"]), f"wrong image dimensions: {relative}"
         assert reviewed_visuals[relative]["sha256"] == sha256(path), f"visual receipt hash mismatch: {relative}"
     core = [manifest_visuals[path] for path in (
         "docs/assets/aso-readme-banner.png",
         "docs/assets/aso-pages-hero.png",
-        "docs/assets/aso-social-card.png",
+        "docs/assets/aso-social-card.jpg",
     )]
     assert len({(item["width"], item["height"]) for item in core}) == 3
     assert len({item["width"] / item["height"] for item in core}) == 3
     assert len({reviewed_visuals[item["path"]]["sha256"] for item in core}) == 3
-    social = manifest_visuals["docs/assets/aso-social-card.png"]
-    assert social["required_text"] == ["Agent Swarm Orchestration", "Parallel cognition without custody loss."]
+    social = manifest_visuals["docs/assets/aso-social-card.jpg"]
+    assert social["required_text"] == ["Agent Swarm Orchestration", "Parallel cognition. One accountable root."]
 
     plugin = read_json("plugins/agent-swarm-orchestration/.codex-plugin/plugin.json")
     assert plugin["version"] == VERSION

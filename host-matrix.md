@@ -16,7 +16,7 @@ Version 0.2.2 keeps created, packaged, installed, discoverable, invoked, healthy
 |---|---|---|
 | README hero | `docs/assets/aso-readme-banner.png` (1280x640) | Text-free branching topology composed for the repository introduction |
 | Pages hero | `docs/assets/aso-pages-hero.png` (1600x900) | Text-free worker-lane convergence composed for the wide landing-page hero |
-| Social / Open Graph card | `docs/assets/aso-social-card.png` (1730x909) | Generated frontal-convergence composition with the exact product title and “Parallel cognition without custody loss.” inside the safe area |
+| Social / Open Graph card | `docs/assets/aso-social-card.jpg` (1730x909, 197 KB) | Bee-conductor composition with the exact product title and “Parallel cognition. One accountable root.” inside the safe area |
 | Plugin listing image | `plugins/agent-swarm-orchestration/assets/aso-social-card.png` (1586x992) | Generated top-down topology composition with the exact product title and “Choose the smallest swarm that earns itself.” |
 
 ## Runtime dependencies

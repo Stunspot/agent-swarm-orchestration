@@ -29,12 +29,12 @@
                        "pixel_judgment":  "Restored original 16:9 lane convergence; vivid product-specific bee identity; no text appropriate."
                    },
                    {
-                       "path":  "docs/assets/aso-social-card.png",
+                       "path":  "docs/assets/aso-social-card.jpg",
                        "role":  "Open Graph social card",
                        "dimensions":  "1730x909",
-                       "sha256":  "8fc2492b7bee26c238011922953d3b92b68975b50c6ba3975e446b09870bf62b",
+                       "sha256":  "8f6c5888b99dd02e1881c9ab8439377d1894acaa735daeb72df3e78b40708347",
                        "verdict":  "PASS",
-                       "pixel_judgment":  "Generated frontal bee-conductor illustration; exact title and Parallel cognition without custody loss. are legible and crop-safe."
+                       "pixel_judgment":  "User-approved bee-conductor composition; exact title and Parallel cognition. One accountable root. are legible and crop-safe. The 197 KB JPEG was directly inspected and decoded against its PNG source with sampled RGB MAE 2.28/255."
                    },
                    {
                        "path":  "plugins/agent-swarm-orchestration/assets/aso-icon.png",

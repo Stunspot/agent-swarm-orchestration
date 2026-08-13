@@ -39,10 +39,10 @@ The public visual set is role-specific rather than one artwork resized three tim
 
 - `docs/assets/aso-readme-banner.png` is the restored 1280x640 text-free branching-topology composition for the repository introduction.
 - `docs/assets/aso-pages-hero.png` is the restored 1600x900 text-free worker-lane convergence composition for the landing-page hero.
-- `docs/assets/aso-social-card.png` is a generated 1730x909 frontal-convergence illustration containing the exact product title and “Parallel cognition without custody loss.”
+- `docs/assets/aso-social-card.jpg` is a 1730x909 bee-conductor illustration containing the exact product title and “Parallel cognition. One accountable root.”; the deployable JPEG faithfully preserves the inspected user-approved PNG composition and is 197 KB, within the publication upload boundary encountered.
 - `plugins/agent-swarm-orchestration/assets/aso-social-card.png` is a separate generated 1586x992 top-down topology illustration containing the exact product title and “Choose the smallest swarm that earns itself.”
 
-The two generated PNGs were produced as original raster artwork on August 12, 2026 and copied into the repository unchanged. The current tree contains no scripted raster-art renderer. Exact hashes, dimensions, text, crop survival, composition, and actual pixels are reviewed separately. Visual review does not establish assistive-technology conformance.
+The social-card composition and plugin listing composition were produced as original raster artwork on August 12, 2026. The social card is distributed as a publication-ready JPEG; the plugin listing image remains PNG. The current tree contains no scripted raster-art renderer. Exact hashes, dimensions, text, crop survival, composition, and actual pixels are reviewed separately. Visual review does not establish assistive-technology conformance.
 
 ## Evidence boundary
 

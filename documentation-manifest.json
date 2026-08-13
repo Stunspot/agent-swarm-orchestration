@@ -46,14 +46,14 @@
       "embedded_text": false
     },
     {
-      "path": "docs/assets/aso-social-card.png",
+      "path": "docs/assets/aso-social-card.jpg",
       "use": "Open Graph social card",
       "width": 1730,
       "height": 909,
       "embedded_text": true,
       "required_text": [
         "Agent Swarm Orchestration",
-        "Parallel cognition without custody loss."
+        "Parallel cognition. One accountable root."
       ]
     },
     {
