@@ -1,6 +1,6 @@
 # Trust, evidence, and limits
 
-Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what the unchanged 0.1.0 runtime evidence establishes, what the 0.2.2 public distribution adds, and what your live task must still prove.
+Agent Swarm Orchestration coordinates cognition; it does not turn worker output into truth or tool access into permission. Use this page to distinguish what the unchanged 0.1.0 runtime evidence establishes, what the 0.2.3 public distribution adds, and what your live task must still prove.
 
 ## Keep one authority envelope
 
@@ -101,11 +101,11 @@ Customers should therefore expect these residual risks, especially with smaller 
 
 Check the live task's sources and tools before accepting a result. Require exact evidence for any claimed inspection, prefer direct execution for trivial work, and review degraded-state classification when an input or capability is missing.
 
-The retained runtime TestForge disposition is `PASS_WITH_CONDITIONS / READY_WITH_RESIDUAL_RISK` for the exact 0.1.0 runtime fingerprint and its bounded Codex decision evidence. Version 0.2.2 does not rerun or enlarge that behavioral claim. Its current documentation, accessibility, archive, and visual checks are bound to the final documentation fingerprint or candidate bytes. Public repository, release, and live Pages checks remain separate until publication. None establishes universal swarm competence, customer outcomes, or every live-host configuration.
+The retained runtime TestForge disposition is `PASS_WITH_CONDITIONS / READY_WITH_RESIDUAL_RISK` for the exact 0.1.0 runtime fingerprint and its bounded Codex decision evidence. Version 0.2.3 does not rerun or enlarge that behavioral claim. Its current documentation, accessibility, archive, and visual checks are bound to the final documentation fingerprint or candidate bytes. Public repository, release, and live Pages checks remain separate external observations. None establishes universal swarm competence, customer outcomes, or every live-host configuration.
 
 ## What remains untested or outside the claim
 
-Version 0.2.2 does not establish:
+Version 0.2.3 does not establish:
 
 - installation on a clean customer host;
 - Codex discovery or implicit routing after installation;
@@ -118,7 +118,7 @@ Version 0.2.2 does not establish:
 - rollback from interruption or cancellation;
 - assistive-technology conformance or representative-user usability beyond the recorded documentation accessibility review.
 
-Version 0.2.2 packages the same runtime for Codex and as a byte-matched Claude or one-skill upload. The retained behavioral qualification is Codex decision-only evidence; live Claude upload, activation, and behavior remain untested. Persistent external swarm services are outside this release.
+Version 0.2.3 packages the same runtime for Codex and as a byte-matched Claude or one-skill upload. The retained behavioral qualification is Codex decision-only evidence; live Claude upload, activation, and behavior remain untested. Persistent external swarm services are outside this release.
 
 ## Human control and safe stopping
 
@@ -127,8 +127,8 @@ The user retains priorities, values, risk acceptance, new authority, sensitive d
 When evidence, authority, tools, cost, or quality cannot support another responsible in-bounds step, the skill should stop with an exact bounded state and re-entry condition. A truthful partial result is safer than a polished claim that outruns its receipts.
 
 
-## Public 0.2.2 distribution boundary
+## Public 0.2.3 distribution boundary
 
-Version 0.2.2 preserves public licensing, a Codex marketplace plugin, a byte-matched Claude folder, release archives, Pages source, and visual assets around the unchanged verified runtime fingerprint. Packaging checks can establish file parity, manifest validity, archive topology, dimensions, links, and checksums. They do not retroactively establish live host discovery, Claude activation, directory approval, rendered accessibility with assistive technology, or customer outcomes.
+Version 0.2.3 preserves public licensing, a Codex marketplace plugin, a byte-matched Claude folder, release archives, Pages source, and visual assets around the unchanged verified runtime fingerprint. Packaging checks can establish file parity, manifest validity, archive topology, dimensions, links, and checksums. They do not retroactively establish live host discovery, Claude activation, directory approval, rendered accessibility with assistive technology, or customer outcomes.
 
-Repository visibility, GitHub release publication, Pages deployment, plugin installation, skill discovery, invocation, and healthy behavior require separate receipts. Until publication is observed, v0.2.2 remains packaged and locally checked rather than published, installed, discoverable, invoked, or healthy. Earlier installation evidence is not borrowed by implication.
+Repository visibility, GitHub release publication, Pages deployment, plugin installation, skill discovery, invocation, and healthy behavior require separate receipts. The tagged source establishes v0.2.3 as packaged and locally checked; a separate post-tag receipt must establish repository, release, and Pages publication, and none of those establishes installation, discovery, invocation, or health. Earlier installation evidence is not borrowed by implication.

@@ -1,6 +1,6 @@
 # Install Agent Swarm Orchestration
 
-Version 0.2.2 ships one runtime skill through several governed transport surfaces. Choose the surface your host actually supports; do not install the entire repository as though build evidence were runtime cargo.
+Version 0.2.3 ships one runtime skill through several governed transport surfaces. Choose the surface your host actually supports; do not install the entire repository as though build evidence were runtime cargo.
 
 ## Before you begin
 

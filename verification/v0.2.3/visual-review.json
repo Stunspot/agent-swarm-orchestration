@@ -1,0 +1,61 @@
+{
+  "format": "cd-visual-review/v1",
+  "product": "agent-swarm-orchestration",
+  "version": "0.2.3",
+  "reviewed_at": "2026-08-14",
+  "method": "Every final image was opened and its actual pixels were directly inspected at a legible scale. Metadata alone was not accepted.",
+  "core_set": {
+    "distinct_files": true,
+    "distinct_aspect_ratios": true,
+    "duplicate_compositions": false,
+    "shared_identity": "crystalline bee conductor and distinct luminous worker paths",
+    "programmed_art": false
+  },
+  "assets": [
+    {
+      "path": "docs/assets/aso-readme-banner.png",
+      "role": "README hero",
+      "dimensions": "1280x640",
+      "sha256": "9ecb7dfe388499dbe64aad0e3a50c63233a0a2b20f8159d3261e00a1e7a91d23",
+      "verdict": "PASS",
+      "pixel_judgment": "Restored original branching topology; strong center, clear lanes, no text appropriate."
+    },
+    {
+      "path": "docs/assets/aso-pages-hero.png",
+      "role": "Pages hero",
+      "dimensions": "1600x900",
+      "sha256": "6f1471f9f73e0a036c434a7c53b7708c7e23a169518f00ec3bd76cc80207b0f3",
+      "verdict": "PASS",
+      "pixel_judgment": "Restored original 16:9 lane convergence; vivid product-specific bee identity; no text appropriate."
+    },
+    {
+      "path": "docs/assets/aso-social-card.jpg",
+      "role": "Open Graph social card",
+      "dimensions": "1730x909",
+      "sha256": "8f6c5888b99dd02e1881c9ab8439377d1894acaa735daeb72df3e78b40708347",
+      "verdict": "PASS",
+      "pixel_judgment": "User-approved bee-conductor composition; exact title and Parallel cognition. One accountable root. are legible and crop-safe. The 197 KB JPEG was directly inspected and decoded against its PNG source with sampled RGB MAE 2.28/255."
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-icon.png",
+      "role": "Plugin icon",
+      "dimensions": "512x512",
+      "sha256": "8be44db4ba287f4145d7de76ecd3f30fa4bf1b68f7778fe6282edb470704e245",
+      "verdict": "PASS",
+      "pixel_judgment": "Restored canonical bee conductor icon; clear square crop."
+    },
+    {
+      "path": "plugins/agent-swarm-orchestration/assets/aso-social-card.png",
+      "role": "Plugin listing image",
+      "dimensions": "1586x992",
+      "sha256": "7966eee47b12301d7c4632550bb29869ff2b4f2ea2c38d4c351c276a73f723f3",
+      "verdict": "PASS",
+      "pixel_judgment": "Generated top-down topology illustration; exact title and Choose the smallest swarm that earns itself. are legible; composition is distinct from the social card."
+    }
+  ],
+  "rejected": [
+    "0.2.1 programmed social card",
+    "0.2.1 programmed plugin listing image"
+  ],
+  "verdict": "PASS"
+}

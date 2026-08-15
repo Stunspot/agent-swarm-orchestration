@@ -3,7 +3,7 @@
     "product":  "agent-swarm-orchestration",
     "version":  "0.2.2",
     "reviewed_at":  "2026-08-12",
-    "documentation_fingerprint":  "e56ae7b8c475c60d335f2fca8f616fbe8377095bb788b26077b7e381ac16d011",
+    "documentation_fingerprint":  "0d5b8a008f3669b6e73eef27f9b0f3df094ca06b1eaf7c62996b1bc11215e619",
     "files":  [
                   {
                       "path":  "README.md",
@@ -31,7 +31,7 @@
                   },
                   {
                       "path":  "host-matrix.md",
-                      "sha256":  "28219ac9de69730f109a77b5e3d9e1933f98131797a779b12691e375e65581a6"
+                      "sha256":  "475f786796f0adcb91dbab2bc4cd79a382d45546f353ae100b6b65cc1afea8ff"
                   },
                   {
                       "path":  "DATA-AND-PRIVACY.md",
@@ -71,7 +71,7 @@
                   },
                   {
                       "path":  "provenance.md",
-                      "sha256":  "f0c8f35f4535fb3bd60a19b9031b6a461c347ebf9fbad03430ca77eaa1ad2ede"
+                      "sha256":  "fe8b674c36c4cc2ce9182c8a4d441aa87c72babc9a2214d3bf38086a700591ac"
                   },
                   {
                       "path":  "RELEASE-NOTES-v0.2.2.md",
@@ -87,7 +87,7 @@
                   },
                   {
                       "path":  "docs/index.html",
-                      "sha256":  "39811aa43c5bc35e1c475f7d1fd5bb36a068719734054c219e6f26fab7ba6849"
+                      "sha256":  "1c21a69ea5214a119d581e90ad068d1c04474872a0ccf9d38d4b3bb3ed2ff72e"
                   },
                   {
                       "path":  "docs/style.css",
@@ -95,7 +95,7 @@
                   },
                   {
                       "path":  "documentation-manifest.json",
-                      "sha256":  "b6fca576a9ab8711b7f921dd600832b7374e74ce42c413488439bc73f8a1082f"
+                      "sha256":  "f0972d528d46d7536d028ad375fbc35c89cae6e04d228314a0329825db2dece8"
                   }
               ],
     "hesperos_lint":  {

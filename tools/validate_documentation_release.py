@@ -10,7 +10,7 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.2"
+VERSION = "0.2.3"
 
 
 def read_json(relative: str) -> dict:
@@ -54,10 +54,10 @@ def documentation_fingerprint(paths: list[str]) -> tuple[str, list[dict[str, str
 def main() -> int:
     docs = read_json("documentation-manifest.json")
     package = read_json("package-manifest.json")
-    authorship = read_json("verification/v0.2.2/documentation-authorship.json")
-    review = read_json("verification/v0.2.2/documentation-review.json")
-    accessibility = read_json("verification/v0.2.2/documentation-accessibility-review.json")
-    visual = read_json("verification/v0.2.2/visual-review.json")
+    authorship = read_json("verification/v0.2.3/documentation-authorship.json")
+    review = read_json("verification/v0.2.3/documentation-review.json")
+    accessibility = read_json("verification/v0.2.3/documentation-accessibility-review.json")
+    visual = read_json("verification/v0.2.3/visual-review.json")
 
     assert docs["version"] == VERSION
     assert package["version"] == VERSION
@@ -127,8 +127,8 @@ def main() -> int:
 
     plugin = read_json("plugins/agent-swarm-orchestration/.codex-plugin/plugin.json")
     assert plugin["version"] == VERSION
-    custody = read_json("release-assets/v0.2.2/archive-custody.json")
-    assert custody["version"] == VERSION and custody["generated_at"] == "2026-08-12"
+    custody = read_json("release-assets/v0.2.3/archive-custody.json")
+    assert custody["version"] == VERSION and custody["generated_at"] == "2026-08-14"
     for archive in custody["archives"]:
         path = ROOT / archive["path"]
         assert path.is_file(), f"missing archive: {archive['path']}"
