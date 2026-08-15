@@ -1,0 +1,26 @@
+{
+  "format": "documentation-accessibility-review/v1",
+  "product": "agent-swarm-orchestration",
+  "version": "0.2.3",
+  "reviewed_at": "2026-08-14",
+  "documentation_fingerprint": "aeec90cf0bea3c65445619b9761dde8586a9024d3292c67960b5da22e027928d",
+  "verdict": "REVIEW_PASS_WITH_CONDITIONS",
+  "passed": [
+    "logical headings with no skips",
+    "skip link and semantic main/navigation",
+    "all internal fragments resolve",
+    "meaningful Pages hero alternative",
+    "visible focus rules",
+    "navigation remains available on narrow screens",
+    "reduced-motion rule",
+    "declared foreground/background contrast ratios from 9.92:1 to 19.32:1",
+    "Hesperos Markdown lint on all changed Markdown"
+  ],
+  "not_tested": [
+    "live rendered browser after 0.2.3 deployment",
+    "keyboard traversal in deployed browser",
+    "zoom and reflow in deployed browser",
+    "screen reader and other assistive technology",
+    "formal WCAG conformance"
+  ]
+}

@@ -11,7 +11,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.2"
+VERSION = "0.2.3"
 SKILL = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
 
 
@@ -113,7 +113,7 @@ def main() -> int:
     result = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", str(SKILL / "tests"), "-v"], cwd=ROOT)
     assert result.returncode == 0, "validator tests failed"
 
-    print("PUBLIC RELEASE VALID agent-swarm-orchestration v0.2.2")
+    print("PUBLIC RELEASE VALID agent-swarm-orchestration v0.2.3")
     return 0
 
 

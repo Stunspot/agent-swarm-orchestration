@@ -1,14 +1,14 @@
 # Host and distribution matrix
 
-Version 0.2.2 keeps created, packaged, installed, discoverable, invoked, healthy, published, and independently verified as separate evidence states. The runtime bytes and retained behavioral fingerprint are unchanged from 0.1.0; this patch release repairs documentation and presentation custody.
+Version 0.2.3 keeps created, packaged, installed, discoverable, invoked, healthy, published, and independently verified as separate evidence states. The runtime bytes and retained behavioral fingerprint are unchanged from 0.1.0; this patch release repairs documentation and presentation custody.
 
 | Surface | Supplied object | Current static state | Live evidence boundary |
 |---|---|---|---|
-| Codex marketplace | `plugins/agent-swarm-orchestration/` | Plugin manifest, distinct listing image, icon, license pointer, and one self-contained skill are packaged at 0.2.2 | The retained v0.2.1 install observation does not establish installation, discovery, invocation, or health for v0.2.2 |
+| Codex marketplace | `plugins/agent-swarm-orchestration/` | Plugin manifest, distinct listing image, icon, license pointer, and one self-contained skill are packaged at 0.2.3 | The retained v0.2.1 install observation does not establish installation, discovery, invocation, or health for v0.2.3 |
 | Standalone Codex | `release/codex/agent-swarm-orchestration/` and the versioned skill archive | Runtime tree is byte-matched to canonical and packaged under one top-level folder | Existing behavioral qualification is decision-only; universal discovery, invocation, and live tool behavior are not established |
-| Claude / one-skill upload | `release/claude/agent-swarm-orchestration/` and `claude-ai/agent-swarm-orchestration-v0.2.2.zip` | Byte-matched skill folder and archive are packaged | Live upload, discovery, invocation, and behavior remain untested until observed in a named Claude host |
-| GitHub release | `release-assets/v0.2.2/` | Plugin and skill archives, custody JSON, and checksums are supplied without changing frozen v0.2.0 or v0.2.1 artifacts | Publication and downloaded-byte readback remain not tested until the v0.2.2 release exists |
-| GitHub Pages | `docs/` | Complete customer journey, useful navigation, and role-specific visual wiring are supplied | The v0.2.2 deployment, navigation, and public asset bytes remain not tested until publication |
+| Claude / one-skill upload | `release/claude/agent-swarm-orchestration/` and `claude-ai/agent-swarm-orchestration-v0.2.3.zip` | Byte-matched skill folder and archive are packaged | Live upload, discovery, invocation, and behavior remain untested until observed in a named Claude host |
+| GitHub release | `release-assets/v0.2.3/` | Plugin and skill archives, custody JSON, and checksums are supplied without changing frozen v0.2.0, v0.2.1, or v0.2.2 artifacts | Publication and downloaded-byte readback require a separate post-tag receipt; this source tree establishes neither |
+| GitHub Pages | `docs/` | Complete customer journey, useful navigation, and role-specific visual wiring are supplied | Deployment, navigation, and public asset bytes require separate live observation after this commit reaches Pages |
 
 ## Presentation surfaces
 

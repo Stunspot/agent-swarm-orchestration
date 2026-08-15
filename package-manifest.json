@@ -2,10 +2,10 @@
     "format":  "cd-augment-package/v1",
     "name":  "agent-swarm-orchestration",
     "display_name":  "Agent Swarm Orchestration",
-    "version":  "0.2.2",
+    "version":  "0.2.3",
     "runtime_version":  "0.1.0",
     "runtime_fingerprint":  "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
-    "status":  "public-release-published",
+    "status":  "public-release-candidate",
     "map":  "design-record/agent-swarm-orchestration-augment-map.md",
     "build_state":  "design-record/agent-swarm-orchestration-build-state.md",
     "canonical_skills":  [
@@ -19,34 +19,34 @@
     "customer_docs_manifest":  "documentation-manifest.json",
     "distributions":  {
                           "codex_plugin":  {
-                                               "status":  "published-in-github-release-v0.2.2",
+                                               "status":  "release-candidate-v0.2.3",
                                                "paths":  [
                                                              ".agents/plugins/marketplace.json",
                                                              "plugins/agent-swarm-orchestration"
                                                          ]
                                            },
                           "codex_standalone":  {
-                                                   "status":  "published-in-github-release-v0.2.2",
+                                                   "status":  "release-candidate-v0.2.3",
                                                    "paths":  [
                                                                  "release/codex/agent-swarm-orchestration",
-                                                                 "release-assets/v0.2.2/Skill-agent-swarm-orchestration-v0.2.2.zip"
+                                                                 "release-assets/v0.2.3/Skill-agent-swarm-orchestration-v0.2.3.zip"
                                                              ]
                                                },
                           "claude_standalone":  {
-                                                    "status":  "published-in-github-release-v0.2.2-activation-untested",
+                                                    "status":  "release-candidate-v0.2.3-activation-untested",
                                                     "paths":  [
                                                                   "release/claude/agent-swarm-orchestration",
-                                                                  "claude-ai/agent-swarm-orchestration-v0.2.2.zip"
+                                                                  "claude-ai/agent-swarm-orchestration-v0.2.3.zip"
                                                               ]
                                                 },
                           "release_assets":  {
-                                                 "status":  "published-github-release-v0.2.2",
+                                                 "status":  "release-candidate-v0.2.3",
                                                  "paths":  [
-                                                               "release-assets/v0.2.2"
+                                                               "release-assets/v0.2.3"
                                                            ]
                                              },
                           "pages":  {
-                                        "status":  "published-live-http-verified-rendered-not-tested",
+                                        "status":  "source-ready-live-observation-required",
                                         "paths":  [
                                                       "docs"
                                                   ]
@@ -61,18 +61,18 @@
     "rights_status":  "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
     "evidence":  {
                      "runtime":  "retained-0.1.0-verification-applies-only-to-exact-runtime-bytes",
-                     "structural_verification":  "local-0.2.2-public-release-validator-and-10-unit-tests-pass",
+                     "structural_verification":  "local-0.2.3-public-release-validator-and-10-unit-tests-pass",
                      "behavioral_verification":  "retained-ten-case-natural-codex-decision-qualification-pass-with-residual-risk; qwen transfer negative",
-                     "installation":  "retained-0.2.1-observation-does-not-establish-0.2.2",
-                     "clean_host_discovery":  "not-performed-for-0.2.2",
-                     "clean_host_invocation":  "not-performed-for-0.2.2",
-                     "publication":  "verification/v0.2.2/public-release.json",
-                     "documentation":  "verification/v0.2.2/documentation-review.json",
-                     "accessibility":  "verification/v0.2.2/documentation-accessibility-review.json",
-                     "visuals":  "verification/v0.2.2/visual-review.json",
-                     "adversarial_release_verification":  "verification/v0.2.2/adversarial-review.md",
-                     "recovery_backup":  "release-assets/v0.2.2",
-                     "historical_custody":  "v0.2.0-and-v0.2.1-archives-tags-and-receipts-left-unchanged"
+                     "installation":  "retained-0.2.1-observation-does-not-establish-0.2.3",
+                     "clean_host_discovery":  "not-performed-for-0.2.3",
+                     "clean_host_invocation":  "not-performed-for-0.2.3",
+                     "publication":  "external-post-tag-observation-required",
+                     "documentation":  "verification/v0.2.3/documentation-review.json",
+                     "accessibility":  "verification/v0.2.3/documentation-accessibility-review.json",
+                     "visuals":  "verification/v0.2.3/visual-review.json",
+                     "adversarial_release_verification":  "verification/v0.2.3/adversarial-review.md",
+                     "recovery_backup":  "release-assets/v0.2.3",
+                     "historical_custody":  "v0.2.0-through-v0.2.2-archives-tags-and-receipts-left-unchanged"
                  },
     "authority":  {
                       "installation":  true,

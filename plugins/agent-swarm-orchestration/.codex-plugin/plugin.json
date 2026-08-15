@@ -1,6 +1,6 @@
 {
   "name": "agent-swarm-orchestration",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Decides when multiple AI agents will help, divides independent work safely, and reconciles one accountable answer.",
   "author": {
     "name": "Collaborative Dynamics",

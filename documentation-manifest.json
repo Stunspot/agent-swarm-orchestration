@@ -1,6 +1,6 @@
 {
   "format": "cd-customer-documentation/v1",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "reader_journey": [
     "README.md",
     "START-HERE.md",
@@ -19,9 +19,10 @@
     "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
     "provenance.md",
-    "RELEASE-NOTES-v0.2.2.md"
+    "RELEASE-NOTES-v0.2.3.md"
   ],
   "historical_customer_docs": [
+    "RELEASE-NOTES-v0.2.2.md",
     "RELEASE-NOTES-v0.2.1.md",
     "RELEASE-NOTES-v0.2.0.md"
   ],
@@ -93,6 +94,7 @@
     "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
     "provenance.md",
+    "RELEASE-NOTES-v0.2.3.md",
     "RELEASE-NOTES-v0.2.2.md",
     "RELEASE-NOTES-v0.2.1.md",
     "RELEASE-NOTES-v0.2.0.md"
@@ -143,7 +145,7 @@
       "TERMS-OF-USE.md"
     ],
     "maintenance": [
-      "RELEASE-NOTES-v0.2.2.md",
+      "RELEASE-NOTES-v0.2.3.md",
       "ARCHIVE-CUSTODY.md"
     ],
     "provenance": [

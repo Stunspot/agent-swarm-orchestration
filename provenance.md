@@ -9,6 +9,7 @@
 - **Derived release decision:** version 0.2.0 preserved the verified runtime bytes and added public Codex, Claude, legal, documentation, visual, archive, and publication surfaces.
 - **Derived remediation decision:** version 0.2.1 preserved the same runtime bytes while expanding the Pages customer journey and correcting stale evidence language.
 - **Derived presentation correction:** version 0.2.2 preserves the runtime again, restores direct product language, retains the original heroes and icon, replaces rejected programmed compositions with original generated illustrations, and removes scripted raster-art generation from the current tree.
+- **Deployable social correction:** version 0.2.3 preserves that runtime and reviewed identity while replacing the oversized Pages social PNG with the directly inspected JPEG delivery asset.
 
 Neither distribution expansion rewrites the earlier 0.1.0 runtime evidence boundary.
 
@@ -46,4 +47,4 @@ The social-card composition and plugin listing composition were produced as orig
 
 ## Evidence boundary
 
-The public 0.2.2 wrapper does not enlarge the runtime claim. The retained runtime fingerprint, validator evidence, package parity, and Codex decision qualification remain bounded as recorded in `verification/`. Public packaging, licensing, documentation, image quality, archive custody, GitHub release publication, repository visibility, and Pages deployment each require their own receipts. Claude activation, broad clean-host behavior, directory approval, assistive-technology conformance, and customer outcomes remain unestablished until observed.
+The public 0.2.3 wrapper does not enlarge the runtime claim. The retained runtime fingerprint, validator evidence, package parity, and Codex decision qualification remain bounded as recorded in `verification/`. Public packaging, licensing, documentation, image quality, archive custody, GitHub release publication, repository visibility, and Pages deployment each require their own receipts. Claude activation, broad clean-host behavior, directory approval, assistive-technology conformance, and customer outcomes remain unestablished until observed.
