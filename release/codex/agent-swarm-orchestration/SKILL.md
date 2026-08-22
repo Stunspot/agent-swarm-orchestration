@@ -1,6 +1,6 @@
 ---
 name: agent-swarm-orchestration
-description: "🐝 Agent swarm orchestration."
+description: "🐝 Coordinate many workers on split tasks."
 ---
 
 # Make parallel cognition answer to one mind
