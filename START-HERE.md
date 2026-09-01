@@ -1,63 +1,50 @@
-# Start here: coordinate agents without losing control
+# Start here: design the organization the work needs
 
-Agent Swarm Orchestration helps an AI host decide whether multiple agents will improve a task, divide earned work safely, and return one evidence-bounded result. It is for people who want the benefit of parallel cognition without handing mission, authority, or final judgment to a committee.
+Agent Swarm Orchestration helps an AI coordinator decide not only whether multiple agents will help, but what temporary organization can improve the accepted result. It separates memorable role names from actual contributions, designs information and authority relations deliberately, compiles the next phase into a safe execution regime, and changes the form when evidence changes the problem.
 
-Version 0.2.3 is a free public Augment. It packages the same verified runtime as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill release archives. The package does not supply collaboration tools; the current host must expose them.
+Version 0.3.0 is packaged as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill archives. The package does not supply collaboration tools; the current host must expose them.
 
 ## Decide whether this fits your task
 
-Use it when the work has at least one of these shapes:
+Use it when work benefits from one or more of these mechanisms:
 
-- two or more independent areas can be inspected at the same time;
-- one bounded specialist task can run while the root continues useful work;
-- one result must be accepted before a dependent specialist begins;
-- competing explanations benefit from independent investigation;
-- a writer needs a separate, independent reviewer;
-- an existing swarm has stalled, conflicted, or been redirected.
+- independent evidence gathering without shared anchoring;
+- distinct transformations that can proceed concurrently;
+- dependent specialists whose inputs must be accepted in sequence;
+- structured disagreement, cross-review, or bounded deliberation;
+- purposeful redundancy with an explicit resolver;
+- changing membership or information exposure as uncertainty moves;
+- recovery that preserves accepted evidence and resumes from the first unearned edge.
 
-Stay with one agent when the task is small, tightly sequential, dependent on shared conversational context, latency-sensitive, or focused on one shared file. The skill is designed to decline unnecessary swarms.
+Stay with one agent when the next horizon is small, tightly sequential, shared-context-heavy, latency-sensitive, or concentrated on one mutable surface. The skill is designed to decline unnecessary organizations as cheerfully as it designs useful ones.
+
+## Think in contributions, not costumes
+
+For the next reasoning horizon, identify the product of the phase, the contributions that can cause it, their consumers, dependencies, evidence burdens, error opportunities, information exposure, authority, state custody, resolver, and transition signal.
+
+A role label such as “critic,” “stakeholder,” or “review bot” may help a model hold a stance. It does not prove competence, independence, legitimacy, or useful difference. An agent simulating residents is not authorized to speak for residents. Stakeholder evidence and stakeholder standing remain separate.
 
 ## Install the package that matches your host
 
-- **Codex marketplace plugin:** use the two commands in [Installation](INSTALLATION.md).
-- **Standalone Codex:** install `release/codex/agent-swarm-orchestration/`.
-- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or the matching archive under `claude-ai/`.
+- **Codex marketplace plugin:** use the commands in [Installation](INSTALLATION.md).
+- **Standalone Codex:** install `release/codex/agent-swarm-orchestration/` or the versioned skill ZIP.
+- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or `claude-ai/agent-swarm-orchestration-v0.3.0.zip`.
 - **Source and evidence review:** use the repository, not an installed runtime folder.
 
-Installation files existing on disk do not establish host discovery or activation. Follow the check for your host and record what you actually observe.
+Files existing on disk do not establish discovery or activation. Confirm what the named host actually loads.
 
 ## Reach first value
 
-Start a fresh task if your host requires reload after installation. Then use this example prompt with independent read surfaces:
+Start a fresh task if your host requires reload after installation, then try:
 
 ```text
-Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep every worker read-only. Decide whether parallel agents earn their coordination cost, give each worker one bounded evidence question, and return one comparison with the riskiest inconsistency. Treat worker findings as reported until you inspect their cited evidence.
+Use $agent-swarm-orchestration to compare retry handling in billing, search, and notifications. Keep mutations out of scope. Identify the distinct causal contributions, decide whether independence or cross-review is useful, name the resolver, and compile only the next phase into the lightest safe execution regime. Reconcile cited evidence into one answer.
 ```
 
-Look for these results:
-
-1. The root selects Direct, Enlist, Assemble, Chain, or Recover for the actual work.
-2. Each worker receives a distinct responsibility and explicit authority.
-3. Mutable surfaces have one writer at a time.
-4. The root reconciles returned claims against cited evidence.
-5. You receive one integrated answer with limits, not a stack of worker summaries.
-
-A correct Direct decision is success when parallelism would cost more than it contributes.
+A good run should make four things legible: why each contribution exists, what each member may see and do, how disagreement or overlap will be resolved, and what observation will change or end the organization. It should then return one integrated result—not a hamper of worker summaries tied with ribbon.
 
 ## If the first attempt fails
 
-- If the host does not recognize the skill, check the installed folder or plugin registration in [Troubleshooting](TROUBLESHOOTING.md).
-- If the skill is recognized but no agents can be created, confirm that the current task exposes collaboration controls.
-- If workers returned claims but the root cannot inspect their evidence, keep those claims labeled `agent-reported`.
-- If a write or external action may have committed, reconcile authoritative state before retrying.
+If the host does not recognize the skill, check the installed folder or plugin registration in [Troubleshooting](TROUBLESHOOTING.md). If the skill is recognized but agent controls are unavailable, work directly or return an exact delegation packet marked `PREPARED — NOT DISPATCHED`. If a worker returns claims the root cannot inspect, keep them `agent-reported`. If a write may have landed, read authoritative state before retrying.
 
-## Continue the journey
-
-- [README](README.md): product promise, install commands, release map, and evidence boundary.
-- [Installation](INSTALLATION.md): Codex, Claude, direct ZIP, removal, and rollback.
-- [Workflows](WORKFLOWS.md): practical orchestration patterns.
-- [Troubleshooting](TROUBLESHOOTING.md): symptom-led recovery.
-- [Trust and limits](TRUST-AND-LIMITS.md): authority, privacy, evidence, validation, and non-claims.
-- [Host matrix](host-matrix.md): supplied and untested host surfaces.
-- [Data and privacy](DATA-AND-PRIVACY.md): data-handling boundary.
-- [Support](SUPPORT.md): useful issue reports and maintenance boundary.
+Continue with [Workflows](WORKFLOWS.md), [Trust and limits](TRUST-AND-LIMITS.md), and the [host matrix](host-matrix.md).

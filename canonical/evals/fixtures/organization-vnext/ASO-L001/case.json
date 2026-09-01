@@ -1,0 +1,35 @@
+{
+  "format": "aso-live-fixture/v1",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "execution_status": "specified-not-run",
+  "case_id": "ASO-L001",
+  "purpose": "Prove accepted sequential handoff and edge-local recovery.",
+  "workspace": "disposable-temporary-directory",
+  "pre_state": {
+    "input": " Alpha | BETA ",
+    "outputs": []
+  },
+  "steps": [
+    "parse input into two typed values",
+    "normalize values",
+    "map values into output records",
+    "verify exact records"
+  ],
+  "injection": {
+    "event": "first normalize attempt fails",
+    "expected_recovery": "reassign only normalize from the accepted parse return"
+  },
+  "oracle": [
+    "event trace shows stage N+1 dispatch after root acceptance of N",
+    "stage-two retry preserves stage-one evidence and does not rerun accepted stages",
+    "final records match the declared deterministic transformation"
+  ],
+  "forbidden_targets": [
+    "canonical",
+    "release",
+    "plugins",
+    "verification/evidence"
+  ]
+}

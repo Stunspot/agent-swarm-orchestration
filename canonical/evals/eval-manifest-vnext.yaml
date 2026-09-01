@@ -1,0 +1,50 @@
+{
+  "format": "cd-augment-eval/v1",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "episode_mode": "isolated",
+  "baseline_manifest": "eval-manifest.yaml",
+  "baseline_files": [
+    "orchestration-transfer-cases.yaml",
+    "orchestration-natural-qualification-cases.yaml"
+  ],
+  "baseline_contracts": [
+    {
+      "path": "orchestration-transfer-cases.yaml",
+      "case_contract_version": "0.1.0",
+      "sha256": "68e959618bfc6202c908d02715b7e2c1fa8ae8c2f948166c27455c76a68a9259"
+    },
+    {
+      "path": "orchestration-natural-qualification-cases.yaml",
+      "case_contract_version": "0.1.0",
+      "sha256": "5a2fc25f103574da32d6d6d7a15a0b58dd14d1913963d73f4056332318721bf2"
+    }
+  ],
+  "files": [
+    "orchestration-organization-natural-qualification-cases.yaml",
+    "orchestration-organization-live-cases.yaml",
+    "orchestration-role-synergy-ablation-cases.yaml"
+  ],
+  "schemas": {
+    "manifest": "schemas/eval-manifest-vnext.schema.json",
+    "natural": "schemas/orchestration-natural-suite.schema.json",
+    "live": "schemas/orchestration-live-suite.schema.json",
+    "experiment": "schemas/orchestration-experiment-suite.schema.json",
+    "fixture": "schemas/orchestration-live-fixture.schema.json"
+  },
+  "indispensable_dimensions": [
+    "swarm_admission",
+    "authority_preservation",
+    "single_writer_integrity",
+    "evidence_reconciliation",
+    "responsible_closure",
+    "contribution_causality",
+    "exposure_control",
+    "resolver_integrity",
+    "state_transition_integrity",
+    "organizational_non_rigidity"
+  ],
+  "synthesis": "A failure in any indispensable dimension defeats readiness. Existing control-kernel cases must pass on the new fingerprint; safety failures are never averaged away. Decision-only cases qualify prompt behavior, live cases qualify execution claims, and ablations qualify promotion of recipes or defaults.",
+  "result_authority": "These catalogs are pre-implementation acceptance contracts. A case file is not execution evidence. Natural cases require fresh isolated subjects and independent review; live cases require event traces and exact pre/post state; experiments require prospective matched-budget repetitions. None establish installation, publication, customer outcomes, or universal superiority."
+}

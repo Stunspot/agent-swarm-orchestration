@@ -1,6 +1,6 @@
 # Install Agent Swarm Orchestration
 
-Version 0.2.3 ships one runtime skill through several governed transport surfaces. Choose the surface your host actually supports; do not install the entire repository as though build evidence were runtime cargo.
+Version 0.3.0 ships one runtime skill through several governed transport surfaces. Choose the surface your host actually supports; do not install the entire repository as though build evidence were runtime cargo.
 
 ## Before you begin
 
@@ -52,13 +52,13 @@ Host upload controls, discovery rules, reload behavior, and supported tool contr
 Start a new task and enter:
 
 ```text
-Use $agent-swarm-orchestration to decide whether this task earns multiple agents: compare three independent folders read-only, then return one evidence-backed recommendation. Explain the selected topology briefly and keep the root responsible for verification.
+Use $agent-swarm-orchestration to decide what temporary organization this task earns: compare three independent folders read-only, identify the distinct contributions and resolver, compile the next phase into a safe execution regime, and return one evidence-backed recommendation with the root responsible for verification.
 ```
 
 A successful check requires:
 
 1. the host recognizes the named skill;
-2. the skill applies its Direct, Enlist, Assemble, Chain, or Recover logic;
+2. the skill designs causal contributions, relations, authority, state, and resolution, then applies its Direct, Enlist, Assemble, Chain, or Recover execution logic;
 3. if agents are needed, the task exposes usable collaboration controls;
 4. returned claims remain bounded by evidence.
 

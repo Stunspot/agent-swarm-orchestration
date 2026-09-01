@@ -1,34 +1,38 @@
 # Archive custody and recovery
 
-Version 0.2.3 is a documentation and presentation patch release around the unchanged runtime fingerprint. Frozen v0.2.0, v0.2.1, and v0.2.2 archives, checksums, custody JSON, tags, and verification records remain untouched.
+Version 0.3.0 is a new runtime release candidate, not a wrapper around the earlier 0.1.0 runtime. It adds new archives and leaves prior release assets, tags, checksums, and receipts intact.
 
 | Artifact | Current location | Recovery purpose |
 |---|---|---|
-| Codex marketplace plugin | `release-assets/v0.2.3/Plugin-Agent-Swarm-Orchestration-v0.2.3.zip` | Installable plugin with corrected listing assets, manifest, license pointer, and one self-contained skill |
-| Standalone skill | `release-assets/v0.2.3/Skill-agent-swarm-orchestration-v0.2.3.zip` | Portable one-skill installation and recovery |
-| Claude upload | `claude-ai/agent-swarm-orchestration-v0.2.3.zip` | Byte-matched one-skill upload archive |
-| Source repository | Git tag `v0.2.3` at the reconciled release commit | Current product source, docs, evals, generated presentation assets, receipts, and provenance |
-
-`release-assets/v0.2.3/archive-custody.json` records archive hashes, sizes, member counts, source-tree digests, and path rules. `release-assets/v0.2.3/checksums.sha256` is the detached human-readable checksum list.
+| Codex marketplace plugin | `release-assets/v0.3.0/Plugin-Agent-Swarm-Orchestration-v0.3.0.zip` | Plugin wrapper, listing assets, manifest, license pointer, and one self-contained skill |
+| Standalone skill | `release-assets/v0.3.0/Skill-agent-swarm-orchestration-v0.3.0.zip` | Portable Codex or Agent Skills installation and downstream edition input |
+| Claude upload | `claude-ai/agent-swarm-orchestration-v0.3.0.zip` | Byte-identical one-skill archive for Claude-compatible upload |
+| Aggregate custody | `release-assets/v0.3.0/archive-custody.json` and `checksums.sha256` | Archive path, hash, size, member count, source-tree digest, and detached checksum custody |
+| Integration companion | `Skill-agent-swarm-orchestration-v0.3.0.zip.sha256` and `Skill-agent-swarm-orchestration-v0.3.0-VERIFY.txt` | Exact identity and cross-platform verification instructions for the edition-selected skill ZIP |
+| Source checkpoint | Local release commit named in the handoff packet | Binds the repository state from which the candidate was built; no tag, push, or public release is implied |
 
 ## Verify an archive
 
-From the repository root, compare the downloaded file's SHA-256 digest with the matching line in `release-assets/v0.2.3/checksums.sha256`. Then inspect the archive before extraction:
+From `release-assets/v0.3.0`, compare the file's SHA-256 with `checksums.sha256`. For the standalone skill ZIP, the adjacent `.sha256` and `-VERIFY.txt` files provide the same expected digest and PowerShell plus `shasum` commands.
+
+Then inspect the archive:
 
 - every member uses a forward-slash path;
+- no member is absolute, duplicated, or escapes through `..`;
 - every member lives under one top-level `agent-swarm-orchestration/` directory;
 - `SKILL.md` sits directly inside that directory;
-- the expected `agents`, `assets`, `examples`, `references`, `scripts`, and `tests` members are present.
+- the extracted tree matches the governed source tree exactly.
 
-A matching digest verifies exact archive identity. It does not establish installation, discovery, invocation, or healthy behavior.
+A matching digest proves exact archive byte identity. It does not establish installation, discovery, invocation, healthy behavior, edition integration, or publication.
+
+## Historical 0.2.3 boundary
+
+The `v0.2.3` Git tag points to its original tagged commit. Later repository reconciliation produced the v0.2.3 archive bytes frozen by the current baseline hashes. Those are distinct custody facts. Version 0.3.0 preserves both; it does not move the tag or rewrite either history into the other.
+
+The frozen baseline remains under `release-assets/v0.2.3/` and `claude-ai/agent-swarm-orchestration-v0.2.3.zip`. Its exact hashes are checked before 0.3.0 acceptance.
 
 ## Recover or roll back
 
-1. Stop new use of the uncertain installation.
-2. Record the installed path, host version, package version, and any local modifications.
-3. Reconcile active worker, file, commit, and external-action state separately; package rollback does not undo them.
-4. Remove only the exact failed installation folder or plugin registration.
-5. Restore a previously verified archive or the immutable `v0.2.1` release when rolling back this presentation repair.
-6. Restart or refresh the host, confirm discovery, and run the first-invocation check in `INSTALLATION.md`.
+Record the installed path, host version, package version, local modifications, and active worker or external-action state. Package rollback does not undo agent work, commits, deployments, or external actions.
 
-Keep extracted backups outside the active destination. Do not overwrite a locally modified installation until those changes are preserved or intentionally discarded.
+Remove only the exact failed installation or plugin registration, then restore a previously verified archive. Reload the host if required, confirm discovery, and run the first-invocation check in `INSTALLATION.md`. Keep extracted backups outside the active destination and preserve local modifications before replacement.

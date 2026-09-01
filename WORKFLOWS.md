@@ -1,8 +1,26 @@
 # Agent Swarm Orchestration workflows
 
-These workflows are starting patterns, not fixed recipes. The active host should inspect the current task, authority, evidence, dependencies, write surfaces, live collaboration-tool contract, and total coordination cost before selecting a topology.
+These workflows are provocations, not a closed taxonomy. Start from the result the current reasoning horizon must produce. Design causal contributions, dependencies, information exposure, authority, state custody, resolution, and transition signals; then compile the phase into the lightest safe execution regime.
 
-Before any dispatch, distinguish skill discovery from tool availability: a host may recognize `$agent-swarm-orchestration` while exposing no agent controls in that task. In that case, complete root-owned work and return the strongest honest prepared result rather than simulating a swarm.
+Before dispatch, distinguish skill discovery from tool availability: a host may recognize `$agent-swarm-orchestration` while exposing no agent controls in that task. In that case, complete root-owned work and return the strongest honest prepared result rather than simulating a swarm.
+
+## Design a temporary organization for a messy problem
+
+Use this when the work needs deliberation, competing models, stakeholder evidence, or changing membership rather than a bucketline of interchangeable drones.
+
+```text
+Use $agent-swarm-orchestration to design the temporary organization this problem needs. Identify causally distinct contributions and their consumers. Decide what should remain independent, what should cross-review, who may see or change what, where task truth and artifact state live, and how disagreement will be resolved. Treat role names as memory aids, not competence. Treat stakeholder simulation as evidence work, not stakeholder authority. Compile only the next phase into a safe execution regime, then reform or dissolve the organization when evidence changes the live uncertainty.
+
+Problem: <describe the outcome, constraints, stakeholders, evidence, authority, and acceptance boundary>
+```
+
+**Done when:** every admitted contribution has a causal reason and consumer; authority and state have owners; exposure and resolver are deliberate; the next phase has a legible execution regime; and the organization has a transition or stopping observation.
+
+## Compose mechanisms without becoming hidebound
+
+Bucketlines move known units through a reliable sequence. Anthills exploit local signals and redundant exploration. Platoons combine delegated initiative with clear command and support. Boardrooms surface value conflict and adjudication. General staffs integrate specialized estimates for one accountable decision-maker. Complex adaptive systems vary, select, and rewire under bounded feedback.
+
+Borrow only the mechanisms the problem earns. Hybridize, invert, rename, or invent another form when the causal jobs demand it. Purposeful redundancy is valid when it creates an independent evidence channel, exploration branch, incubation path, or containment boundary and has a cap plus resolver. More agents are not automatically waste; more agents without a reason are just a meeting with worse snacks.
 
 ## Decide whether a swarm is worth using
 
@@ -113,12 +131,8 @@ Recover this swarm from the first unearned edge. Preserve accepted work and the 
 
 Useful degraded states include `PREPARED — NOT DISPATCHED`, `RETURNED — NOT RECONCILED`, `PARTIAL — DEPENDENCY UNAVAILABLE`, `AWAITING AUTHORITY`, `CAPABILITY-LIMITED`, and `CANCELLED`. The label identifies the boundary; it does not replace the prepared work or missing-dependency detail.
 
-## Use the included planning artifacts
+## Use only the planning artifacts that retire a live risk
 
-For consequential, multi-turn, or recovery-prone work:
+Keep light work implicit. For consequential, ambiguous, long-running, or adaptive work, use `assets/organization-sketch.template.md` to make contributions, relations, authority, state, resolver, and transitions inspectable. Use `assets/contribution-card.template.md` only where a member's causal job needs inspection, and `assets/cross-response-packet.template.md` only where bounded exposure or critique changes the work.
 
-1. Start from `assets/swarm-plan.template.json` and keep one working copy outside the installed package.
-2. Use `assets/delegation-packet.template.md` for each worker's objective, scope, authority, evidence, and return contract.
-3. Ask workers to return the fields in `assets/agent-return.template.md` or an equivalent compact shape.
-4. Use `assets/merge-ledger.template.md` when claims or shared state can conflict.
-5. Validate the plan structure with the packaged script, then manually judge semantic quality and reconciled state.
+When execution itself is multi-turn or recovery-prone, use `assets/swarm-plan.template.json`, bounded delegation and return packets, and `assets/merge-ledger.template.md`. Use `assets/organization-transition.template.md` at a material reform. Validate a Swarm Plan with the packaged script, then judge semantic quality and reconciled state manually. Do not instantiate the whole toolkit ceremonially; paperwork is not a contribution.

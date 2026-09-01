@@ -1,0 +1,45 @@
+{
+  "format": "aso-live-fixture/v1",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "execution_status": "specified-not-run",
+  "case_id": "ASO-L004",
+  "purpose": "Prove explicit discovery-to-advice-to-execution transition.",
+  "workspace": "disposable-temporary-directory",
+  "pre_state": {
+    "evidence_partitions": [
+      "source-a",
+      "source-b"
+    ],
+    "decision_options": [
+      "option-1",
+      "option-2"
+    ],
+    "artifact": "decision.txt"
+  },
+  "steps": [
+    "assemble blind discovery",
+    "accept and reconcile evidence",
+    "release discovery responsibilities",
+    "enlist or chain advisory integration",
+    "compile controlled single-writer execution",
+    "verify artifact"
+  ],
+  "injection": {
+    "event": "accepted evidence removes option-2",
+    "expected_recovery": "transition without preserving obsolete contribution or private scratch as truth"
+  },
+  "oracle": [
+    "transition trigger and state dispositions recorded",
+    "valid kernel regime per phase",
+    "no orphaned worker",
+    "one artifact writer"
+  ],
+  "forbidden_targets": [
+    "canonical",
+    "release",
+    "plugins",
+    "verification/evidence"
+  ]
+}

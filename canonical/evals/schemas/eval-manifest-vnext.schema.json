@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://collaborative-dynamics.example/schemas/aso-vnext-eval-manifest-v1.json",
+  "title": "Agent Swarm Orchestration vNext eval manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "case_contract_version",
+    "target_package_version",
+    "target_runtime_fingerprint",
+    "episode_mode",
+    "baseline_manifest",
+    "baseline_files",
+    "baseline_contracts",
+    "files",
+    "schemas",
+    "indispensable_dimensions",
+    "synthesis",
+    "result_authority"
+  ],
+  "properties": {
+    "format": {
+      "const": "cd-augment-eval/v1"
+    },
+    "case_contract_version": {
+      "const": "aso-vnext-eval-contract/v1"
+    },
+    "target_package_version": {
+      "const": "0.3.0"
+    },
+    "target_runtime_fingerprint": {
+      "oneOf": [
+        {
+          "const": "PENDING_SOURCE_FREEZE"
+        },
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      ]
+    },
+    "episode_mode": {
+      "const": "isolated"
+    },
+    "baseline_manifest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_files": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "baseline_contracts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "case_contract_version",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "case_contract_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "uniqueItems": true
+    },
+    "files": {
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest",
+        "natural",
+        "live",
+        "experiment",
+        "fixture"
+      ],
+      "properties": {
+        "manifest": {
+          "type": "string"
+        },
+        "natural": {
+          "type": "string"
+        },
+        "live": {
+          "type": "string"
+        },
+        "experiment": {
+          "type": "string"
+        },
+        "fixture": {
+          "type": "string"
+        }
+      }
+    },
+    "indispensable_dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "synthesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "result_authority": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

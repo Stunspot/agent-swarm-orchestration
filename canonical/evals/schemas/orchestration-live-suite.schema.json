@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://collaborative-dynamics.example/schemas/aso-vnext-live-suite-v1.json",
+  "title": "Agent Swarm Orchestration vNext live-control suite specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "suite", "case_contract_version", "target_package_version", "target_runtime_fingerprint", "execution_status", "fixture_root", "evidence_root", "fixture_policy", "required_receipts", "cases"],
+  "properties": {
+    "format": {"const": "cd-augment-eval/v1"},
+    "suite": {"const": "orchestration-organization-live-control"},
+    "case_contract_version": {"const": "aso-vnext-eval-contract/v1"},
+    "target_package_version": {"const": "0.3.0"},
+    "target_runtime_fingerprint": {"oneOf": [{"const": "PENDING_SOURCE_FREEZE"}, {"type": "string", "pattern": "^[0-9a-f]{64}$"}]},
+    "execution_status": {"const": "specified-not-run"},
+    "fixture_root": {"type": "string", "minLength": 1},
+    "evidence_root": {"type": "string", "minLength": 1},
+    "fixture_policy": {"type": "string", "minLength": 1},
+    "required_receipts": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "concern", "dimensions", "fixture", "input", "execution_contract", "required_observations", "failure_signals", "oracle"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^ASO-L[0-9]{3}$"},
+          "concern": {"type": "string", "minLength": 1},
+          "dimensions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "fixture": {"type": "string", "minLength": 1},
+          "input": {"type": "string", "minLength": 1},
+          "execution_contract": {"type": "string", "minLength": 1},
+          "required_observations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "failure_signals": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "oracle": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

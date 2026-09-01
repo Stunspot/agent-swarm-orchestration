@@ -1,7 +1,7 @@
 {
   "name": "agent-swarm-orchestration",
-  "version": "0.2.3",
-  "description": "Decides when multiple AI agents will help, divides independent work safely, and reconciles one accountable answer.",
+  "version": "0.3.0",
+  "description": "Designs, composes, and adapts temporary agent organizations while preserving authority, evidence, state custody, and accountable closure.",
   "author": {
     "name": "Collaborative Dynamics",
     "url": "https://collaborative-dynamics.com"
@@ -19,8 +19,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Agent Swarm Orchestration",
-    "shortDescription": "Parallel cognition without custody loss.",
-    "longDescription": "Choose when multiple agents earn their coordination cost, divide work under explicit ownership and authority, reconcile reported findings against evidence, and return one accountable result without pretending that dispatch equals verification.",
+    "shortDescription": "Design and adapt accountable agent organizations.",
+    "longDescription": "Shape the temporary organization a task actually needs: differentiate causal contributions, choose information and authority relations, compile each phase into a safe execution regime, adapt from evidence, and reconcile one accountable result without mistaking role costumes or agent chatter for competence.",
     "developerName": "Collaborative Dynamics",
     "websiteURL": "https://stunspot.github.io/agent-swarm-orchestration/",
     "privacyPolicyURL": "https://github.com/Stunspot/agent-swarm-orchestration/blob/main/DATA-AND-PRIVACY.md",
@@ -32,9 +32,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Choose the lightest capable topology, coordinate the work, and return one evidence-bounded result.",
-      "Split these independent areas safely, keep one writer per mutable surface, and reconcile every return.",
-      "Recover this stalled swarm from the first unearned edge without discarding accepted work."
+      "Shape the temporary agent organization this work needs, compile its next phase safely, and adapt it from evidence.",
+      "Design causally distinct contributions and relations for this problem without treating familiar swarm patterns as a closed taxonomy.",
+      "Recover or reorganize this collaboration from the first unearned edge while preserving accepted evidence and authority."
     ],
     "brandColor": "#6FE7F7",
     "composerIcon": "./assets/aso-icon.png",

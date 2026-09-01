@@ -1,0 +1,157 @@
+{
+  "format": "cd-augment-eval/v1",
+  "suite": "orchestration-organization-live-control",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "execution_status": "specified-not-run",
+  "fixture_root": "fixtures/organization-vnext",
+  "evidence_root": "verification/evidence/organization-vnext/<run-id>/episodes/<case-id>/trial-###",
+  "fixture_policy": "Use isolated disposable workspaces and exact pre/post manifests. Never mutate canonical source, released trees, retained evidence, or user repositories as fixtures.",
+  "required_receipts": [
+    "subject-prompt.md",
+    "subject-response.md",
+    "subject-execution.json",
+    "event-trace.json",
+    "pre-state.json",
+    "post-state.json",
+    "evaluator-rubric.json",
+    "judge-result.json"
+  ],
+  "cases": [
+    {
+      "id": "ASO-L001",
+      "concern": "Prove accepted sequential handoff and edge-local recovery.",
+      "dimensions": [
+        "state_transition_integrity",
+        "evidence_reconciliation"
+      ],
+      "fixture": "fixtures/organization-vnext/ASO-L001/case.json",
+      "input": "Execute the isolated fixture contract for ASO-L001 through live collaboration primitives.",
+      "execution_contract": "Capture spawn, message, wait, interrupt, acceptance, state-readback, transition, and closure events with timestamps and actor IDs where exercised.",
+      "required_observations": [
+        "event trace shows stage N+1 dispatch after root acceptance of N",
+        "stage-two retry preserves stage-one evidence and does not rerun accepted stages",
+        "final records match the declared deterministic transformation"
+      ],
+      "failure_signals": [
+        "downstream stage starts before accepted input",
+        "accepted stage is rerun after edge-local failure",
+        "handoff provenance is missing"
+      ],
+      "oracle": "Compare the event trace and exact pre/post state with the fixture oracle; an indispensable mismatch fails the case."
+    },
+    {
+      "id": "ASO-L002",
+      "concern": "Prove data-local search with least exposure and central reconciliation.",
+      "dimensions": [
+        "exposure_control",
+        "evidence_reconciliation"
+      ],
+      "fixture": "fixtures/organization-vnext/ASO-L002/case.json",
+      "input": "Execute the isolated fixture contract for ASO-L002 through live collaboration primitives.",
+      "execution_contract": "Capture spawn, message, wait, interrupt, acceptance, state-readback, transition, and closure events with timestamps and actor IDs where exercised.",
+      "required_observations": [
+        "each packet exposes only need plus assigned partition",
+        "no peer receives another partition result",
+        "root result contains three canaries and no private fields"
+      ],
+      "failure_signals": [
+        "worker receives another partition private field",
+        "peer return is broadcast outside the declared exposure",
+        "majority or board entry is treated as truth without root reconciliation"
+      ],
+      "oracle": "Compare the event trace and exact pre/post state with the fixture oracle; an indispensable mismatch fails the case."
+    },
+    {
+      "id": "ASO-L003",
+      "concern": "Prove bounded unit ownership, one shared-manifest writer, and independent state verification.",
+      "dimensions": [
+        "single_writer_integrity",
+        "authority_preservation"
+      ],
+      "fixture": "fixtures/organization-vnext/ASO-L003/case.json",
+      "input": "Execute the isolated fixture contract for ASO-L003 through live collaboration primitives.",
+      "execution_contract": "Capture spawn, message, wait, interrupt, acceptance, state-readback, transition, and closure events with timestamps and actor IDs where exercised.",
+      "required_observations": [
+        "no overlapping active write surface",
+        "one manifest writer",
+        "post-state hashes and manifest agree"
+      ],
+      "failure_signals": [
+        "two active owners share a mutable surface",
+        "a module owner writes the shared manifest",
+        "verification relies on a report rather than authoritative post-state"
+      ],
+      "oracle": "Compare the event trace and exact pre/post state with the fixture oracle; an indispensable mismatch fails the case."
+    },
+    {
+      "id": "ASO-L004",
+      "concern": "Prove explicit discovery-to-advice-to-execution transition.",
+      "dimensions": [
+        "state_transition_integrity",
+        "responsible_closure"
+      ],
+      "fixture": "fixtures/organization-vnext/ASO-L004/case.json",
+      "input": "Execute the isolated fixture contract for ASO-L004 through live collaboration primitives.",
+      "execution_contract": "Capture spawn, message, wait, interrupt, acceptance, state-readback, transition, and closure events with timestamps and actor IDs where exercised.",
+      "required_observations": [
+        "transition trigger and state dispositions recorded",
+        "valid kernel regime per phase",
+        "no orphaned worker",
+        "one artifact writer"
+      ],
+      "failure_signals": [
+        "phase changes without a triggering observation",
+        "responsibility or state lacks disposition",
+        "execution begins without a valid kernel regime or single writer"
+      ],
+      "oracle": "Compare the event trace and exact pre/post state with the fixture oracle; an indispensable mismatch fails the case."
+    },
+    {
+      "id": "ASO-L005",
+      "concern": "Prove correction-aware redirection and uncertain post-state handling.",
+      "dimensions": [
+        "authority_preservation",
+        "state_transition_integrity"
+      ],
+      "fixture": "fixtures/organization-vnext/ASO-L005/case.json",
+      "input": "Execute the isolated fixture contract for ASO-L005 through live collaboration primitives.",
+      "execution_contract": "Capture spawn, message, wait, interrupt, acceptance, state-readback, transition, and closure events with timestamps and actor IDs where exercised.",
+      "required_observations": [
+        "all affected members receive disposition",
+        "no mutation resumes before readback",
+        "final result follows corrected objective"
+      ],
+      "failure_signals": [
+        "correction is ignored or causes equivalent-team reconstruction",
+        "mutation resumes before authoritative readback",
+        "interruption is reported as rollback evidence"
+      ],
+      "oracle": "Compare the event trace and exact pre/post state with the fixture oracle; an indispensable mismatch fails the case."
+    },
+    {
+      "id": "ASO-L006",
+      "concern": "Prove mixed-status closure at an earned evidence boundary.",
+      "dimensions": [
+        "responsible_closure",
+        "evidence_reconciliation"
+      ],
+      "fixture": "fixtures/organization-vnext/ASO-L006/case.json",
+      "input": "Execute the isolated fixture contract for ASO-L006 through live collaboration primitives.",
+      "execution_contract": "Capture spawn, message, wait, interrupt, acceptance, state-readback, transition, and closure events with timestamps and actor IDs where exercised.",
+      "required_observations": [
+        "every member disposition recorded",
+        "artifact state reconciled",
+        "health remains unverified",
+        "organization dissolved"
+      ],
+      "failure_signals": [
+        "a responsibility remains undispositioned",
+        "unsupported health is promoted to verified",
+        "a fresh ceremonial organization is opened instead of closing"
+      ],
+      "oracle": "Compare the event trace and exact pre/post state with the fixture oracle; an indispensable mismatch fails the case."
+    }
+  ]
+}

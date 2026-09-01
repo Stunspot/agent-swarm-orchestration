@@ -1,0 +1,127 @@
+{
+  "format": "aso-source-development-verification/v1",
+  "package": "agent-swarm-orchestration",
+  "version": "0.3.0-dev",
+  "runtime_version": "0.3.0-dev",
+  "runtime_fingerprint": "e625a54f9facee4b093c6504cb7b8cc870a4e5e98443e6eebe60f320dc43eed2",
+  "observed_at": "2026-08-31T21:53:56.1760872Z",
+  "state": "source-development-unreleased",
+  "source_gate": {
+    "valid": true,
+    "command": "python -B -X utf8 tools\\validate_source_development.py",
+    "aggregate_test_executions": 148,
+    "runtime_suites": [
+      {
+        "surface": "canonical",
+        "discovered": 27,
+        "passed": 27,
+        "skipped": 0
+      },
+      {
+        "surface": "plugin mirror",
+        "discovered": 27,
+        "passed": 27,
+        "skipped": 0
+      },
+      {
+        "surface": "Codex standalone mirror",
+        "discovered": 27,
+        "passed": 27,
+        "skipped": 0
+      },
+      {
+        "surface": "Claude standalone mirror",
+        "discovered": 27,
+        "passed": 27,
+        "skipped": 0
+      }
+    ],
+    "repository_suite": {
+      "discovered": 40,
+      "passed": 39,
+      "skipped": 1,
+      "skip_reason": "Directory-symlink creation requires unavailable Windows privilege (WinError 1314); file-symlink and real Windows junction/reparse probes executed and passed."
+    },
+    "diff_check": "passed"
+  },
+  "runtime_parity": {
+    "valid": true,
+    "canonical_files": 26,
+    "plugin_missing": 0,
+    "plugin_extra": 0,
+    "plugin_changed": 0,
+    "codex_missing": 0,
+    "codex_extra": 0,
+    "codex_changed": 0,
+    "claude_missing": 0,
+    "claude_extra": 0,
+    "claude_changed": 0
+  },
+  "evaluation_custody": {
+    "valid": true,
+    "mode": "dry-run",
+    "validation_scope": "contract-and-fixture-completeness-only",
+    "execution_evidence": "not-evaluated",
+    "baseline_cases": 20,
+    "natural_qualification_cases": 16,
+    "live_control_cases": 6,
+    "ablation_experiments": 3,
+    "fixtures": 6,
+    "schemas": 5
+  },
+  "source_level_organization_qualification": {
+    "outcome": "bounded-pass",
+    "fresh_scenarios": 6,
+    "passed": 6,
+    "scope": "Current source behavior and design fit only.",
+    "established": "The skill exposes a generative organization workbench with role synergy, hybrid and invented forms, phase transitions, stakeholder standing, and explicit resolution without a closed taxonomy.",
+    "not_established": "Live-control effectiveness, comparative superiority, or deployment performance."
+  },
+  "independent_final_audit": {
+    "outcome": "bounded-pass",
+    "reproducible_blockers": 0,
+    "counterexample_classes_replayed": [
+      "empty allowed authority",
+      "closed-but-not-reconciled upstream dependency",
+      "placeholder evidence",
+      "terminal-prefix smuggling",
+      "Windows trailing-dot and trailing-space aliases",
+      "extra authority and distribution metadata",
+      "contradictory negative evidence",
+      "post-plan parent-junction copy and removal escape",
+      "KeyboardInterrupt and SystemExit rollback"
+    ]
+  },
+  "frozen_release_baseline": {
+    "version": "0.2.3",
+    "runtime_fingerprint": "8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5",
+    "build_refusal": "Expected failure: package status is not release-ready: source-development.",
+    "hashes_unchanged": true,
+    "sha256": {
+      "archive_custody": "CBD925EC4FCF33D24C59EFD70F58E8959E9E22E113B2F8A6AB483780B3CD16A4",
+      "checksums": "FDA392C806F9C2DF81BF7D6915B76A12CF8F8A3D37456F8822B49828CCAD1650",
+      "codex_plugin_zip": "00964D85A389571C6DFA561A3EFFF07E497CAEAFF04A8F5AD81F9354F39BFA8F",
+      "codex_skill_zip": "AB3ED058D8CB26B0CA70DCDA39F9C1A622950F80BCA379BB33C964306AEF4886",
+      "claude_skill_zip": "AB3ED058D8CB26B0CA70DCDA39F9C1A622950F80BCA379BB33C964306AEF4886"
+    }
+  },
+  "repository_state": {
+    "branch": "main",
+    "base_head": "01504f8e47af467883aa8dbfe4831cd6ad49faa9",
+    "worktree": "intentional-uncommitted-source-development-changes",
+    "commit_created": false,
+    "remote_action": "not-performed"
+  },
+  "not_established": [
+    "Installation or host discovery",
+    "Clean-host invocation",
+    "Live-control-case or ablation execution",
+    "Comparative superiority",
+    "Release readiness",
+    "Publication, deployment, or external synchronization"
+  ],
+  "residuals": [
+    "One directory-symlink creation probe was skipped for unavailable Windows privilege; equivalent file-symlink and real junction/reparse protections executed and passed.",
+    "Real-use benefits remain to be observed after an authorized installation or invocation."
+  ]
+}

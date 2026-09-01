@@ -1,0 +1,51 @@
+{
+  "format": "aso-live-fixture/v1",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "execution_status": "specified-not-run",
+  "case_id": "ASO-L006",
+  "purpose": "Prove mixed-status closure at an earned evidence boundary.",
+  "workspace": "disposable-temporary-directory",
+  "pre_state": {
+    "members": [
+      {
+        "id": "a",
+        "status": "returned"
+      },
+      {
+        "id": "b",
+        "status": "failed"
+      },
+      {
+        "id": "c",
+        "status": "interrupted"
+      }
+    ],
+    "artifact": "result.txt",
+    "unsupported_claim": "live service is healthy"
+  },
+  "steps": [
+    "reconcile returned evidence and artifact bytes",
+    "record failed and interrupted dispositions",
+    "keep health claim unverified",
+    "release all responsibilities",
+    "close without a fresh plan"
+  ],
+  "injection": {
+    "event": "one return claims health without live observation",
+    "expected_recovery": "preserve unverified boundary"
+  },
+  "oracle": [
+    "every member disposition recorded",
+    "artifact state reconciled",
+    "health remains unverified",
+    "organization dissolved"
+  ],
+  "forbidden_targets": [
+    "canonical",
+    "release",
+    "plugins",
+    "verification/evidence"
+  ]
+}

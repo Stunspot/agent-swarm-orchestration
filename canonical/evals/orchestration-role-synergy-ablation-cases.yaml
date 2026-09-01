@@ -1,0 +1,101 @@
+{
+  "format": "cd-augment-eval/v1",
+  "suite": "orchestration-role-synergy-ablation",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "execution_status": "specified-not-run",
+  "promotion_rule": "A pattern, adaptive rule, or exposure default remains an Option or Experiment until repeated prospective matched-budget evidence improves task-native outcome without an indispensable safety failure.",
+  "measures": [
+    "task_native_outcome",
+    "corrected_errors",
+    "introduced_errors",
+    "unique_evidence_contribution",
+    "minority_correction_survival",
+    "handoff_loss",
+    "tokens",
+    "wall_time",
+    "recovery",
+    "security_contamination"
+  ],
+  "experiments": [
+    {
+      "id": "ASO-X001",
+      "dimensions": [
+        "contribution_causality",
+        "organizational_non_rigidity"
+      ],
+      "question": "Do functional differences add value beyond persona labels?",
+      "arms": [
+        "strong Direct",
+        "equal-budget independent sampling",
+        "identical nominal personas",
+        "functional contributions with distinct evidence, tools, or transformations",
+        "same functional graph with labels shuffled"
+      ],
+      "repetitions": 5,
+      "budget_match": "Match maximum tokens, tool calls, wall-clock cap, source access, and verifier budget across arms; record actual use.",
+      "randomization": "Randomize case order and blind the adjudicator to arm labels.",
+      "oracle": "Use the same preregistered task-native outcome and indispensable safety gates for every arm.",
+      "promotion_threshold": "Repeated prospective improvement over strong Direct and nearest simpler baseline with zero indispensable safety failures; report uncertainty and local scope.",
+      "safety_gates": [
+        "authority_preservation",
+        "single_writer_integrity",
+        "evidence_reconciliation",
+        "responsible_closure"
+      ]
+    },
+    {
+      "id": "ASO-X002",
+      "dimensions": [
+        "exposure_control",
+        "resolver_integrity"
+      ],
+      "question": "Which interaction schedule improves the result?",
+      "arms": [
+        "blind-first",
+        "full disclosure",
+        "selective challenge",
+        "all-to-all debate",
+        "explicit resolver",
+        "implicit consensus"
+      ],
+      "repetitions": 5,
+      "budget_match": "Match maximum tokens, tool calls, wall-clock cap, source access, and verifier budget across arms; record actual use.",
+      "randomization": "Randomize case order and blind the adjudicator to arm labels.",
+      "oracle": "Use the same preregistered task-native outcome and indispensable safety gates for every arm.",
+      "promotion_threshold": "Repeated prospective improvement over strong Direct and nearest simpler baseline with zero indispensable safety failures; report uncertainty and local scope.",
+      "safety_gates": [
+        "authority_preservation",
+        "single_writer_integrity",
+        "evidence_reconciliation",
+        "responsible_closure"
+      ]
+    },
+    {
+      "id": "ASO-X003",
+      "dimensions": [
+        "state_transition_integrity",
+        "organizational_non_rigidity"
+      ],
+      "question": "Does evidence-triggered reform outperform a fixed simpler workflow?",
+      "arms": [
+        "nearest fixed workflow",
+        "phase-scoped recruitment and pruning",
+        "same organization without pruning",
+        "same budget with early stop"
+      ],
+      "repetitions": 5,
+      "budget_match": "Match maximum tokens, tool calls, wall-clock cap, source access, and verifier budget across arms; record actual use.",
+      "randomization": "Randomize case order and blind the adjudicator to arm labels.",
+      "oracle": "Use the same preregistered task-native outcome and indispensable safety gates for every arm.",
+      "promotion_threshold": "Repeated prospective improvement over strong Direct and nearest simpler baseline with zero indispensable safety failures; report uncertainty and local scope.",
+      "safety_gates": [
+        "authority_preservation",
+        "single_writer_integrity",
+        "evidence_reconciliation",
+        "responsible_closure"
+      ]
+    }
+  ]
+}

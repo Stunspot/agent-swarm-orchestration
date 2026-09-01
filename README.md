@@ -2,9 +2,9 @@
 
 # Agent Swarm Orchestration
 
-Agent Swarm Orchestration is a free Collaborative Dynamics Augment for coordinating multiple AI agents without misplacing the mission, authority, evidence, or final judgment somewhere in the group chat.
+Agent Swarm Orchestration is a free Collaborative Dynamics Augment for designing and coordinating the temporary agent organization a task actually needs. It keeps one accountable root responsible for the mission, authority, shared state, integration, and final claim.
 
-Its promise is simple: **parallel cognition without custody loss**. One accountable root decides whether a swarm is worth its overhead, gives each worker one coherent responsibility, prevents write collisions, reconciles returned claims against evidence, and delivers one integrated result.
+Version 0.3.0 adds the missing layer above “split the work”: it asks which distinct contributions are causally useful, who should see or challenge whose work, where authority and state live, how conflicts will be resolved, and what evidence should recruit, release, rewire, change phase, or stop the organization. A bucketline, anthill, platoon, boardroom, general staff, complex adaptive system, or unfamiliar hybrid is a source of mechanisms—not a sacred taxonomy handed down by the Department of Tiny Committees.
 
 **[Explore the visual project guide →](https://stunspot.github.io/agent-swarm-orchestration/)**
 
@@ -15,55 +15,58 @@ codex plugin marketplace add Stunspot/agent-swarm-orchestration --ref main --spa
 codex plugin add agent-swarm-orchestration@cd-agent-swarm-orchestration
 ```
 
-Start a fresh Codex task, then invoke `$agent-swarm-orchestration`. The repository also preserves a standalone Codex folder, a byte-matched Claude folder, and one-skill ZIPs for hosts that accept direct skill installation.
+Start a fresh Codex task, then invoke `$agent-swarm-orchestration`. The repository also carries standalone Codex and Claude folders plus one-skill ZIPs for hosts that accept direct skill installation.
 
 The package does not create agent tools. It reads the collaboration controls exposed by the current host and adapts to their live schemas, concurrency, messaging, waiting, interruption, and lifecycle semantics.
 
-## What it helps an agent do
+## What it helps an agent think about
 
-- choose Direct, Enlist, Assemble, Chain, or Recover instead of spawning by reflex;
-- map prerequisites, ready work, ownership, budgets, and stop conditions;
-- keep deterministic inventory at the root and delegate only work that earns context reconstruction;
-- give each worker a bounded packet with exact scope, authority, evidence burden, and return shape;
-- reserve one writer for every mutable surface;
-- sequence correctness-bearing changes before clarity or polish on shared artifacts;
-- keep worker findings `agent-reported` until the root inspects their evidence;
-- continue authorized work while reserving only the actual authority edge;
-- recover from stale context, failed workers, collisions, corrections, and capability loss without discarding accepted work;
-- account for every worker before closure.
+Before dispatch, the coordinator identifies the next reasoning horizon and asks what has to be produced, which contributions have distinct causal jobs, what information exposure will improve or contaminate them, who may decide or mutate what, where task truth and artifact state live, and what resolver can settle disagreement without inventing an oracle.
 
-It does not expand authority, prove worker claims, guarantee savings, run after the host task ends, or turn five agents into five times the competence. That last trick remains regrettably unavailable from physics.
+Named personas can make a stance memorable or perturb search usefully. They do not establish competence, independence, evidence, or authority. Every admitted contribution still needs a distinct transformation, evidence channel, capability, error opportunity, containment boundary, check, or justified redundancy—and a named consumer.
 
-## The five operating shapes
+The organization can change as evidence arrives. It may recruit a new capability, release a completed member, isolate competing hypotheses, expose selected work for critique, switch resolver, move to another execution regime, or dissolve entirely. The form is a working hypothesis, not a pet org chart seeking tenure.
 
-| Shape | Use it when |
+## Execution kernel
+
+Each live phase compiles into one legible control regime:
+
+| Regime | Use it when |
 |---|---|
-| **Direct** | The root can complete small, sequential, same-surface, or shared-context-heavy work more safely and cheaply. |
-| **Enlist** | One bounded worker can return a useful result while the root continues the mission. |
+| **Direct** | The root can complete the current horizon more safely and cheaply. |
+| **Enlist** | One bounded worker can add a useful contribution while the root continues. |
 | **Assemble** | Two or more independent, ready slices can run concurrently under separate ownership. |
-| **Chain** | One accepted result determines the exact input to the next specialist. |
-| **Recover** | Existing work is failed, stale, conflicting, interrupted, or based on a bad premise. |
+| **Chain** | An accepted result must become the next specialist’s exact input. |
+| **Recover** | Useful state should survive while a failed premise, route, owner, tool, sequence, or verifier changes. |
+
+These are execution regimes, not the whole design vocabulary. One task may move through several of them; each phase still needs explicit authority, state, evidence, and closure.
 
 ## Get to first value
 
-Use a task with genuinely independent read surfaces:
+Try a problem where simple parallel inspection is useful:
 
 ```text
-Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep every worker read-only. Decide whether parallel agents earn their coordination cost, give each worker one bounded evidence question, and return one comparison with the riskiest inconsistency. Treat worker findings as reported until you inspect their cited evidence.
+Use $agent-swarm-orchestration to inspect billing, search, and notifications for retry behavior. Keep every worker read-only. Decide which contributions are actually distinct, whether they should remain independent or cross-review, and what evidence will resolve disagreement. Compile the next phase into the smallest safe execution regime and return one reconciled comparison with the riskiest inconsistency.
 ```
 
-A correct decision to work directly is not a failure. It is the skill saving you from a tiny bureaucracy with tokens.
+Or use a problem where deliberation matters:
+
+```text
+Use $agent-swarm-orchestration to design a temporary deliberative organization for this messy policy problem. Give each contribution a causal job and evidence burden. Do not treat stakeholder simulation as stakeholder authority. Choose information exposure and a resolver deliberately, adapt the organization when evidence changes the live uncertainty, and return one accountable synthesis with unresolved value conflicts intact.
+```
+
+A correct Direct decision is success. So is purposeful redundancy when it has a causal reason, a cap, and a resolver. Headcount is not the unit of intelligence. Sometimes it is merely the unit of catering.
 
 ## Product and release map
 
-- `canonical/skills/agent-swarm-orchestration/` — maintained runtime source.
-- `plugins/agent-swarm-orchestration/` — installable Codex marketplace plugin.
-- `release/codex/agent-swarm-orchestration/` — standalone Codex folder.
+- `canonical/skills/agent-swarm-orchestration/` — maintained 26-file runtime source.
+- `plugins/agent-swarm-orchestration/` — Codex marketplace plugin wrapper.
+- `release/codex/agent-swarm-orchestration/` — byte-matched standalone Codex folder.
 - `release/claude/agent-swarm-orchestration/` — byte-matched Claude folder.
-- `release-assets/v0.2.3/` — governed plugin and standalone release archives.
-- `claude-ai/` — one-skill Claude upload archive.
-- `canonical/evals/` and `verification/` — retained behavioral cases and evidence.
-- `docs/` — tailored GitHub Pages source and visual assets.
+- `release-assets/v0.3.0/` — 0.3.0 plugin and skill ZIPs, custody, checksums, and verification companions.
+- `claude-ai/agent-swarm-orchestration-v0.3.0.zip` — byte-identical one-skill archive.
+- `canonical/evals/` and `verification/` — bounded qualification contracts and historical evidence.
+- `docs/` — GitHub Pages source and visual assets.
 
 ## Documentation journey
 
@@ -71,25 +74,21 @@ A correct decision to work directly is not a failure. It is the skill saving you
 |---|---|
 | Will this help, and what should I try first? | [Start here](START-HERE.md) |
 | How do I install, check, remove, or roll back? | [Installation](INSTALLATION.md) |
-| How do I use the common orchestration patterns? | [Workflows](WORKFLOWS.md) |
+| How do I design and run common organizations? | [Workflows](WORKFLOWS.md) |
 | Why is it not behaving as expected? | [Troubleshooting](TROUBLESHOOTING.md) |
 | What may I trust, and what remains untested? | [Trust and limits](TRUST-AND-LIMITS.md) |
 | Which host surfaces are packaged? | [Host matrix](host-matrix.md) |
 | How is data handled? | [Data and privacy](DATA-AND-PRIVACY.md) |
-| What are the use and responsibility boundaries? | [Terms of use](TERMS-OF-USE.md) |
-| What should I send for support? | [Support](SUPPORT.md) |
-| What changed in the public release? | [0.2.3 release notes](RELEASE-NOTES-v0.2.3.md) |
+| What changed? | [0.3.0 release notes](RELEASE-NOTES-v0.3.0.md) |
 
 ## Evidence boundary
 
-Version 0.2.3 preserves the verified runtime fingerprint `8833af967b1faf2f1b1b92a5eda54129579a995c91965b73883bc1f8272768b5`. The included validator suite, runtime parity checks, portable ZIP topology, and ten-case Codex decision qualification support the boundaries recorded in [Trust and limits](TRUST-AND-LIMITS.md).
+Version 0.3.0 binds the runtime to fingerprint `ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca`. Canonical/plugin/Codex/Claude parity, plan-validator tests, six fresh source-level organization scenarios, eval-contract validation, portable ZIP topology, archive custody, checksums, and documentation structure can be checked locally.
 
-That evidence does not establish universal reliability, universal savings, live behavior on every future host contract, clean installation on every customer machine, Claude activation, accessibility conformance, directory approval, or customer outcomes. Packaging and publication receipts are tracked separately from runtime behavior.
+The vNext live-control cases and role-synergy ablations are specified but not run. Prior 0.1.0 and 0.2.3 behavioral evidence does not silently transfer to the new runtime. Local packaging does not establish public publication, clean-host installation, discovery, invocation, Claude activation, universal savings, stakeholder legitimacy, customer outcomes, or superiority over a strong single-agent route. See [Trust and limits](TRUST-AND-LIMITS.md).
 
 ## License
 
 Agent Swarm Orchestration is free to use and redistribute under a split license: MIT for Python software and machine-readable schemas; CC BY-ND 4.0 for original authored Augment material. See [LICENSE.md](LICENSE.md), [ATTRIBUTION.md](ATTRIBUTION.md), and [TRADEMARKS.md](TRADEMARKS.md).
-
-## Publisher
 
 Agent Swarm Orchestration is a Collaborative Dynamics Augment. Issues and contributions are welcome within the boundaries in [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).

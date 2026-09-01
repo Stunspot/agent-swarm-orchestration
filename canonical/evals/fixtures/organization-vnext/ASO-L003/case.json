@@ -1,0 +1,44 @@
+{
+  "format": "aso-live-fixture/v1",
+  "case_contract_version": "aso-vnext-eval-contract/v1",
+  "target_package_version": "0.3.0",
+  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "execution_status": "specified-not-run",
+  "case_id": "ASO-L003",
+  "purpose": "Prove bounded unit ownership, one shared-manifest writer, and independent state verification.",
+  "workspace": "disposable-git-repository",
+  "pre_state": {
+    "modules": [
+      "alpha.txt",
+      "beta.txt",
+      "gamma.txt"
+    ],
+    "manifest": "manifest.json",
+    "expected_updates": [
+      "alpha",
+      "beta",
+      "gamma"
+    ]
+  },
+  "steps": [
+    "assign one module per bounded owner",
+    "collect module post-state",
+    "one root-owned integrator writes manifest",
+    "independent verifier reads modules and manifest"
+  ],
+  "injection": {
+    "event": "a module owner proposes direct manifest write",
+    "expected_recovery": "reject shared write and return manifest delta to integrator"
+  },
+  "oracle": [
+    "no overlapping active write surface",
+    "one manifest writer",
+    "post-state hashes and manifest agree"
+  ],
+  "forbidden_targets": [
+    "canonical",
+    "release",
+    "plugins",
+    "verification/evidence"
+  ]
+}

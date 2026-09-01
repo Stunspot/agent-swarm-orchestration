@@ -1,0 +1,12 @@
+Agent Swarm Orchestration 0.3.0 skill archive verification
+
+Archive: Skill-agent-swarm-orchestration-v0.3.0.zip
+Expected SHA-256: 68292DA08974225278EF19704830606354C124C2695E4AE0A1E9CD1E4E70EB3B
+
+PowerShell:
+(Get-FileHash -Algorithm SHA256 .\Skill-agent-swarm-orchestration-v0.3.0.zip).Hash
+
+macOS/Linux:
+shasum -a 256 Skill-agent-swarm-orchestration-v0.3.0.zip
+
+A matching SHA-256 establishes exact archive byte identity only. It does not establish installation, discovery, invocation, healthy behavior, or publication.

@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Build deterministic Agent Swarm Orchestration 0.2.3 release archives."""
+"""Build deterministic Agent Swarm Orchestration 0.3.0 release archives."""
 
 from __future__ import annotations
 
 import hashlib
 import json
-import shutil
 import zipfile
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.3"
-FIXED_TIME = (2026, 8, 14, 0, 0, 0)
+VERSION = "0.3.0"
+FIXED_TIME = (2026, 9, 1, 0, 0, 0)
+GENERATED_AT = "2026-09-01"
 OUT = ROOT / "release-assets" / f"v{VERSION}"
 PLUGIN_SOURCE = ROOT / "plugins" / "agent-swarm-orchestration"
 SKILL_SOURCE = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
@@ -29,8 +29,8 @@ def is_release_file(path: Path, root: Path) -> bool:
 
 def files_under(root: Path) -> list[Path]:
     return sorted(
-        (p for p in root.rglob("*") if is_release_file(p, root)),
-        key=lambda p: p.relative_to(root).as_posix(),
+        (path for path in root.rglob("*") if is_release_file(path, root)),
+        key=lambda path: path.relative_to(root).as_posix(),
     )
 
 
@@ -53,9 +53,9 @@ def tree_digest(root: Path) -> str:
 
 
 def build_zip(source: Path, target: Path, top_level: str) -> dict[str, object]:
-    target.parent.mkdir(parents=True, exist_ok=True)
     if target.exists():
-        target.unlink()
+        raise RuntimeError(f"refusing to overwrite release artifact: {target}")
+    target.parent.mkdir(parents=True, exist_ok=True)
     members: list[str] = []
     with zipfile.ZipFile(target, "w", compression=zipfile.ZIP_STORED) as archive:
         for path in files_under(source):
@@ -79,8 +79,51 @@ def build_zip(source: Path, target: Path, top_level: str) -> dict[str, object]:
     }
 
 
+def assert_release_ready() -> None:
+    package = json.loads((ROOT / "package-manifest.json").read_text(encoding="utf-8"))
+    plugin = json.loads((PLUGIN_SOURCE / ".codex-plugin" / "plugin.json").read_text(encoding="utf-8"))
+    if package.get("status") not in {"public-release-candidate", "public-release-published"}:
+        raise RuntimeError(f"package status is not release-ready: {package.get('status')}")
+    if package.get("version") != VERSION or package.get("runtime_version") != VERSION or plugin.get("version") != VERSION:
+        raise RuntimeError(
+            "release identity mismatch: "
+            f"builder={VERSION} package={package.get('version')} "
+            f"runtime={package.get('runtime_version')} plugin={plugin.get('version')}"
+        )
+    canonical_fingerprint = tree_digest(SKILL_SOURCE)
+    if package.get("runtime_fingerprint") != canonical_fingerprint:
+        raise RuntimeError(
+            f"runtime fingerprint mismatch: manifest={package.get('runtime_fingerprint')} canonical={canonical_fingerprint}"
+        )
+    if OUT.exists() or CLAUDE_OUT.exists():
+        raise RuntimeError(f"refusing to overwrite existing version custody: {OUT} or {CLAUDE_OUT}")
+
+
+def write_skill_companions(skill_record: dict[str, object]) -> None:
+    archive_name = Path(str(skill_record["path"])).name
+    expected = str(skill_record["sha256"]).upper()
+    checksum_path = OUT / f"{archive_name}.sha256"
+    checksum_path.write_text(f"{expected}  {archive_name}\n", encoding="utf-8", newline="\n")
+    verify_path = OUT / f"Skill-agent-swarm-orchestration-v{VERSION}-VERIFY.txt"
+    verify_text = f"""Agent Swarm Orchestration {VERSION} skill archive verification
+
+Archive: {archive_name}
+Expected SHA-256: {expected}
+
+PowerShell:
+(Get-FileHash -Algorithm SHA256 .\\{archive_name}).Hash
+
+macOS/Linux:
+shasum -a 256 {archive_name}
+
+A matching SHA-256 establishes exact archive byte identity only. It does not establish installation, discovery, invocation, healthy behavior, or publication.
+"""
+    verify_path.write_text(verify_text, encoding="utf-8", newline="\n")
+
+
 def main() -> int:
-    OUT.mkdir(parents=True, exist_ok=True)
+    assert_release_ready()
+    OUT.mkdir(parents=True, exist_ok=False)
     plugin_zip = OUT / f"Plugin-Agent-Swarm-Orchestration-v{VERSION}.zip"
     skill_zip = OUT / f"Skill-agent-swarm-orchestration-v{VERSION}.zip"
 
@@ -93,17 +136,20 @@ def main() -> int:
         "format": "cd-augment-archive-custody/v1",
         "product": "agent-swarm-orchestration",
         "version": VERSION,
-        "generated_at": "2026-08-14",
+        "generated_at": GENERATED_AT,
         "archives": records,
     }
     custody_path = OUT / "archive-custody.json"
     custody_path.write_text(json.dumps(custody, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     checksum_lines = [
-        f"{record['sha256']}  {Path(str(record['path'])).name}" for record in records if str(record["path"]).startswith("release-assets/")
+        f"{record['sha256']}  {Path(str(record['path'])).name}"
+        for record in records
+        if str(record["path"]).startswith("release-assets/")
     ]
     checksum_lines.append(f"{records[2]['sha256']}  ../../{records[2]['path']}")
     (OUT / "checksums.sha256").write_text("\n".join(checksum_lines) + "\n", encoding="utf-8", newline="\n")
+    write_skill_companions(records[1])
 
     print(json.dumps(custody, indent=2))
     return 0
