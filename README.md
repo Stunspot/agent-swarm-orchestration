@@ -83,7 +83,7 @@ A correct Direct decision is success. So is purposeful redundancy when it has a 
 
 ## Evidence boundary
 
-Version 0.3.0 binds the runtime to fingerprint `ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca`. Canonical/plugin/Codex/Claude parity, plan-validator tests, six fresh source-level organization scenarios, eval-contract validation, portable ZIP topology, archive custody, checksums, and documentation structure can be checked locally.
+Version 0.3.0 binds the runtime to fingerprint `62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732`. Canonical/plugin/Codex/Claude parity, plan-validator tests, six fresh source-level organization scenarios, eval-contract validation, portable ZIP topology, archive custody, checksums, and documentation structure can be checked locally.
 
 The vNext live-control cases and role-synergy ablations are specified but not run. Prior 0.1.0 and 0.2.3 behavioral evidence does not silently transfer to the new runtime. Local packaging does not establish public publication, clean-host installation, discovery, invocation, Claude activation, universal savings, stakeholder legitimacy, customer outcomes, or superiority over a strong single-agent route. See [Trust and limits](TRUST-AND-LIMITS.md).
 
