@@ -4,7 +4,7 @@
   "display_name": "Agent Swarm Orchestration",
   "version": "0.3.0",
   "runtime_version": "0.3.0",
-  "runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
   "status": "public-release-candidate",
   "map": "design-record/agent-swarm-orchestration-vnext-organization-architecture.md",
   "build_state": "design-record/agent-swarm-orchestration-v0.3.0-release-state.md",
@@ -25,7 +25,7 @@
   "evaluation_custody": {
     "baseline": "historical-contracts-pinned-rerun-required-on-new-runtime",
     "vnext": "contracts-and-fixtures-valid-live-execution-not-evaluated",
-    "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca"
+    "target_runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732"
   },
   "customer_docs_manifest": "documentation-manifest.json",
   "distributions": {

@@ -6,32 +6,32 @@
   "archives": [
     {
       "path": "release-assets/v0.3.0/Plugin-Agent-Swarm-Orchestration-v0.3.0.zip",
-      "sha256": "219b1b0fd129736e1e5790cd8ca46c882e87e2fe3dfb50d6a55d63dff9547915",
-      "size": 3493742,
+      "sha256": "0afb0053999c5e83052ffd14320b97fb512e42a44acb7cf853b9aa2283f1b4ab",
+      "size": 3493636,
       "member_count": 30,
       "top_level": "agent-swarm-orchestration",
       "source": "plugins/agent-swarm-orchestration",
-      "source_tree_sha256": "754fe3be00b64e80b23820c6bdb8045dfa81c81f16be229abb662866f6d0c750",
+      "source_tree_sha256": "13e9ab820eff4b1bfb0c4b1ffd62ca68bbe942a5cf3c7ac899cb67983c0ff466",
       "members_use_posix_paths": true
     },
     {
       "path": "release-assets/v0.3.0/Skill-agent-swarm-orchestration-v0.3.0.zip",
-      "sha256": "68292da08974225278ef19704830606354c124c2695e4ae0a1e9cd1e4e70eb3b",
-      "size": 131776,
+      "sha256": "95a8e2ee3abc28d7a028bc0240bcd00b6bc401103a4e3ebe92362a34126c8316",
+      "size": 131670,
       "member_count": 26,
       "top_level": "agent-swarm-orchestration",
       "source": "canonical/skills/agent-swarm-orchestration",
-      "source_tree_sha256": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+      "source_tree_sha256": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
       "members_use_posix_paths": true
     },
     {
       "path": "claude-ai/agent-swarm-orchestration-v0.3.0.zip",
-      "sha256": "68292da08974225278ef19704830606354c124c2695e4ae0a1e9cd1e4e70eb3b",
-      "size": 131776,
+      "sha256": "95a8e2ee3abc28d7a028bc0240bcd00b6bc401103a4e3ebe92362a34126c8316",
+      "size": 131670,
       "member_count": 26,
       "top_level": "agent-swarm-orchestration",
       "source": "canonical/skills/agent-swarm-orchestration",
-      "source_tree_sha256": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+      "source_tree_sha256": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
       "members_use_posix_paths": true
     }
   ]
