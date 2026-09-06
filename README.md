@@ -4,7 +4,7 @@
 
 Agent Swarm Orchestration is a free Collaborative Dynamics Augment for designing and coordinating the temporary agent organization a task actually needs. It keeps one accountable root responsible for the mission, authority, shared state, integration, and final claim.
 
-Version 0.3.0 adds the missing layer above “split the work”: it asks which distinct contributions are causally useful, who should see or challenge whose work, where authority and state live, how conflicts will be resolved, and what evidence should recruit, release, rewire, change phase, or stop the organization. A bucketline, anthill, platoon, boardroom, general staff, complex adaptive system, or unfamiliar hybrid is a source of mechanisms—not a sacred taxonomy handed down by the Department of Tiny Committees.
+Version 0.3.1 retains the organization design introduced in 0.3.0 and adds concise discovery and complete customer installation guidance. The design adds the missing layer above “split the work”: it asks which distinct contributions are causally useful, who should see or challenge whose work, where authority and state live, how conflicts will be resolved, and what evidence should recruit, release, rewire, change phase, or stop the organization. A bucketline, anthill, platoon, boardroom, general staff, complex adaptive system, or unfamiliar hybrid is a source of mechanisms—not a sacred taxonomy handed down by the Department of Tiny Committees.
 
 **[Explore the visual project guide →](https://stunspot.github.io/agent-swarm-orchestration/)**
 
@@ -63,8 +63,8 @@ A correct Direct decision is success. So is purposeful redundancy when it has a 
 - `plugins/agent-swarm-orchestration/` — Codex marketplace plugin wrapper.
 - `release/codex/agent-swarm-orchestration/` — byte-matched standalone Codex folder.
 - `release/claude/agent-swarm-orchestration/` — byte-matched Claude folder.
-- `release-assets/v0.3.0/` — 0.3.0 plugin and skill ZIPs, custody, checksums, and verification companions.
-- `claude-ai/agent-swarm-orchestration-v0.3.0.zip` — byte-identical one-skill archive.
+- `release-assets/v0.3.1/` — 0.3.1 plugin and skill ZIPs, custody, checksums, and verification companions.
+- `claude-ai/agent-swarm-orchestration-v0.3.1.zip` — byte-identical one-skill archive.
 - `canonical/evals/` and `verification/` — bounded qualification contracts and historical evidence.
 - `docs/` — GitHub Pages source and visual assets.
 
@@ -79,11 +79,11 @@ A correct Direct decision is success. So is purposeful redundancy when it has a 
 | What may I trust, and what remains untested? | [Trust and limits](TRUST-AND-LIMITS.md) |
 | Which host surfaces are packaged? | [Host matrix](host-matrix.md) |
 | How is data handled? | [Data and privacy](DATA-AND-PRIVACY.md) |
-| What changed? | [0.3.0 release notes](RELEASE-NOTES-v0.3.0.md) |
+| What changed? | [0.3.1 release notes](RELEASE-NOTES-v0.3.1.md) |
 
 ## Evidence boundary
 
-Version 0.3.0 binds the runtime to fingerprint `62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732`. Canonical/plugin/Codex/Claude parity, plan-validator tests, six fresh source-level organization scenarios, eval-contract validation, portable ZIP topology, archive custody, checksums, and documentation structure can be checked locally.
+Version 0.3.1 binds the runtime to fingerprint `62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732`. Canonical/plugin/Codex/Claude parity, plan-validator tests, six fresh source-level organization scenarios, eval-contract validation, portable ZIP topology, archive custody, checksums, and documentation structure can be checked locally.
 
 The vNext live-control cases and role-synergy ablations are specified but not run. Prior 0.1.0 and 0.2.3 behavioral evidence does not silently transfer to the new runtime. Local packaging does not establish public publication, clean-host installation, discovery, invocation, Claude activation, universal savings, stakeholder legitimacy, customer outcomes, or superiority over a strong single-agent route. See [Trust and limits](TRUST-AND-LIMITS.md).
 

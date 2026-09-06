@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Agent Swarm Orchestration 0.3.0 documentation and presentation custody."""
+"""Validate Agent Swarm Orchestration 0.3.1 documentation and presentation custody."""
 
 from __future__ import annotations
 
@@ -11,8 +11,8 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.0"
-RUNTIME_FINGERPRINT = "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca"
+VERSION = "0.3.1"
+RUNTIME_FINGERPRINT = "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732"
 
 
 def read_json(relative: str) -> dict:
@@ -66,7 +66,7 @@ def main() -> int:
     assert len(governed) == len(set(governed)), "duplicate governed documentation path"
     for relative in governed:
         assert (ROOT / relative).is_file(), f"missing governed documentation: {relative}"
-    assert docs["reader_journey"][-1] == "RELEASE-NOTES-v0.3.0.md"
+    assert docs["reader_journey"][-1] == "RELEASE-NOTES-v0.3.1.md"
     assert "RELEASE-NOTES-v0.2.3.md" in docs["historical_customer_docs"]
 
     fingerprint, records = documentation_fingerprint(governed)
@@ -109,8 +109,8 @@ def main() -> int:
 
     plugin = read_json("plugins/agent-swarm-orchestration/.codex-plugin/plugin.json")
     assert plugin["version"] == VERSION
-    custody = read_json("release-assets/v0.3.0/archive-custody.json")
-    assert custody["version"] == VERSION and custody["generated_at"] == "2026-09-01"
+    custody = read_json("release-assets/v0.3.1/archive-custody.json")
+    assert custody["version"] == VERSION and custody["generated_at"] == "2026-09-05"
     for archive in custody["archives"]:
         path = ROOT / archive["path"]
         assert path.is_file(), f"missing archive: {archive['path']}"

@@ -8,7 +8,7 @@
   "properties": {
     "format": {"const": "aso-live-fixture/v1"},
     "case_contract_version": {"const": "aso-vnext-eval-contract/v1"},
-    "target_package_version": {"const": "0.3.0"},
+    "target_package_version": {"const": "0.3.1"},
     "target_runtime_fingerprint": {"oneOf": [{"const": "PENDING_SOURCE_FREEZE"}, {"type": "string", "pattern": "^[0-9a-f]{64}$"}]},
     "execution_status": {"const": "specified-not-run"},
     "case_id": {"type": "string", "pattern": "^ASO-L[0-9]{3}$"},

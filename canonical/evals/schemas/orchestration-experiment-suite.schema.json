@@ -9,7 +9,7 @@
     "format": {"const": "cd-augment-eval/v1"},
     "suite": {"const": "orchestration-role-synergy-ablation"},
     "case_contract_version": {"const": "aso-vnext-eval-contract/v1"},
-    "target_package_version": {"const": "0.3.0"},
+    "target_package_version": {"const": "0.3.1"},
     "target_runtime_fingerprint": {"oneOf": [{"const": "PENDING_SOURCE_FREEZE"}, {"type": "string", "pattern": "^[0-9a-f]{64}$"}]},
     "execution_status": {"const": "specified-not-run"},
     "promotion_rule": {"type": "string", "minLength": 1},

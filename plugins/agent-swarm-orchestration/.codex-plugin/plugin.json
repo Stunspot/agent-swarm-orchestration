@@ -1,6 +1,6 @@
 {
   "name": "agent-swarm-orchestration",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Designs, composes, and adapts temporary agent organizations while preserving authority, evidence, state custody, and accountable closure.",
   "author": {
     "name": "Collaborative Dynamics",

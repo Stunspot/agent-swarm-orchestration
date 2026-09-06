@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Agent Swarm Orchestration 0.3.0 local release-candidate custody."""
+"""Validate Agent Swarm Orchestration 0.3.1 local release-candidate custody."""
 
 from __future__ import annotations
 
@@ -12,8 +12,8 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.0"
-GENERATED_AT = "2026-09-01"
+VERSION = "0.3.1"
+GENERATED_AT = "2026-09-05"
 SKILL = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
 OUT = ROOT / "release-assets" / f"v{VERSION}"
 BASELINE_HASHES = {

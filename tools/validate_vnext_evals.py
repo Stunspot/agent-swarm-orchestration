@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_EVAL_ROOT = ROOT / "canonical" / "evals"
 DEFAULT_MANIFEST = "eval-manifest-vnext.yaml"
 CONTRACT_VERSION = "aso-vnext-eval-contract/v1"
-TARGET_PACKAGE_VERSION = "0.3.0"
+TARGET_PACKAGE_VERSION = "0.3.1"
 PENDING_FINGERPRINT = "PENDING_SOURCE_FREEZE"
 REQUIRED_RECEIPTS = {
     "subject-prompt.md",

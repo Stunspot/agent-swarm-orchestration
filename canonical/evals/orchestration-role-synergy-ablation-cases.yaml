@@ -2,8 +2,8 @@
   "format": "cd-augment-eval/v1",
   "suite": "orchestration-role-synergy-ablation",
   "case_contract_version": "aso-vnext-eval-contract/v1",
-  "target_package_version": "0.3.0",
-  "target_runtime_fingerprint": "ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca",
+  "target_package_version": "0.3.1",
+  "target_runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
   "execution_status": "specified-not-run",
   "promotion_rule": "A pattern, adaptive rule, or exposure default remains an Option or Experiment until repeated prospective matched-budget evidence improves task-native outcome without an indispensable safety failure.",
   "measures": [

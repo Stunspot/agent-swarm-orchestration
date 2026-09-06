@@ -2,7 +2,7 @@
 
 Agent Swarm Orchestration helps an AI coordinator decide not only whether multiple agents will help, but what temporary organization can improve the accepted result. It separates memorable role names from actual contributions, designs information and authority relations deliberately, compiles the next phase into a safe execution regime, and changes the form when evidence changes the problem.
 
-Version 0.3.0 is packaged as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill archives. The package does not supply collaboration tools; the current host must expose them.
+Version 0.3.1 is packaged as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill archives. The package does not supply collaboration tools; the current host must expose them.
 
 ## Decide whether this fits your task
 
@@ -28,7 +28,7 @@ A role label such as “critic,” “stakeholder,” or “review bot” may he
 
 - **Codex marketplace plugin:** use the commands in [Installation](INSTALLATION.md).
 - **Standalone Codex:** install `release/codex/agent-swarm-orchestration/` or the versioned skill ZIP.
-- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or `claude-ai/agent-swarm-orchestration-v0.3.0.zip`.
+- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or `claude-ai/agent-swarm-orchestration-v0.3.1.zip`.
 - **Source and evidence review:** use the repository, not an installed runtime folder.
 
 Files existing on disk do not establish discovery or activation. Confirm what the named host actually loads.
