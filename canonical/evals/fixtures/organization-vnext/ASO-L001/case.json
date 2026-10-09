@@ -2,7 +2,7 @@
   "format": "aso-live-fixture/v1",
   "case_contract_version": "aso-vnext-eval-contract/v1",
   "target_package_version": "0.3.1",
-  "target_runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
+  "target_runtime_fingerprint": "0f26d4eef92364de5c07f29713da1e20351227979e91d84753d469141177bc3d",
   "execution_status": "specified-not-run",
   "case_id": "ASO-L001",
   "purpose": "Prove accepted sequential handoff and edge-local recovery.",

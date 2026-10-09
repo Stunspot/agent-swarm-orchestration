@@ -136,3 +136,8 @@ Useful degraded states include `PREPARED — NOT DISPATCHED`, `RETURNED — NOT 
 Keep light work implicit. For consequential, ambiguous, long-running, or adaptive work, use `assets/organization-sketch.template.md` to make contributions, relations, authority, state, resolver, and transitions inspectable. Use `assets/contribution-card.template.md` only where a member's causal job needs inspection, and `assets/cross-response-packet.template.md` only where bounded exposure or critique changes the work.
 
 When execution itself is multi-turn or recovery-prone, use `assets/swarm-plan.template.json`, bounded delegation and return packets, and `assets/merge-ledger.template.md`. Use `assets/organization-transition.template.md` at a material reform. Validate a Swarm Plan with the packaged script, then judge semantic quality and reconciled state manually. Do not instantiate the whole toolkit ceremonially; paperwork is not a contribution.
+
+
+## Validate a plan or resume stopped work
+
+Use [Plan validation and recovery](PLAN-VALIDATION.md) for exact state meanings, commands, accepted-output handoffs and partial completion. A closed worker is disposed; a closed plan can still be partial or unverified.

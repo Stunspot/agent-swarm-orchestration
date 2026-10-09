@@ -1,0 +1,8 @@
+Materially revised the listed customer guides from the actual source, retained failures, repaired contracts and extracted-kit journey checks.
+AUTHORING_RUN_ID: agent-swarm-orchestration-estate-repair-20261006
+AUTHORING_CAPABILITY: hesperos-documentation
+AUTHORSHIP_SCOPE: materially-revised
+AUTHORED_FILES_COUNT: 12
+AUTHORED_FILES: README.md | START-HERE.md | INSTALLATION.md | WORKFLOWS.md | TROUBLESHOOTING.md | TRUST-AND-LIMITS.md | host-matrix.md | ARCHIVE-CUSTODY.md | provenance.md | RELEASE-NOTES-v0.3.1.md | PLAN-VALIDATION.md | delivery-sidecars/Agent Swarm Orchestration T-Free v0.3.1 Extra.md
+DOCUMENTATION_FINGERPRINT: 86075a4610f383d0fc96201b4a816d2c62aa66c1ed70b3ab6c4058e45900fd4e
+HESPEROS_AUTHORING_COMPLETE

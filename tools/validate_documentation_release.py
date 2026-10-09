@@ -60,7 +60,8 @@ def main() -> int:
     package = read_json("package-manifest.json")
     assert docs["version"] == VERSION
     assert package["version"] == VERSION
-    assert package["runtime_fingerprint"] == RUNTIME_FINGERPRINT
+    from sync_runtime_trees import tree_fingerprint, SOURCE
+    assert package["runtime_fingerprint"] == tree_fingerprint(SOURCE)
 
     governed = list(docs["customer_docs"]) + ["docs/index.html", "docs/style.css", "documentation-manifest.json"]
     assert len(governed) == len(set(governed)), "duplicate governed documentation path"
@@ -116,7 +117,7 @@ def main() -> int:
         assert path.is_file(), f"missing archive: {archive['path']}"
         assert sha256(path) == archive["sha256"], f"archive hash mismatch: {archive['path']}"
 
-    print(f"DOCUMENTATION RELEASE VALID agent-swarm-orchestration v{VERSION}")
+    print(f"DOCUMENTATION STRUCTURE VALID agent-swarm-orchestration v{VERSION}")
     print(f"DOCUMENTATION FINGERPRINT {fingerprint}")
     print(f"GOVERNED FILES {len(governed)}; VISUALS {len(docs['visual_assets'])}; REQUIRED SECTIONS {len(required_ids)}")
     return 0

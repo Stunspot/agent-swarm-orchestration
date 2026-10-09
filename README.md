@@ -83,7 +83,7 @@ A correct Direct decision is success. So is purposeful redundancy when it has a 
 
 ## Evidence boundary
 
-Version 0.3.1 binds the runtime to fingerprint `62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732`. Canonical/plugin/Codex/Claude parity, plan-validator tests, six fresh source-level organization scenarios, eval-contract validation, portable ZIP topology, archive custody, checksums, and documentation structure can be checked locally.
+The current 0.3.1 restoration binds exact runtime bytes in package-manifest.json and package-custody.json. Canonical/plugin/Codex/Claude parity, adversarial plan tests, portable ZIP topology, checksums and documentation links are checked locally. The six earlier organization scenarios remain historical expert review; they are not fresh model execution. New model trials in this repair: zero.
 
 The vNext live-control cases and role-synergy ablations are specified but not run. Prior 0.1.0 and 0.2.3 behavioral evidence does not silently transfer to the new runtime. Local packaging does not establish public publication, clean-host installation, discovery, invocation, Claude activation, universal savings, stakeholder legitimacy, customer outcomes, or superiority over a strong single-agent route. See [Trust and limits](TRUST-AND-LIMITS.md).
 
@@ -92,3 +92,6 @@ The vNext live-control cases and role-synergy ablations are specified but not ru
 Agent Swarm Orchestration is free to use and redistribute under a split license: MIT for Python software and machine-readable schemas; CC BY-ND 4.0 for original authored Augment material. See [LICENSE.md](LICENSE.md), [ATTRIBUTION.md](ATTRIBUTION.md), and [TRADEMARKS.md](TRADEMARKS.md).
 
 Agent Swarm Orchestration is a Collaborative Dynamics Augment. Issues and contributions are welcome within the boundaries in [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
+## Repair and package verification
+
+[Plan validation and recovery](PLAN-VALIDATION.md) distinguishes worker disposal, accepted output and mission acceptance. [Archive custody](ARCHIVE-CUSTODY.md) identifies exact-byte verification and the reproducible source build route.

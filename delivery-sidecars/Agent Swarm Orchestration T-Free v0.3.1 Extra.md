@@ -16,6 +16,10 @@ Public GitHub Repo: [agent-swarm-orchestration](https://github.com/Stunspot/agen
 
 # Changelog
 
+## 2026-10-06 — same-version restoration
+
+Directory reservations now include descendants; the declared execution cap and allowed/reserved permission consistency are checked. Accepted output survives worker disposal, cancellation before dispatch is representable, unknown stopped writes stay reserved, and declared mission acceptance requires exact passing criterion coverage. Missing historical outcome remains unverified. Hypothetical premises are kept separate from observed live inputs. Portable builders reject junctions and namespace collisions, retain prior artifacts and produce exact-byte package verification. Customer entry, validation and recovery guidance are updated. These are local source, executable and package checks; no new model trial or public deployment is claimed.
+
 v0.3.1 - Shortened the discovery cue and corrected complete-kit installation guidance, manifest paths, and support details. Existing orchestration behavior is preserved.
 
 v0.3.0 - Added contribution and organization design, controlled information sharing, adaptable interaction and synthesis, and deliberate recovery and closure.

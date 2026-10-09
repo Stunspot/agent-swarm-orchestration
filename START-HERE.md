@@ -48,3 +48,7 @@ A good run should make four things legible: why each contribution exists, what e
 If the host does not recognize the skill, check the installed folder or plugin registration in [Troubleshooting](TROUBLESHOOTING.md). If the skill is recognized but agent controls are unavailable, work directly or return an exact delegation packet marked `PREPARED — NOT DISPATCHED`. If a worker returns claims the root cannot inspect, keep them `agent-reported`. If a write may have landed, read authoritative state before retrying.
 
 Continue with [Workflows](WORKFLOWS.md), [Trust and limits](TRUST-AND-LIMITS.md), and the [host matrix](host-matrix.md).
+
+## Validate a plan or resume stopped work
+
+Use [Plan validation and recovery](PLAN-VALIDATION.md) for exact state meanings, commands, accepted-output handoffs and partial completion. A closed worker is disposed; a closed plan can still be partial or unverified.

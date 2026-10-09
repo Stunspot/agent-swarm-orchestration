@@ -1,0 +1,18 @@
+{
+  "format": "cd-customer-documentation/v1",
+  "customer_docs": [
+    "README.md",
+    "START-HERE.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "ARCHIVE-CUSTODY.md",
+    "provenance.md",
+    "RELEASE-NOTES-v0.3.1.md",
+    "PLAN-VALIDATION.md",
+    "delivery-sidecars/Agent Swarm Orchestration T-Free v0.3.1 Extra.md"
+  ],
+  "scope": "Materially revised documentation and current Extra only. Unchanged install prompt and artwork retain historical authorship."
+}

@@ -19,6 +19,7 @@
     "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
     "provenance.md",
+    "PLAN-VALIDATION.md",
     "RELEASE-NOTES-v0.3.1.md"
   ],
   "historical_customer_docs": [
@@ -100,7 +101,8 @@
     "RELEASE-NOTES-v0.2.3.md",
     "RELEASE-NOTES-v0.2.2.md",
     "RELEASE-NOTES-v0.2.1.md",
-    "RELEASE-NOTES-v0.2.0.md"
+    "RELEASE-NOTES-v0.2.0.md",
+    "PLAN-VALIDATION.md"
   ],
   "landing_page": "README.md",
   "moments": {
@@ -148,7 +150,7 @@
       "TERMS-OF-USE.md"
     ],
     "maintenance": [
-      "RELEASE-NOTES-v0.3.0.md",
+      "RELEASE-NOTES-v0.3.1.md",
       "ARCHIVE-CUSTODY.md"
     ],
     "provenance": [

@@ -1,0 +1,13 @@
+{
+  "candidate": {
+    "candidate": "E:\\Github\\agent-swarm-orchestration\\dist\\estate-quality-20261006-final",
+    "customer_sha256": "504be63ad383b45018c6516d74324a7c36cf30177661e11bf0b6017239ce2591"
+  },
+  "reproducibility": {
+    "candidate": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-reproducibility",
+    "customer_sha256": "504be63ad383b45018c6516d74324a7c36cf30177661e11bf0b6017239ce2591"
+  },
+  "all_channel_rebuild_match": true,
+  "inner_channels_unchanged_from_native_checked_candidate": true,
+  "delta": "Only source manifest distribution pointers changed to the current candidate; historical accepted artifact paths are explicitly historical. Customer custody binds those revised metadata bytes. Runtime, docs and other inner channels unchanged."
+}

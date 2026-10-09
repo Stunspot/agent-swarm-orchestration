@@ -91,7 +91,7 @@ def run(argv: list[str], label: str) -> None:
     assert completed.returncode == 0, f"{label} failed"
 
 
-def main() -> int:
+def historical_main() -> int:
     package = json.loads((ROOT / "package-manifest.json").read_text(encoding="utf-8"))
     assert package["version"] == VERSION
     assert package["runtime_version"] == VERSION
@@ -199,6 +199,46 @@ def main() -> int:
     print(f"PUBLIC RELEASE VALID agent-swarm-orchestration v{VERSION}")
     print(f"RUNTIME FILES {len(canonical)}; RUNTIME FINGERPRINT {canonical_digest}")
     print(f"ARCHIVES {len(expected_archives)}; CHECKSUM AND SIDECAR CUSTODY VALID")
+    return 0
+
+
+def main() -> int:
+    import argparse, tempfile
+    from archive_paths import assert_unlinked, check_members, assert_chain
+    parser=argparse.ArgumentParser(description="Check exact candidate custody, source parity and structural tests; no public publication claim.")
+    parser.add_argument("--candidate",type=Path,help="New same-version candidate directory; omit only for the original historical release gate")
+    args=parser.parse_args()
+    if args.candidate is None:
+        return historical_main()
+    candidate=assert_unlinked(args.candidate)
+    package=json.loads((ROOT/"package-manifest.json").read_text(encoding="utf-8"))
+    assert package["version"]==VERSION
+    from sync_runtime_trees import tree_fingerprint, SOURCE, parity, DESTINATIONS
+    assert package["runtime_fingerprint"]==tree_fingerprint(SOURCE)
+    assert all(parity(path)["valid"] for path in DESTINATIONS.values())
+    custody=json.loads((candidate/"archive-custody.json").read_text(encoding="utf-8"))
+    assert custody["version"]==VERSION
+    expected={f"Plugin-Agent-Swarm-Orchestration-v{VERSION}.zip":ROOT/"plugins/agent-swarm-orchestration",
+              f"Skill-agent-swarm-orchestration-v{VERSION}.zip":SOURCE,
+              f"claude/agent-swarm-orchestration-v{VERSION}.zip":SOURCE}
+    assert len(custody["archives"])==len(expected)
+    assert {x["path"] for x in custody["archives"]}==set(expected)
+    for record in custody["archives"]:
+        path=candidate/record["path"];assert_chain(path)
+        assert sha256(path)==record["sha256"]
+        validate_zip(path,files(expected[record["path"]]))
+    customer=candidate/custody["customer"]["zip"]
+    if customer.parent!=candidate:raise ValueError("customer ZIP must be a direct candidate child")
+    assert sha256(customer)==custody["customer"]["sha256"]
+    with tempfile.TemporaryDirectory(prefix="aso-check-") as d:
+        with zipfile.ZipFile(customer) as z:
+            entries=[(i.filename,b"" if i.is_dir() else z.read(i)) for i in z.infolist()]
+            check_members(entries)
+            z.extractall(d)
+        from verify_package import verify
+        report=verify(Path(d)/f"agent-swarm-orchestration-v{VERSION}")
+    run([sys.executable,"-B","-X","utf8","-m","unittest","discover","-s",str(SOURCE/"tests")],"runtime tests")
+    print(json.dumps({"valid":True,"candidate":str(candidate),"customer":report,"boundary":"Exact candidate bytes, source parity and local executable checks only; public state and model behavior unobserved"},indent=2))
     return 0
 
 

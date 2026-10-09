@@ -1,38 +1,36 @@
 # Archive custody and recovery
 
-Version 0.3.0 is a new runtime release candidate, not a wrapper around the earlier 0.1.0 runtime. It adds new archives and leaves prior release assets, tags, checksums, and receipts intact.
+The current same-version 0.3.1 restoration corrects the accepted ownership, capacity, authority, lifecycle, completion and package promises. Previously accepted 0.3.1 and earlier artifacts remain frozen in the source repository; a version number alone cannot distinguish their bytes from this repair.
 
-| Artifact | Current location | Recovery purpose |
-|---|---|---|
-| Codex marketplace plugin | `release-assets/v0.3.0/Plugin-Agent-Swarm-Orchestration-v0.3.0.zip` | Plugin wrapper, listing assets, manifest, license pointer, and one self-contained skill |
-| Standalone skill | `release-assets/v0.3.0/Skill-agent-swarm-orchestration-v0.3.0.zip` | Portable Codex or Agent Skills installation and downstream edition input |
-| Claude upload | `claude-ai/agent-swarm-orchestration-v0.3.0.zip` | Byte-identical one-skill archive for Claude-compatible upload |
-| Aggregate custody | `release-assets/v0.3.0/archive-custody.json` and `checksums.sha256` | Archive path, hash, size, member count, source-tree digest, and detached checksum custody |
-| Integration companion | `Skill-agent-swarm-orchestration-v0.3.0.zip.sha256` and `Skill-agent-swarm-orchestration-v0.3.0-VERIFY.txt` | Exact identity and cross-platform verification instructions for the edition-selected skill ZIP |
-| Source checkpoint | Local release commit named in the handoff packet | Binds the repository state from which the candidate was built; no tag, push, or public release is implied |
+## Verify what you received
 
-## Verify an archive
+Compare the outer ZIP SHA-256 with the accompanying trusted distributor checksum. The complete kit extracts to agent-swarm-orchestration-v0.3.1 with START-HERE.md at its root. From that root, run:
 
-From `release-assets/v0.3.0`, compare the file's SHA-256 with `checksums.sha256`. For the standalone skill ZIP, the adjacent `.sha256` and `-VERIFY.txt` files provide the same expected digest and PowerShell plus `shasum` commands.
+    python tools/verify_package.py
 
-Then inspect the archive:
+The verifier checks the complete recorded file set and hashes, portable paths, and the nested Claude/Codex skill equality. The package-custody.json file binds the exact extracted content; the enclosing ZIP hash binds that manifest too. A self-consistent manifest by itself is not publisher authentication.
 
-- every member uses a forward-slash path;
-- no member is absolute, duplicated, or escapes through `..`;
-- every member lives under one top-level `agent-swarm-orchestration/` directory;
-- `SKILL.md` sits directly inside that directory;
-- the extracted tree matches the governed source tree exactly.
+Standalone skill and Claude archives each use one agent-swarm-orchestration directory with SKILL.md directly inside. The plugin archive adds its plugin wrapper and assets. Never install the whole customer kit as a skill.
 
-A matching digest proves exact archive byte identity. It does not establish installation, discovery, invocation, healthy behavior, edition integration, or publication.
+## Reproduce from canonical source
 
-## Historical 0.2.3 boundary
+Repository maintainers use the canonical skill under canonical/skills/agent-swarm-orchestration. Inspect the source sync plan, then apply only reviewed source changes into the three governed mirrors with tools/sync_runtime_trees.py. This tool preserves its dirty-work guards; it is not permission to overwrite independent destination changes.
 
-The `v0.2.3` Git tag points to its original tagged commit. Later repository reconciliation produced the v0.2.3 archive bytes frozen by the current baseline hashes. Those are distinct custody facts. Version 0.3.0 preserves both; it does not move the tag or rewrite either history into the other.
+After updating the source fingerprint and passing source tests, build into a new repository-local directory:
 
-The frozen baseline remains under `release-assets/v0.2.3/` and `claude-ai/agent-swarm-orchestration-v0.2.3.zip`. Its exact hashes are checked before 0.3.0 acceptance.
+    python tools/build_candidate.py --output-dir dist/my-reviewed-candidate
+    python tools/validate_public_release.py --candidate dist/my-reviewed-candidate
+
+The complete candidate is staged on the destination volume and published only after all channels and the extracted-kit verifier pass. An existing candidate is refused. Sources and archive members with links, junctions, portable-name collisions or unsafe paths are rejected. No historical directory is replaced. Rebuilding identical selected source into another new directory produces identical ZIP bytes.
+
+This is a repository build route; the customer kit intentionally contains runtime and reader support, not the full source/evaluation repository.
 
 ## Recover or roll back
 
-Record the installed path, host version, package version, local modifications, and active worker or external-action state. Package rollback does not undo agent work, commits, deployments, or external actions.
+Record the installed path, host version, exact package checksum, local modifications and any active worker or external-action state. Package rollback does not undo agent work, commits, deployments or external actions.
 
-Remove only the exact failed installation or plugin registration, then restore a previously verified archive. Reload the host if required, confirm discovery, and run the first-invocation check in `INSTALLATION.md`. Keep extracted backups outside the active destination and preserve local modifications before replacement.
+Restore a previously verified complete installation from its retained backup, reload the host if required, then follow [Installation](INSTALLATION.md) to check discovery and invocation. Preserve modified local files outside the replacement destination. If state is uncertain, inspect it before retrying.
+
+## Historical evidence
+
+The original v0.2.3 tag and later reconciled v0.2.3 archive bytes remain distinct historical facts. Neither is rewritten by this repair. The original 0.3.0 and 0.3.1 builds, source reviews and receipts retain their original scope. Exact source and artifact hashes for the restoration are recorded with its candidate; none of these static checks implies public publication, installation or healthy behavior.

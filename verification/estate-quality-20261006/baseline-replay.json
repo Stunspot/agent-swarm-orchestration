@@ -1,0 +1,49 @@
+[
+  {
+    "fixture": "ancestor-writers.json",
+    "errors": [
+      "active workers share write surface src / src/component.py: worker-a, worker-b"
+    ],
+    "valid": false,
+    "declared_outcome": "unverified"
+  },
+  {
+    "fixture": "cancel-before-dispatch.json",
+    "errors": [],
+    "valid": true,
+    "declared_outcome": "unverified"
+  },
+  {
+    "fixture": "closed-accepted-prerequisite-no-distinct-output-state.json",
+    "errors": [
+      "worker worker-b status working requires accepted dependency worker-a; found closed"
+    ],
+    "valid": false,
+    "declared_outcome": "unverified"
+  },
+  {
+    "fixture": "conflicting-authority.json",
+    "errors": [
+      "authority.allowed conflicts with authority.reserved: read the named sources."
+    ],
+    "valid": false,
+    "declared_outcome": "unverified"
+  },
+  {
+    "fixture": "control-closed-with-no-mission-acceptance-evidence.json",
+    "errors": [],
+    "valid": true,
+    "declared_outcome": "unverified"
+  },
+  {
+    "fixture": "over-concurrency.json",
+    "errors": [
+      "active worker count 2 exceeds budgets.concurrency_limit 1"
+    ],
+    "valid": false,
+    "declared_outcome": "unverified"
+  },
+  {
+    "interpretation": "The two closed-state baseline probes demonstrated an unrepresentable/ambiguous distinction. They do not authorize inferring accepted output from disposal. Legacy closed without outcome still validates structure and explicitly reports unverified. New exact accepted/partial/closed-output opposing controls are in the 42-test suite."
+  }
+]

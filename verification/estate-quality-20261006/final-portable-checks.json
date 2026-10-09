@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "checks": {
+    "fresh-runtime-tests": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\fresh-runtime-tests.txt"
+    },
+    "fresh-package-verifier": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\fresh-package-verifier.txt"
+    },
+    "fresh-plan-help": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\fresh-plan-help.txt"
+    },
+    "fresh-verifier-help": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\fresh-verifier-help.txt"
+    },
+    "fresh-customer-lint": {
+      "exit_code": 1,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\fresh-customer-lint.txt"
+    },
+    "deterministic-rebuild": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\deterministic-rebuild.txt"
+    }
+  },
+  "native_extract": "PowerShell Expand-Archive completed for all four final channels",
+  "runtime_files": 28,
+  "fresh_runtime_tests": 42,
+  "customer_files_verified": 67,
+  "local_markdown_links_checked": 40,
+  "links": [
+    {
+      "document": "README.md",
+      "target": "docs/assets/aso-readme-banner.png"
+    },
+    {
+      "document": "README.md",
+      "target": "START-HERE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "INSTALLATION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "WORKFLOWS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "TROUBLESHOOTING.md"
+    },
+    {
+      "document": "README.md",
+      "target": "TRUST-AND-LIMITS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "host-matrix.md"
+    },
+    {
+      "document": "README.md",
+      "target": "DATA-AND-PRIVACY.md"
+    },
+    {
+      "document": "README.md",
+      "target": "RELEASE-NOTES-v0.3.1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "TRUST-AND-LIMITS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "LICENSE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "ATTRIBUTION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "TRADEMARKS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "CONTRIBUTING.md"
+    },
+    {
+      "document": "README.md",
+      "target": "SECURITY.md"
+    },
+    {
+      "document": "README.md",
+      "target": "PLAN-VALIDATION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "ARCHIVE-CUSTODY.md"
+    },
+    {
+      "document": "START-HERE.md",
+      "target": "INSTALLATION.md"
+    },
+    {
+      "document": "START-HERE.md",
+      "target": "TROUBLESHOOTING.md"
+    },
+    {
+      "document": "START-HERE.md",
+      "target": "WORKFLOWS.md"
+    },
+    {
+      "document": "START-HERE.md",
+      "target": "TRUST-AND-LIMITS.md"
+    },
+    {
+      "document": "START-HERE.md",
+      "target": "host-matrix.md"
+    },
+    {
+      "document": "START-HERE.md",
+      "target": "PLAN-VALIDATION.md"
+    },
+    {
+      "document": "INSTALLATION.md",
+      "target": "PLAN-VALIDATION.md"
+    },
+    {
+      "document": "WORKFLOWS.md",
+      "target": "PLAN-VALIDATION.md"
+    },
+    {
+      "document": "TROUBLESHOOTING.md",
+      "target": "INSTALLATION.md"
+    },
+    {
+      "document": "TROUBLESHOOTING.md",
+      "target": "PLAN-VALIDATION.md"
+    },
+    {
+      "document": "TROUBLESHOOTING.md",
+      "target": "SUPPORT.md"
+    },
+    {
+      "document": "TRUST-AND-LIMITS.md",
+      "target": "PLAN-VALIDATION.md"
+    },
+    {
+      "document": "host-matrix.md",
+      "target": "INSTALLATION.md"
+    },
+    {
+      "document": "host-matrix.md",
+      "target": "ARCHIVE-CUSTODY.md"
+    },
+    {
+      "document": "SUPPORT.md",
+      "target": "TROUBLESHOOTING.md"
+    },
+    {
+      "document": "SUPPORT.md",
+      "target": "SECURITY.md"
+    },
+    {
+      "document": "TERMS-OF-USE.md",
+      "target": "TRADEMARKS.md"
+    },
+    {
+      "document": "TERMS-OF-USE.md",
+      "target": "LICENSE.md"
+    },
+    {
+      "document": "TERMS-OF-USE.md",
+      "target": "DATA-AND-PRIVACY.md"
+    },
+    {
+      "document": "ARCHIVE-CUSTODY.md",
+      "target": "INSTALLATION.md"
+    },
+    {
+      "document": "PLAN-VALIDATION.md",
+      "target": "START-HERE.md"
+    },
+    {
+      "document": "PLAN-VALIDATION.md",
+      "target": "INSTALLATION.md"
+    },
+    {
+      "document": "PLAN-VALIDATION.md",
+      "target": "TROUBLESHOOTING.md"
+    }
+  ],
+  "lint_warning_dispositions": {
+    "README.md:7": "Figurative 'layer above split the work' names an abstraction, not a visual location.",
+    "LICENSE.md:13": "Retained MIT license requirement to include the above copyright notice; legal text preserved."
+  },
+  "deterministic_all_channels": true,
+  "candidate_sha256": "76355296b9e6bae14dce6075e66bc25cd6eb8dabc9242a877940e53fc332f1c3",
+  "boundary": "Exact native extracted bytes, file links and runtime declarations; no rendered assistive-technology test, fresh-host activation or model trial."
+}

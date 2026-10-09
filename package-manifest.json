@@ -4,7 +4,7 @@
   "display_name": "Agent Swarm Orchestration",
   "version": "0.3.1",
   "runtime_version": "0.3.1",
-  "runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
+  "runtime_fingerprint": "0f26d4eef92364de5c07f29713da1e20351227979e91d84753d469141177bc3d",
   "status": "public-release-candidate",
   "map": "design-record/agent-swarm-orchestration-vnext-organization-architecture.md",
   "build_state": "design-record/agent-swarm-orchestration-v0.3.1-release-state.md",
@@ -25,30 +25,31 @@
   "evaluation_custody": {
     "baseline": "historical-contracts-pinned-rerun-required-on-new-runtime",
     "vnext": "contracts-and-fixtures-valid-live-execution-not-evaluated",
-    "target_runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732"
+    "target_runtime_fingerprint": "0f26d4eef92364de5c07f29713da1e20351227979e91d84753d469141177bc3d",
+    "target_status": "Specifications retargeted to repaired source; prior specifications retained. No execution evidence claimed."
   },
   "customer_docs_manifest": "documentation-manifest.json",
   "distributions": {
     "codex_plugin": {
-      "status": "local-release-candidate-built",
+      "status": "repaired-source-candidate-awaiting-independent-acceptance",
       "paths": [
         ".agents/plugins/marketplace.json",
         "plugins/agent-swarm-orchestration",
-        "release-assets/v0.3.1/Plugin-Agent-Swarm-Orchestration-v0.3.1.zip"
+        "dist/estate-quality-20261006-final/Plugin-Agent-Swarm-Orchestration-v0.3.1.zip"
       ]
     },
     "codex_standalone": {
-      "status": "local-release-candidate-built",
+      "status": "repaired-source-candidate-awaiting-independent-acceptance",
       "paths": [
         "release/codex/agent-swarm-orchestration",
-        "release-assets/v0.3.1/Skill-agent-swarm-orchestration-v0.3.1.zip"
+        "dist/estate-quality-20261006-final/Skill-agent-swarm-orchestration-v0.3.1.zip"
       ]
     },
     "claude_standalone": {
-      "status": "local-release-candidate-built",
+      "status": "repaired-source-candidate-awaiting-independent-acceptance",
       "paths": [
         "release/claude/agent-swarm-orchestration",
-        "claude-ai/agent-swarm-orchestration-v0.3.1.zip"
+        "dist/estate-quality-20261006-final/claude/agent-swarm-orchestration-v0.3.1.zip"
       ]
     },
     "frozen_release_assets": {
@@ -73,18 +74,18 @@
   "license": "LICENSE.md",
   "rights_status": "Free public split license: MIT software and schemas; CC BY-ND 4.0 authored Augment material; separate trademark custody.",
   "evidence": {
-    "runtime": "0.3.1 patch retains the accepted 0.3.0 runtime tree and concise routing metadata",
+    "runtime": "Same-version restoration: ownership, capacity, authority, lifecycle, truthful outcome and portable source custody repaired.",
     "structural_verification": "release, documentation, runtime-parity, archive-custody, and checksum gates required before handoff",
-    "behavioral_verification": "six fresh source-level organization scenarios passed; vNext live-control cases and ablations remain specified-not-run",
-    "installation": "not-performed-for-0.3.0",
-    "clean_host_discovery": "not-performed-for-0.3.0",
-    "clean_host_invocation": "not-performed-for-0.3.0",
+    "behavioral_verification": "Historical source-level scenarios retained; current expert task contrasts are reviews, not executed model trials. New model trials: 0.",
+    "installation": "not-observed-for-repaired-candidate",
+    "clean_host_discovery": "not-observed-for-repaired-candidate",
+    "clean_host_invocation": "not-observed-for-repaired-candidate",
     "live_execution": "not-performed-for-vnext-control-cases-or-ablations",
-    "publication": "0.3.1 authorized for publication; completion requires remote readback",
+    "publication": "no new public publication claimed",
     "documentation": "current 0.3.1 transport and installation documentation",
     "accessibility": "structure-statically-validated; assistive-technology-and-representative-user-testing-not-performed",
     "visuals": "retained-v0.2.3-assets-with-byte-and-dimension-validation",
-    "recovery_backup": "release-assets/v0.2.3-retained-baseline",
+    "recovery_backup": "Accepted 0.3.1 and all earlier archive bytes retained",
     "historical_custody": "v0.2.0-through-v0.2.3-assets-tags-and-receipts-preserved; v0.2.3-tag-and-later-reconciled-baseline-distinguished"
   },
   "authority": {
@@ -96,5 +97,15 @@
     "free_offer": false,
     "risk_acceptance": false
   },
-  "owner": "Collaborative Dynamics"
+  "owner": "Collaborative Dynamics",
+  "restoration": {
+    "decision": "edit",
+    "version": "0.3.1",
+    "accepted_runtime_fingerprint": "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732",
+    "current_runtime_fingerprint": "0f26d4eef92364de5c07f29713da1e20351227979e91d84753d469141177bc3d",
+    "candidate_directory": "dist/estate-quality-20261006-final",
+    "boundary": "Source/executable/static package checks; independent acceptance pending; model trials 0",
+    "historical_accepted_archive": "release-assets/v0.3.1/Agent-Swarm-Orchestration-v0.3.1.zip"
+  },
+  "authority_note": "Historical flags record prior release context, not present authority. Resolve actual current user authorization and product ownership."
 }

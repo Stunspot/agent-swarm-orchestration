@@ -1,6 +1,6 @@
 # Trust, evidence, and limits
 
-Agent Swarm Orchestration coordinates cognition; it does not turn a role label into competence, worker agreement into truth, tool access into permission, or simulated stakeholders into stakeholder authority. Version 0.3.0 is a new 26-file runtime with fingerprint `ec4fd5afdee16512cb1561639521844d07a11300975633447766e419bc8886ca`. Its claims are bounded to that exact tree and the checks named here.
+Agent Swarm Orchestration coordinates cognition; it does not turn a role label into competence, worker agreement into truth, tool access into permission, or simulated stakeholders into stakeholder authority. Version 0.3.1 retains that promise with repaired execution and packaging checks. Exact runtime membership and fingerprint come from the delivered package custody manifest; historical receipts stay historical.
 
 ## Keep one authority envelope
 
@@ -43,15 +43,15 @@ The organization should distinguish task truth, accepted progress, evidence, scr
 
 Collaboration controls are host-provided and volatile. The skill must inspect live tool presence, schemas, concurrency, context forks, model routes, messages, waits, interruption, cancellation, nested delegation, and lifecycle semantics before relying on them. Documentation examples describe intent; they do not freeze a future host API.
 
-## What 0.3.0 establishes locally
+## What the current local checks establish
 
 The local release gate can establish that:
 
 - canonical, plugin, standalone Codex, and standalone Claude runtime trees are byte-identical;
-- the canonical runtime has 26 files and the manifest fingerprint matches their exact bytes;
+- the manifest lists the actual canonical runtime files and matches their exact bytes;
 - the Swarm Plan validator's structural tests pass;
 - vNext eval manifests, schemas, fixtures, IDs, hashes, and declared evidence contracts are internally valid;
-- six fresh source-level organization scenarios passed the recorded review boundary;
+- historical source-level scenarios remain preserved; this repair adds executable admission and lifecycle counterexamples plus expert task contrasts, with zero new model trials;
 - the plugin and standalone ZIPs reproduce their governed source trees under one safe POSIX top-level folder;
 - archive custody, detached checksums, the selected skill-ZIP sidecar, and its verification instructions agree with actual bytes;
 - customer documentation files, navigation, local links, accessibility structure, visual dimensions, and archive references pass the repository's static checks;
@@ -69,7 +69,7 @@ The 0.3.0 vNext live-control cases and role-synergy ablations remain **specified
 
 ## What remains unestablished
 
-Version 0.3.0 does not by local packaging alone establish clean-host installation, discovery, implicit routing, invocation, live collaboration-tool execution, Claude activation, repeatability across models, universal reliability, universal cost or latency savings, superiority of any role composition, stakeholder legitimacy, customer productivity, customer outcomes, background execution after the task ends, rollback after interruption, assistive-technology conformance, directory approval, public repository state, a GitHub release, or Pages deployment.
+The current runtime does not by local packaging alone establish clean-host installation, discovery, implicit routing, invocation, live collaboration-tool execution, Claude activation, repeatability across models, universal reliability, universal cost or latency savings, superiority of any role composition, stakeholder legitimacy, customer productivity, customer outcomes, background execution after the task ends, rollback after interruption, assistive-technology conformance, directory approval, public repository state, a GitHub release, or Pages deployment.
 
 A passing Swarm Plan validates declared structure, not synergy, competence, factual correctness, or organizational value. A matching ZIP hash proves byte identity, not installation or healthy behavior. Publication, installation, discovery, invocation, and behavior require separate observations.
 
@@ -79,6 +79,9 @@ The user retains purpose, priorities, values, risk acceptance, new authority, se
 
 When evidence, authority, tools, cost, or quality cannot support another responsible in-bounds step, stop with the strongest useful result and an exact boundary such as `RETURNED — NOT RECONCILED`, `PARTIAL — DEPENDENCY UNAVAILABLE`, `AWAITING AUTHORITY`, or `CAPABILITY-LIMITED`. The temporary organization exists to finish the mission. It is not a tiny constitutional crisis that has learned JSON.
 
-## 0.3.0 distribution boundary
+## Distribution boundary
 
-The 0.3.0 repository state is a locally built release candidate until a separately authorized commit, tag, push, release publication, Pages deployment, installation, and live invocation are each observed. This task authorizes local build and checkpoint only. Earlier public or installation evidence is not borrowed by implication.
+A local candidate establishes only its observed checks. Installation, fresh-host discovery, invocation and public publication have their own evidence. Existing authorization follows its actual scope; this document creates no additional permission gate. Earlier public or installation evidence is not borrowed for changed bytes.
+## Read the plan verdict precisely
+
+The validator reports declared control and mission outcome separately. Missing outcome is unverified; accepted requires passing coverage of the stated criteria and no unresolved writes. It checks declarations and evidence references, not their authenticity or truth. Follow [Plan validation and recovery](PLAN-VALIDATION.md) for the exact field meanings and examples.
