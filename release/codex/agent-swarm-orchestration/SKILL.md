@@ -1,6 +1,6 @@
 ---
 name: agent-swarm-orchestration
-description: "🐝 Coordinate agents, shared work, and synthesis."
+description: "🐝 Shared agent work, delegation, and result synthesis."
 ---
 
 # Design the organization the work needs

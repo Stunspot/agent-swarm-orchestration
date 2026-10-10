@@ -1,0 +1,50 @@
+{
+  "format": "cd-augment-archive-custody/v1",
+  "product": "agent-swarm-orchestration",
+  "version": "0.3.1",
+  "generated_at": "2026-10-06",
+  "archives": [
+    {
+      "path": "Plugin-Agent-Swarm-Orchestration-v0.3.1.zip",
+      "sha256": "a7c3aea9c31c1c87b81064aa132880e9c5461f715ef8f5d4e8da9d9a9a993048",
+      "size": 3520823,
+      "member_count": 32,
+      "top_level": "agent-swarm-orchestration",
+      "source": "plugins/agent-swarm-orchestration",
+      "source_tree_sha256": "afac80ce998a7cfaf0cce53f6a872a84366d5e56fc4a1608a58734b7dfae7fca",
+      "members_use_posix_paths": true
+    },
+    {
+      "path": "Skill-agent-swarm-orchestration-v0.3.1.zip",
+      "sha256": "357427d676ad63a5da355d6fcf28d91c6563b4583bbbf2464ddb7f17e254f3a5",
+      "size": 158725,
+      "member_count": 28,
+      "top_level": "agent-swarm-orchestration",
+      "source": "canonical/skills/agent-swarm-orchestration",
+      "source_tree_sha256": "5f046a7d08df59b6c069b4c51d57d339ab0c304c6dae9f15fa6cd783151fd0c7",
+      "members_use_posix_paths": true
+    },
+    {
+      "path": "claude/agent-swarm-orchestration-v0.3.1.zip",
+      "sha256": "357427d676ad63a5da355d6fcf28d91c6563b4583bbbf2464ddb7f17e254f3a5",
+      "size": 158725,
+      "member_count": 28,
+      "top_level": "agent-swarm-orchestration",
+      "source": "canonical/skills/agent-swarm-orchestration",
+      "source_tree_sha256": "5f046a7d08df59b6c069b4c51d57d339ab0c304c6dae9f15fa6cd783151fd0c7",
+      "members_use_posix_paths": true
+    }
+  ],
+  "customer": {
+    "version": "0.3.1",
+    "zip": "Agent-Swarm-Orchestration-v0.3.1.zip",
+    "sha256": "81bb8c1cf214c3930db8da5fc1f7acf258ebb08793a91a717999aa6aa5627106",
+    "files": 68,
+    "check": {
+      "valid": true,
+      "files": 67,
+      "runtime_files": 28,
+      "boundary": "Exact package bytes and channel parity only"
+    }
+  }
+}

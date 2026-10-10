@@ -6,7 +6,7 @@ The orchestration layer is designed to prevent duplicated research, conflicting 
 
 # Usage Notes
 
-Copy the .zip from "Additional Files" to your chosen harness or Chat project. Attach or reference it in chat and say, "Install this Augment." The installation prompt is optional.
+Copy the .zip from "Additional Files" to your chosen harness or Chat project. Attach or reference it in chat and say, "Install this Augment." The prompt in this post is optional.
 
 - Use when a distinct contribution, independent review, parallel slice, or sequential stage can improve the result. Simple work can stay with one agent.
 - Tell it the finished outcome you need, what evidence will count, any shared files, and the parts that must not be changed.
