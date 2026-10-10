@@ -4,7 +4,7 @@ Version 0.3.1 can arrive through a Codex marketplace plugin, a standalone Codex 
 
 ## Marketplace command succeeds but the skill is not recognized
 
-1. Confirm the marketplace source is registered as `Stunspot/agent-swarm-orchestration`.
+1. Run `codex plugin marketplace list --json` and confirm marketplace `cd-agent-swarm-orchestration` uses the source you installed. For the extracted complete kit, check its local `codex` path and `.agents/plugins/marketplace.json`; for Git installation, check the chosen `Stunspot/agent-swarm-orchestration` source and ref. A local source is not a failed Git registration.
 2. Confirm the installed plugin name is `agent-swarm-orchestration@cd-agent-swarm-orchestration`.
 3. Start a fresh task if the host caches plugin discovery.
 4. Ask the host to resolve `$agent-swarm-orchestration`.

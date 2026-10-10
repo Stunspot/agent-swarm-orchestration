@@ -1,0 +1,267 @@
+{
+  "format": "aso-documentation-factual-maintenance/v1",
+  "product": {
+    "slug": "agent-swarm-orchestration",
+    "version": "0.3.1"
+  },
+  "recorded_at": "2026-10-10T21:16:19.749142+00:00",
+  "operation": "current-journey-route-restoration-20261010-r2",
+  "capability": "hesperos-documentation",
+  "mode": "in-process",
+  "scope": "Factual current-versus-historical artifact lookup and source-specific marketplace recovery. Original organization design, runtime, navigation, examples and retained historical archives remain intact; no whole-corpus reauthorship.",
+  "baseline": {
+    "current_complete_kit_sha256": "81bb8c1cf214c3930db8da5fc1f7acf258ebb08793a91a717999aa6aa5627106",
+    "original_documentation_receipts": [
+      "documentation-authorship.json",
+      "verification/estate-quality-20261006/documentation-authorship.json"
+    ],
+    "receipt_scope": "Retained original authoring revisions. The October6 receipt differs only at the Extra sidecar after the separately accepted compact-cue wording repair; it is not reissued as current-byte proof."
+  },
+  "source_truth": [
+    "Current complete kit native verification:67payload files and28runtime files exact.",
+    "Historical Skill0.3.1 ZIP retains26members and the exact old validator already observed rejecting the supported outcome extension; current installed validator accepts the same plan.",
+    "Native Codex marketplace add help admits local and Git sources separately; resulting registration state is unobserved.",
+    "Existing latest release and live Pages installation route were observed; a separately named restored kit preserves historical assets.",
+    "Actual current embedded Claude archive has28members/current validator; actual retained historical Claude archive has26members/old validator. Corrected map labels distinguish these bytes."
+  ],
+  "changes": [
+    {
+      "path": "README.md",
+      "before_sha256": "604375e6efdfb1011b5d43a7b20749671e9153ee4991a788fd55c5fc38f154d3",
+      "after_sha256": "7025594c103dc2a4179827be7e316ba8c52741d17f9be80f6691ce564cbf2dc3",
+      "replacements": [
+        {
+          "before": "`release-assets/v0.3.1/` — 0.3.1 plugin and skill ZIPs, custody, checksums, and verification companions.",
+          "after": "`release-assets/v0.3.1/` — historical 0.3.1 plugin and skill ZIPs, custody, checksums, and verification companions; these retain their original runtime."
+        },
+        {
+          "before": "`claude-ai/agent-swarm-orchestration-v0.3.1.zip` — byte-identical one-skill archive.",
+          "after": "`claude-ai/agent-swarm-orchestration-v0.3.1.zip` — historical one-skill archive matching that original release."
+        },
+        {
+          "before": "## Product and release map\n",
+          "after": "## Product and release map\n\nFor current installation, use the maintained runtime folders listed in this product map or the [current restored complete kit](https://github.com/Stunspot/agent-swarm-orchestration/releases/download/v0.3.1/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip). Follow [Installation](INSTALLATION.md) and verify the supplied kit custody. Earlier versioned archives remain available as historical snapshots.\n"
+        },
+        {
+          "before": "maintained 26-file runtime source.",
+          "after": "maintained 28-file runtime source."
+        }
+      ]
+    },
+    {
+      "path": "START-HERE.md",
+      "before_sha256": "c627290e6ef9eaeb5e5700fc78fc66876da693aaf0dbd37ecae9032ee8184c73",
+      "after_sha256": "2bcd09bb541673590edeb5100fe0e2596ba747c78c79db64c3bd9ed9f8f9f914",
+      "replacements": [
+        {
+          "before": "- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or `claude-ai/agent-swarm-orchestration-v0.3.1.zip`.",
+          "after": "- **Claude or another one-skill host:** use the current matched `release/claude/agent-swarm-orchestration/` folder or the current complete kit’s supplied one-skill archive. Earlier repository and GitHub release archives retain their historical runtime."
+        }
+      ]
+    },
+    {
+      "path": "INSTALLATION.md",
+      "before_sha256": "6297f51d5617317a76a72d03f8eff3c1bb2895272b84c74903274326b12801a2",
+      "after_sha256": "012069f0fb589113d4fac9117eab5dfbef521f2285914f7b4b72aebd10c41cd8",
+      "replacements": [
+        {
+          "before": "or the one-skill archive under `claude-ai/`. Preserve the single top-level `agent-swarm-orchestration/` folder and keep `SKILL.md` directly inside it.",
+          "after": "or the one-skill archive supplied by the current restored complete kit. Earlier repository and GitHub release archives retain their historical runtime. Preserve the single top-level `agent-swarm-orchestration/` folder and keep `SKILL.md` directly inside it."
+        }
+      ]
+    },
+    {
+      "path": "TROUBLESHOOTING.md",
+      "before_sha256": "9bf1eaac3c526693b1427b78c1a833ddb6749355ab1e38a8a9f419fec84134f3",
+      "after_sha256": "a19b732da1b4121f04022cd0e3ac8098bb2b167d82861bf369fc3298295268a5",
+      "replacements": [
+        {
+          "before": "1. Confirm the marketplace source is registered as `Stunspot/agent-swarm-orchestration`.",
+          "after": "1. Run `codex plugin marketplace list --json` and confirm marketplace `cd-agent-swarm-orchestration` uses the source you installed. For the extracted complete kit, check its local `codex` path and `.agents/plugins/marketplace.json`; for Git installation, check the chosen `Stunspot/agent-swarm-orchestration` source and ref. A local source is not a failed Git registration."
+        }
+      ]
+    },
+    {
+      "path": "docs/index.html",
+      "before_sha256": "879b9b4efb5613d827301e8306c4cbf7936498da49e10d07c03416cb1a31b67c",
+      "after_sha256": "db904951642d4b7b3cbd1b733924e5ea70ac4d4dff416616f5bfb9690df4b14a",
+      "replacements": [
+        {
+          "before": "Download the versioned skill ZIP. Extract its single <code>agent-swarm-orchestration/</code> folder into your Codex skills directory, refresh discovery, and invoke it in a new task.",
+          "after": "Use the current complete kit or copy the <a href=\"https://github.com/Stunspot/agent-swarm-orchestration/tree/main/release/codex/agent-swarm-orchestration\">maintained standalone Codex folder</a> into your Codex skills directory, refresh discovery, and invoke it in a new task."
+        },
+        {
+          "before": "Use the one-skill archive or matching <code>release/claude/</code> folder through the host's documented skill mechanism. Live Claude activation remains untested for this release.",
+          "after": "Use the current complete kit’s one-skill archive or the <a href=\"https://github.com/Stunspot/agent-swarm-orchestration/tree/main/release/claude/agent-swarm-orchestration\">maintained Claude folder</a> through the host's documented skill mechanism. Live Claude activation remains untested for this release."
+        },
+        {
+          "before": "<a class=\"button primary\" href=\"https://github.com/Stunspot/agent-swarm-orchestration/releases/latest\">Download the latest release</a>",
+          "after": "<a class=\"button primary\" href=\"https://github.com/Stunspot/agent-swarm-orchestration/releases/download/v0.3.1/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip\">Download the current restored kit</a>"
+        },
+        {
+          "before": "<a href=\"https://github.com/Stunspot/agent-swarm-orchestration/releases/latest\">Releases</a>",
+          "after": "<a href=\"https://github.com/Stunspot/agent-swarm-orchestration/releases/latest\">Historical releases</a>"
+        }
+      ]
+    },
+    {
+      "path": "documentation-manifest.json",
+      "before_sha256": "a8fc866d81a6bec19e2957e1920e76bf98ae7eefa95c38bf07f3fb5d58118649",
+      "after_sha256": "9da0369bdba0d02a8b857a5c06df480e2f79566aee1871ce9b960143784f0bbd",
+      "transformation": "Add only the portable factual-route maintenance evidence pointer; existing customer inventory unchanged."
+    },
+    {
+      "path": "tools/build_customer_kit.py",
+      "before_sha256": "792753aad71c558187b8794c3a28eb19ac37bd17533d93ba27af432e70fc8698",
+      "after_sha256": "e14b7c77deecb361a482322390e41ea20baeb836d3ad4dbc81369614d5dcd81c",
+      "transformation": "Translate the exact current source-history map row into the current supplied kit archive row; preserve historical release-note paths instead of applying a global claude-ai substitution."
+    }
+  ],
+  "current_customer_inventory": [
+    {
+      "path": "README.md",
+      "sha256": "7025594c103dc2a4179827be7e316ba8c52741d17f9be80f6691ce564cbf2dc3",
+      "treatment": "factual field amendment"
+    },
+    {
+      "path": "START-HERE.md",
+      "sha256": "2bcd09bb541673590edeb5100fe0e2596ba747c78c79db64c3bd9ed9f8f9f914",
+      "treatment": "factual field amendment"
+    },
+    {
+      "path": "INSTALLATION.md",
+      "sha256": "012069f0fb589113d4fac9117eab5dfbef521f2285914f7b4b72aebd10c41cd8",
+      "treatment": "factual field amendment"
+    },
+    {
+      "path": "WORKFLOWS.md",
+      "sha256": "a2e75a51e5ac7b4d9dc32723cfcb9a410d90f33b8521f3238972b46d8e3bb922",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "TROUBLESHOOTING.md",
+      "sha256": "a19b732da1b4121f04022cd0e3ac8098bb2b167d82861bf369fc3298295268a5",
+      "treatment": "factual field amendment"
+    },
+    {
+      "path": "TRUST-AND-LIMITS.md",
+      "sha256": "405ccbc4ae965d6b0cb265d9d7cfaa5ae12dbffb6b05ae565c3b64a10e58c89c",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "host-matrix.md",
+      "sha256": "6ecdbb9c2da26d183503f70d92950f775736c7cda2610981c0959b8f75bf66ac",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "DATA-AND-PRIVACY.md",
+      "sha256": "37108810e1119cb92e0877c1c0c09fdb45fbe8326aed9b7128041129bbff4fd5",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "51663d8a2a2d5eb23961e46d4718b37d1ce749a543ed652ccd6b46181be742e6",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "SUPPORT.md",
+      "sha256": "a9f543ae19c83060b3563a2efc3be5a2a33f2d8547e4e5114b7a75c8b0ea0a34",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "ce4be31c03ebf34921c3f7df04a2780557a119a4f9c8551749bb7000a66807e6",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "TERMS-OF-USE.md",
+      "sha256": "5cf7850c1f0c2a511ceaa92fcc235f7432627cbad360173989173f820e159951",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "6e4b0ab54741e63865fa1eb901a6705349ed21e3d64ba6cf726f1f0299808d4f",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "56db580d4adb7fdaff6387ebdb92344aba6f44a0afdb49758fff92bda26c23b5",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "TRADEMARKS.md",
+      "sha256": "72ba9b418e1e4c5d4c5c2083c389696cc886f44df5f7810d57aee6e3718f4a35",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "ARCHIVE-CUSTODY.md",
+      "sha256": "d70f4650a0a889ed43f0d44368a5d006e439add9d122536c33f5c2b314fcb45e",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "provenance.md",
+      "sha256": "835bc91187c3698a2df9817e6756a7467c22954544318bb2f57f1b0db9ebdbdd",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "RELEASE-NOTES-v0.3.1.md",
+      "sha256": "54c153c849201069c7a29cea325c0942ddc5836dd06c17af17729df45b88ccda",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "RELEASE-NOTES-v0.2.3.md",
+      "sha256": "45de26cc2b98169e60d1abe9c90e1083eafa733b2b2a332e2fd181ea73599a08",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "RELEASE-NOTES-v0.2.2.md",
+      "sha256": "4e888e6912f8a9d17c91c9db6d70c9e0ea3ce9a81e2f6b839fb1580745de8d78",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "RELEASE-NOTES-v0.2.1.md",
+      "sha256": "1173e132cf76b501deb9cbd5439c5f4ae32522a1184f3f2139629f09a2f53cd3",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "RELEASE-NOTES-v0.2.0.md",
+      "sha256": "1f0d13dd69cf9d887587468bde22e50216f8752f256da4ed39cd530dc1709fae",
+      "treatment": "unchanged original document"
+    },
+    {
+      "path": "PLAN-VALIDATION.md",
+      "sha256": "1048920b28851297202f09b21b922aa621a7c55213186dce3ac1e97005515ee9",
+      "treatment": "unchanged original document"
+    }
+  ],
+  "loaded_craft": [
+    "canonical Scribe Hesperos persona",
+    "integrated Clearpath practitioner",
+    "product truth/change governance",
+    "reader-task verification"
+  ],
+  "boundary": "Actual in-process factual maintenance with exact before/after custody; no new authorship receipt for unchanged documents, terminal authoring marker, model qualification, installation, public delivery or accessibility-conformance claim at this source cutoff. Independent final challenge remains separate.",
+  "current_already_accepted_extra": {
+    "path": "delivery-sidecars/Agent Swarm Orchestration T-Free v0.3.1 Extra.md",
+    "bytes": 3084,
+    "sha256": "c3ea27e252a089531afa4b14a4583db5f8d468f6399fe20a1c12722460b91ba6",
+    "treatment": "Unchanged here; prior accepted compact-cue repair separately reviewed the Extra wording. Current outer quartet binds these bytes; no reauthorship or historical response rewrite.",
+    "prior_source_review": "Existing compact-cue-ccr2 Extra wording review; current complete product review checks this exact unchanged role.",
+    "baseline_authorship_validation": {
+      "exit_code": 1,
+      "findings": [
+        "authorship.docs.stale",
+        "authorship.file.stale at Extra",
+        "authorship.response.markers"
+      ],
+      "disposition": "Retain historical receipt/response unchanged; current maintenance plus accepted Extra identity supplies incremental custody."
+    }
+  },
+  "bounded_lint_adjudication": "Original README line7 describes the conceptual layer above split-the-work. Its unchanged rhetorical above is not a navigation dependency. The new literal directory-reference warning was corrected before building; no original performance-bearing prose was restyled.",
+  "prior_candidate_disposition": {
+    "candidate": "current-journey-20261010-r1",
+    "status": "NOT_READY",
+    "finding": "Global source-to-kit path replacement transferred the historical source archive label to the current embedded archive. Current source runtime map also retained the stale 26-file count.",
+    "source": "Trusted supervisor finding independently reproduced against the actual embedded and historical archives."
+  }
+}

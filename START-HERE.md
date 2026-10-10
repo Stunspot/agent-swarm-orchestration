@@ -28,7 +28,7 @@ A role label such as “critic,” “stakeholder,” or “review bot” may he
 
 - **Codex marketplace plugin:** use the commands in [Installation](INSTALLATION.md).
 - **Standalone Codex:** install `release/codex/agent-swarm-orchestration/` or the versioned skill ZIP.
-- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or `claude-ai/agent-swarm-orchestration-v0.3.1.zip`.
+- **Claude or another one-skill host:** use the current matched `release/claude/agent-swarm-orchestration/` folder or the current complete kit’s supplied one-skill archive. Earlier repository and GitHub release archives retain their historical runtime.
 - **Source and evidence review:** use the repository, not an installed runtime folder.
 
 Files existing on disk do not establish discovery or activation. Confirm what the named host actually loads.

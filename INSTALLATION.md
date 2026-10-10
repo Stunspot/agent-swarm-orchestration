@@ -43,7 +43,7 @@ Use the byte-matched folder:
 release/claude/agent-swarm-orchestration/
 ```
 
-or the one-skill archive under `claude-ai/`. Preserve the single top-level `agent-swarm-orchestration/` folder and keep `SKILL.md` directly inside it.
+or the one-skill archive supplied by the current restored complete kit. Earlier repository and GitHub release archives retain their historical runtime. Preserve the single top-level `agent-swarm-orchestration/` folder and keep `SKILL.md` directly inside it.
 
 Host upload controls, discovery rules, reload behavior, and supported tool contracts can change. The package shape is validated; only an observed upload and fresh invocation establish activation in a particular host.
 

@@ -156,5 +156,8 @@
     "provenance": [
       "provenance.md"
     ]
-  }
+  },
+  "maintenance_evidence": [
+    "docs/verification/current-journey-maintenance-20261010.json"
+  ]
 }
