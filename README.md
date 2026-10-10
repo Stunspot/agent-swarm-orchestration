@@ -59,12 +59,13 @@ A correct Direct decision is success. So is purposeful redundancy when it has a 
 
 ## Product and release map
 
-For current installation, use the maintained runtime folders listed in this product map or the [current restored complete kit](https://github.com/Stunspot/agent-swarm-orchestration/releases/download/v0.3.1/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip). Follow [Installation](INSTALLATION.md) and verify the supplied kit custody. Earlier versioned archives remain available as historical snapshots.
+For current installation, use the maintained runtime folders listed in this product map or the [current restored complete kit](https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/main/release-assets/v0.3.1/restoration-20261010/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip). Check the [ZIP checksum](https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/main/release-assets/v0.3.1/restoration-20261010/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip.sha256). Follow [Installation](INSTALLATION.md) and verify the supplied kit custody. Earlier versioned archives remain available as historical snapshots.
 
 - `canonical/skills/agent-swarm-orchestration/` — maintained 28-file runtime source.
 - `plugins/agent-swarm-orchestration/` — Codex marketplace plugin wrapper.
 - `release/codex/agent-swarm-orchestration/` — byte-matched standalone Codex folder.
 - `release/claude/agent-swarm-orchestration/` — byte-matched Claude folder.
+- `release-assets/v0.3.1/restoration-20261010/` — current restored complete kit and its checksum in the public source repository.
 - `release-assets/v0.3.1/` — historical 0.3.1 plugin and skill ZIPs, custody, checksums, and verification companions; these retain their original runtime.
 - `claude-ai/agent-swarm-orchestration-v0.3.1.zip` — historical one-skill archive matching that original release.
 - `canonical/evals/` and `verification/` — bounded qualification contracts and historical evidence.

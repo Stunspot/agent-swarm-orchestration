@@ -4,8 +4,8 @@
     "slug": "agent-swarm-orchestration",
     "version": "0.3.1"
   },
-  "recorded_at": "2026-10-10T21:16:19.749142+00:00",
-  "operation": "current-journey-route-restoration-20261010-r2",
+  "recorded_at": "2026-10-10T21:42:40.409337+00:00",
+  "operation": "current-journey-route-restoration-20261010-r3",
   "capability": "hesperos-documentation",
   "mode": "in-process",
   "scope": "Factual current-versus-historical artifact lookup and source-specific marketplace recovery. Original organization design, runtime, navigation, examples and retained historical archives remain intact; no whole-corpus reauthorship.",
@@ -21,14 +21,14 @@
     "Current complete kit native verification:67payload files and28runtime files exact.",
     "Historical Skill0.3.1 ZIP retains26members and the exact old validator already observed rejecting the supported outcome extension; current installed validator accepts the same plan.",
     "Native Codex marketplace add help admits local and Git sources separately; resulting registration state is unobserved.",
-    "Existing latest release and live Pages installation route were observed; a separately named restored kit preserves historical assets.",
+    "Existing v0.3.1 historical release is immutable; the attempted separately named restoration upload returned HTTP422. The existing public repository already carries release-assets ZIPs; the current route is prepared there and has not yet been published.",
     "Actual current embedded Claude archive has28members/current validator; actual retained historical Claude archive has26members/old validator. Corrected map labels distinguish these bytes."
   ],
   "changes": [
     {
       "path": "README.md",
       "before_sha256": "604375e6efdfb1011b5d43a7b20749671e9153ee4991a788fd55c5fc38f154d3",
-      "after_sha256": "7025594c103dc2a4179827be7e316ba8c52741d17f9be80f6691ce564cbf2dc3",
+      "after_sha256": "6711d503291c483f00d9da2333921f0b2a6cd1a25cdaa09833c3274740869f19",
       "replacements": [
         {
           "before": "`release-assets/v0.3.1/` — 0.3.1 plugin and skill ZIPs, custody, checksums, and verification companions.",
@@ -46,7 +46,13 @@
           "before": "maintained 26-file runtime source.",
           "after": "maintained 28-file runtime source."
         }
-      ]
+      ],
+      "route_repair_r3": {
+        "replacement": {
+          "before": "https://github.com/Stunspot/agent-swarm-orchestration/releases/download/v0.3.1/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip",
+          "after": "https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/main/release-assets/v0.3.1/restoration-20261010/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip"
+        }
+      }
     },
     {
       "path": "START-HERE.md",
@@ -84,7 +90,7 @@
     {
       "path": "docs/index.html",
       "before_sha256": "879b9b4efb5613d827301e8306c4cbf7936498da49e10d07c03416cb1a31b67c",
-      "after_sha256": "db904951642d4b7b3cbd1b733924e5ea70ac4d4dff416616f5bfb9690df4b14a",
+      "after_sha256": "3e53e873b4d8bc59f6ebbf51d551d2946aeee5bf0d3b38e6b1360521d9f46023",
       "replacements": [
         {
           "before": "Download the versioned skill ZIP. Extract its single <code>agent-swarm-orchestration/</code> folder into your Codex skills directory, refresh discovery, and invoke it in a new task.",
@@ -102,7 +108,13 @@
           "before": "<a href=\"https://github.com/Stunspot/agent-swarm-orchestration/releases/latest\">Releases</a>",
           "after": "<a href=\"https://github.com/Stunspot/agent-swarm-orchestration/releases/latest\">Historical releases</a>"
         }
-      ]
+      ],
+      "route_repair_r3": {
+        "replacement": {
+          "before": "https://github.com/Stunspot/agent-swarm-orchestration/releases/download/v0.3.1/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip",
+          "after": "https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/main/release-assets/v0.3.1/restoration-20261010/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip"
+        }
+      }
     },
     {
       "path": "documentation-manifest.json",
@@ -120,7 +132,7 @@
   "current_customer_inventory": [
     {
       "path": "README.md",
-      "sha256": "7025594c103dc2a4179827be7e316ba8c52741d17f9be80f6691ce564cbf2dc3",
+      "sha256": "6711d503291c483f00d9da2333921f0b2a6cd1a25cdaa09833c3274740869f19",
       "treatment": "factual field amendment"
     },
     {
@@ -263,5 +275,17 @@
     "status": "NOT_READY",
     "finding": "Global source-to-kit path replacement transferred the historical source archive label to the current embedded archive. Current source runtime map also retained the stale 26-file count.",
     "source": "Trusted supervisor finding independently reproduced against the actual embedded and historical archives."
+  },
+  "public_route_repair": {
+    "prior_candidate": "current-journey-20261010-r2",
+    "prior_source_commit": "33e985113c6f4f2cf49a116f9817d40b8308f9cc",
+    "observed_failure": "GitHub HTTP422: Cannot upload assets to an immutable release. No mutation of historical release or tag occurred.",
+    "old_url": "https://github.com/Stunspot/agent-swarm-orchestration/releases/download/v0.3.1/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip",
+    "current_url": "https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/main/release-assets/v0.3.1/restoration-20261010/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip",
+    "treatment": "Replace two current-download URLs; publish the exact accepted complete kit and checksum through the existing repository release-assets directory. Historical v0.3.1 remains intact.",
+    "state_at_source_cutoff": "Prepared existing-channel route; actual upload/download/Pages readback remains pending.",
+    "verification_boundary": "Reopen only current entry-route, portable amendment and package derivation; accepted unchanged28-file runtime, craft, native use and saved return remain valid.",
+    "checksum_url": "https://raw.githubusercontent.com/Stunspot/agent-swarm-orchestration/main/release-assets/v0.3.1/restoration-20261010/Agent-Swarm-Orchestration-v0.3.1-restoration-20261010.zip.sha256",
+    "supervisor_direction": "Explicit current-restoration map row; direct repository ZIP/checksum URLs; actual deployed Pages and download readback before shelf promotion."
   }
 }
