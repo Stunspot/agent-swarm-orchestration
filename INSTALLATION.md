@@ -1,10 +1,10 @@
 # Install Agent Swarm Orchestration
 
-Version 0.3.1 ships one runtime skill through several governed transport surfaces. Choose the surface your host actually supports; do not install the entire repository as though build evidence were runtime cargo.
+Version 0.3.2 ships one runtime skill through several governed transport surfaces. Choose the surface your host actually supports; do not install the entire repository as though build evidence were runtime cargo.
 
 ## Before you begin
 
-You need an AI host that supports Agent Skills or Codex plugins. To create or coordinate agents, the current task must also expose collaboration tools. Python 3 is optional and is used only for the packaged Swarm Plan validator.
+You need an AI host that supports Agent Skills or Codex plugins. To create or coordinate agents, the current task must also expose collaboration tools. Python 3 is optional for package and Swarm Plan validation; the runtime instructions themselves require no Python.
 
 Back up an existing `agent-swarm-orchestration` installation before replacing it. Keep the backup outside the destination folder.
 
@@ -43,7 +43,7 @@ Use the byte-matched folder:
 release/claude/agent-swarm-orchestration/
 ```
 
-or the one-skill archive under `claude-ai/`. Preserve the single top-level `agent-swarm-orchestration/` folder and keep `SKILL.md` directly inside it.
+or the one-skill archive supplied by the current restored complete kit. Earlier repository and GitHub release archives retain their historical runtime. Preserve the single top-level `agent-swarm-orchestration/` folder and keep `SKILL.md` directly inside it.
 
 Host upload controls, discovery rules, reload behavior, and supported tool contracts can change. The package shape is validated; only an observed upload and fresh invocation establish activation in a particular host.
 
@@ -75,10 +75,11 @@ python scripts/validate_swarm_plan.py path/to/swarm-plan.json
 Successful output is:
 
 ```text
-VALID cd-agent-swarm-plan/v1
+VALID cd-agent-swarm-plan/v1 — declared structure only
+Control: planned; mission outcome: unverified (declared, not independently authenticated)
 ```
 
-The validator checks declared fields, dependency references and cycles, terminal-state consistency, and concurrent active write collisions. It does not judge whether the task deserves agents or whether returned claims are true.
+The validator checks declared fields, dependency readiness and cycles, capacity, authority consistency, directory-inclusive write collisions and outcome coverage. [Plan validation](PLAN-VALIDATION.md) explains the exact limits. It does not judge whether the task deserves agents or whether returned claims are true.
 
 ## Remove the package
 
@@ -92,3 +93,11 @@ Removal does not cancel running agents, undo committed changes, or roll back ext
 ## Roll back
 
 Restore the backed-up folder or reinstall the prior marketplace version, reload the host if required, and confirm the restored `SKILL.md` bytes before resuming work. If copy, removal, or reload state is uncertain, mark installation state `unknown` and inspect the exact destination before another mutation.
+
+## Check the extracted customer kit
+
+From the extracted customer-kit root (where START-HERE.md lives), run:
+
+    python tools/verify_package.py
+
+The verifier compares the recorded file hashes, checks portable paths and compares the nested Claude skill with the Codex runtime. It changes no installation. Its success is exact package evidence, not host activation or model behavior. Keep package-custody.json with the kit and compare the outer ZIP checksum supplied by your trusted distributor before extraction.

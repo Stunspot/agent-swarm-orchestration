@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Agent Swarm Orchestration 0.3.1 documentation and presentation custody."""
+"""Validate Agent Swarm Orchestration 0.3.2 documentation and presentation custody."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.1"
+VERSION = "0.3.2"
 RUNTIME_FINGERPRINT = "62875296959f3ac6bcfbfc8f7222b10b6293446d33b8de3d097709471cb04732"
 
 
@@ -60,13 +60,14 @@ def main() -> int:
     package = read_json("package-manifest.json")
     assert docs["version"] == VERSION
     assert package["version"] == VERSION
-    assert package["runtime_fingerprint"] == RUNTIME_FINGERPRINT
+    from sync_runtime_trees import tree_fingerprint, SOURCE
+    assert package["runtime_fingerprint"] == tree_fingerprint(SOURCE)
 
     governed = list(docs["customer_docs"]) + ["docs/index.html", "docs/style.css", "documentation-manifest.json"]
     assert len(governed) == len(set(governed)), "duplicate governed documentation path"
     for relative in governed:
         assert (ROOT / relative).is_file(), f"missing governed documentation: {relative}"
-    assert docs["reader_journey"][-1] == "RELEASE-NOTES-v0.3.1.md"
+    assert docs["reader_journey"][-1] == "RELEASE-NOTES-v0.3.2.md"
     assert "RELEASE-NOTES-v0.2.3.md" in docs["historical_customer_docs"]
 
     fingerprint, records = documentation_fingerprint(governed)
@@ -109,14 +110,14 @@ def main() -> int:
 
     plugin = read_json("plugins/agent-swarm-orchestration/.codex-plugin/plugin.json")
     assert plugin["version"] == VERSION
-    custody = read_json("release-assets/v0.3.1/archive-custody.json")
-    assert custody["version"] == VERSION and custody["generated_at"] == "2026-09-05"
+    custody = read_json("release-assets/v0.3.2/archive-custody.json")
+    assert custody["version"] == VERSION and custody["generated_at"] == "2026-10-12"
     for archive in custody["archives"]:
         path = ROOT / archive["path"]
         assert path.is_file(), f"missing archive: {archive['path']}"
         assert sha256(path) == archive["sha256"], f"archive hash mismatch: {archive['path']}"
 
-    print(f"DOCUMENTATION RELEASE VALID agent-swarm-orchestration v{VERSION}")
+    print(f"DOCUMENTATION STRUCTURE VALID agent-swarm-orchestration v{VERSION}")
     print(f"DOCUMENTATION FINGERPRINT {fingerprint}")
     print(f"GOVERNED FILES {len(governed)}; VISUALS {len(docs['visual_assets'])}; REQUIRED SECTIONS {len(required_ids)}")
     return 0

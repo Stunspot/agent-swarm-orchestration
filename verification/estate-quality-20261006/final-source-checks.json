@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "checks": {
+    "final-source-runtime-tests": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-source-runtime-tests.txt"
+    },
+    "final-repository-tests": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-repository-tests.txt"
+    },
+    "final-source-parity": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-source-parity.txt"
+    },
+    "final-documentation-structure": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-documentation-structure.txt"
+    },
+    "final-authorship-validation": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-authorship-validation.txt"
+    },
+    "accepted_archive_preserved": {
+      "sha256": "72e6bd266de4274695b0be773d6b49e12706879ffe8a2f0a35cab4c60a65512b"
+    },
+    "final-build": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-build.txt"
+    },
+    "final-candidate-gate": {
+      "exit_code": 0,
+      "log": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\final-candidate-gate.txt"
+    }
+  },
+  "candidate": {
+    "candidate": "E:\\Github\\agent-swarm-orchestration\\dist\\estate-quality-20261006",
+    "customer_sha256": "76355296b9e6bae14dce6075e66bc25cd6eb8dabc9242a877940e53fc332f1c3"
+  },
+  "source_runtime_tests": 42,
+  "repository_tests_run": 37,
+  "repository_tests_passed": 36,
+  "repository_tests_skipped": 1,
+  "skip": "Directory symlink privilege unavailable; actual Windows junction controls passed.",
+  "model_trials": 0
+}

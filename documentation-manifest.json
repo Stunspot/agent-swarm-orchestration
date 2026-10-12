@@ -1,6 +1,6 @@
 {
   "format": "cd-customer-documentation/v1",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "reader_journey": [
     "README.md",
     "START-HERE.md",
@@ -19,9 +19,11 @@
     "TRADEMARKS.md",
     "ARCHIVE-CUSTODY.md",
     "provenance.md",
-    "RELEASE-NOTES-v0.3.1.md"
+    "PLAN-VALIDATION.md",
+    "RELEASE-NOTES-v0.3.2.md"
   ],
   "historical_customer_docs": [
+    "RELEASE-NOTES-v0.3.1.md",
     "RELEASE-NOTES-v0.3.0.md",
     "RELEASE-NOTES-v0.2.3.md",
     "RELEASE-NOTES-v0.2.2.md",
@@ -100,7 +102,9 @@
     "RELEASE-NOTES-v0.2.3.md",
     "RELEASE-NOTES-v0.2.2.md",
     "RELEASE-NOTES-v0.2.1.md",
-    "RELEASE-NOTES-v0.2.0.md"
+    "RELEASE-NOTES-v0.2.0.md",
+    "PLAN-VALIDATION.md",
+    "RELEASE-NOTES-v0.3.2.md"
   ],
   "landing_page": "README.md",
   "moments": {
@@ -148,11 +152,14 @@
       "TERMS-OF-USE.md"
     ],
     "maintenance": [
-      "RELEASE-NOTES-v0.3.0.md",
+      "RELEASE-NOTES-v0.3.2.md",
       "ARCHIVE-CUSTODY.md"
     ],
     "provenance": [
       "provenance.md"
     ]
-  }
+  },
+  "maintenance_evidence": [
+    "docs/verification/current-journey-maintenance-20261010.json"
+  ]
 }

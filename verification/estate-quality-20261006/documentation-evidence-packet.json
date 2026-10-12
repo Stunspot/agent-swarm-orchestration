@@ -1,0 +1,38 @@
+{
+  "product": "agent-swarm-orchestration",
+  "version": "0.3.1",
+  "sources": [
+    {
+      "path": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\baseline.json"
+    },
+    {
+      "path": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\baseline-probes.json"
+    },
+    {
+      "path": "E:\\Github\\agent-swarm-orchestration\\verification\\estate-quality-20261006\\initial-repair-checks.json"
+    },
+    {
+      "path": "E:\\Github\\agent-swarm-orchestration\\canonical\\skills\\agent-swarm-orchestration\\scripts\\validate_swarm_plan.py"
+    }
+  ],
+  "customer_tasks": [
+    "Choose the correct kit-relative installation route",
+    "Validate and recover a cancelled or partial mission without inventing success",
+    "Retain accepted outputs after disposing workers",
+    "Verify exact package bytes and understand the untested model/host boundary"
+  ],
+  "customer_docs": [
+    "README.md",
+    "START-HERE.md",
+    "INSTALLATION.md",
+    "WORKFLOWS.md",
+    "TROUBLESHOOTING.md",
+    "TRUST-AND-LIMITS.md",
+    "host-matrix.md",
+    "ARCHIVE-CUSTODY.md",
+    "provenance.md",
+    "RELEASE-NOTES-v0.3.1.md",
+    "PLAN-VALIDATION.md",
+    "delivery-sidecars/Agent Swarm Orchestration T-Free v0.3.1 Extra.md"
+  ]
+}

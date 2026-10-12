@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "candidate": "E:\\Github\\agent-swarm-orchestration\\dist\\estate-quality-20261006-final",
+  "customer": {
+    "valid": true,
+    "files": 67,
+    "runtime_files": 28,
+    "boundary": "Exact package bytes and channel parity only"
+  },
+  "boundary": "Exact candidate bytes, source parity and local executable checks only; public state and model behavior unobserved"
+}
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.683s
+
+OK

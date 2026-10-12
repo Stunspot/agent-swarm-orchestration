@@ -6,7 +6,7 @@ The orchestration layer is designed to prevent duplicated research, conflicting 
 
 # Usage Notes
 
-Copy the .zip from "Additional Files" to your chosen harness or Chat project. Attach or reference it in chat and say, "Install this Augment." The installation prompt is optional.
+Copy the .zip from "Additional Files" to your chosen harness or Chat project. Attach or reference it in chat and say, "Install this Augment." The prompt in this post is optional.
 
 - Use when a distinct contribution, independent review, parallel slice, or sequential stage can improve the result. Simple work can stay with one agent.
 - Tell it the finished outcome you need, what evidence will count, any shared files, and the parts that must not be changed.
@@ -15,6 +15,10 @@ Copy the .zip from "Additional Files" to your chosen harness or Chat project. At
 Public GitHub Repo: [agent-swarm-orchestration](https://github.com/Stunspot/agent-swarm-orchestration)
 
 # Changelog
+
+## 2026-10-06 — same-version restoration
+
+Directory reservations now include descendants; the declared execution cap and allowed/reserved permission consistency are checked. Accepted output survives worker disposal, cancellation before dispatch is representable, unknown stopped writes stay reserved, and declared mission acceptance requires exact passing criterion coverage. Missing historical outcome remains unverified. Hypothetical premises are kept separate from observed live inputs. Portable builders reject junctions and namespace collisions, retain prior artifacts and produce exact-byte package verification. Customer entry, validation and recovery guidance are updated. These are local source, executable and package checks; no new model trial or public deployment is claimed.
 
 v0.3.1 - Shortened the discovery cue and corrected complete-kit installation guidance, manifest paths, and support details. Existing orchestration behavior is preserved.
 

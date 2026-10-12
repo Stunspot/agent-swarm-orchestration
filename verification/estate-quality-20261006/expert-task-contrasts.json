@@ -1,0 +1,49 @@
+{
+  "method": "Expert instruction and task-outcome review, performed by repairing worker; not independent model trials.",
+  "cases": [
+    {
+      "case": "Hypothetical architecture",
+      "input": "Assume three supplied log streams exist; design an independent diagnosis plan.",
+      "before_risk": "Strong premise wording could be borrowed for live dispatch.",
+      "repaired_judgment": "Reason conditionally without claiming files were read or workers dispatched; no source demand for a pure design exercise."
+    },
+    {
+      "case": "Live named file not found, independent docs available",
+      "input": "Repair a component using an absent required trace and compare existing manuals independently.",
+      "before_risk": "Only-source hold wording could stop unrelated useful work or treat stated existence as observed.",
+      "repaired_judgment": "Locate/read the trace; if unavailable hold only its dependent mutation. Continue the manual comparison with present inputs."
+    },
+    {
+      "case": "Directory and nested-file owners",
+      "input": "Worker A owns src; B writes src/a.py concurrently.",
+      "before_risk": "Exact-name equality admitted both.",
+      "repaired_judgment": "Reject overlap; sequence the actual dependency or choose genuinely disjoint ownership. The real validator now rejects the retained input."
+    },
+    {
+      "case": "Cancelled downstream never dispatched",
+      "input": "Cancel a planned chain before first output exists.",
+      "before_risk": "Stopping was treated as starting and required accepted input.",
+      "repaired_judgment": "Dispose both; do not create fictitious output evidence or infer unknown writes safe."
+    },
+    {
+      "case": "Worker disposed after output accepted",
+      "input": "Close a worker but consume its inspected accepted return.",
+      "before_risk": "The status transition erased accepted dependency meaning.",
+      "repaired_judgment": "Retain explicit accepted-output evidence and write readback when it wrote. Closed alone is insufficient."
+    },
+    {
+      "case": "All workers finished, mission criterion fails",
+      "input": "Every responsibility is terminal but integrated verification failed.",
+      "before_risk": "VALID closed status could be presented as mission success.",
+      "repaired_judgment": "Report partial outcome and failed check. A declared accepted outcome with failed/missing checks rejects."
+    },
+    {
+      "case": "No production mutation authorized",
+      "input": "Read-only incident diagnosis with concurrent external actors possible.",
+      "before_risk": "Example inferred unchanged production from no write permission.",
+      "repaired_judgment": "Report only observed dispatch/authority facts; unchanged production requires authoritative post-state evidence."
+    }
+  ],
+  "executed_model_trials": 0,
+  "executable_correspondence": "Runtime negative and positive tests cover the structured admission/lifecycle cases. Prose cases remain expert review with no reliability claim."
+}

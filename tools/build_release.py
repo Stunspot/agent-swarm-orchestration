@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build deterministic Agent Swarm Orchestration 0.3.1 release archives."""
+"""Build deterministic Agent Swarm Orchestration 0.3.2 release archives."""
 
 from __future__ import annotations
 
@@ -7,11 +7,12 @@ import hashlib
 import json
 import zipfile
 from pathlib import Path, PurePosixPath
+from archive_paths import assert_unlinked, check_tree, atomic_zip
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.1"
+VERSION = "0.3.2"
 FIXED_TIME = (2026, 9, 1, 0, 0, 0)
-GENERATED_AT = "2026-09-05"
+GENERATED_AT = "2026-10-12"
 OUT = ROOT / "release-assets" / f"v{VERSION}"
 PLUGIN_SOURCE = ROOT / "plugins" / "agent-swarm-orchestration"
 SKILL_SOURCE = ROOT / "canonical" / "skills" / "agent-swarm-orchestration"
@@ -28,6 +29,7 @@ def is_release_file(path: Path, root: Path) -> bool:
 
 
 def files_under(root: Path) -> list[Path]:
+    assert_unlinked(root)
     return sorted(
         (path for path in root.rglob("*") if is_release_file(path, root)),
         key=lambda path: path.relative_to(root).as_posix(),
@@ -53,20 +55,11 @@ def tree_digest(root: Path) -> str:
 
 
 def build_zip(source: Path, target: Path, top_level: str) -> dict[str, object]:
-    if target.exists():
-        raise RuntimeError(f"refusing to overwrite release artifact: {target}")
-    target.parent.mkdir(parents=True, exist_ok=True)
-    members: list[str] = []
-    with zipfile.ZipFile(target, "w", compression=zipfile.ZIP_STORED) as archive:
-        for path in files_under(source):
-            rel = PurePosixPath(top_level) / PurePosixPath(path.relative_to(source).as_posix())
-            name = rel.as_posix()
-            info = zipfile.ZipInfo(name, FIXED_TIME)
-            info.compress_type = zipfile.ZIP_STORED
-            info.create_system = 3
-            info.external_attr = 0o100644 << 16
-            archive.writestr(info, path.read_bytes())
-            members.append(name)
+    source.relative_to(ROOT)
+    target.relative_to(ROOT)
+    entries = check_tree(source, files_under(source), top_level)
+    atomic_zip(entries, target, FIXED_TIME)
+    members = [name for name, _ in entries]
     return {
         "path": target.relative_to(ROOT).as_posix(),
         "sha256": sha256_file(target),

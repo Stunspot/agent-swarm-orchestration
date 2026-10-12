@@ -1,0 +1,6 @@
+{
+  "valid": true,
+  "files": 67,
+  "runtime_files": 28,
+  "boundary": "Exact package bytes and channel parity only"
+}

@@ -1,10 +1,10 @@
 # Troubleshoot Agent Swarm Orchestration
 
-Version 0.3.0 can arrive through a Codex marketplace plugin, a standalone Codex folder, or a Claude/one-skill archive. Begin with the observable boundary: package bytes, host registration, discovery, invocation, collaboration-tool availability, worker behavior, merge, or external state.
+Version 0.3.2 can arrive through a Codex marketplace plugin, a standalone Codex folder, or a Claude/one-skill archive. Begin with the observable boundary: package bytes, host registration, discovery, invocation, collaboration-tool availability, worker behavior, merge, or external state.
 
 ## Marketplace command succeeds but the skill is not recognized
 
-1. Confirm the marketplace source is registered as `Stunspot/agent-swarm-orchestration`.
+1. Run `codex plugin marketplace list --json` and confirm marketplace `cd-agent-swarm-orchestration` uses the source you installed. For the extracted complete kit, check its local `codex` path and `.agents/plugins/marketplace.json`; for Git installation, check the chosen `Stunspot/agent-swarm-orchestration` source and ref. A local source is not a failed Git registration.
 2. Confirm the installed plugin name is `agent-swarm-orchestration@cd-agent-swarm-orchestration`.
 3. Start a fresh task if the host caches plugin discovery.
 4. Ask the host to resolve `$agent-swarm-orchestration`.
@@ -29,12 +29,12 @@ Start from the observable symptom. Preserve the package, task transcript, agent 
 
 **Then:**
 
-1. Confirm all 17 released files are present.
+1. Confirm installed files match the delivered package custody manifest; run the package verifier described in [Installation](INSTALLATION.md).
 2. Confirm you copied the release folder or extracted top-level ZIP folder, not the whole product root.
 3. Reload Codex or start a fresh task if the host requires discovery at session start.
 4. Invoke the exact name `$agent-swarm-orchestration`.
 
-**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. The 0.3.0 runtime is not qualified for clean-host discovery by local packaging. It supplies Codex and Claude transport surfaces, but only an observed registration, upload, and fresh-task resolution establishes discovery in a particular host.
+**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. The current runtime is not qualified for clean-host discovery by local packaging. It supplies Codex and Claude transport surfaces, but only an observed registration, upload, and fresh-task resolution establishes discovery in a particular host.
 
 ## The skill loads but does not create agents
 
@@ -101,13 +101,13 @@ If any worker may already have written a file or acted externally, inspect autho
 
 ## The Swarm Plan validator reports `INVALID`
 
-Run it with exactly one plan path:
+Use --help for usage, or run it with exactly one UTF-8 plan path:
 
 ```text
 python <skill-root>/scripts/validate_swarm_plan.py <swarm-plan.json>
 ```
 
-The validator prints `INVALID` followed by one or more structural errors and exits with code 1. Repair the named field, dependency, state, or active write collision, then rerun it.
+The validator prints `INVALID` followed by one or more structural errors and exits with code 1. Repair the named field, dependency, capacity, state, or parent/child write collision, then rerun it. [Plan validation and recovery](PLAN-VALIDATION.md) explains cancellation before dispatch, closed accepted outputs, unknown writes, and partial closure.
 
 If the command prints usage and exits with code 2, supply exactly one plan path. If Python or the file is unavailable, preserve the plan and report the missing prerequisite instead of calling it valid.
 

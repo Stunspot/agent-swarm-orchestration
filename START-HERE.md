@@ -2,7 +2,7 @@
 
 Agent Swarm Orchestration helps an AI coordinator decide not only whether multiple agents will help, but what temporary organization can improve the accepted result. It separates memorable role names from actual contributions, designs information and authority relations deliberately, compiles the next phase into a safe execution regime, and changes the form when evidence changes the problem.
 
-Version 0.3.1 is packaged as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill archives. The package does not supply collaboration tools; the current host must expose them.
+Version 0.3.2 is packaged as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill archives. The package does not supply collaboration tools; the current host must expose them.
 
 ## Decide whether this fits your task
 
@@ -28,7 +28,7 @@ A role label such as “critic,” “stakeholder,” or “review bot” may he
 
 - **Codex marketplace plugin:** use the commands in [Installation](INSTALLATION.md).
 - **Standalone Codex:** install `release/codex/agent-swarm-orchestration/` or the versioned skill ZIP.
-- **Claude or another one-skill host:** use `release/claude/agent-swarm-orchestration/` or `claude-ai/agent-swarm-orchestration-v0.3.1.zip`.
+- **Claude or another one-skill host:** use the current matched `release/claude/agent-swarm-orchestration/` folder or the current complete kit’s supplied one-skill archive. Earlier repository and GitHub release archives retain their historical runtime.
 - **Source and evidence review:** use the repository, not an installed runtime folder.
 
 Files existing on disk do not establish discovery or activation. Confirm what the named host actually loads.
@@ -48,3 +48,7 @@ A good run should make four things legible: why each contribution exists, what e
 If the host does not recognize the skill, check the installed folder or plugin registration in [Troubleshooting](TROUBLESHOOTING.md). If the skill is recognized but agent controls are unavailable, work directly or return an exact delegation packet marked `PREPARED — NOT DISPATCHED`. If a worker returns claims the root cannot inspect, keep them `agent-reported`. If a write may have landed, read authoritative state before retrying.
 
 Continue with [Workflows](WORKFLOWS.md), [Trust and limits](TRUST-AND-LIMITS.md), and the [host matrix](host-matrix.md).
+
+## Validate a plan or resume stopped work
+
+Use [Plan validation and recovery](PLAN-VALIDATION.md) for exact state meanings, commands, accepted-output handoffs and partial completion. A closed worker is disposed; a closed plan can still be partial or unverified.

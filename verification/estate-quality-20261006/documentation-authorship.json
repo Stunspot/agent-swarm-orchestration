@@ -1,0 +1,112 @@
+{
+  "authored_files": [
+    {
+      "bytes": 7879,
+      "path": "README.md",
+      "sha256": "604375e6efdfb1011b5d43a7b20749671e9153ee4991a788fd55c5fc38f154d3"
+    },
+    {
+      "bytes": 4297,
+      "path": "START-HERE.md",
+      "sha256": "c627290e6ef9eaeb5e5700fc78fc66876da693aaf0dbd37ecae9032ee8184c73"
+    },
+    {
+      "bytes": 4903,
+      "path": "INSTALLATION.md",
+      "sha256": "6297f51d5617317a76a72d03f8eff3c1bb2895272b84c74903274326b12801a2"
+    },
+    {
+      "bytes": 12289,
+      "path": "WORKFLOWS.md",
+      "sha256": "a2e75a51e5ac7b4d9dc32723cfcb9a410d90f33b8521f3238972b46d8e3bb922"
+    },
+    {
+      "bytes": 8291,
+      "path": "TROUBLESHOOTING.md",
+      "sha256": "9bf1eaac3c526693b1427b78c1a833ddb6749355ab1e38a8a9f419fec84134f3"
+    },
+    {
+      "bytes": 8566,
+      "path": "TRUST-AND-LIMITS.md",
+      "sha256": "405ccbc4ae965d6b0cb265d9d7cfaa5ae12dbffb6b05ae565c3b64a10e58c89c"
+    },
+    {
+      "bytes": 3113,
+      "path": "host-matrix.md",
+      "sha256": "6ecdbb9c2da26d183503f70d92950f775736c7cda2610981c0959b8f75bf66ac"
+    },
+    {
+      "bytes": 3308,
+      "path": "ARCHIVE-CUSTODY.md",
+      "sha256": "d70f4650a0a889ed43f0d44368a5d006e439add9d122536c33f5c2b314fcb45e"
+    },
+    {
+      "bytes": 5658,
+      "path": "provenance.md",
+      "sha256": "835bc91187c3698a2df9817e6756a7467c22954544318bb2f57f1b0db9ebdbdd"
+    },
+    {
+      "bytes": 1559,
+      "path": "RELEASE-NOTES-v0.3.1.md",
+      "sha256": "54c153c849201069c7a29cea325c0942ddc5836dd06c17af17729df45b88ccda"
+    },
+    {
+      "bytes": 5722,
+      "path": "PLAN-VALIDATION.md",
+      "sha256": "1048920b28851297202f09b21b922aa621a7c55213186dce3ac1e97005515ee9"
+    },
+    {
+      "bytes": 3084,
+      "path": "delivery-sidecars/Agent Swarm Orchestration T-Free v0.3.1 Extra.md",
+      "sha256": "7ef1ee255f3dc78f32a2e123702bd731747d040084d8109579f5cc82df665ceb"
+    }
+  ],
+  "authoring": {
+    "authorship_scope": "materially-revised",
+    "capability": "hesperos-documentation",
+    "capability_entrypoint_sha256": "21606903702db1eae375cb8e05dcad821616d399a574488f0f1be738d6dab42f",
+    "capability_revision": "sha256:21606903702db1eae375cb8e05dcad821616d399a574488f0f1be738d6dab42f",
+    "capability_snapshot": {
+      "bytes": 7306,
+      "path": "verification/hesperos-capabilities/21606903702db1eae375cb8e05dcad821616d399a574488f0f1be738d6dab42f/SKILL.md",
+      "sha256": "21606903702db1eae375cb8e05dcad821616d399a574488f0f1be738d6dab42f"
+    },
+    "mode": "in-process",
+    "run_id": "agent-swarm-orchestration-estate-repair-20261006"
+  },
+  "authoring_response": {
+    "bytes": 724,
+    "path": "verification/estate-quality-20261006/documentation-authoring-response.txt",
+    "sha256": "9729c6ae03a0d747cfe8b8ca4e2cf6b98bf0506cb082c37a764493ce73890696"
+  },
+  "claim_boundary": "Binds retained evidence for one Hesperos authoring or material-revision run. It does not prove independent review, host activation, publication, accessibility conformance, or customer outcomes.",
+  "created_at": "2026-10-07T01:31:52+00:00",
+  "documentation_fingerprint": "86075a4610f383d0fc96201b4a816d2c62aa66c1ed70b3ab6c4058e45900fd4e",
+  "documentation_manifest": {
+    "bytes": 544,
+    "path": "verification/estate-quality-20261006/documentation-manifest.json",
+    "sha256": "2638dbdf62d1fc875cb4956020308098d68cc4bb76cd058292e9bf71e69ed42f"
+  },
+  "evidence_packet": {
+    "bytes": 1280,
+    "path": "verification/estate-quality-20261006/documentation-evidence-packet.json",
+    "sha256": "f688576b5d7c9680a414604cf8d58b46913a53028fae5b08c5bacee15b63c6fc"
+  },
+  "execution_evidence": [
+    {
+      "bytes": 415,
+      "path": "verification/estate-quality-20261006/documentation-execution.json",
+      "sha256": "ab5bc439ee4b3ba413d34f96d709ca425a0647178fc82ded403559284fa05e09"
+    },
+    {
+      "bytes": 724,
+      "path": "verification/estate-quality-20261006/documentation-authoring-response.txt",
+      "sha256": "9729c6ae03a0d747cfe8b8ca4e2cf6b98bf0506cb082c37a764493ce73890696"
+    }
+  ],
+  "format": "cd-hesperos-documentation-authorship/v1",
+  "product": {
+    "slug": "agent-swarm-orchestration",
+    "version": "0.3.1"
+  }
+}
