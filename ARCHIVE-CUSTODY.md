@@ -1,6 +1,6 @@
 # Archive custody and recovery
 
-The 0.3.2 patch gives the corrected ownership, capacity, authority, lifecycle, completion and package implementation a distinct customer release identity. Released 0.3.1 and all earlier artifacts remain historical; use the 0.3.2 kit and matching checksum for this update.
+Use the versioned 0.3.2 kit and its matching checksum. The GitHub release holds the original kit. The repository also carries a 0.3.2 kit with updated instructions and the same plugin and skill files. Each kit has its own checksum. For the latest instructions for installing it, use the [current installation guide on GitHub](https://github.com/Stunspot/agent-swarm-orchestration/blob/main/INSTALLATION.md).
 
 ## Verify what you received
 

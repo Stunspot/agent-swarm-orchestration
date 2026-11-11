@@ -39,18 +39,6 @@ def build(stage,target,claude_source):
     (stage/'claude').mkdir();claude=f'agent-swarm-orchestration-v{version}.zip';shutil.copy2(claude_source,stage/'claude'/claude)
     for name in names:shutil.copy2(ROOT/name,stage/name)
     shutil.copytree(ROOT/'docs',stage/'docs')
-    for name in names:
-        file=stage/name;t=file.read_text(encoding='utf-8')
-        if name=='README.md':
-            # Source history and the current supplied archive have different custody.
-            # Rewrite the whole map entry before translating installation paths.
-            historical=f'- `claude-ai/{claude}` — current one-skill archive matching this release.'
-            current=f'- `claude/{claude}` — current supplied one-skill archive, byte-matched to this kit’s runtime.'
-            if t.count(historical)!=1:raise ValueError('Missing exact source current Claude map entry')
-            t=t.replace(historical,current)
-        t=t.replace('release/codex/agent-swarm-orchestration/','codex/plugins/agent-swarm-orchestration/skills/agent-swarm-orchestration/').replace('release/claude/agent-swarm-orchestration/',f'the extracted agent-swarm-orchestration/ folder from claude/{claude}')
-        if name=='INSTALLATION.md':t=t.replace('codex plugin marketplace add Stunspot/agent-swarm-orchestration --ref main --sparse .agents --sparse plugins/agent-swarm-orchestration','codex plugin marketplace add "/path/to/extracted-kit/codex" --json')
-        file.write_text(t,encoding='utf-8',newline='\n')
     (stage/'tools').mkdir()
     for name in ['verify_package.py','archive_paths.py']:shutil.copy2(ROOT/'tools'/name,stage/'tools'/name)
     (stage/'provenance').mkdir();shutil.copy2(ROOT/'package-manifest.json',stage/'provenance/repository-package-manifest.json')

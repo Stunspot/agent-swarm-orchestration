@@ -1,54 +1,26 @@
-# Start here: design the organization the work needs
+# Start here with Agent Swarm Orchestration
 
-Agent Swarm Orchestration helps an AI coordinator decide not only whether multiple agents will help, but what temporary organization can improve the accepted result. It separates memorable role names from actual contributions, designs information and authority relations deliberately, compiles the next phase into a safe execution regime, and changes the form when evidence changes the problem.
+Use Agent Swarm Orchestration when an AI task may benefit from independent checks, parallel work on different parts, or a handoff between specialists. The lead agent (the **root**) decides how to organize the work and stays responsible for the final answer. For a short task or a single shared edit, it may do the work directly.
 
-Version 0.3.2 is packaged as a Codex marketplace plugin, standalone Codex and Claude skill folders, and one-skill archives. The package does not supply collaboration tools; the current host must expose them.
+## Install the skill
 
-## Decide whether this fits your task
+[Choose your installation method](INSTALLATION.md). In Codex, you can install the plugin from this repository's marketplace or install the skill folder directly. In Claude or another Agent Skills host, use the one-skill ZIP if the host supports skill uploads. Every route delivers the same skill.
 
-Use it when work benefits from one or more of these mechanisms:
+## Try a read-only comparison
 
-- independent evidence gathering without shared anchoring;
-- distinct transformations that can proceed concurrently;
-- dependent specialists whose inputs must be accepted in sequence;
-- structured disagreement, cross-review, or bounded deliberation;
-- purposeful redundancy with an explicit resolver;
-- changing membership or information exposure as uncertainty moves;
-- recovery that preserves accepted evidence and resumes from the first unearned edge.
+1. Open a new task where your assistant can read several relevant files or folders. For this example, use a project with billing, search, and notifications, or substitute three areas you have.
+2. In the Codex CLI or IDE, use this prompt. In other interfaces, select or name the installed skill using the host's skill controls and use the rest of the prompt.
 
-Stay with one agent when the next horizon is small, tightly sequential, shared-context-heavy, latency-sensitive, or concentrated on one mutable surface. The skill is designed to decline unnecessary organizations as cheerfully as it designs useful ones.
+   ```text
+   Use $agent-swarm-orchestration to compare how billing, search, and notifications handle retries. Keep the work read-only. Decide which parts, if any, to delegate. Check conflicting findings against the source and return one comparison with the biggest risk.
+   ```
 
-## Think in contributions, not costumes
+3. Look for one comparison with source references, a brief reason for using workers or working directly, and any differences the evidence could not settle.
 
-For the next reasoning horizon, identify the product of the phase, the contributions that can cause it, their consumers, dependencies, evidence burdens, error opportunities, information exposure, authority, state custody, resolver, and transition signal.
+The skill uses the collaboration controls available in the current task. If the host has no worker controls, the assistant can do the comparison directly or prepare a delegation plan for later. A prepared plan has the status `PREPARED — NOT DISPATCHED`.
 
-A role label such as “critic,” “stakeholder,” or “review bot” may help a model hold a stance. It does not prove competence, independence, legitimacy, or useful difference. An agent simulating residents is not authorized to speak for residents. Stakeholder evidence and stakeholder standing remain separate.
+## If you get stuck
 
-## Install the package that matches your host
+If the host cannot find the skill, check [installation and discovery](INSTALLATION.md#check-discovery-and-try-the-skill). If the skill loads but no workers start, see [why the skill may work directly](TROUBLESHOOTING.md#the-skill-loads-but-does-not-create-agents). For conflicting findings or uncertain edits, see [Troubleshooting](TROUBLESHOOTING.md).
 
-- **Codex marketplace plugin:** use the commands in [Installation](INSTALLATION.md).
-- **Standalone Codex:** install `release/codex/agent-swarm-orchestration/` or the versioned skill ZIP.
-- **Claude or another one-skill host:** use the current matched `release/claude/agent-swarm-orchestration/` folder or the current complete kit’s supplied one-skill archive. Earlier repository and GitHub release archives retain their historical runtime.
-- **Source and evidence review:** use the repository, not an installed runtime folder.
-
-Files existing on disk do not establish discovery or activation. Confirm what the named host actually loads.
-
-## Reach first value
-
-Start a fresh task if your host requires reload after installation, then try:
-
-```text
-Use $agent-swarm-orchestration to compare retry handling in billing, search, and notifications. Keep mutations out of scope. Identify the distinct causal contributions, decide whether independence or cross-review is useful, name the resolver, and compile only the next phase into the lightest safe execution regime. Reconcile cited evidence into one answer.
-```
-
-A good run should make four things legible: why each contribution exists, what each member may see and do, how disagreement or overlap will be resolved, and what observation will change or end the organization. It should then return one integrated result—not a hamper of worker summaries tied with ribbon.
-
-## If the first attempt fails
-
-If the host does not recognize the skill, check the installed folder or plugin registration in [Troubleshooting](TROUBLESHOOTING.md). If the skill is recognized but agent controls are unavailable, work directly or return an exact delegation packet marked `PREPARED — NOT DISPATCHED`. If a worker returns claims the root cannot inspect, keep them `agent-reported`. If a write may have landed, read authoritative state before retrying.
-
-Continue with [Workflows](WORKFLOWS.md), [Trust and limits](TRUST-AND-LIMITS.md), and the [host matrix](host-matrix.md).
-
-## Validate a plan or resume stopped work
-
-Use [Plan validation and recovery](PLAN-VALIDATION.md) for exact state meanings, commands, accepted-output handoffs and partial completion. A closed worker is disposed; a closed plan can still be partial or unverified.
+Once the first task works, use [Workflows](WORKFLOWS.md) for parallel work, sequential handoffs, independent review, and recovery. [Plan validation](PLAN-VALIDATION.md) explains how to check a saved plan or resume stopped work.

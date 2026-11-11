@@ -1,8 +1,8 @@
 # Host and distribution matrix
 
-Version 0.3.2 separates packaged, installed, discoverable, invoked, healthy, integrated and published states. Exact file membership is recorded in package-custody.json. Older behavioral evidence does not transfer to changed instructions.
+Version 0.3.2 includes one skill. Codex can install it through the packaged marketplace or directly from a skill folder. Claude and other compatible hosts can use the one-skill ZIP.
 
-The paths in this table are relative to the extracted customer-kit root, beside START-HERE.md.
+The paths in this table are relative to the extracted kit, beside `START-HERE.md`. [Installation](INSTALLATION.md) also covers the GitHub checkout.
 
 | Surface | Supplied object | What to verify |
 |---|---|---|

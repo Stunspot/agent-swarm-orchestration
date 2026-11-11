@@ -1,10 +1,10 @@
 # Troubleshoot Agent Swarm Orchestration
 
-Version 0.3.2 can arrive through a Codex marketplace plugin, a standalone Codex folder, or a Claude/one-skill archive. Begin with the observable boundary: package bytes, host registration, discovery, invocation, collaboration-tool availability, worker behavior, merge, or external state.
+Version 0.3.2 ships as a Codex plugin and as a standalone skill. Start with the symptom that matches where you got stuck.
 
 ## Marketplace command succeeds but the skill is not recognized
 
-1. Run `codex plugin marketplace list --json` and confirm marketplace `cd-agent-swarm-orchestration` uses the source you installed. For the extracted complete kit, check its local `codex` path and `.agents/plugins/marketplace.json`; for Git installation, check the chosen `Stunspot/agent-swarm-orchestration` source and ref. A local source is not a failed Git registration.
+1. Run `codex plugin marketplace list --json` and find `cd-agent-swarm-orchestration`. Check that it points to the extracted kit’s `codex` directory or the `Stunspot/agent-swarm-orchestration` repository and ref you selected. If the source differs, check `codex plugin marketplace remove --help`, remove the old marketplace entry if you intend to switch sources, then repeat the matching [installation steps](INSTALLATION.md#install-the-codex-plugin).
 2. Confirm the installed plugin name is `agent-swarm-orchestration@cd-agent-swarm-orchestration`.
 3. Start a fresh task if the host caches plugin discovery.
 4. Ask the host to resolve `$agent-swarm-orchestration`.
@@ -29,12 +29,12 @@ Start from the observable symptom. Preserve the package, task transcript, agent 
 
 **Then:**
 
-1. Confirm installed files match the delivered package custody manifest; run the package verifier described in [Installation](INSTALLATION.md).
+1. If you installed from the complete kit, [verify the extracted kit](INSTALLATION.md#download-and-check-the-complete-kit) from its root and compare the installed folder with the verified source folder.
 2. Confirm you copied the release folder or extracted top-level ZIP folder, not the whole product root.
 3. Reload Codex or start a fresh task if the host requires discovery at session start.
 4. Invoke the exact name `$agent-swarm-orchestration`.
 
-**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. The current runtime is not qualified for clean-host discovery by local packaging. It supplies Codex and Claude transport surfaces, but only an observed registration, upload, and fresh-task resolution establishes discovery in a particular host.
+**Safe stopping state:** leave the existing folder intact and record the Codex version, installed path, observed folder shape, and exact response. Use the exact host response to distinguish a missing installation from a discovery problem.
 
 ## The skill loads but does not create agents
 
